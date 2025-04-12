@@ -22,7 +22,7 @@ const phoneNumber = ref("");
           <p class="font-mono">{{ phoneNumber }}</p>
         </div>
       </div>
-<!--
+      <!--
       <div class="p-4 bg-gray-100 rounded-lg">
         <PhoneSelect
           v-model="phoneNumber"
