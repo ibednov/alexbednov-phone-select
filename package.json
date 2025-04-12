@@ -32,11 +32,9 @@
     "tailwindcss": "^4.0.0",
     "typescript": "^5.3.3",
     "vite": "^5.1.4",
-    "vue-i18n": "^9.9.0",
     "vue-tsc": "^1.8.27"
   },
   "peerDependencies": {
-    "vue": "^3.4.21",
-    "vue-i18n": "^9.9.0"
+    "vue": "^3.4.21"
   }
 }

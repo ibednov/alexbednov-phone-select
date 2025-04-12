@@ -1,45 +1,36 @@
-<script setup lang='ts'>
-import type { Language } from "@/interfaces";
-import { useI18n } from "vue-i18n";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { ref } from "vue";
+<script setup lang="ts">
+import { ref, watch } from 'vue'
+import { setLanguage } from '@/utils/i18n'
 
-const { t, locale, availableLocales } = useI18n();
+const languages = [
+  { code: 'ru', name: 'Русский' },
+  { code: 'en', name: 'English' },
+  { code: 'az', name: 'Azərbaycan' },
+  { code: 'be', name: 'Беларуская' }
+]
 
-const lang = ref<Language>(locale.value as Language);
+const selectedLang = ref('ru')
 
-const languages = availableLocales.map((code) => ({
-  code,
-  name: t(`lang.name.${code}`),
-}));
-
-const handleLanguageChange = (newLang: Language) => {
-  locale.value = newLang;
-  lang.value = newLang;
-};
+watch(selectedLang, (newLang) => {
+  setLanguage(newLang)
+})
 </script>
 
 <template>
-
-<div class="">
-      <label class="block text-sm font-medium text-gray-700 mb-2">{{
-        t("lang.lang")
-      }}</label>
-      <Select :model-value="lang" @update:model-value="handleLanguageChange">
-        <SelectTrigger class="w-full">
-          <SelectValue :placeholder="t('lang.lang')" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem v-for="l in languages" :key="l.code" :value="l.code">
-            {{ l.name }}
-          </SelectItem>
-        </SelectContent>
-      </Select>
-    </div>
+  <div class="flex items-center gap-2">
+    <label for="lang" class="text-sm text-gray-600">Язык:</label>
+    <select
+      id="lang"
+      v-model="selectedLang"
+      class="px-2 py-1 border rounded"
+    >
+      <option
+        v-for="lang in languages"
+        :key="lang.code"
+        :value="lang.code"
+      >
+        {{ lang.name }}
+      </option>
+    </select>
+  </div>
 </template>
