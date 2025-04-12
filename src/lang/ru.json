@@ -1,4 +1,16 @@
 {
+    "name": "alexbednov-phone-select",
+    "phone-select":{
+        "placeholder": "Выберите страну",
+        "search": "Поиск...",
+        "select": "Выберите страну",
+        "no_results": "Ничего не найдено",
+        "loading": "Загрузка...",
+        "selected_phone_number": "Выбранный номер телефона"
+    },
+    "lang": {
+        "lang": "Язык"
+    },
     "countries": {
         "AF": "Афганистан",
         "AL": "Албания",

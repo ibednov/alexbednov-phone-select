@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { getCountries, type Language } from '../utils/countries'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps<{
   modelValue: string
@@ -54,7 +57,7 @@ const handleInput = (e: Event) => {
         v-model="searchQuery"
         type="text"
         class="w-full p-2 border-b"
-        placeholder="Поиск..."
+        :placeholder="t('phone-select.search')"
       >
       <div class="max-h-60 overflow-y-auto">
         <div
@@ -79,7 +82,7 @@ const handleInput = (e: Event) => {
       @input="handleInput"
       type="tel"
       class="flex-1 p-2 border rounded"
-      :placeholder="`+${selectedCountry.phone_code}...`"
+      :placeholder="t('phone-select.placeholder')"
     >
   </div>
 </template>

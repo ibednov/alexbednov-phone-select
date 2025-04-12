@@ -1,6 +1,6 @@
 {
   "name": "alexbednov-phone-select",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue component for phone number selection with country codes",
   "type": "module",
   "main": "./dist/index.umd.js",
