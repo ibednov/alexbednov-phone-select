@@ -50,3 +50,11 @@ interface Country {
   flag: string
 }
 ```
+
+## Локализация
+
+Локализация осуществляется через файлы `ru.json` и `en.json` в папке `src/lang`.
+
+## Основано на
+
+Список стран и флагов из репозитория [react-phone-country-code-flag](https://github.com/markliu2013/react-phone-country-code-flag/tree/main)
