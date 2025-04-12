@@ -1,4 +1,4 @@
-import type { Translations } from '../interfaces'
+import type { Translations } from '@/interfaces'
 
 export const loadTranslations = (): Translations => {
   return Object.fromEntries(

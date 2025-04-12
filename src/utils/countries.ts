@@ -1,6 +1,6 @@
-import countriesData from '../json/countries.json'
-import { loadTranslations } from './translations'
-import type { Language, CountryType } from '../interfaces'
+import countriesData from '@/json/countries.json'
+import { loadTranslations } from '@/utils/translations'
+import type { Language, CountryType } from '@/interfaces'
 
 export type Country = CountryType
 

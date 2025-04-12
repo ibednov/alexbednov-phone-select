@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
-import { getCountries, type Country, type Language } from '../utils/countries'
-import { extractPhoneCode } from '../utils/phone'
+import { getCountries, getCountryByCode, type Country } from '@/utils/countries'
+import type { Language } from '@/interfaces'
 import { useI18n } from 'vue-i18n'
 import { Input } from '@/components/ui/input'
 import {
@@ -11,6 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import { extractPhoneCode } from '@/utils/phone'
 
 const { t } = useI18n()
 

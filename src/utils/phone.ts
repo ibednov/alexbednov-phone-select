@@ -1,4 +1,4 @@
-import { type Country } from './countries'
+import { type Country } from '@/utils/countries'
 
 export function findCountryByCode(code: string, countries: Country[]): Country | null {
   // Убираем + если есть

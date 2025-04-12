@@ -1,4 +1,4 @@
-import type { Language, CountryType } from '../interfaces';
+import type { Language, CountryType } from '@/interfaces';
 export type Country = CountryType;
 export declare const getCountries: (lang?: Language) => Country[];
 export declare const getCountryByCode: (code: string, lang?: Language) => Country | undefined;

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import PhoneSelect from "../components/PhoneSelect.vue";
-import type { Language } from "../interfaces";
+import PhoneSelect from "@/components/PhoneSelect.vue";
+import type { Language } from "@/interfaces";
 import { useI18n } from "vue-i18n";
 import {
   Select,
@@ -9,7 +9,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../components/ui/select";
+} from "@/components/ui/select";
 
 const { t, locale, availableLocales } = useI18n();
 

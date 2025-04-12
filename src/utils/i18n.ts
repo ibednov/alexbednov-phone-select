@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n'
-import { loadTranslations } from './translations'
-import type { Language } from '../interfaces'
+import { loadTranslations } from '@/utils/translations'
+import type { Language } from '@/interfaces'
 
 export const createI18nInstance = () => {
   const messages = loadTranslations()
