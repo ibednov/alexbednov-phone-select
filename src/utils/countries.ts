@@ -1,26 +1,8 @@
 import countriesData from '../json/countries.json'
-import ru from '../lang/ru.json'
-import en from '../lang/en.json'
+import { loadTranslations } from './translations'
+import type { Language, Country, Translations } from '../interfaces'
 
-export type Language = 'ru' | 'en'
-
-export interface Country {
-  country_code: string
-  phone_code: number
-}
-
-interface Translations {
-  [key: string]: {
-    countries: {
-      [key: string]: string
-    }
-  }
-}
-
-const translations: Translations = {
-  ru,
-  en
-}
+const translations = loadTranslations()
 
 export const getCountries = (lang: Language = 'ru'): Country[] => {
   return countriesData.map(country => ({

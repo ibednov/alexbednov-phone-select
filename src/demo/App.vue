@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import PhoneSelect from '../components/PhoneSelect.vue'
-import type { Language } from '../utils/countries'
+import type { Language } from '../interfaces'
 import { useI18n } from 'vue-i18n'
 
-const { t, locale } = useI18n()
+const { t, locale, availableLocales } = useI18n()
 
 const phone = ref('')
 const lang = ref<Language>(locale.value as Language)
 
-const languages = [
-  { code: 'ru', name: 'Русский' },
-  { code: 'en', name: 'English' }
-]
+const languages = availableLocales.map(code => ({
+  code,
+  name: t(`lang.name.${code}`)
+}))
 
 const handleLanguageChange = (newLang: Language) => {
   locale.value = newLang

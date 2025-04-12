@@ -10,7 +10,13 @@
       "select-country": "Select country"
   },
   "lang": {
-      "lang": "Language"
+      "lang": "Language",
+      "name": {
+          "en": "English",
+          "ru": "Russian",
+          "az": "Azerbaijani",
+          "be": "Belarusian"
+      }
   },
   "countries": {
     "AF": "Afghanistan",
