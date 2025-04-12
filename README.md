@@ -1,59 +1,84 @@
 # Phone Select
 
-Vue компонент для выбора телефонного номера с поддержкой кодов 239 стран.
+API и Vue компонент для работы с телефонными номерами и кодами стран.
 
 ## Установка
 
 ```bash
-npm install phone-select
-```
-
-## Использование
-
-```vue
-<script setup lang="ts">
-import { PhoneSelect } from 'phone-select'
-</script>
-
-<template>
-  <PhoneSelect v-model="phoneNumber" />
-</template>
+npm install alexbednov-phone-select
 ```
 
 ## API
 
-### Компонент
-
-- `v-model` - полный номер телефона с кодом страны
-
-### Утилиты
+### Основные функции
 
 ```typescript
-import { getCountries, getCountryByCode, getCountryByName } from 'phone-select'
+import {
+  getCountries,
+  getCountryByCode,
+  getCountryByName,
+  getCountryByPhoneCode,
+  getFlagPath
+} from 'alexbednov-phone-select'
 
 // Получить список всех стран
-const allCountries = getCountries()
+const allCountries = getCountries('ru') // Поддерживает языки: ru, en, az, be
 
 // Найти страну по коду
-const country = getCountryByCode('7') // Россия
+const country = getCountryByCode('ru') // Россия
 
 // Найти страну по названию
 const country = getCountryByName('Russia') // Россия
+
+// Найти страну по телефонному коду
+const country = getCountryByPhoneCode(7) // Россия
+
+// Получить путь к флагу страны
+const flagPath = getFlagPath('ru') // /src/assets/flags/ru.svg
 ```
 
-## Типы
+### Типы
 
 ```typescript
 interface Country {
-  name: string
-  code: string
-  flag: string
+  country_code: string
+  phone_code: number
+  name?: string
 }
+
+type Language = 'ru' | 'en' | 'az' | 'be'
 ```
 
-## Локализация
+### Локализация
 
-Локализация осуществляется через файлы `ru.json` и `en.json` в папке `src/lang`.
+```typescript
+import { loadTranslations } from 'alexbednov-phone-select'
+
+const translations = loadTranslations()
+// Доступные переводы: ru, en, az, be
+```
+
+## Vue компонент
+
+```vue
+<script setup lang="ts">
+import { PhoneSelect } from 'alexbednov-phone-select'
+</script>
+
+<template>
+  <PhoneSelect
+    v-model="phoneNumber"
+    :lang="lang"
+    :favorites-countries="['by', 'ru']"
+  />
+</template>
+```
+
+### Пропсы компонента
+
+- `v-model` - полный номер телефона с кодом страны
+- `lang` - язык интерфейса (ru, en, az, be)
+- `favorites-countries` - массив кодов избранных стран
 
 ## Основано на
 

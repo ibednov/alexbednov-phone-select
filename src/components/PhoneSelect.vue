@@ -10,6 +10,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
+  SelectSeparator,
 } from '@/components/ui/select'
 import { extractPhoneCode } from '@/utils/phone'
 
@@ -18,6 +19,7 @@ const { t } = useI18n()
 const props = defineProps<{
   modelValue: string
   lang?: Language
+  favoritesCountries?: string[]
 }>()
 
 const emit = defineEmits<{
@@ -29,11 +31,22 @@ const searchQuery = ref('')
 const selectedCountry = ref<Country | null>(null)
 const inputValue = ref('')
 
+const favoritesCountries = computed(() => {
+  return props.favoritesCountries?.map(code => getCountryByCode(code, props.lang))
+})
+
 const filteredCountries = computed(() => {
-  return getCountries(props.lang).filter(country =>
+  const countries = getCountries(props.lang)
+  const filtered = countries.filter(country =>
     country.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
     country.phone_code.toString().includes(searchQuery.value)
   )
+
+  if (props.favoritesCountries?.length && favoritesCountries.value.length) {
+    return filtered.filter(country => !props.favoritesCountries?.includes(country.country_code.toLowerCase()))
+  }
+
+  return filtered
 })
 
 const handleCountrySelect = (country: Country) => {
@@ -97,21 +110,35 @@ watch(() => props.modelValue, (newValue) => {
           />
         </div>
         <div class="max-h-60 overflow-y-auto">
-          <SelectItem
-            v-for="country in filteredCountries"
-            :key="country.country_code"
-            :value="country"
-          >
-            <div class="flex items-center gap-2">
-              <img
-                :src="`/src/assets/flags/${country.country_code}.svg`"
-                :alt="country.country_code"
-                class="w-6 h-4"
-              >
-              <span>{{ country.name }}</span>
-              <span class="text-gray-500">+{{ country.phone_code }}</span>
+          <template v-if="props.favoritesCountries?.length && favoritesCountries.length">
+            <div v-for="country in favoritesCountries">
+              <SelectItem :value="country">
+                <div class="flex items-center gap-2">
+                  <img
+                    :src="`/src/assets/flags/${country.country_code}.svg`"
+                    :alt="country.country_code"
+                    class="w-6 h-4"
+                  >
+                  <span>{{ country.name }}</span>
+                  <span class="text-gray-500">+{{ country.phone_code }}</span>
+                </div>
+              </SelectItem>
             </div>
-          </SelectItem>
+            <SelectSeparator />
+          </template>
+          <div v-for="country in filteredCountries.filter(c => !props.favoritesCountries?.includes(c.country_code))" :key="country.country_code">
+            <SelectItem :value="country">
+              <div class="flex items-center gap-2">
+                <img
+                  :src="`/src/assets/flags/${country.country_code}.svg`"
+                  :alt="country.country_code"
+                  class="w-6 h-4"
+                >
+                <span>{{ country.name }}</span>
+                <span class="text-gray-500">+{{ country.phone_code }}</span>
+              </div>
+            </SelectItem>
+          </div>
         </div>
       </SelectContent>
     </Select>

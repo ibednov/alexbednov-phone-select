@@ -1,4 +1,5 @@
-import PhoneSelect from '@/components/PhoneSelect.vue';
-import { getCountryByCode, getCountryByName, getCountries } from '@/utils/countries';
-import { createI18nInstance } from '@/utils/i18n';
-export { PhoneSelect, getCountryByCode, getCountryByName, getCountries, createI18nInstance };
+export * from './utils/countries';
+export * from './utils/phone';
+export * from './utils/translations';
+export type { Language } from './interfaces';
+export { default as PhoneSelect } from './components/PhoneSelect.vue';
