@@ -20,19 +20,34 @@ export default defineConfig({
       formats: ['es', 'umd']
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'vue-i18n'],
       output: {
         globals: {
-          vue: 'Vue'
+          vue: 'Vue',
+          'vue-i18n': 'VueI18n'
         },
-        exports: 'named'
+        exports: 'named',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name?.endsWith('.svg')) {
+            return 'assets/flags/[name][extname]'
+          }
+          return 'assets/[name][extname]'
+        }
       }
-    }
+    },
+    copyPublicDir: false,
+    assetsDir: 'assets',
+    outDir: 'dist',
+    emptyOutDir: true,
+    assetsInlineLimit: 0
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     }
   },
-  assetsInclude: ['**/*.svg']
+  assetsInclude: ['**/*.svg'],
+  optimizeDeps: {
+    exclude: ['fs']
+  }
 })

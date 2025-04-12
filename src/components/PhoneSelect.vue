@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { getCountries, getCountryByCode, type Country } from '@/utils/countries'
 import type { Language } from '@/interfaces'
-import { useI18n } from 'vue-i18n'
 import { Input } from '@/components/ui/input'
 import {
   Select,
@@ -13,8 +12,7 @@ import {
   SelectSeparator,
 } from '@/components/ui/select'
 import { extractPhoneCode } from '@/utils/phone'
-
-const { t } = useI18n()
+import { t, setLanguage } from '@/utils/i18n'
 
 const props = defineProps<{
   modelValue: string
@@ -26,13 +24,23 @@ const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void
 }>()
 
+// Устанавливаем язык
+onMounted(() => {
+  setLanguage(props.lang)
+})
+
 const isOpen = ref(false)
 const searchQuery = ref('')
 const selectedCountry = ref<Country | null>(null)
 const inputValue = ref('')
 
+const getFlagUrl = (code: string) => {
+  return new URL(`../assets/flags/${code}.svg`, import.meta.url).href
+}
+
 const favoritesCountries = computed(() => {
-  return props.favoritesCountries?.map(code => getCountryByCode(code, props.lang))
+  if (!props.favoritesCountries?.length) return []
+  return props.favoritesCountries.map(code => getCountryByCode(code, props.lang))
 })
 
 const filteredCountries = computed(() => {
@@ -43,7 +51,7 @@ const filteredCountries = computed(() => {
   )
 
   if (props.favoritesCountries?.length && favoritesCountries.value.length) {
-    return filtered.filter(country => !props.favoritesCountries?.includes(country.country_code.toLowerCase()))
+    return filtered.filter(country => !props.favoritesCountries?.includes(country.country_code))
   }
 
   return filtered
@@ -78,6 +86,11 @@ watch(() => props.modelValue, (newValue) => {
     }
   }
 }, { immediate: true })
+
+// При изменении языка
+watch(() => props.lang, (newLang) => {
+  setLanguage(newLang)
+})
 </script>
 
 <template>
@@ -91,7 +104,7 @@ watch(() => props.modelValue, (newValue) => {
           <div class="flex items-center gap-2">
             <img
               v-if="selectedCountry"
-              :src="`/src/assets/flags/${selectedCountry.country_code}.svg`"
+              :src="getFlagUrl(selectedCountry.country_code)"
               :alt="selectedCountry.country_code"
               class="w-6 h-4"
             >
@@ -115,7 +128,7 @@ watch(() => props.modelValue, (newValue) => {
               <SelectItem :value="country">
                 <div class="flex items-center gap-2">
                   <img
-                    :src="`/src/assets/flags/${country.country_code}.svg`"
+                    :src="getFlagUrl(country.country_code)"
                     :alt="country.country_code"
                     class="w-6 h-4"
                   >
@@ -126,11 +139,11 @@ watch(() => props.modelValue, (newValue) => {
             </div>
             <SelectSeparator />
           </template>
-          <div v-for="country in filteredCountries.filter(c => !props.favoritesCountries?.includes(c.country_code))" :key="country.country_code">
+          <div v-for="country in filteredCountries">
             <SelectItem :value="country">
               <div class="flex items-center gap-2">
                 <img
-                  :src="`/src/assets/flags/${country.country_code}.svg`"
+                  :src="getFlagUrl(country.country_code)"
                   :alt="country.country_code"
                   class="w-6 h-4"
                 >

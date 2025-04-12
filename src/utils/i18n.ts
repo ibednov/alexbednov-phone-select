@@ -1,16 +1,26 @@
-import { createI18n } from 'vue-i18n'
 import { loadTranslations } from '@/utils/translations'
 import type { Language } from '@/interfaces'
 
-export const createI18nInstance = () => {
-  const messages = loadTranslations()
-  const availableLocales = Object.keys(messages) as Language[]
+let currentLang: Language = 'ru'
+let translations = loadTranslations()
 
-  return createI18n({
-    legacy: false,
-    locale: 'ru',
-    fallbackLocale: 'en',
-    messages,
-    availableLocales
-  })
+export const setLanguage = (lang: Language | undefined) => {
+  if (lang && ['ru', 'en', 'az', 'be'].includes(lang)) {
+    currentLang = lang
+  }
+}
+
+export const t = (key: string) => {
+  const keys = key.split('.')
+  let value: any = translations[currentLang]
+
+  for (const k of keys) {
+    if (value && typeof value === 'object') {
+      value = value[k]
+    } else {
+      return key
+    }
+  }
+
+  return value || key
 }

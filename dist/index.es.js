@@ -1,11 +1,11 @@
-var hr = (e) => {
+var me = (e) => {
   throw TypeError(e);
 };
-var _i = (e, t, n) => t.has(e) || hr("Cannot " + n);
-var hn = (e, t, n) => (_i(e, t, "read from private field"), n ? n.call(e) : t.get(e)), gr = (e, t, n) => t.has(e) ? hr("Cannot add the same private member more than once") : t instanceof WeakSet ? t.add(e) : t.set(e, n);
-import * as yr from "vue";
-import { getCurrentInstance as nt, inject as Wo, shallowRef as Nn, ref as R, computed as k, onBeforeMount as hi, watch as he, onMounted as lt, onUnmounted as Ko, defineComponent as Y, h as Ze, createVNode as ae, Text as gi, Fragment as Nt, isRef as Vn, reactive as Un, unref as N, toRefs as rn, toValue as Je, nextTick as Ue, withDirectives as yi, createElementBlock as Ne, openBlock as H, normalizeClass as Ta, vModelText as vi, getCurrentScope as wa, onScopeDispose as Sa, shallowReadonly as Jt, Comment as bi, mergeProps as be, cloneVNode as Ei, createBlock as ne, withCtx as W, renderSlot as q, customRef as Ti, effectScope as Oa, onBeforeUnmount as Ho, watchEffect as Fe, readonly as wi, provide as Aa, toHandlerKey as Si, camelize as Na, toRef as Oi, createCommentVNode as gt, Teleport as Ca, normalizeStyle as Yo, markRaw as Ai, watchPostEffect as La, mergeDefaults as Ni, createElementVNode as Ve, renderList as bo, withModifiers as vn, normalizeProps as Ia, guardReactiveProps as Pa, resolveDynamicComponent as Ci, createTextVNode as zo, toDisplayString as Ut } from "vue";
-const Li = [
+var st = (e, t, o) => t.has(e) || me("Cannot " + o);
+var l0 = (e, t, o) => (st(e, t, "read from private field"), o ? o.call(e) : t.get(e)), _e = (e, t, o) => t.has(e) ? me("Cannot add the same private member more than once") : t instanceof WeakSet ? t.add(e) : t.set(e, o);
+import * as be from "vue";
+import { computed as S, isRef as m0, reactive as _0, unref as p, toRefs as e0, toValue as g2, getCurrentInstance as V2, ref as C, watch as W, nextTick as r2, defineComponent as V, withDirectives as at, createElementBlock as X, openBlock as P, normalizeClass as Qe, vModelText as dt, shallowRef as ie, getCurrentScope as Xe, onScopeDispose as e3, shallowReadonly as U2, Fragment as Q2, Comment as ft, mergeProps as U, cloneVNode as gt, h as j2, createBlock as N, withCtx as T, renderSlot as Z, customRef as ht, effectScope as t3, onBeforeUnmount as ne, watchEffect as t2, readonly as ut, onMounted as x2, inject as o3, provide as i3, onUnmounted as n3, toHandlerKey as pt, camelize as r3, toRef as kt, createCommentVNode as M2, Teleport as l3, normalizeStyle as re, markRaw as wt, watchPostEffect as c3, mergeDefaults as yt, createVNode as D, createElementVNode as i2, renderList as F0, withModifiers as s0, normalizeProps as s3, guardReactiveProps as a3, resolveDynamicComponent as xt, createTextVNode as le, toDisplayString as D2 } from "vue";
+const vt = [
   {
     country_code: "AF",
     phone_code: 93
@@ -962,12 +962,12 @@ const Li = [
     country_code: "ZW",
     phone_code: 263
   }
-], Ma = "alexbednov-phone-select", ka = {
+], d3 = "alexbednov-phone-select", f3 = {
   author: {
     name: "Alex Bednov",
     authored_by: "Müəllif"
   }
-}, xa = {
+}, g3 = {
   lang: "Dil",
   name: {
     az: "Azərbaycan",
@@ -975,7 +975,7 @@ const Li = [
     ru: "Русский",
     be: "Беларуский"
   }
-}, Ra = {
+}, h3 = {
   AF: "Əfqanıstan",
   AL: "Albaniya",
   DZ: "Əlcəzair",
@@ -1214,9 +1214,9 @@ const Li = [
   YE: "Yəmən",
   ZM: "Zambiya",
   ZW: "Zimbabve"
-}, Ii = {
-  name: Ma,
-  demo: ka,
+}, mt = {
+  name: d3,
+  demo: f3,
   "phone-select": {
     placeholder: "Telefon nömrəsini daxil edin",
     search: "Axtarış...",
@@ -1226,21 +1226,21 @@ const Li = [
     selected_phone_number: "Seçilmiş telefon nömrəsi",
     "select-country": "Ölkə seçin"
   },
-  lang: xa,
-  countries: Ra
-}, Pi = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  lang: g3,
+  countries: h3
+}, _t = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  countries: Ra,
-  default: Ii,
-  demo: ka,
-  lang: xa,
-  name: Ma
-}, Symbol.toStringTag, { value: "Module" })), Da = "alexbednov-phone-select", Fa = {
+  countries: h3,
+  default: mt,
+  demo: f3,
+  lang: g3,
+  name: d3
+}, Symbol.toStringTag, { value: "Module" })), u3 = "alexbednov-phone-select", p3 = {
   author: {
     name: "Александр Беднов",
     authored_by: "Аўтар"
   }
-}, Ba = {
+}, k3 = {
   lang: "Мова",
   name: {
     ru: "Руская",
@@ -1248,7 +1248,7 @@ const Li = [
     az: "Азербайджанская",
     be: "Беларуская"
   }
-}, Va = {
+}, w3 = {
   AF: "Афганістан",
   AL: "Албанія",
   DZ: "Алжыр",
@@ -1487,9 +1487,9 @@ const Li = [
   YE: "Емен",
   ZM: "Замбія",
   ZW: "Зімбабвэ"
-}, Mi = {
-  name: Da,
-  demo: Fa,
+}, bt = {
+  name: u3,
+  demo: p3,
   "phone-select": {
     placeholder: "Увядзіце нумар тэлефона",
     search: "Пошук...",
@@ -1499,22 +1499,22 @@ const Li = [
     selected_phone_number: "Выбраны нумар тэлефона",
     "select-country": "Выберыце краіну"
   },
-  lang: Ba,
-  countries: Va
-}, ki = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  lang: k3,
+  countries: w3
+}, jt = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  countries: Va,
-  default: Mi,
-  demo: Fa,
-  lang: Ba,
-  name: Da
-}, Symbol.toStringTag, { value: "Module" })), $a = "alexbednov-phone-select", Ua = {
+  countries: w3,
+  default: bt,
+  demo: p3,
+  lang: k3,
+  name: u3
+}, Symbol.toStringTag, { value: "Module" })), y3 = "alexbednov-phone-select", x3 = {
   author: {
     name: "Alex Bednov",
     authored_by: "Author",
     mirror: "Mirror"
   }
-}, Ga = {
+}, v3 = {
   lang: "Language",
   name: {
     en: "English",
@@ -1522,7 +1522,7 @@ const Li = [
     az: "Azerbaijani",
     be: "Belarusian"
   }
-}, Wa = {
+}, m3 = {
   AF: "Afghanistan",
   AL: "Albania",
   DZ: "Algeria",
@@ -1761,9 +1761,9 @@ const Li = [
   YE: "Yemen",
   ZM: "Zambia",
   ZW: "Zimbabwe"
-}, xi = {
-  name: $a,
-  demo: Ua,
+}, Mt = {
+  name: y3,
+  demo: x3,
   "phone-select": {
     placeholder: "Choose country",
     search: "Search...",
@@ -1773,21 +1773,21 @@ const Li = [
     selected_phone_number: "Selected phone number",
     "select-country": "Select country"
   },
-  lang: Ga,
-  countries: Wa
-}, Ri = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  lang: v3,
+  countries: m3
+}, At = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  countries: Wa,
-  default: xi,
-  demo: Ua,
-  lang: Ga,
-  name: $a
-}, Symbol.toStringTag, { value: "Module" })), Ka = "alexbednov-phone-select", Ha = {
+  countries: m3,
+  default: Mt,
+  demo: x3,
+  lang: v3,
+  name: y3
+}, Symbol.toStringTag, { value: "Module" })), _3 = "alexbednov-phone-select", b3 = {
   author: {
     name: "Alex Bednov",
     authored_by: "Автор"
   }
-}, Ya = {
+}, j3 = {
   lang: "Язык",
   name: {
     ru: "Русский",
@@ -1795,7 +1795,7 @@ const Li = [
     az: "Азербайджанский",
     be: "Белорусский"
   }
-}, za = {
+}, M3 = {
   AF: "Афганистан",
   AL: "Албания",
   DZ: "Алжир",
@@ -2034,9 +2034,9 @@ const Li = [
   YE: "Йемен",
   ZM: "Замбия",
   ZW: "Зимбабве"
-}, Di = {
-  name: Ka,
-  demo: Ha,
+}, Bt = {
+  name: _3,
+  demo: b3,
   "phone-select": {
     placeholder: "Введите номер телефона",
     search: "Поиск...",
@@ -2046,33 +2046,33 @@ const Li = [
     selected_phone_number: "Выбранный номер телефона",
     "select-country": "Выберите страну"
   },
-  lang: Ya,
-  countries: za
-}, Fi = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  lang: j3,
+  countries: M3
+}, St = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  countries: za,
-  default: Di,
-  demo: Ha,
-  lang: Ya,
-  name: Ka
-}, Symbol.toStringTag, { value: "Module" })), Bi = () => Object.fromEntries(
+  countries: M3,
+  default: Bt,
+  demo: b3,
+  lang: j3,
+  name: _3
+}, Symbol.toStringTag, { value: "Module" })), A3 = () => Object.fromEntries(
   Object.entries(
-    /* @__PURE__ */ Object.assign({ "../lang/az.json": Pi, "../lang/be.json": ki, "../lang/en.json": Ri, "../lang/ru.json": Fi })
+    /* @__PURE__ */ Object.assign({ "../lang/az.json": _t, "../lang/be.json": jt, "../lang/en.json": At, "../lang/ru.json": St })
   ).map(([e, t]) => {
-    var o;
-    return [((o = e.split("/").pop()) == null ? void 0 : o.replace(".json", "")) || "", t.default];
+    var i;
+    return [((i = e.split("/").pop()) == null ? void 0 : i.replace(".json", "")) || "", t.default];
   })
-), Vi = Bi(), bn = (e = "ru") => Li.map((t) => ({
+), Ct = A3(), a0 = (e = "ru") => vt.map((t) => ({
   ...t,
-  name: Vi[e].countries[t.country_code] || t.country_code
-})), $i = (e, t = "ru") => bn(t).find((n) => n.country_code.toLowerCase() === e.toLowerCase()), Dp = (e, t = "ru") => bn(t).find((n) => n.country_code.toLowerCase() === e.toLowerCase()), Fp = (e, t = "ru") => bn(t).find((n) => n.phone_code === e), Bp = (e) => `/src/assets/flags/${e}.svg`;
-function Vp(e, t) {
-  const n = e.startsWith("+") ? e.slice(1) : e;
+  name: Ct[e].countries[t.country_code] || t.country_code
+})), Et = (e, t = "ru") => a0(t).find((o) => o.country_code.toLowerCase() === e.toLowerCase()), p6 = (e, t = "ru") => a0(t).find((o) => o.country_code.toLowerCase() === e.toLowerCase()), k6 = (e, t = "ru") => a0(t).find((o) => o.phone_code === e), w6 = (e) => `/src/assets/flags/${e}.svg`;
+function y6(e, t) {
+  const o = e.startsWith("+") ? e.slice(1) : e;
   return t.find(
-    (o) => o.phone_code.toString().startsWith(n)
+    (i) => i.phone_code.toString().startsWith(o)
   ) || null;
 }
-function Ui(e) {
+function Tt(e) {
   const t = e.match(/^(\+\d+)(.*)$/);
   return t ? {
     code: t[1],
@@ -2082,3162 +2082,96 @@ function Ui(e) {
     number: e
   };
 }
-/*!
-  * shared v9.14.4
-  * (c) 2025 kazuya kawaguchi
-  * Released under the MIT License.
-  */
-const yt = typeof window < "u";
-let Ge, Gt;
-if (process.env.NODE_ENV !== "production") {
-  const e = yt && window.performance;
-  e && e.mark && e.measure && e.clearMarks && // @ts-ignore browser compat
-  e.clearMeasures && (Ge = (t) => {
-    e.mark(t);
-  }, Gt = (t, n, o) => {
-    e.measure(t, n, o), e.clearMarks(n), e.clearMarks(o);
-  });
-}
-const Gi = /\{([0-9a-zA-Z]+)\}/g;
-function jo(e, ...t) {
-  return t.length === 1 && Q(t[0]) && (t = t[0]), (!t || !t.hasOwnProperty) && (t = {}), e.replace(Gi, (n, o) => t.hasOwnProperty(o) ? t[o] : "");
-}
-const Et = (e, t = !1) => t ? Symbol.for(e) : Symbol(e), Wi = (e, t, n) => Ki({ l: e, k: t, s: n }), Ki = (e) => JSON.stringify(e).replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029").replace(/\u0027/g, "\\u0027"), Ae = (e) => typeof e == "number" && isFinite(e), Hi = (e) => Xa(e) === "[object Date]", an = (e) => Xa(e) === "[object RegExp]", jn = (e) => X(e) && Object.keys(e).length === 0, Le = Object.assign, Yi = Object.create, ie = (e = null) => Yi(e);
-let vr;
-const ht = () => vr || (vr = typeof globalThis < "u" ? globalThis : typeof self < "u" ? self : typeof window < "u" ? window : typeof global < "u" ? global : ie());
-function br(e) {
-  return e.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
-}
-const zi = Object.prototype.hasOwnProperty;
-function Xe(e, t) {
-  return zi.call(e, t);
-}
-const ve = Array.isArray, fe = (e) => typeof e == "function", x = (e) => typeof e == "string", ue = (e) => typeof e == "boolean", Q = (e) => e !== null && typeof e == "object", ji = (e) => Q(e) && fe(e.then) && fe(e.catch), ja = Object.prototype.toString, Xa = (e) => ja.call(e), X = (e) => {
-  if (!Q(e))
-    return !1;
-  const t = Object.getPrototypeOf(e);
-  return t === null || t.constructor === Object;
-}, Xi = (e) => e == null ? "" : ve(e) || X(e) && e.toString === ja ? JSON.stringify(e, null, 2) : String(e);
-function Zi(e, t = "") {
-  return e.reduce((n, o, r) => r === 0 ? n + o : n + t + o, "");
-}
-const Er = 2;
-function Ji(e, t = 0, n = e.length) {
-  const o = e.split(/\r?\n/);
-  let r = 0;
-  const a = [];
-  for (let s = 0; s < o.length; s++)
-    if (r += o[s].length + 1, r >= t) {
-      for (let i = s - Er; i <= s + Er || n > r; i++) {
-        if (i < 0 || i >= o.length)
-          continue;
-        const l = i + 1;
-        a.push(`${l}${" ".repeat(3 - String(l).length)}|  ${o[i]}`);
-        const c = o[i].length;
-        if (i === s) {
-          const d = t - (r - c) + 1, u = Math.max(1, n > r ? c - d : n - t);
-          a.push("   |  " + " ".repeat(d) + "^".repeat(u));
-        } else if (i > s) {
-          if (n > r) {
-            const d = Math.max(Math.min(n - r, c), 1);
-            a.push("   |  " + "^".repeat(d));
-          }
-          r += c + 1;
-        }
-      }
-      break;
-    }
-  return a.join(`
-`);
-}
-function Xn(e) {
-  let t = e;
-  return () => ++t;
-}
-function Tt(e, t) {
-  typeof console < "u" && (console.warn("[intlify] " + e), t && console.warn(t.stack));
-}
-const Tr = {};
-function Za(e) {
-  Tr[e] || (Tr[e] = !0, Tt(e));
-}
-function qi() {
-  const e = /* @__PURE__ */ new Map();
-  return {
-    events: e,
-    on(n, o) {
-      const r = e.get(n);
-      r && r.push(o) || e.set(n, [o]);
-    },
-    off(n, o) {
-      const r = e.get(n);
-      r && r.splice(r.indexOf(o) >>> 0, 1);
-    },
-    emit(n, o) {
-      (e.get(n) || []).slice().map((r) => r(o)), (e.get("*") || []).slice().map((r) => r(n, o));
-    }
-  };
-}
-const In = (e) => !Q(e) || ve(e);
-function $n(e, t) {
-  if (In(e) || In(t))
-    throw new Error("Invalid value");
-  const n = [{ src: e, des: t }];
-  for (; n.length; ) {
-    const { src: o, des: r } = n.pop();
-    Object.keys(o).forEach((a) => {
-      a !== "__proto__" && (Q(o[a]) && !Q(r[a]) && (r[a] = Array.isArray(o[a]) ? [] : ie()), In(r[a]) || In(o[a]) ? r[a] = o[a] : n.push({ src: o[a], des: r[a] }));
-    });
-  }
-}
-/*!
-  * message-compiler v9.14.4
-  * (c) 2025 kazuya kawaguchi
-  * Released under the MIT License.
-  */
-function Qi(e, t, n) {
-  return { line: e, column: t, offset: n };
-}
-function Gn(e, t, n) {
-  return { start: e, end: t };
-}
-const el = /\{([0-9a-zA-Z]+)\}/g;
-function Ja(e, ...t) {
-  return t.length === 1 && tl(t[0]) && (t = t[0]), (!t || !t.hasOwnProperty) && (t = {}), e.replace(el, (n, o) => t.hasOwnProperty(o) ? t[o] : "");
-}
-const qa = Object.assign, wr = (e) => typeof e == "string", tl = (e) => e !== null && typeof e == "object";
-function Qa(e, t = "") {
-  return e.reduce((n, o, r) => r === 0 ? n + o : n + t + o, "");
-}
-const Zn = {
-  USE_MODULO_SYNTAX: 1,
-  __EXTEND_POINT__: 2
-}, nl = {
-  [Zn.USE_MODULO_SYNTAX]: "Use modulo before '{{0}}'."
-};
-function ol(e, t, ...n) {
-  const o = Ja(nl[e], ...n || []), r = { message: String(o), code: e };
-  return t && (r.location = t), r;
-}
-const K = {
-  // tokenizer error codes
-  EXPECTED_TOKEN: 1,
-  INVALID_TOKEN_IN_PLACEHOLDER: 2,
-  UNTERMINATED_SINGLE_QUOTE_IN_PLACEHOLDER: 3,
-  UNKNOWN_ESCAPE_SEQUENCE: 4,
-  INVALID_UNICODE_ESCAPE_SEQUENCE: 5,
-  UNBALANCED_CLOSING_BRACE: 6,
-  UNTERMINATED_CLOSING_BRACE: 7,
-  EMPTY_PLACEHOLDER: 8,
-  NOT_ALLOW_NEST_PLACEHOLDER: 9,
-  INVALID_LINKED_FORMAT: 10,
-  // parser error codes
-  MUST_HAVE_MESSAGES_IN_PLURAL: 11,
-  UNEXPECTED_EMPTY_LINKED_MODIFIER: 12,
-  UNEXPECTED_EMPTY_LINKED_KEY: 13,
-  UNEXPECTED_LEXICAL_ANALYSIS: 14,
-  // generator error codes
-  UNHANDLED_CODEGEN_NODE_TYPE: 15,
-  // minifier error codes
-  UNHANDLED_MINIFIER_NODE_TYPE: 16,
-  // Special value for higher-order compilers to pick up the last code
-  // to avoid collision of error codes. This should always be kept as the last
-  // item.
-  __EXTEND_POINT__: 17
-}, rl = {
-  // tokenizer error messages
-  [K.EXPECTED_TOKEN]: "Expected token: '{0}'",
-  [K.INVALID_TOKEN_IN_PLACEHOLDER]: "Invalid token in placeholder: '{0}'",
-  [K.UNTERMINATED_SINGLE_QUOTE_IN_PLACEHOLDER]: "Unterminated single quote in placeholder",
-  [K.UNKNOWN_ESCAPE_SEQUENCE]: "Unknown escape sequence: \\{0}",
-  [K.INVALID_UNICODE_ESCAPE_SEQUENCE]: "Invalid unicode escape sequence: {0}",
-  [K.UNBALANCED_CLOSING_BRACE]: "Unbalanced closing brace",
-  [K.UNTERMINATED_CLOSING_BRACE]: "Unterminated closing brace",
-  [K.EMPTY_PLACEHOLDER]: "Empty placeholder",
-  [K.NOT_ALLOW_NEST_PLACEHOLDER]: "Not allowed nest placeholder",
-  [K.INVALID_LINKED_FORMAT]: "Invalid linked format",
-  // parser error messages
-  [K.MUST_HAVE_MESSAGES_IN_PLURAL]: "Plural must have messages",
-  [K.UNEXPECTED_EMPTY_LINKED_MODIFIER]: "Unexpected empty linked modifier",
-  [K.UNEXPECTED_EMPTY_LINKED_KEY]: "Unexpected empty linked key",
-  [K.UNEXPECTED_LEXICAL_ANALYSIS]: "Unexpected lexical analysis in token: '{0}'",
-  // generator error messages
-  [K.UNHANDLED_CODEGEN_NODE_TYPE]: "unhandled codegen node type: '{0}'",
-  // minimizer error messages
-  [K.UNHANDLED_MINIFIER_NODE_TYPE]: "unhandled mimifier node type: '{0}'"
-};
-function cn(e, t, n = {}) {
-  const { domain: o, messages: r, args: a } = n, s = Ja((r || rl)[e] || "", ...a || []), i = new SyntaxError(String(s));
-  return i.code = e, t && (i.location = t), i.domain = o, i;
-}
-function al(e) {
-  throw e;
-}
-const sl = /<\/?[\w\s="/.':;#-\/]+>/, il = (e) => sl.test(e), ft = " ", ll = "\r", Me = `
-`, cl = "\u2028", ul = "\u2029";
-function dl(e) {
-  const t = e;
-  let n = 0, o = 1, r = 1, a = 0;
-  const s = (A) => t[A] === ll && t[A + 1] === Me, i = (A) => t[A] === Me, l = (A) => t[A] === ul, c = (A) => t[A] === cl, d = (A) => s(A) || i(A) || l(A) || c(A), u = () => n, f = () => o, m = () => r, _ = () => a, y = (A) => s(A) || l(A) || c(A) ? Me : t[A], v = () => y(n), S = () => y(n + a);
-  function w() {
-    return a = 0, d(n) && (o++, r = 0), s(n) && n++, n++, r++, t[n];
-  }
-  function p() {
-    return s(n + a) && a++, a++, t[n + a];
-  }
-  function h() {
-    n = 0, o = 1, r = 1, a = 0;
-  }
-  function T(A = 0) {
-    a = A;
-  }
-  function E() {
-    const A = n + a;
-    for (; A !== n; )
-      w();
-    a = 0;
-  }
-  return {
-    index: u,
-    line: f,
-    column: m,
-    peekOffset: _,
-    charAt: y,
-    currentChar: v,
-    currentPeek: S,
-    next: w,
-    peek: p,
-    reset: h,
-    resetPeek: T,
-    skipToPeek: E
-  };
-}
-const St = void 0, fl = ".", Sr = "'", pl = "tokenizer";
-function ml(e, t = {}) {
-  const n = t.location !== !1, o = dl(e), r = () => o.index(), a = () => Qi(o.line(), o.column(), o.index()), s = a(), i = r(), l = {
-    currentType: 14,
-    offset: i,
-    startLoc: s,
-    endLoc: s,
-    lastType: 14,
-    lastOffset: i,
-    lastStartLoc: s,
-    lastEndLoc: s,
-    braceNest: 0,
-    inLinked: !1,
-    text: ""
-  }, c = () => l, { onError: d } = t;
-  function u(g, b, I, ...G) {
-    const me = c();
-    if (b.column += I, b.offset += I, d) {
-      const ce = n ? Gn(me.startLoc, b) : null, se = cn(g, ce, {
-        domain: pl,
-        args: G
-      });
-      d(se);
-    }
-  }
-  function f(g, b, I) {
-    g.endLoc = a(), g.currentType = b;
-    const G = { type: b };
-    return n && (G.loc = Gn(g.startLoc, g.endLoc)), I != null && (G.value = I), G;
-  }
-  const m = (g) => f(
-    g,
-    14
-    /* TokenTypes.EOF */
-  );
-  function _(g, b) {
-    return g.currentChar() === b ? (g.next(), b) : (u(K.EXPECTED_TOKEN, a(), 0, b), "");
-  }
-  function y(g) {
-    let b = "";
-    for (; g.currentPeek() === ft || g.currentPeek() === Me; )
-      b += g.currentPeek(), g.peek();
-    return b;
-  }
-  function v(g) {
-    const b = y(g);
-    return g.skipToPeek(), b;
-  }
-  function S(g) {
-    if (g === St)
-      return !1;
-    const b = g.charCodeAt(0);
-    return b >= 97 && b <= 122 || // a-z
-    b >= 65 && b <= 90 || // A-Z
-    b === 95;
-  }
-  function w(g) {
-    if (g === St)
-      return !1;
-    const b = g.charCodeAt(0);
-    return b >= 48 && b <= 57;
-  }
-  function p(g, b) {
-    const { currentType: I } = b;
-    if (I !== 2)
-      return !1;
-    y(g);
-    const G = S(g.currentPeek());
-    return g.resetPeek(), G;
-  }
-  function h(g, b) {
-    const { currentType: I } = b;
-    if (I !== 2)
-      return !1;
-    y(g);
-    const G = g.currentPeek() === "-" ? g.peek() : g.currentPeek(), me = w(G);
-    return g.resetPeek(), me;
-  }
-  function T(g, b) {
-    const { currentType: I } = b;
-    if (I !== 2)
-      return !1;
-    y(g);
-    const G = g.currentPeek() === Sr;
-    return g.resetPeek(), G;
-  }
-  function E(g, b) {
-    const { currentType: I } = b;
-    if (I !== 8)
-      return !1;
-    y(g);
-    const G = g.currentPeek() === ".";
-    return g.resetPeek(), G;
-  }
-  function A(g, b) {
-    const { currentType: I } = b;
-    if (I !== 9)
-      return !1;
-    y(g);
-    const G = S(g.currentPeek());
-    return g.resetPeek(), G;
-  }
-  function O(g, b) {
-    const { currentType: I } = b;
-    if (!(I === 8 || I === 12))
-      return !1;
-    y(g);
-    const G = g.currentPeek() === ":";
-    return g.resetPeek(), G;
-  }
-  function L(g, b) {
-    const { currentType: I } = b;
-    if (I !== 10)
-      return !1;
-    const G = () => {
-      const ce = g.currentPeek();
-      return ce === "{" ? S(g.peek()) : ce === "@" || ce === "%" || ce === "|" || ce === ":" || ce === "." || ce === ft || !ce ? !1 : ce === Me ? (g.peek(), G()) : $(g, !1);
-    }, me = G();
-    return g.resetPeek(), me;
-  }
-  function V(g) {
-    y(g);
-    const b = g.currentPeek() === "|";
-    return g.resetPeek(), b;
-  }
-  function U(g) {
-    const b = y(g), I = g.currentPeek() === "%" && g.peek() === "{";
-    return g.resetPeek(), {
-      isModulo: I,
-      hasSpace: b.length > 0
-    };
-  }
-  function $(g, b = !0) {
-    const I = (me = !1, ce = "", se = !1) => {
-      const C = g.currentPeek();
-      return C === "{" ? ce === "%" ? !1 : me : C === "@" || !C ? ce === "%" ? !0 : me : C === "%" ? (g.peek(), I(me, "%", !0)) : C === "|" ? ce === "%" || se ? !0 : !(ce === ft || ce === Me) : C === ft ? (g.peek(), I(!0, ft, se)) : C === Me ? (g.peek(), I(!0, Me, se)) : !0;
-    }, G = I();
-    return b && g.resetPeek(), G;
-  }
-  function j(g, b) {
-    const I = g.currentChar();
-    return I === St ? St : b(I) ? (g.next(), I) : null;
-  }
-  function ee(g) {
-    const b = g.charCodeAt(0);
-    return b >= 97 && b <= 122 || // a-z
-    b >= 65 && b <= 90 || // A-Z
-    b >= 48 && b <= 57 || // 0-9
-    b === 95 || // _
-    b === 36;
-  }
-  function le(g) {
-    return j(g, ee);
-  }
-  function Z(g) {
-    const b = g.charCodeAt(0);
-    return b >= 97 && b <= 122 || // a-z
-    b >= 65 && b <= 90 || // A-Z
-    b >= 48 && b <= 57 || // 0-9
-    b === 95 || // _
-    b === 36 || // $
-    b === 45;
-  }
-  function te(g) {
-    return j(g, Z);
-  }
-  function D(g) {
-    const b = g.charCodeAt(0);
-    return b >= 48 && b <= 57;
-  }
-  function Ee(g) {
-    return j(g, D);
-  }
-  function Pe(g) {
-    const b = g.charCodeAt(0);
-    return b >= 48 && b <= 57 || // 0-9
-    b >= 65 && b <= 70 || // A-F
-    b >= 97 && b <= 102;
-  }
-  function ot(g) {
-    return j(g, Pe);
-  }
-  function ye(g) {
-    let b = "", I = "";
-    for (; b = Ee(g); )
-      I += b;
-    return I;
-  }
-  function pe(g) {
-    v(g);
-    const b = g.currentChar();
-    return b !== "%" && u(K.EXPECTED_TOKEN, a(), 0, b), g.next(), "%";
-  }
-  function de(g) {
-    let b = "";
-    for (; ; ) {
-      const I = g.currentChar();
-      if (I === "{" || I === "}" || I === "@" || I === "|" || !I)
-        break;
-      if (I === "%")
-        if ($(g))
-          b += I, g.next();
-        else
-          break;
-      else if (I === ft || I === Me)
-        if ($(g))
-          b += I, g.next();
-        else {
-          if (V(g))
-            break;
-          b += I, g.next();
-        }
-      else
-        b += I, g.next();
-    }
-    return b;
-  }
-  function Ke(g) {
-    v(g);
-    let b = "", I = "";
-    for (; b = te(g); )
-      I += b;
-    return g.currentChar() === St && u(K.UNTERMINATED_CLOSING_BRACE, a(), 0), I;
-  }
-  function ut(g) {
-    v(g);
-    let b = "";
-    return g.currentChar() === "-" ? (g.next(), b += `-${ye(g)}`) : b += ye(g), g.currentChar() === St && u(K.UNTERMINATED_CLOSING_BRACE, a(), 0), b;
-  }
-  function J(g) {
-    return g !== Sr && g !== Me;
-  }
-  function Ce(g) {
-    v(g), _(g, "'");
-    let b = "", I = "";
-    for (; b = j(g, J); )
-      b === "\\" ? I += Se(g) : I += b;
-    const G = g.currentChar();
-    return G === Me || G === St ? (u(K.UNTERMINATED_SINGLE_QUOTE_IN_PLACEHOLDER, a(), 0), G === Me && (g.next(), _(g, "'")), I) : (_(g, "'"), I);
-  }
-  function Se(g) {
-    const b = g.currentChar();
-    switch (b) {
-      case "\\":
-      case "'":
-        return g.next(), `\\${b}`;
-      case "u":
-        return Te(g, b, 4);
-      case "U":
-        return Te(g, b, 6);
-      default:
-        return u(K.UNKNOWN_ESCAPE_SEQUENCE, a(), 0, b), "";
-    }
-  }
-  function Te(g, b, I) {
-    _(g, b);
-    let G = "";
-    for (let me = 0; me < I; me++) {
-      const ce = ot(g);
-      if (!ce) {
-        u(K.INVALID_UNICODE_ESCAPE_SEQUENCE, a(), 0, `\\${b}${G}${g.currentChar()}`);
-        break;
-      }
-      G += ce;
-    }
-    return `\\${b}${G}`;
-  }
-  function Be(g) {
-    return g !== "{" && g !== "}" && g !== ft && g !== Me;
-  }
-  function xe(g) {
-    v(g);
-    let b = "", I = "";
-    for (; b = j(g, Be); )
-      I += b;
-    return I;
-  }
-  function dt(g) {
-    let b = "", I = "";
-    for (; b = le(g); )
-      I += b;
-    return I;
-  }
-  function M(g) {
-    const b = (I) => {
-      const G = g.currentChar();
-      return G === "{" || G === "%" || G === "@" || G === "|" || G === "(" || G === ")" || !G || G === ft ? I : (I += G, g.next(), b(I));
-    };
-    return b("");
-  }
-  function oe(g) {
-    v(g);
-    const b = _(
-      g,
-      "|"
-      /* TokenChars.Pipe */
-    );
-    return v(g), b;
-  }
-  function mn(g, b) {
-    let I = null;
-    switch (g.currentChar()) {
-      case "{":
-        return b.braceNest >= 1 && u(K.NOT_ALLOW_NEST_PLACEHOLDER, a(), 0), g.next(), I = f(
-          b,
-          2,
-          "{"
-          /* TokenChars.BraceLeft */
-        ), v(g), b.braceNest++, I;
-      case "}":
-        return b.braceNest > 0 && b.currentType === 2 && u(K.EMPTY_PLACEHOLDER, a(), 0), g.next(), I = f(
-          b,
-          3,
-          "}"
-          /* TokenChars.BraceRight */
-        ), b.braceNest--, b.braceNest > 0 && v(g), b.inLinked && b.braceNest === 0 && (b.inLinked = !1), I;
-      case "@":
-        return b.braceNest > 0 && u(K.UNTERMINATED_CLOSING_BRACE, a(), 0), I = Dt(g, b) || m(b), b.braceNest = 0, I;
-      default: {
-        let me = !0, ce = !0, se = !0;
-        if (V(g))
-          return b.braceNest > 0 && u(K.UNTERMINATED_CLOSING_BRACE, a(), 0), I = f(b, 1, oe(g)), b.braceNest = 0, b.inLinked = !1, I;
-        if (b.braceNest > 0 && (b.currentType === 5 || b.currentType === 6 || b.currentType === 7))
-          return u(K.UNTERMINATED_CLOSING_BRACE, a(), 0), b.braceNest = 0, _n(g, b);
-        if (me = p(g, b))
-          return I = f(b, 5, Ke(g)), v(g), I;
-        if (ce = h(g, b))
-          return I = f(b, 6, ut(g)), v(g), I;
-        if (se = T(g, b))
-          return I = f(b, 7, Ce(g)), v(g), I;
-        if (!me && !ce && !se)
-          return I = f(b, 13, xe(g)), u(K.INVALID_TOKEN_IN_PLACEHOLDER, a(), 0, I.value), v(g), I;
-        break;
-      }
-    }
-    return I;
-  }
-  function Dt(g, b) {
-    const { currentType: I } = b;
-    let G = null;
-    const me = g.currentChar();
-    switch ((I === 8 || I === 9 || I === 12 || I === 10) && (me === Me || me === ft) && u(K.INVALID_LINKED_FORMAT, a(), 0), me) {
-      case "@":
-        return g.next(), G = f(
-          b,
-          8,
-          "@"
-          /* TokenChars.LinkedAlias */
-        ), b.inLinked = !0, G;
-      case ".":
-        return v(g), g.next(), f(
-          b,
-          9,
-          "."
-          /* TokenChars.LinkedDot */
-        );
-      case ":":
-        return v(g), g.next(), f(
-          b,
-          10,
-          ":"
-          /* TokenChars.LinkedDelimiter */
-        );
-      default:
-        return V(g) ? (G = f(b, 1, oe(g)), b.braceNest = 0, b.inLinked = !1, G) : E(g, b) || O(g, b) ? (v(g), Dt(g, b)) : A(g, b) ? (v(g), f(b, 12, dt(g))) : L(g, b) ? (v(g), me === "{" ? mn(g, b) || G : f(b, 11, M(g))) : (I === 8 && u(K.INVALID_LINKED_FORMAT, a(), 0), b.braceNest = 0, b.inLinked = !1, _n(g, b));
-    }
-  }
-  function _n(g, b) {
-    let I = {
-      type: 14
-      /* TokenTypes.EOF */
-    };
-    if (b.braceNest > 0)
-      return mn(g, b) || m(b);
-    if (b.inLinked)
-      return Dt(g, b) || m(b);
-    switch (g.currentChar()) {
-      case "{":
-        return mn(g, b) || m(b);
-      case "}":
-        return u(K.UNBALANCED_CLOSING_BRACE, a(), 0), g.next(), f(
-          b,
-          3,
-          "}"
-          /* TokenChars.BraceRight */
-        );
-      case "@":
-        return Dt(g, b) || m(b);
-      default: {
-        if (V(g))
-          return I = f(b, 1, oe(g)), b.braceNest = 0, b.inLinked = !1, I;
-        const { isModulo: me, hasSpace: ce } = U(g);
-        if (me)
-          return ce ? f(b, 0, de(g)) : f(b, 4, pe(g));
-        if ($(g))
-          return f(b, 0, de(g));
-        break;
-      }
-    }
-    return I;
-  }
-  function so() {
-    const { currentType: g, offset: b, startLoc: I, endLoc: G } = l;
-    return l.lastType = g, l.lastOffset = b, l.lastStartLoc = I, l.lastEndLoc = G, l.offset = r(), l.startLoc = a(), o.currentChar() === St ? f(
-      l,
-      14
-      /* TokenTypes.EOF */
-    ) : _n(o, l);
-  }
-  return {
-    nextToken: so,
-    currentOffset: r,
-    currentPosition: a,
-    context: c
-  };
-}
-const _l = "parser", hl = /(?:\\\\|\\'|\\u([0-9a-fA-F]{4})|\\U([0-9a-fA-F]{6}))/g;
-function gl(e, t, n) {
-  switch (e) {
-    case "\\\\":
-      return "\\";
-    case "\\'":
-      return "'";
-    default: {
-      const o = parseInt(t || n, 16);
-      return o <= 55295 || o >= 57344 ? String.fromCodePoint(o) : "�";
-    }
-  }
-}
-function yl(e = {}) {
-  const t = e.location !== !1, { onError: n, onWarn: o } = e;
-  function r(p, h, T, E, ...A) {
-    const O = p.currentPosition();
-    if (O.offset += E, O.column += E, n) {
-      const L = t ? Gn(T, O) : null, V = cn(h, L, {
-        domain: _l,
-        args: A
-      });
-      n(V);
-    }
-  }
-  function a(p, h, T, E, ...A) {
-    const O = p.currentPosition();
-    if (O.offset += E, O.column += E, o) {
-      const L = t ? Gn(T, O) : null;
-      o(ol(h, L, A));
-    }
-  }
-  function s(p, h, T) {
-    const E = { type: p };
-    return t && (E.start = h, E.end = h, E.loc = { start: T, end: T }), E;
-  }
-  function i(p, h, T, E) {
-    t && (p.end = h, p.loc && (p.loc.end = T));
-  }
-  function l(p, h) {
-    const T = p.context(), E = s(3, T.offset, T.startLoc);
-    return E.value = h, i(E, p.currentOffset(), p.currentPosition()), E;
-  }
-  function c(p, h) {
-    const T = p.context(), { lastOffset: E, lastStartLoc: A } = T, O = s(5, E, A);
-    return O.index = parseInt(h, 10), p.nextToken(), i(O, p.currentOffset(), p.currentPosition()), O;
-  }
-  function d(p, h, T) {
-    const E = p.context(), { lastOffset: A, lastStartLoc: O } = E, L = s(4, A, O);
-    return L.key = h, T === !0 && (L.modulo = !0), p.nextToken(), i(L, p.currentOffset(), p.currentPosition()), L;
-  }
-  function u(p, h) {
-    const T = p.context(), { lastOffset: E, lastStartLoc: A } = T, O = s(9, E, A);
-    return O.value = h.replace(hl, gl), p.nextToken(), i(O, p.currentOffset(), p.currentPosition()), O;
-  }
-  function f(p) {
-    const h = p.nextToken(), T = p.context(), { lastOffset: E, lastStartLoc: A } = T, O = s(8, E, A);
-    return h.type !== 12 ? (r(p, K.UNEXPECTED_EMPTY_LINKED_MODIFIER, T.lastStartLoc, 0), O.value = "", i(O, E, A), {
-      nextConsumeToken: h,
-      node: O
-    }) : (h.value == null && r(p, K.UNEXPECTED_LEXICAL_ANALYSIS, T.lastStartLoc, 0, ze(h)), O.value = h.value || "", i(O, p.currentOffset(), p.currentPosition()), {
-      node: O
-    });
-  }
-  function m(p, h) {
-    const T = p.context(), E = s(7, T.offset, T.startLoc);
-    return E.value = h, i(E, p.currentOffset(), p.currentPosition()), E;
-  }
-  function _(p) {
-    const h = p.context(), T = s(6, h.offset, h.startLoc);
-    let E = p.nextToken();
-    if (E.type === 9) {
-      const A = f(p);
-      T.modifier = A.node, E = A.nextConsumeToken || p.nextToken();
-    }
-    switch (E.type !== 10 && r(p, K.UNEXPECTED_LEXICAL_ANALYSIS, h.lastStartLoc, 0, ze(E)), E = p.nextToken(), E.type === 2 && (E = p.nextToken()), E.type) {
-      case 11:
-        E.value == null && r(p, K.UNEXPECTED_LEXICAL_ANALYSIS, h.lastStartLoc, 0, ze(E)), T.key = m(p, E.value || "");
-        break;
-      case 5:
-        E.value == null && r(p, K.UNEXPECTED_LEXICAL_ANALYSIS, h.lastStartLoc, 0, ze(E)), T.key = d(p, E.value || "");
-        break;
-      case 6:
-        E.value == null && r(p, K.UNEXPECTED_LEXICAL_ANALYSIS, h.lastStartLoc, 0, ze(E)), T.key = c(p, E.value || "");
-        break;
-      case 7:
-        E.value == null && r(p, K.UNEXPECTED_LEXICAL_ANALYSIS, h.lastStartLoc, 0, ze(E)), T.key = u(p, E.value || "");
-        break;
-      default: {
-        r(p, K.UNEXPECTED_EMPTY_LINKED_KEY, h.lastStartLoc, 0);
-        const A = p.context(), O = s(7, A.offset, A.startLoc);
-        return O.value = "", i(O, A.offset, A.startLoc), T.key = O, i(T, A.offset, A.startLoc), {
-          nextConsumeToken: E,
-          node: T
-        };
-      }
-    }
-    return i(T, p.currentOffset(), p.currentPosition()), {
-      node: T
-    };
-  }
-  function y(p) {
-    const h = p.context(), T = h.currentType === 1 ? p.currentOffset() : h.offset, E = h.currentType === 1 ? h.endLoc : h.startLoc, A = s(2, T, E);
-    A.items = [];
-    let O = null, L = null;
-    do {
-      const $ = O || p.nextToken();
-      switch (O = null, $.type) {
-        case 0:
-          $.value == null && r(p, K.UNEXPECTED_LEXICAL_ANALYSIS, h.lastStartLoc, 0, ze($)), A.items.push(l(p, $.value || ""));
-          break;
-        case 6:
-          $.value == null && r(p, K.UNEXPECTED_LEXICAL_ANALYSIS, h.lastStartLoc, 0, ze($)), A.items.push(c(p, $.value || ""));
-          break;
-        case 4:
-          L = !0;
-          break;
-        case 5:
-          $.value == null && r(p, K.UNEXPECTED_LEXICAL_ANALYSIS, h.lastStartLoc, 0, ze($)), A.items.push(d(p, $.value || "", !!L)), L && (a(p, Zn.USE_MODULO_SYNTAX, h.lastStartLoc, 0, ze($)), L = null);
-          break;
-        case 7:
-          $.value == null && r(p, K.UNEXPECTED_LEXICAL_ANALYSIS, h.lastStartLoc, 0, ze($)), A.items.push(u(p, $.value || ""));
-          break;
-        case 8: {
-          const j = _(p);
-          A.items.push(j.node), O = j.nextConsumeToken || null;
-          break;
-        }
-      }
-    } while (h.currentType !== 14 && h.currentType !== 1);
-    const V = h.currentType === 1 ? h.lastOffset : p.currentOffset(), U = h.currentType === 1 ? h.lastEndLoc : p.currentPosition();
-    return i(A, V, U), A;
-  }
-  function v(p, h, T, E) {
-    const A = p.context();
-    let O = E.items.length === 0;
-    const L = s(1, h, T);
-    L.cases = [], L.cases.push(E);
-    do {
-      const V = y(p);
-      O || (O = V.items.length === 0), L.cases.push(V);
-    } while (A.currentType !== 14);
-    return O && r(p, K.MUST_HAVE_MESSAGES_IN_PLURAL, T, 0), i(L, p.currentOffset(), p.currentPosition()), L;
-  }
-  function S(p) {
-    const h = p.context(), { offset: T, startLoc: E } = h, A = y(p);
-    return h.currentType === 14 ? A : v(p, T, E, A);
-  }
-  function w(p) {
-    const h = ml(p, qa({}, e)), T = h.context(), E = s(0, T.offset, T.startLoc);
-    return t && E.loc && (E.loc.source = p), E.body = S(h), e.onCacheKey && (E.cacheKey = e.onCacheKey(p)), T.currentType !== 14 && r(h, K.UNEXPECTED_LEXICAL_ANALYSIS, T.lastStartLoc, 0, p[T.offset] || ""), i(E, h.currentOffset(), h.currentPosition()), E;
-  }
-  return { parse: w };
-}
-function ze(e) {
-  if (e.type === 14)
-    return "EOF";
-  const t = (e.value || "").replace(/\r?\n/gu, "\\n");
-  return t.length > 10 ? t.slice(0, 9) + "…" : t;
-}
-function vl(e, t = {}) {
-  const n = {
-    ast: e,
-    helpers: /* @__PURE__ */ new Set()
-  };
-  return { context: () => n, helper: (a) => (n.helpers.add(a), a) };
-}
-function Or(e, t) {
-  for (let n = 0; n < e.length; n++)
-    Xo(e[n], t);
-}
-function Xo(e, t) {
-  switch (e.type) {
-    case 1:
-      Or(e.cases, t), t.helper(
-        "plural"
-        /* HelperNameMap.PLURAL */
-      );
-      break;
-    case 2:
-      Or(e.items, t);
-      break;
-    case 6: {
-      Xo(e.key, t), t.helper(
-        "linked"
-        /* HelperNameMap.LINKED */
-      ), t.helper(
-        "type"
-        /* HelperNameMap.TYPE */
-      );
-      break;
-    }
-    case 5:
-      t.helper(
-        "interpolate"
-        /* HelperNameMap.INTERPOLATE */
-      ), t.helper(
-        "list"
-        /* HelperNameMap.LIST */
-      );
-      break;
-    case 4:
-      t.helper(
-        "interpolate"
-        /* HelperNameMap.INTERPOLATE */
-      ), t.helper(
-        "named"
-        /* HelperNameMap.NAMED */
-      );
-      break;
-  }
-}
-function bl(e, t = {}) {
-  const n = vl(e);
-  n.helper(
-    "normalize"
-    /* HelperNameMap.NORMALIZE */
-  ), e.body && Xo(e.body, n);
-  const o = n.context();
-  e.helpers = Array.from(o.helpers);
-}
-function El(e) {
-  const t = e.body;
-  return t.type === 2 ? Ar(t) : t.cases.forEach((n) => Ar(n)), e;
-}
-function Ar(e) {
-  if (e.items.length === 1) {
-    const t = e.items[0];
-    (t.type === 3 || t.type === 9) && (e.static = t.value, delete t.value);
-  } else {
-    const t = [];
-    for (let n = 0; n < e.items.length; n++) {
-      const o = e.items[n];
-      if (!(o.type === 3 || o.type === 9) || o.value == null)
-        break;
-      t.push(o.value);
-    }
-    if (t.length === e.items.length) {
-      e.static = Qa(t);
-      for (let n = 0; n < e.items.length; n++) {
-        const o = e.items[n];
-        (o.type === 3 || o.type === 9) && delete o.value;
-      }
-    }
-  }
-}
-const Tl = "minifier";
-function en(e) {
-  switch (e.t = e.type, e.type) {
-    case 0: {
-      const t = e;
-      en(t.body), t.b = t.body, delete t.body;
-      break;
-    }
-    case 1: {
-      const t = e, n = t.cases;
-      for (let o = 0; o < n.length; o++)
-        en(n[o]);
-      t.c = n, delete t.cases;
-      break;
-    }
-    case 2: {
-      const t = e, n = t.items;
-      for (let o = 0; o < n.length; o++)
-        en(n[o]);
-      t.i = n, delete t.items, t.static && (t.s = t.static, delete t.static);
-      break;
-    }
-    case 3:
-    case 9:
-    case 8:
-    case 7: {
-      const t = e;
-      t.value && (t.v = t.value, delete t.value);
-      break;
-    }
-    case 6: {
-      const t = e;
-      en(t.key), t.k = t.key, delete t.key, t.modifier && (en(t.modifier), t.m = t.modifier, delete t.modifier);
-      break;
-    }
-    case 5: {
-      const t = e;
-      t.i = t.index, delete t.index;
-      break;
-    }
-    case 4: {
-      const t = e;
-      t.k = t.key, delete t.key;
-      break;
-    }
-    default:
-      throw cn(K.UNHANDLED_MINIFIER_NODE_TYPE, null, {
-        domain: Tl,
-        args: [e.type]
-      });
-  }
-  delete e.type;
-}
-const wl = "parser";
-function Sl(e, t) {
-  const { filename: n, breakLineCode: o, needIndent: r } = t, a = t.location !== !1, s = {
-    filename: n,
-    code: "",
-    column: 1,
-    line: 1,
-    offset: 0,
-    map: void 0,
-    breakLineCode: o,
-    needIndent: r,
-    indentLevel: 0
-  };
-  a && e.loc && (s.source = e.loc.source);
-  const i = () => s;
-  function l(y, v) {
-    s.code += y;
-  }
-  function c(y, v = !0) {
-    const S = v ? o : "";
-    l(r ? S + "  ".repeat(y) : S);
-  }
-  function d(y = !0) {
-    const v = ++s.indentLevel;
-    y && c(v);
-  }
-  function u(y = !0) {
-    const v = --s.indentLevel;
-    y && c(v);
-  }
-  function f() {
-    c(s.indentLevel);
-  }
-  return {
-    context: i,
-    push: l,
-    indent: d,
-    deindent: u,
-    newline: f,
-    helper: (y) => `_${y}`,
-    needIndent: () => s.needIndent
-  };
-}
-function Ol(e, t) {
-  const { helper: n } = e;
-  e.push(`${n(
-    "linked"
-    /* HelperNameMap.LINKED */
-  )}(`), sn(e, t.key), t.modifier ? (e.push(", "), sn(e, t.modifier), e.push(", _type")) : e.push(", undefined, _type"), e.push(")");
-}
-function Al(e, t) {
-  const { helper: n, needIndent: o } = e;
-  e.push(`${n(
-    "normalize"
-    /* HelperNameMap.NORMALIZE */
-  )}([`), e.indent(o());
-  const r = t.items.length;
-  for (let a = 0; a < r && (sn(e, t.items[a]), a !== r - 1); a++)
-    e.push(", ");
-  e.deindent(o()), e.push("])");
-}
-function Nl(e, t) {
-  const { helper: n, needIndent: o } = e;
-  if (t.cases.length > 1) {
-    e.push(`${n(
-      "plural"
-      /* HelperNameMap.PLURAL */
-    )}([`), e.indent(o());
-    const r = t.cases.length;
-    for (let a = 0; a < r && (sn(e, t.cases[a]), a !== r - 1); a++)
-      e.push(", ");
-    e.deindent(o()), e.push("])");
-  }
-}
-function Cl(e, t) {
-  t.body ? sn(e, t.body) : e.push("null");
-}
-function sn(e, t) {
-  const { helper: n } = e;
-  switch (t.type) {
-    case 0:
-      Cl(e, t);
-      break;
-    case 1:
-      Nl(e, t);
-      break;
-    case 2:
-      Al(e, t);
-      break;
-    case 6:
-      Ol(e, t);
-      break;
-    case 8:
-      e.push(JSON.stringify(t.value), t);
-      break;
-    case 7:
-      e.push(JSON.stringify(t.value), t);
-      break;
-    case 5:
-      e.push(`${n(
-        "interpolate"
-        /* HelperNameMap.INTERPOLATE */
-      )}(${n(
-        "list"
-        /* HelperNameMap.LIST */
-      )}(${t.index}))`, t);
-      break;
-    case 4:
-      e.push(`${n(
-        "interpolate"
-        /* HelperNameMap.INTERPOLATE */
-      )}(${n(
-        "named"
-        /* HelperNameMap.NAMED */
-      )}(${JSON.stringify(t.key)}))`, t);
-      break;
-    case 9:
-      e.push(JSON.stringify(t.value), t);
-      break;
-    case 3:
-      e.push(JSON.stringify(t.value), t);
-      break;
-    default:
-      throw cn(K.UNHANDLED_CODEGEN_NODE_TYPE, null, {
-        domain: wl,
-        args: [t.type]
-      });
-  }
-}
-const Ll = (e, t = {}) => {
-  const n = wr(t.mode) ? t.mode : "normal", o = wr(t.filename) ? t.filename : "message.intl";
-  t.sourceMap;
-  const r = t.breakLineCode != null ? t.breakLineCode : n === "arrow" ? ";" : `
-`, a = t.needIndent ? t.needIndent : n !== "arrow", s = e.helpers || [], i = Sl(e, {
-    filename: o,
-    breakLineCode: r,
-    needIndent: a
-  });
-  i.push(n === "normal" ? "function __msg__ (ctx) {" : "(ctx) => {"), i.indent(a), s.length > 0 && (i.push(`const { ${Qa(s.map((d) => `${d}: _${d}`), ", ")} } = ctx`), i.newline()), i.push("return "), sn(i, e), i.deindent(a), i.push("}"), delete e.helpers;
-  const { code: l, map: c } = i.context();
-  return {
-    ast: e,
-    code: l,
-    map: c ? c.toJSON() : void 0
-    // eslint-disable-line @typescript-eslint/no-explicit-any
-  };
-};
-function Il(e, t = {}) {
-  const n = qa({}, t), o = !!n.jit, r = !!n.minify, a = n.optimize == null ? !0 : n.optimize, i = yl(n).parse(e);
-  return o ? (a && El(i), r && en(i), { ast: i, code: "" }) : (bl(i, n), Ll(i, n));
-}
-/*!
-  * core-base v9.14.4
-  * (c) 2025 kazuya kawaguchi
-  * Released under the MIT License.
-  */
-function Pl() {
-  typeof __INTLIFY_PROD_DEVTOOLS__ != "boolean" && (ht().__INTLIFY_PROD_DEVTOOLS__ = !1), typeof __INTLIFY_JIT_COMPILATION__ != "boolean" && (ht().__INTLIFY_JIT_COMPILATION__ = !1), typeof __INTLIFY_DROP_MESSAGE_COMPILER__ != "boolean" && (ht().__INTLIFY_DROP_MESSAGE_COMPILER__ = !1);
-}
-function qe(e) {
-  return Q(e) && Zo(e) === 0 && (Xe(e, "b") || Xe(e, "body"));
-}
-const es = ["b", "body"];
-function Ml(e) {
-  return kt(e, es);
-}
-const ts = ["c", "cases"];
-function kl(e) {
-  return kt(e, ts, []);
-}
-const ns = ["s", "static"];
-function xl(e) {
-  return kt(e, ns);
-}
-const os = ["i", "items"];
-function Rl(e) {
-  return kt(e, os, []);
-}
-const rs = ["t", "type"];
-function Zo(e) {
-  return kt(e, rs);
-}
-const as = ["v", "value"];
-function Pn(e, t) {
-  const n = kt(e, as);
-  if (n != null)
-    return n;
-  throw En(t);
-}
-const ss = ["m", "modifier"];
-function Dl(e) {
-  return kt(e, ss);
-}
-const is = ["k", "key"];
-function Fl(e) {
-  const t = kt(e, is);
-  if (t)
-    return t;
-  throw En(
-    6
-    /* NodeTypes.Linked */
-  );
-}
-function kt(e, t, n) {
-  for (let o = 0; o < t.length; o++) {
-    const r = t[o];
-    if (Xe(e, r) && e[r] != null)
-      return e[r];
-  }
-  return n;
-}
-const ls = [
-  ...es,
-  ...ts,
-  ...ns,
-  ...os,
-  ...is,
-  ...ss,
-  ...as,
-  ...rs
-];
-function En(e) {
-  return new Error(`unhandled node type: ${e}`);
-}
-const xt = [];
-xt[
-  0
-  /* States.BEFORE_PATH */
-] = {
-  w: [
-    0
-    /* States.BEFORE_PATH */
-  ],
-  i: [
-    3,
-    0
-    /* Actions.APPEND */
-  ],
-  "[": [
-    4
-    /* States.IN_SUB_PATH */
-  ],
-  o: [
-    7
-    /* States.AFTER_PATH */
-  ]
-};
-xt[
-  1
-  /* States.IN_PATH */
-] = {
-  w: [
-    1
-    /* States.IN_PATH */
-  ],
-  ".": [
-    2
-    /* States.BEFORE_IDENT */
-  ],
-  "[": [
-    4
-    /* States.IN_SUB_PATH */
-  ],
-  o: [
-    7
-    /* States.AFTER_PATH */
-  ]
-};
-xt[
-  2
-  /* States.BEFORE_IDENT */
-] = {
-  w: [
-    2
-    /* States.BEFORE_IDENT */
-  ],
-  i: [
-    3,
-    0
-    /* Actions.APPEND */
-  ],
-  0: [
-    3,
-    0
-    /* Actions.APPEND */
-  ]
-};
-xt[
-  3
-  /* States.IN_IDENT */
-] = {
-  i: [
-    3,
-    0
-    /* Actions.APPEND */
-  ],
-  0: [
-    3,
-    0
-    /* Actions.APPEND */
-  ],
-  w: [
-    1,
-    1
-    /* Actions.PUSH */
-  ],
-  ".": [
-    2,
-    1
-    /* Actions.PUSH */
-  ],
-  "[": [
-    4,
-    1
-    /* Actions.PUSH */
-  ],
-  o: [
-    7,
-    1
-    /* Actions.PUSH */
-  ]
-};
-xt[
-  4
-  /* States.IN_SUB_PATH */
-] = {
-  "'": [
-    5,
-    0
-    /* Actions.APPEND */
-  ],
-  '"': [
-    6,
-    0
-    /* Actions.APPEND */
-  ],
-  "[": [
-    4,
-    2
-    /* Actions.INC_SUB_PATH_DEPTH */
-  ],
-  "]": [
-    1,
-    3
-    /* Actions.PUSH_SUB_PATH */
-  ],
-  o: 8,
-  l: [
-    4,
-    0
-    /* Actions.APPEND */
-  ]
-};
-xt[
-  5
-  /* States.IN_SINGLE_QUOTE */
-] = {
-  "'": [
-    4,
-    0
-    /* Actions.APPEND */
-  ],
-  o: 8,
-  l: [
-    5,
-    0
-    /* Actions.APPEND */
-  ]
-};
-xt[
-  6
-  /* States.IN_DOUBLE_QUOTE */
-] = {
-  '"': [
-    4,
-    0
-    /* Actions.APPEND */
-  ],
-  o: 8,
-  l: [
-    6,
-    0
-    /* Actions.APPEND */
-  ]
-};
-const Bl = /^\s?(?:true|false|-?[\d.]+|'[^']*'|"[^"]*")\s?$/;
-function Vl(e) {
-  return Bl.test(e);
-}
-function $l(e) {
-  const t = e.charCodeAt(0), n = e.charCodeAt(e.length - 1);
-  return t === n && (t === 34 || t === 39) ? e.slice(1, -1) : e;
-}
-function Ul(e) {
-  if (e == null)
-    return "o";
-  switch (e.charCodeAt(0)) {
-    case 91:
-    case 93:
-    case 46:
-    case 34:
-    case 39:
-      return e;
-    case 95:
-    case 36:
-    case 45:
-      return "i";
-    case 9:
-    case 10:
-    case 13:
-    case 160:
-    case 65279:
-    case 8232:
-    case 8233:
-      return "w";
-  }
-  return "i";
-}
-function Gl(e) {
-  const t = e.trim();
-  return e.charAt(0) === "0" && isNaN(parseInt(e)) ? !1 : Vl(t) ? $l(t) : "*" + t;
-}
-function Wl(e) {
-  const t = [];
-  let n = -1, o = 0, r = 0, a, s, i, l, c, d, u;
-  const f = [];
-  f[
-    0
-    /* Actions.APPEND */
-  ] = () => {
-    s === void 0 ? s = i : s += i;
-  }, f[
-    1
-    /* Actions.PUSH */
-  ] = () => {
-    s !== void 0 && (t.push(s), s = void 0);
-  }, f[
-    2
-    /* Actions.INC_SUB_PATH_DEPTH */
-  ] = () => {
-    f[
-      0
-      /* Actions.APPEND */
-    ](), r++;
-  }, f[
-    3
-    /* Actions.PUSH_SUB_PATH */
-  ] = () => {
-    if (r > 0)
-      r--, o = 4, f[
-        0
-        /* Actions.APPEND */
-      ]();
-    else {
-      if (r = 0, s === void 0 || (s = Gl(s), s === !1))
-        return !1;
-      f[
-        1
-        /* Actions.PUSH */
-      ]();
-    }
-  };
-  function m() {
-    const _ = e[n + 1];
-    if (o === 5 && _ === "'" || o === 6 && _ === '"')
-      return n++, i = "\\" + _, f[
-        0
-        /* Actions.APPEND */
-      ](), !0;
-  }
-  for (; o !== null; )
-    if (n++, a = e[n], !(a === "\\" && m())) {
-      if (l = Ul(a), u = xt[o], c = u[l] || u.l || 8, c === 8 || (o = c[0], c[1] !== void 0 && (d = f[c[1]], d && (i = a, d() === !1))))
-        return;
-      if (o === 7)
-        return t;
-    }
-}
-const Nr = /* @__PURE__ */ new Map();
-function Kl(e, t) {
-  return Q(e) ? e[t] : null;
-}
-function Hl(e, t) {
-  if (!Q(e))
-    return null;
-  let n = Nr.get(t);
-  if (n || (n = Wl(t), n && Nr.set(t, n)), !n)
-    return null;
-  const o = n.length;
-  let r = e, a = 0;
-  for (; a < o; ) {
-    const s = n[a];
-    if (ls.includes(s) && qe(r))
-      return null;
-    const i = r[s];
-    if (i === void 0 || fe(r))
-      return null;
-    r = i, a++;
-  }
-  return r;
-}
-const Yl = (e) => e, zl = (e) => "", jl = "text", Xl = (e) => e.length === 0 ? "" : Zi(e), Zl = Xi;
-function Cr(e, t) {
-  return e = Math.abs(e), t === 2 ? e ? e > 1 ? 1 : 0 : 1 : e ? Math.min(e, 2) : 0;
-}
-function Jl(e) {
-  const t = Ae(e.pluralIndex) ? e.pluralIndex : -1;
-  return e.named && (Ae(e.named.count) || Ae(e.named.n)) ? Ae(e.named.count) ? e.named.count : Ae(e.named.n) ? e.named.n : t : t;
-}
-function ql(e, t) {
-  t.count || (t.count = e), t.n || (t.n = e);
-}
-function Ql(e = {}) {
-  const t = e.locale, n = Jl(e), o = Q(e.pluralRules) && x(t) && fe(e.pluralRules[t]) ? e.pluralRules[t] : Cr, r = Q(e.pluralRules) && x(t) && fe(e.pluralRules[t]) ? Cr : void 0, a = (S) => S[o(n, S.length, r)], s = e.list || [], i = (S) => s[S], l = e.named || ie();
-  Ae(e.pluralIndex) && ql(n, l);
-  const c = (S) => l[S];
-  function d(S) {
-    const w = fe(e.messages) ? e.messages(S) : Q(e.messages) ? e.messages[S] : !1;
-    return w || (e.parent ? e.parent.message(S) : zl);
-  }
-  const u = (S) => e.modifiers ? e.modifiers[S] : Yl, f = X(e.processor) && fe(e.processor.normalize) ? e.processor.normalize : Xl, m = X(e.processor) && fe(e.processor.interpolate) ? e.processor.interpolate : Zl, _ = X(e.processor) && x(e.processor.type) ? e.processor.type : jl, v = {
-    list: i,
-    named: c,
-    plural: a,
-    linked: (S, ...w) => {
-      const [p, h] = w;
-      let T = "text", E = "";
-      w.length === 1 ? Q(p) ? (E = p.modifier || E, T = p.type || T) : x(p) && (E = p || E) : w.length === 2 && (x(p) && (E = p || E), x(h) && (T = h || T));
-      const A = d(S)(v), O = (
-        // The message in vnode resolved with linked are returned as an array by processor.nomalize
-        T === "vnode" && ve(A) && E ? A[0] : A
-      );
-      return E ? u(E)(O, T) : O;
-    },
-    message: d,
-    type: _,
-    interpolate: m,
-    normalize: f,
-    values: Le(ie(), s, l)
-  };
-  return v;
-}
-let Tn = null;
-function ec(e) {
-  Tn = e;
-}
-function tc(e, t, n) {
-  Tn && Tn.emit("i18n:init", {
-    timestamp: Date.now(),
-    i18n: e,
-    version: t,
-    meta: n
-  });
-}
-const nc = /* @__PURE__ */ oc(
-  "function:translate"
-  /* IntlifyDevToolsHooks.FunctionTranslate */
-);
-function oc(e) {
-  return (t) => Tn && Tn.emit(e, t);
-}
-const cs = Zn.__EXTEND_POINT__, Bt = Xn(cs), ke = {
-  NOT_FOUND_KEY: cs,
-  // 2
-  FALLBACK_TO_TRANSLATE: Bt(),
-  // 3
-  CANNOT_FORMAT_NUMBER: Bt(),
-  // 4
-  FALLBACK_TO_NUMBER_FORMAT: Bt(),
-  // 5
-  CANNOT_FORMAT_DATE: Bt(),
-  // 6
-  FALLBACK_TO_DATE_FORMAT: Bt(),
-  // 7
-  EXPERIMENTAL_CUSTOM_MESSAGE_COMPILER: Bt(),
-  // 8
-  __EXTEND_POINT__: Bt()
-  // 9
-}, rc = {
-  [ke.NOT_FOUND_KEY]: "Not found '{key}' key in '{locale}' locale messages.",
-  [ke.FALLBACK_TO_TRANSLATE]: "Fall back to translate '{key}' key with '{target}' locale.",
-  [ke.CANNOT_FORMAT_NUMBER]: "Cannot format a number value due to not supported Intl.NumberFormat.",
-  [ke.FALLBACK_TO_NUMBER_FORMAT]: "Fall back to number format '{key}' key with '{target}' locale.",
-  [ke.CANNOT_FORMAT_DATE]: "Cannot format a date value due to not supported Intl.DateTimeFormat.",
-  [ke.FALLBACK_TO_DATE_FORMAT]: "Fall back to datetime format '{key}' key with '{target}' locale.",
-  [ke.EXPERIMENTAL_CUSTOM_MESSAGE_COMPILER]: "This project is using Custom Message Compiler, which is an experimental feature. It may receive breaking changes or be removed in the future."
-};
-function Wt(e, ...t) {
-  return jo(rc[e], ...t);
-}
-const us = K.__EXTEND_POINT__, Vt = Xn(us), Oe = {
-  INVALID_ARGUMENT: us,
-  // 17
-  INVALID_DATE_ARGUMENT: Vt(),
-  // 18
-  INVALID_ISO_DATE_ARGUMENT: Vt(),
-  // 19
-  NOT_SUPPORT_NON_STRING_MESSAGE: Vt(),
-  // 20
-  NOT_SUPPORT_LOCALE_PROMISE_VALUE: Vt(),
-  // 21
-  NOT_SUPPORT_LOCALE_ASYNC_FUNCTION: Vt(),
-  // 22
-  NOT_SUPPORT_LOCALE_TYPE: Vt(),
-  // 23
-  __EXTEND_POINT__: Vt()
-  // 24
-};
-function rt(e) {
-  return cn(e, null, process.env.NODE_ENV !== "production" ? { messages: ac } : void 0);
-}
-const ac = {
-  [Oe.INVALID_ARGUMENT]: "Invalid arguments",
-  [Oe.INVALID_DATE_ARGUMENT]: "The date provided is an invalid Date object.Make sure your Date represents a valid date.",
-  [Oe.INVALID_ISO_DATE_ARGUMENT]: "The argument provided is not a valid ISO date string",
-  [Oe.NOT_SUPPORT_NON_STRING_MESSAGE]: "Not support non-string message",
-  [Oe.NOT_SUPPORT_LOCALE_PROMISE_VALUE]: "cannot support promise value",
-  [Oe.NOT_SUPPORT_LOCALE_ASYNC_FUNCTION]: "cannot support async function",
-  [Oe.NOT_SUPPORT_LOCALE_TYPE]: "cannot support locale type"
-};
-function Jo(e, t) {
-  return t.locale != null ? Lr(t.locale) : Lr(e.locale);
-}
-let io;
-function Lr(e) {
-  if (x(e))
-    return e;
-  if (fe(e)) {
-    if (e.resolvedOnce && io != null)
-      return io;
-    if (e.constructor.name === "Function") {
-      const t = e();
-      if (ji(t))
-        throw rt(Oe.NOT_SUPPORT_LOCALE_PROMISE_VALUE);
-      return io = t;
-    } else
-      throw rt(Oe.NOT_SUPPORT_LOCALE_ASYNC_FUNCTION);
-  } else
-    throw rt(Oe.NOT_SUPPORT_LOCALE_TYPE);
-}
-function sc(e, t, n) {
-  return [.../* @__PURE__ */ new Set([
-    n,
-    ...ve(t) ? t : Q(t) ? Object.keys(t) : x(t) ? [t] : [n]
-  ])];
-}
-function ds(e, t, n) {
-  const o = x(n) ? n : wn, r = e;
-  r.__localeChainCache || (r.__localeChainCache = /* @__PURE__ */ new Map());
-  let a = r.__localeChainCache.get(o);
-  if (!a) {
-    a = [];
-    let s = [n];
-    for (; ve(s); )
-      s = Ir(a, s, t);
-    const i = ve(t) || !X(t) ? t : t.default ? t.default : null;
-    s = x(i) ? [i] : i, ve(s) && Ir(a, s, !1), r.__localeChainCache.set(o, a);
-  }
-  return a;
-}
-function Ir(e, t, n) {
-  let o = !0;
-  for (let r = 0; r < t.length && ue(o); r++) {
-    const a = t[r];
-    x(a) && (o = ic(e, t[r], n));
-  }
-  return o;
-}
-function ic(e, t, n) {
-  let o;
-  const r = t.split("-");
-  do {
-    const a = r.join("-");
-    o = lc(e, a, n), r.splice(-1, 1);
-  } while (r.length && o === !0);
-  return o;
-}
-function lc(e, t, n) {
-  let o = !1;
-  if (!e.includes(t) && (o = !0, t)) {
-    o = t[t.length - 1] !== "!";
-    const r = t.replace(/!/g, "");
-    e.push(r), (ve(n) || X(n)) && n[r] && (o = n[r]);
-  }
-  return o;
-}
-const cc = "9.14.4", Jn = -1, wn = "en-US", Wn = "", Pr = (e) => `${e.charAt(0).toLocaleUpperCase()}${e.substr(1)}`;
-function uc() {
-  return {
-    upper: (e, t) => t === "text" && x(e) ? e.toUpperCase() : t === "vnode" && Q(e) && "__v_isVNode" in e ? e.children.toUpperCase() : e,
-    lower: (e, t) => t === "text" && x(e) ? e.toLowerCase() : t === "vnode" && Q(e) && "__v_isVNode" in e ? e.children.toLowerCase() : e,
-    capitalize: (e, t) => t === "text" && x(e) ? Pr(e) : t === "vnode" && Q(e) && "__v_isVNode" in e ? Pr(e.children) : e
-  };
-}
-let fs;
-function Mr(e) {
-  fs = e;
-}
-let ps;
-function dc(e) {
-  ps = e;
-}
-let ms;
-function fc(e) {
-  ms = e;
-}
-let _s = null;
-const pc = /* @__NO_SIDE_EFFECTS__ */ (e) => {
-  _s = e;
-}, mc = /* @__NO_SIDE_EFFECTS__ */ () => _s;
-let hs = null;
-const kr = (e) => {
-  hs = e;
-}, _c = () => hs;
-let xr = 0;
-function hc(e = {}) {
-  const t = fe(e.onWarn) ? e.onWarn : Tt, n = x(e.version) ? e.version : cc, o = x(e.locale) || fe(e.locale) ? e.locale : wn, r = fe(o) ? wn : o, a = ve(e.fallbackLocale) || X(e.fallbackLocale) || x(e.fallbackLocale) || e.fallbackLocale === !1 ? e.fallbackLocale : r, s = X(e.messages) ? e.messages : lo(r), i = X(e.datetimeFormats) ? e.datetimeFormats : lo(r), l = X(e.numberFormats) ? e.numberFormats : lo(r), c = Le(ie(), e.modifiers, uc()), d = e.pluralRules || ie(), u = fe(e.missing) ? e.missing : null, f = ue(e.missingWarn) || an(e.missingWarn) ? e.missingWarn : !0, m = ue(e.fallbackWarn) || an(e.fallbackWarn) ? e.fallbackWarn : !0, _ = !!e.fallbackFormat, y = !!e.unresolving, v = fe(e.postTranslation) ? e.postTranslation : null, S = X(e.processor) ? e.processor : null, w = ue(e.warnHtmlMessage) ? e.warnHtmlMessage : !0, p = !!e.escapeParameter, h = fe(e.messageCompiler) ? e.messageCompiler : fs;
-  process.env.NODE_ENV !== "production" && fe(e.messageCompiler) && Za(Wt(ke.EXPERIMENTAL_CUSTOM_MESSAGE_COMPILER));
-  const T = fe(e.messageResolver) ? e.messageResolver : ps || Kl, E = fe(e.localeFallbacker) ? e.localeFallbacker : ms || sc, A = Q(e.fallbackContext) ? e.fallbackContext : void 0, O = e, L = Q(O.__datetimeFormatters) ? O.__datetimeFormatters : /* @__PURE__ */ new Map(), V = Q(O.__numberFormatters) ? O.__numberFormatters : /* @__PURE__ */ new Map(), U = Q(O.__meta) ? O.__meta : {};
-  xr++;
-  const $ = {
-    version: n,
-    cid: xr,
-    locale: o,
-    fallbackLocale: a,
-    messages: s,
-    modifiers: c,
-    pluralRules: d,
-    missing: u,
-    missingWarn: f,
-    fallbackWarn: m,
-    fallbackFormat: _,
-    unresolving: y,
-    postTranslation: v,
-    processor: S,
-    warnHtmlMessage: w,
-    escapeParameter: p,
-    messageCompiler: h,
-    messageResolver: T,
-    localeFallbacker: E,
-    fallbackContext: A,
-    onWarn: t,
-    __meta: U
-  };
-  return $.datetimeFormats = i, $.numberFormats = l, $.__datetimeFormatters = L, $.__numberFormatters = V, process.env.NODE_ENV !== "production" && ($.__v_emitter = O.__v_emitter != null ? O.__v_emitter : void 0), (process.env.NODE_ENV !== "production" || __INTLIFY_PROD_DEVTOOLS__) && tc($, n, U), $;
-}
-const lo = (e) => ({ [e]: ie() });
-function qn(e, t) {
-  return e instanceof RegExp ? e.test(t) : e;
-}
-function gs(e, t) {
-  return e instanceof RegExp ? e.test(t) : e;
-}
-function qo(e, t, n, o, r) {
-  const { missing: a, onWarn: s } = e;
-  if (process.env.NODE_ENV !== "production") {
-    const i = e.__v_emitter;
-    i && i.emit("missing", {
-      locale: n,
-      key: t,
-      type: r,
-      groupId: `${r}:${t}`
-    });
-  }
-  if (a !== null) {
-    const i = a(e, n, t, r);
-    return x(i) ? i : t;
-  } else
-    return process.env.NODE_ENV !== "production" && gs(o, t) && s(Wt(ke.NOT_FOUND_KEY, { key: t, locale: n })), t;
-}
-function gn(e, t, n) {
-  const o = e;
-  o.__localeChainCache = /* @__PURE__ */ new Map(), e.localeFallbacker(e, n, t);
-}
-function ys(e, t) {
-  return e === t ? !1 : e.split("-")[0] === t.split("-")[0];
-}
-function gc(e, t) {
-  const n = t.indexOf(e);
-  if (n === -1)
-    return !1;
-  for (let o = n + 1; o < t.length; o++)
-    if (ys(e, t[o]))
-      return !0;
-  return !1;
-}
-function co(e) {
-  return (n) => yc(n, e);
-}
-function yc(e, t) {
-  const n = Ml(t);
-  if (n == null)
-    throw En(
-      0
-      /* NodeTypes.Resource */
-    );
-  if (Zo(n) === 1) {
-    const a = kl(n);
-    return e.plural(a.reduce((s, i) => [
-      ...s,
-      Rr(e, i)
-    ], []));
-  } else
-    return Rr(e, n);
-}
-function Rr(e, t) {
-  const n = xl(t);
-  if (n != null)
-    return e.type === "text" ? n : e.normalize([n]);
-  {
-    const o = Rl(t).reduce((r, a) => [...r, Eo(e, a)], []);
-    return e.normalize(o);
-  }
-}
-function Eo(e, t) {
-  const n = Zo(t);
-  switch (n) {
-    case 3:
-      return Pn(t, n);
-    case 9:
-      return Pn(t, n);
-    case 4: {
-      const o = t;
-      if (Xe(o, "k") && o.k)
-        return e.interpolate(e.named(o.k));
-      if (Xe(o, "key") && o.key)
-        return e.interpolate(e.named(o.key));
-      throw En(n);
-    }
-    case 5: {
-      const o = t;
-      if (Xe(o, "i") && Ae(o.i))
-        return e.interpolate(e.list(o.i));
-      if (Xe(o, "index") && Ae(o.index))
-        return e.interpolate(e.list(o.index));
-      throw En(n);
-    }
-    case 6: {
-      const o = t, r = Dl(o), a = Fl(o);
-      return e.linked(Eo(e, a), r ? Eo(e, r) : void 0, e.type);
-    }
-    case 7:
-      return Pn(t, n);
-    case 8:
-      return Pn(t, n);
-    default:
-      throw new Error(`unhandled node on format message part: ${n}`);
-  }
-}
-const vc = "Detected HTML in '{source}' message. Recommend not using HTML messages to avoid XSS.";
-function vs(e, t) {
-  t && il(e) && Tt(jo(vc, { source: e }));
-}
-const bs = (e) => e;
-let nn = ie();
-function Es(e) {
-  e.code === Zn.USE_MODULO_SYNTAX && Tt(`The use of named interpolation with modulo syntax is deprecated. It will be removed in v10.
-reference: https://vue-i18n.intlify.dev/guide/essentials/syntax#rails-i18n-format 
-(message compiler warning message: ${e.message})`);
-}
-function Ts(e, t = {}) {
-  let n = !1;
-  const o = t.onError || al;
-  return t.onError = (r) => {
-    n = !0, o(r);
-  }, { ...Il(e, t), detectError: n };
-}
-const bc = /* @__NO_SIDE_EFFECTS__ */ (e, t) => {
-  if (!x(e))
-    throw rt(Oe.NOT_SUPPORT_NON_STRING_MESSAGE);
-  process.env.NODE_ENV !== "production" && (t.onWarn = Es);
-  {
-    const n = ue(t.warnHtmlMessage) ? t.warnHtmlMessage : !0;
-    process.env.NODE_ENV !== "production" && vs(e, n);
-    const r = (t.onCacheKey || bs)(e), a = nn[r];
-    if (a)
-      return a;
-    const { code: s, detectError: i } = Ts(e, t), l = new Function(`return ${s}`)();
-    return i ? l : nn[r] = l;
-  }
-};
-function Ec(e, t) {
-  if (process.env.NODE_ENV !== "production" && (t.onWarn = Es), __INTLIFY_JIT_COMPILATION__ && !__INTLIFY_DROP_MESSAGE_COMPILER__ && x(e)) {
-    const n = ue(t.warnHtmlMessage) ? t.warnHtmlMessage : !0;
-    process.env.NODE_ENV !== "production" && vs(e, n);
-    const r = (t.onCacheKey || bs)(e), a = nn[r];
-    if (a)
-      return a;
-    const { ast: s, detectError: i } = Ts(e, {
-      ...t,
-      location: process.env.NODE_ENV !== "production",
-      jit: !0
-    }), l = co(s);
-    return i ? l : nn[r] = l;
-  } else {
-    if (process.env.NODE_ENV !== "production" && !qe(e))
-      return Tt(`the message that is resolve with key '${t.key}' is not supported for jit compilation`), () => e;
-    const n = e.cacheKey;
-    if (n) {
-      const o = nn[n];
-      return o || (nn[n] = co(e));
-    } else
-      return co(e);
-  }
-}
-const Dr = () => "", He = (e) => fe(e);
-function Fr(e, ...t) {
-  const { fallbackFormat: n, postTranslation: o, unresolving: r, messageCompiler: a, fallbackLocale: s, messages: i } = e, [l, c] = To(...t), d = ue(c.missingWarn) ? c.missingWarn : e.missingWarn, u = ue(c.fallbackWarn) ? c.fallbackWarn : e.fallbackWarn, f = ue(c.escapeParameter) ? c.escapeParameter : e.escapeParameter, m = !!c.resolvedMessage, _ = x(c.default) || ue(c.default) ? ue(c.default) ? a ? l : () => l : c.default : n ? a ? l : () => l : "", y = n || _ !== "", v = Jo(e, c);
-  f && Tc(c);
-  let [S, w, p] = m ? [
-    l,
-    v,
-    i[v] || ie()
-  ] : ws(e, l, v, s, u, d), h = S, T = l;
-  if (!m && !(x(h) || qe(h) || He(h)) && y && (h = _, T = h), !m && (!(x(h) || qe(h) || He(h)) || !x(w)))
-    return r ? Jn : l;
-  if (process.env.NODE_ENV !== "production" && x(h) && e.messageCompiler == null)
-    return Tt(`The message format compilation is not supported in this build. Because message compiler isn't included. You need to pre-compilation all message format. So translate function return '${l}'.`), l;
-  let E = !1;
-  const A = () => {
-    E = !0;
-  }, O = He(h) ? h : Ss(e, l, w, h, T, A);
-  if (E)
-    return h;
-  const L = Ac(e, w, p, c), V = Ql(L), U = wc(e, O, V), $ = o ? o(U, l) : U;
-  if (process.env.NODE_ENV !== "production" || __INTLIFY_PROD_DEVTOOLS__) {
-    const j = {
-      timestamp: Date.now(),
-      key: x(l) ? l : He(h) ? h.key : "",
-      locale: w || (He(h) ? h.locale : ""),
-      format: x(h) ? h : He(h) ? h.source : "",
-      message: $
-    };
-    j.meta = Le({}, e.__meta, /* @__PURE__ */ mc() || {}), nc(j);
-  }
-  return $;
-}
-function Tc(e) {
-  ve(e.list) ? e.list = e.list.map((t) => x(t) ? br(t) : t) : Q(e.named) && Object.keys(e.named).forEach((t) => {
-    x(e.named[t]) && (e.named[t] = br(e.named[t]));
-  });
-}
-function ws(e, t, n, o, r, a) {
-  const { messages: s, onWarn: i, messageResolver: l, localeFallbacker: c } = e, d = c(e, o, n);
-  let u = ie(), f, m = null, _ = n, y = null;
-  const v = "translate";
-  for (let S = 0; S < d.length; S++) {
-    if (f = y = d[S], process.env.NODE_ENV !== "production" && n !== f && !ys(n, f) && qn(r, t) && i(Wt(ke.FALLBACK_TO_TRANSLATE, {
-      key: t,
-      target: f
-    })), process.env.NODE_ENV !== "production" && n !== f) {
-      const T = e.__v_emitter;
-      T && T.emit("fallback", {
-        type: v,
-        key: t,
-        from: _,
-        to: y,
-        groupId: `${v}:${t}`
-      });
-    }
-    u = s[f] || ie();
-    let w = null, p, h;
-    if (process.env.NODE_ENV !== "production" && yt && (w = window.performance.now(), p = "intlify-message-resolve-start", h = "intlify-message-resolve-end", Ge && Ge(p)), (m = l(u, t)) === null && (m = u[t]), process.env.NODE_ENV !== "production" && yt) {
-      const T = window.performance.now(), E = e.__v_emitter;
-      E && w && m && E.emit("message-resolve", {
-        type: "message-resolve",
-        key: t,
-        message: m,
-        time: T - w,
-        groupId: `${v}:${t}`
-      }), p && h && Ge && Gt && (Ge(h), Gt("intlify message resolve", p, h));
-    }
-    if (x(m) || qe(m) || He(m))
-      break;
-    if (!gc(f, d)) {
-      const T = qo(
-        e,
-        // eslint-disable-line @typescript-eslint/no-explicit-any
-        t,
-        f,
-        a,
-        v
-      );
-      T !== t && (m = T);
-    }
-    _ = y;
-  }
-  return [m, f, u];
-}
-function Ss(e, t, n, o, r, a) {
-  const { messageCompiler: s, warnHtmlMessage: i } = e;
-  if (He(o)) {
-    const f = o;
-    return f.locale = f.locale || n, f.key = f.key || t, f;
-  }
-  if (s == null) {
-    const f = () => o;
-    return f.locale = n, f.key = t, f;
-  }
-  let l = null, c, d;
-  process.env.NODE_ENV !== "production" && yt && (l = window.performance.now(), c = "intlify-message-compilation-start", d = "intlify-message-compilation-end", Ge && Ge(c));
-  const u = s(o, Sc(e, n, r, o, i, a));
-  if (process.env.NODE_ENV !== "production" && yt) {
-    const f = window.performance.now(), m = e.__v_emitter;
-    m && l && m.emit("message-compilation", {
-      type: "message-compilation",
-      message: o,
-      time: f - l,
-      groupId: `translate:${t}`
-    }), c && d && Ge && Gt && (Ge(d), Gt("intlify message compilation", c, d));
-  }
-  return u.locale = n, u.key = t, u.source = o, u;
-}
-function wc(e, t, n) {
-  let o = null, r, a;
-  process.env.NODE_ENV !== "production" && yt && (o = window.performance.now(), r = "intlify-message-evaluation-start", a = "intlify-message-evaluation-end", Ge && Ge(r));
-  const s = t(n);
-  if (process.env.NODE_ENV !== "production" && yt) {
-    const i = window.performance.now(), l = e.__v_emitter;
-    l && o && l.emit("message-evaluation", {
-      type: "message-evaluation",
-      value: s,
-      time: i - o,
-      groupId: `translate:${t.key}`
-    }), r && a && Ge && Gt && (Ge(a), Gt("intlify message evaluation", r, a));
-  }
-  return s;
-}
-function To(...e) {
-  const [t, n, o] = e, r = ie();
-  if (!x(t) && !Ae(t) && !He(t) && !qe(t))
-    throw rt(Oe.INVALID_ARGUMENT);
-  const a = Ae(t) ? String(t) : (He(t), t);
-  return Ae(n) ? r.plural = n : x(n) ? r.default = n : X(n) && !jn(n) ? r.named = n : ve(n) && (r.list = n), Ae(o) ? r.plural = o : x(o) ? r.default = o : X(o) && Le(r, o), [a, r];
-}
-function Sc(e, t, n, o, r, a) {
-  return {
-    locale: t,
-    key: n,
-    warnHtmlMessage: r,
-    onError: (s) => {
-      if (a && a(s), process.env.NODE_ENV !== "production") {
-        const i = Oc(o), l = `Message compilation error: ${s.message}`, c = s.location && i && Ji(i, s.location.start.offset, s.location.end.offset), d = e.__v_emitter;
-        d && i && d.emit("compile-error", {
-          message: i,
-          error: s.message,
-          start: s.location && s.location.start.offset,
-          end: s.location && s.location.end.offset,
-          groupId: `translate:${n}`
-        }), console.error(c ? `${l}
-${c}` : l);
-      } else
-        throw s;
-    },
-    onCacheKey: (s) => Wi(t, n, s)
-  };
-}
-function Oc(e) {
-  if (x(e))
-    return e;
-  if (e.loc && e.loc.source)
-    return e.loc.source;
-}
-function Ac(e, t, n, o) {
-  const { modifiers: r, pluralRules: a, messageResolver: s, fallbackLocale: i, fallbackWarn: l, missingWarn: c, fallbackContext: d } = e, f = {
-    locale: t,
-    modifiers: r,
-    pluralRules: a,
-    messages: (m) => {
-      let _ = s(n, m);
-      if (_ == null && d) {
-        const [, , y] = ws(d, m, t, i, l, c);
-        _ = s(y, m);
-      }
-      if (x(_) || qe(_)) {
-        let y = !1;
-        const S = Ss(e, m, t, _, m, () => {
-          y = !0;
-        });
-        return y ? Dr : S;
-      } else return He(_) ? _ : Dr;
-    }
-  };
-  return e.processor && (f.processor = e.processor), o.list && (f.list = o.list), o.named && (f.named = o.named), Ae(o.plural) && (f.pluralIndex = o.plural), f;
-}
-const Br = typeof Intl < "u", Os = {
-  dateTimeFormat: Br && typeof Intl.DateTimeFormat < "u",
-  numberFormat: Br && typeof Intl.NumberFormat < "u"
-};
-function Vr(e, ...t) {
-  const { datetimeFormats: n, unresolving: o, fallbackLocale: r, onWarn: a, localeFallbacker: s } = e, { __datetimeFormatters: i } = e;
-  if (process.env.NODE_ENV !== "production" && !Os.dateTimeFormat)
-    return a(Wt(ke.CANNOT_FORMAT_DATE)), Wn;
-  const [l, c, d, u] = wo(...t), f = ue(d.missingWarn) ? d.missingWarn : e.missingWarn, m = ue(d.fallbackWarn) ? d.fallbackWarn : e.fallbackWarn, _ = !!d.part, y = Jo(e, d), v = s(
-    e,
-    // eslint-disable-line @typescript-eslint/no-explicit-any
-    r,
-    y
-  );
-  if (!x(l) || l === "")
-    return new Intl.DateTimeFormat(y, u).format(c);
-  let S = {}, w, p = null, h = y, T = null;
-  const E = "datetime format";
-  for (let L = 0; L < v.length; L++) {
-    if (w = T = v[L], process.env.NODE_ENV !== "production" && y !== w && qn(m, l) && a(Wt(ke.FALLBACK_TO_DATE_FORMAT, {
-      key: l,
-      target: w
-    })), process.env.NODE_ENV !== "production" && y !== w) {
-      const V = e.__v_emitter;
-      V && V.emit("fallback", {
-        type: E,
-        key: l,
-        from: h,
-        to: T,
-        groupId: `${E}:${l}`
-      });
-    }
-    if (S = n[w] || {}, p = S[l], X(p))
-      break;
-    qo(e, l, w, f, E), h = T;
-  }
-  if (!X(p) || !x(w))
-    return o ? Jn : l;
-  let A = `${w}__${l}`;
-  jn(u) || (A = `${A}__${JSON.stringify(u)}`);
-  let O = i.get(A);
-  return O || (O = new Intl.DateTimeFormat(w, Le({}, p, u)), i.set(A, O)), _ ? O.formatToParts(c) : O.format(c);
-}
-const As = [
-  "localeMatcher",
-  "weekday",
-  "era",
-  "year",
-  "month",
-  "day",
-  "hour",
-  "minute",
-  "second",
-  "timeZoneName",
-  "formatMatcher",
-  "hour12",
-  "timeZone",
-  "dateStyle",
-  "timeStyle",
-  "calendar",
-  "dayPeriod",
-  "numberingSystem",
-  "hourCycle",
-  "fractionalSecondDigits"
-];
-function wo(...e) {
-  const [t, n, o, r] = e, a = ie();
-  let s = ie(), i;
-  if (x(t)) {
-    const l = t.match(/(\d{4}-\d{2}-\d{2})(T|\s)?(.*)/);
-    if (!l)
-      throw rt(Oe.INVALID_ISO_DATE_ARGUMENT);
-    const c = l[3] ? l[3].trim().startsWith("T") ? `${l[1].trim()}${l[3].trim()}` : `${l[1].trim()}T${l[3].trim()}` : l[1].trim();
-    i = new Date(c);
-    try {
-      i.toISOString();
-    } catch {
-      throw rt(Oe.INVALID_ISO_DATE_ARGUMENT);
-    }
-  } else if (Hi(t)) {
-    if (isNaN(t.getTime()))
-      throw rt(Oe.INVALID_DATE_ARGUMENT);
-    i = t;
-  } else if (Ae(t))
-    i = t;
-  else
-    throw rt(Oe.INVALID_ARGUMENT);
-  return x(n) ? a.key = n : X(n) && Object.keys(n).forEach((l) => {
-    As.includes(l) ? s[l] = n[l] : a[l] = n[l];
-  }), x(o) ? a.locale = o : X(o) && (s = o), X(r) && (s = r), [a.key || "", i, a, s];
-}
-function $r(e, t, n) {
-  const o = e;
-  for (const r in n) {
-    const a = `${t}__${r}`;
-    o.__datetimeFormatters.has(a) && o.__datetimeFormatters.delete(a);
-  }
-}
-function Ur(e, ...t) {
-  const { numberFormats: n, unresolving: o, fallbackLocale: r, onWarn: a, localeFallbacker: s } = e, { __numberFormatters: i } = e;
-  if (process.env.NODE_ENV !== "production" && !Os.numberFormat)
-    return a(Wt(ke.CANNOT_FORMAT_NUMBER)), Wn;
-  const [l, c, d, u] = So(...t), f = ue(d.missingWarn) ? d.missingWarn : e.missingWarn, m = ue(d.fallbackWarn) ? d.fallbackWarn : e.fallbackWarn, _ = !!d.part, y = Jo(e, d), v = s(
-    e,
-    // eslint-disable-line @typescript-eslint/no-explicit-any
-    r,
-    y
-  );
-  if (!x(l) || l === "")
-    return new Intl.NumberFormat(y, u).format(c);
-  let S = {}, w, p = null, h = y, T = null;
-  const E = "number format";
-  for (let L = 0; L < v.length; L++) {
-    if (w = T = v[L], process.env.NODE_ENV !== "production" && y !== w && qn(m, l) && a(Wt(ke.FALLBACK_TO_NUMBER_FORMAT, {
-      key: l,
-      target: w
-    })), process.env.NODE_ENV !== "production" && y !== w) {
-      const V = e.__v_emitter;
-      V && V.emit("fallback", {
-        type: E,
-        key: l,
-        from: h,
-        to: T,
-        groupId: `${E}:${l}`
-      });
-    }
-    if (S = n[w] || {}, p = S[l], X(p))
-      break;
-    qo(e, l, w, f, E), h = T;
-  }
-  if (!X(p) || !x(w))
-    return o ? Jn : l;
-  let A = `${w}__${l}`;
-  jn(u) || (A = `${A}__${JSON.stringify(u)}`);
-  let O = i.get(A);
-  return O || (O = new Intl.NumberFormat(w, Le({}, p, u)), i.set(A, O)), _ ? O.formatToParts(c) : O.format(c);
-}
-const Ns = [
-  "localeMatcher",
-  "style",
-  "currency",
-  "currencyDisplay",
-  "currencySign",
-  "useGrouping",
-  "minimumIntegerDigits",
-  "minimumFractionDigits",
-  "maximumFractionDigits",
-  "minimumSignificantDigits",
-  "maximumSignificantDigits",
-  "compactDisplay",
-  "notation",
-  "signDisplay",
-  "unit",
-  "unitDisplay",
-  "roundingMode",
-  "roundingPriority",
-  "roundingIncrement",
-  "trailingZeroDisplay"
-];
-function So(...e) {
-  const [t, n, o, r] = e, a = ie();
-  let s = ie();
-  if (!Ae(t))
-    throw rt(Oe.INVALID_ARGUMENT);
-  const i = t;
-  return x(n) ? a.key = n : X(n) && Object.keys(n).forEach((l) => {
-    Ns.includes(l) ? s[l] = n[l] : a[l] = n[l];
-  }), x(o) ? a.locale = o : X(o) && (s = o), X(r) && (s = r), [a.key || "", i, a, s];
-}
-function Gr(e, t, n) {
-  const o = e;
-  for (const r in n) {
-    const a = `${t}__${r}`;
-    o.__numberFormatters.has(a) && o.__numberFormatters.delete(a);
-  }
-}
-Pl();
-/*!
-  * vue-i18n v9.14.4
-  * (c) 2025 kazuya kawaguchi
-  * Released under the MIT License.
-  */
-const Nc = "9.14.4";
-function Cc() {
-  typeof __VUE_I18N_FULL_INSTALL__ != "boolean" && (ht().__VUE_I18N_FULL_INSTALL__ = !0), typeof __VUE_I18N_LEGACY_API__ != "boolean" && (ht().__VUE_I18N_LEGACY_API__ = !0), typeof __INTLIFY_JIT_COMPILATION__ != "boolean" && (ht().__INTLIFY_JIT_COMPILATION__ = !1), typeof __INTLIFY_DROP_MESSAGE_COMPILER__ != "boolean" && (ht().__INTLIFY_DROP_MESSAGE_COMPILER__ = !1), typeof __INTLIFY_PROD_DEVTOOLS__ != "boolean" && (ht().__INTLIFY_PROD_DEVTOOLS__ = !1);
-}
-const Cs = ke.__EXTEND_POINT__, pt = Xn(Cs), De = {
-  FALLBACK_TO_ROOT: Cs,
-  // 9
-  NOT_SUPPORTED_PRESERVE: pt(),
-  // 10
-  NOT_SUPPORTED_FORMATTER: pt(),
-  // 11
-  NOT_SUPPORTED_PRESERVE_DIRECTIVE: pt(),
-  // 12
-  NOT_SUPPORTED_GET_CHOICE_INDEX: pt(),
-  // 13
-  COMPONENT_NAME_LEGACY_COMPATIBLE: pt(),
-  // 14
-  NOT_FOUND_PARENT_SCOPE: pt(),
-  // 15
-  IGNORE_OBJ_FLATTEN: pt(),
-  // 16
-  NOTICE_DROP_ALLOW_COMPOSITION: pt(),
-  // 17
-  NOTICE_DROP_TRANSLATE_EXIST_COMPATIBLE_FLAG: pt()
-  // 18
-}, Lc = {
-  [De.FALLBACK_TO_ROOT]: "Fall back to {type} '{key}' with root locale.",
-  [De.NOT_SUPPORTED_PRESERVE]: "Not supported 'preserve'.",
-  [De.NOT_SUPPORTED_FORMATTER]: "Not supported 'formatter'.",
-  [De.NOT_SUPPORTED_PRESERVE_DIRECTIVE]: "Not supported 'preserveDirectiveContent'.",
-  [De.NOT_SUPPORTED_GET_CHOICE_INDEX]: "Not supported 'getChoiceIndex'.",
-  [De.COMPONENT_NAME_LEGACY_COMPATIBLE]: "Component name legacy compatible: '{name}' -> 'i18n'",
-  [De.NOT_FOUND_PARENT_SCOPE]: "Not found parent scope. use the global scope.",
-  [De.IGNORE_OBJ_FLATTEN]: "Ignore object flatten: '{key}' key has an string value",
-  [De.NOTICE_DROP_ALLOW_COMPOSITION]: "'allowComposition' option will be dropped in the next major version. For more information, please see 👉 https://tinyurl.com/2p97mcze",
-  [De.NOTICE_DROP_TRANSLATE_EXIST_COMPATIBLE_FLAG]: "'translateExistCompatible' option will be dropped in the next major version."
-};
-function Kn(e, ...t) {
-  return jo(Lc[e], ...t);
-}
-const Ls = Oe.__EXTEND_POINT__, Re = Xn(Ls), _e = {
-  // composer module errors
-  UNEXPECTED_RETURN_TYPE: Ls,
-  // 24
-  // legacy module errors
-  INVALID_ARGUMENT: Re(),
-  // 25
-  // i18n module errors
-  MUST_BE_CALL_SETUP_TOP: Re(),
-  // 26
-  NOT_INSTALLED: Re(),
-  // 27
-  NOT_AVAILABLE_IN_LEGACY_MODE: Re(),
-  // 28
-  // directive module errors
-  REQUIRED_VALUE: Re(),
-  // 29
-  INVALID_VALUE: Re(),
-  // 30
-  // vue-devtools errors
-  CANNOT_SETUP_VUE_DEVTOOLS_PLUGIN: Re(),
-  // 31
-  NOT_INSTALLED_WITH_PROVIDE: Re(),
-  // 32
-  // unexpected error
-  UNEXPECTED_ERROR: Re(),
-  // 33
-  // not compatible legacy vue-i18n constructor
-  NOT_COMPATIBLE_LEGACY_VUE_I18N: Re(),
-  // 34
-  // bridge support vue 2.x only
-  BRIDGE_SUPPORT_VUE_2_ONLY: Re(),
-  // 35
-  // need to define `i18n` option in `allowComposition: true` and `useScope: 'local' at `useI18n``
-  MUST_DEFINE_I18N_OPTION_IN_ALLOW_COMPOSITION: Re(),
-  // 36
-  // Not available Compostion API in Legacy API mode. Please make sure that the legacy API mode is working properly
-  NOT_AVAILABLE_COMPOSITION_IN_LEGACY: Re(),
-  // 37
-  // for enhancement
-  __EXTEND_POINT__: Re()
-  // 38
-};
-function Ct(e, ...t) {
-  return cn(e, null, process.env.NODE_ENV !== "production" ? { messages: Ic, args: t } : void 0);
-}
-const Ic = {
-  [_e.UNEXPECTED_RETURN_TYPE]: "Unexpected return type in composer",
-  [_e.INVALID_ARGUMENT]: "Invalid argument",
-  [_e.MUST_BE_CALL_SETUP_TOP]: "Must be called at the top of a `setup` function",
-  [_e.NOT_INSTALLED]: "Need to install with `app.use` function",
-  [_e.UNEXPECTED_ERROR]: "Unexpected error",
-  [_e.NOT_AVAILABLE_IN_LEGACY_MODE]: "Not available in legacy mode",
-  [_e.REQUIRED_VALUE]: "Required in value: {0}",
-  [_e.INVALID_VALUE]: "Invalid value",
-  [_e.CANNOT_SETUP_VUE_DEVTOOLS_PLUGIN]: "Cannot setup vue-devtools plugin",
-  [_e.NOT_INSTALLED_WITH_PROVIDE]: "Need to install with `provide` function",
-  [_e.NOT_COMPATIBLE_LEGACY_VUE_I18N]: "Not compatible legacy VueI18n.",
-  [_e.BRIDGE_SUPPORT_VUE_2_ONLY]: "vue-i18n-bridge support Vue 2.x only",
-  [_e.MUST_DEFINE_I18N_OPTION_IN_ALLOW_COMPOSITION]: "Must define ‘i18n’ option or custom block in Composition API with using local scope in Legacy API mode",
-  [_e.NOT_AVAILABLE_COMPOSITION_IN_LEGACY]: "Not available Compostion API in Legacy API mode. Please make sure that the legacy API mode is working properly"
-}, Oo = /* @__PURE__ */ Et("__translateVNode"), Ao = /* @__PURE__ */ Et("__datetimeParts"), No = /* @__PURE__ */ Et("__numberParts"), Co = /* @__PURE__ */ Et("__enableEmitter"), Lo = /* @__PURE__ */ Et("__disableEmitter"), Pc = Et("__setPluralRules"), Is = /* @__PURE__ */ Et("__injectWithOption"), Io = /* @__PURE__ */ Et("__dispose");
-function Sn(e) {
-  if (!Q(e) || qe(e))
-    return e;
-  for (const t in e)
-    if (Xe(e, t))
-      if (!t.includes("."))
-        Q(e[t]) && Sn(e[t]);
-      else {
-        const n = t.split("."), o = n.length - 1;
-        let r = e, a = !1;
-        for (let s = 0; s < o; s++) {
-          if (n[s] === "__proto__")
-            throw new Error(`unsafe key: ${n[s]}`);
-          if (n[s] in r || (r[n[s]] = ie()), !Q(r[n[s]])) {
-            process.env.NODE_ENV !== "production" && Tt(Kn(De.IGNORE_OBJ_FLATTEN, {
-              key: n[s]
-            })), a = !0;
-            break;
-          }
-          r = r[n[s]];
-        }
-        if (a || (qe(r) ? ls.includes(n[o]) || delete e[t] : (r[n[o]] = e[t], delete e[t])), !qe(r)) {
-          const s = r[n[o]];
-          Q(s) && Sn(s);
-        }
-      }
-  return e;
-}
-function Qo(e, t) {
-  const { messages: n, __i18n: o, messageResolver: r, flatJson: a } = t, s = X(n) ? n : ve(o) ? ie() : { [e]: ie() };
-  if (ve(o) && o.forEach((i) => {
-    if ("locale" in i && "resource" in i) {
-      const { locale: l, resource: c } = i;
-      l ? (s[l] = s[l] || ie(), $n(c, s[l])) : $n(c, s);
-    } else
-      x(i) && $n(JSON.parse(i), s);
-  }), r == null && a)
-    for (const i in s)
-      Xe(s, i) && Sn(s[i]);
-  return s;
-}
-function Ps(e) {
-  return e.type;
-}
-function Mc(e, t, n) {
-  let o = Q(t.messages) ? t.messages : ie();
-  "__i18nGlobal" in n && (o = Qo(e.locale.value, {
-    messages: o,
-    __i18n: n.__i18nGlobal
-  }));
-  const r = Object.keys(o);
-  r.length && r.forEach((a) => {
-    e.mergeLocaleMessage(a, o[a]);
-  });
-  {
-    if (Q(t.datetimeFormats)) {
-      const a = Object.keys(t.datetimeFormats);
-      a.length && a.forEach((s) => {
-        e.mergeDateTimeFormat(s, t.datetimeFormats[s]);
-      });
-    }
-    if (Q(t.numberFormats)) {
-      const a = Object.keys(t.numberFormats);
-      a.length && a.forEach((s) => {
-        e.mergeNumberFormat(s, t.numberFormats[s]);
-      });
-    }
-  }
-}
-function Wr(e) {
-  return ae(gi, null, e, 0);
-}
-const Kr = "__INTLIFY_META__", Hr = () => [], kc = () => !1;
-let Yr = 0;
-function zr(e) {
-  return (t, n, o, r) => e(n, o, nt() || void 0, r);
-}
-const xc = /* @__NO_SIDE_EFFECTS__ */ () => {
-  const e = nt();
-  let t = null;
-  return e && (t = Ps(e)[Kr]) ? { [Kr]: t } : null;
-};
-function Rc(e = {}, t) {
-  const { __root: n, __injectWithOption: o } = e, r = n === void 0, a = e.flatJson, s = yt ? R : Nn, i = !!e.translateExistCompatible;
-  process.env.NODE_ENV !== "production" && i && Za(Kn(De.NOTICE_DROP_TRANSLATE_EXIST_COMPATIBLE_FLAG));
-  let l = ue(e.inheritLocale) ? e.inheritLocale : !0;
-  const c = s(
-    // prettier-ignore
-    n && l ? n.locale.value : x(e.locale) ? e.locale : wn
-  ), d = s(
-    // prettier-ignore
-    n && l ? n.fallbackLocale.value : x(e.fallbackLocale) || ve(e.fallbackLocale) || X(e.fallbackLocale) || e.fallbackLocale === !1 ? e.fallbackLocale : c.value
-  ), u = s(Qo(c.value, e)), f = s(X(e.datetimeFormats) ? e.datetimeFormats : { [c.value]: {} }), m = s(X(e.numberFormats) ? e.numberFormats : { [c.value]: {} });
-  let _ = n ? n.missingWarn : ue(e.missingWarn) || an(e.missingWarn) ? e.missingWarn : !0, y = n ? n.fallbackWarn : ue(e.fallbackWarn) || an(e.fallbackWarn) ? e.fallbackWarn : !0, v = n ? n.fallbackRoot : ue(e.fallbackRoot) ? e.fallbackRoot : !0, S = !!e.fallbackFormat, w = fe(e.missing) ? e.missing : null, p = fe(e.missing) ? zr(e.missing) : null, h = fe(e.postTranslation) ? e.postTranslation : null, T = n ? n.warnHtmlMessage : ue(e.warnHtmlMessage) ? e.warnHtmlMessage : !0, E = !!e.escapeParameter;
-  const A = n ? n.modifiers : X(e.modifiers) ? e.modifiers : {};
-  let O = e.pluralRules || n && n.pluralRules, L;
-  L = (() => {
-    r && kr(null);
-    const C = {
-      version: Nc,
-      locale: c.value,
-      fallbackLocale: d.value,
-      messages: u.value,
-      modifiers: A,
-      pluralRules: O,
-      missing: p === null ? void 0 : p,
-      missingWarn: _,
-      fallbackWarn: y,
-      fallbackFormat: S,
-      unresolving: !0,
-      postTranslation: h === null ? void 0 : h,
-      warnHtmlMessage: T,
-      escapeParameter: E,
-      messageResolver: e.messageResolver,
-      messageCompiler: e.messageCompiler,
-      __meta: { framework: "vue" }
-    };
-    C.datetimeFormats = f.value, C.numberFormats = m.value, C.__datetimeFormatters = X(L) ? L.__datetimeFormatters : void 0, C.__numberFormatters = X(L) ? L.__numberFormatters : void 0, process.env.NODE_ENV !== "production" && (C.__v_emitter = X(L) ? L.__v_emitter : void 0);
-    const P = hc(C);
-    return r && kr(P), P;
-  })(), gn(L, c.value, d.value);
-  function U() {
-    return [
-      c.value,
-      d.value,
-      u.value,
-      f.value,
-      m.value
-    ];
-  }
-  const $ = k({
-    get: () => c.value,
-    set: (C) => {
-      c.value = C, L.locale = c.value;
-    }
-  }), j = k({
-    get: () => d.value,
-    set: (C) => {
-      d.value = C, L.fallbackLocale = d.value, gn(L, c.value, C);
-    }
-  }), ee = k(() => u.value), le = /* @__PURE__ */ k(() => f.value), Z = /* @__PURE__ */ k(() => m.value);
-  function te() {
-    return fe(h) ? h : null;
-  }
-  function D(C) {
-    h = C, L.postTranslation = C;
-  }
-  function Ee() {
-    return w;
-  }
-  function Pe(C) {
-    C !== null && (p = zr(C)), w = C, L.missing = p;
-  }
-  function ot(C, P) {
-    return C !== "translate" || !P.resolvedMessage;
-  }
-  const ye = (C, P, re, ge, wt, Ln) => {
-    U();
-    let Zt;
-    try {
-      process.env.NODE_ENV !== "production" || __INTLIFY_PROD_DEVTOOLS__, r || (L.fallbackContext = n ? _c() : void 0), Zt = C(L);
-    } finally {
-      process.env.NODE_ENV !== "production" || __INTLIFY_PROD_DEVTOOLS__, r || (L.fallbackContext = void 0);
-    }
-    if (re !== "translate exists" && // for not `te` (e.g `t`)
-    Ae(Zt) && Zt === Jn || re === "translate exists" && !Zt) {
-      const [Ft, mi] = P();
-      if (process.env.NODE_ENV !== "production" && n && x(Ft) && ot(re, mi) && (v && (qn(y, Ft) || gs(_, Ft)) && Tt(Kn(De.FALLBACK_TO_ROOT, {
-        key: Ft,
-        type: re
-      })), process.env.NODE_ENV !== "production")) {
-        const { __v_emitter: _r } = L;
-        _r && v && _r.emit("fallback", {
-          type: re,
-          key: Ft,
-          to: "global",
-          groupId: `${re}:${Ft}`
-        });
-      }
-      return n && v ? ge(n) : wt(Ft);
-    } else {
-      if (Ln(Zt))
-        return Zt;
-      throw Ct(_e.UNEXPECTED_RETURN_TYPE);
-    }
-  };
-  function pe(...C) {
-    return ye((P) => Reflect.apply(Fr, null, [P, ...C]), () => To(...C), "translate", (P) => Reflect.apply(P.t, P, [...C]), (P) => P, (P) => x(P));
-  }
-  function de(...C) {
-    const [P, re, ge] = C;
-    if (ge && !Q(ge))
-      throw Ct(_e.INVALID_ARGUMENT);
-    return pe(P, re, Le({ resolvedMessage: !0 }, ge || {}));
-  }
-  function Ke(...C) {
-    return ye((P) => Reflect.apply(Vr, null, [P, ...C]), () => wo(...C), "datetime format", (P) => Reflect.apply(P.d, P, [...C]), () => Wn, (P) => x(P));
-  }
-  function ut(...C) {
-    return ye((P) => Reflect.apply(Ur, null, [P, ...C]), () => So(...C), "number format", (P) => Reflect.apply(P.n, P, [...C]), () => Wn, (P) => x(P));
-  }
-  function J(C) {
-    return C.map((P) => x(P) || Ae(P) || ue(P) ? Wr(String(P)) : P);
-  }
-  const Se = {
-    normalize: J,
-    interpolate: (C) => C,
-    type: "vnode"
-  };
-  function Te(...C) {
-    return ye(
-      (P) => {
-        let re;
-        const ge = P;
-        try {
-          ge.processor = Se, re = Reflect.apply(Fr, null, [ge, ...C]);
-        } finally {
-          ge.processor = null;
-        }
-        return re;
-      },
-      () => To(...C),
-      "translate",
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (P) => P[Oo](...C),
-      (P) => [Wr(P)],
-      (P) => ve(P)
-    );
-  }
-  function Be(...C) {
-    return ye(
-      (P) => Reflect.apply(Ur, null, [P, ...C]),
-      () => So(...C),
-      "number format",
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (P) => P[No](...C),
-      Hr,
-      (P) => x(P) || ve(P)
-    );
-  }
-  function xe(...C) {
-    return ye(
-      (P) => Reflect.apply(Vr, null, [P, ...C]),
-      () => wo(...C),
-      "datetime format",
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (P) => P[Ao](...C),
-      Hr,
-      (P) => x(P) || ve(P)
-    );
-  }
-  function dt(C) {
-    O = C, L.pluralRules = O;
-  }
-  function M(C, P) {
-    return ye(() => {
-      if (!C)
-        return !1;
-      const re = x(P) ? P : c.value, ge = Dt(re), wt = L.messageResolver(ge, C);
-      return i ? wt != null : qe(wt) || He(wt) || x(wt);
-    }, () => [C], "translate exists", (re) => Reflect.apply(re.te, re, [C, P]), kc, (re) => ue(re));
-  }
-  function oe(C) {
-    let P = null;
-    const re = ds(L, d.value, c.value);
-    for (let ge = 0; ge < re.length; ge++) {
-      const wt = u.value[re[ge]] || {}, Ln = L.messageResolver(wt, C);
-      if (Ln != null) {
-        P = Ln;
-        break;
-      }
-    }
-    return P;
-  }
-  function mn(C) {
-    const P = oe(C);
-    return P ?? (n ? n.tm(C) || {} : {});
-  }
-  function Dt(C) {
-    return u.value[C] || {};
-  }
-  function _n(C, P) {
-    if (a) {
-      const re = { [C]: P };
-      for (const ge in re)
-        Xe(re, ge) && Sn(re[ge]);
-      P = re[C];
-    }
-    u.value[C] = P, L.messages = u.value;
-  }
-  function so(C, P) {
-    u.value[C] = u.value[C] || {};
-    const re = { [C]: P };
-    if (a)
-      for (const ge in re)
-        Xe(re, ge) && Sn(re[ge]);
-    P = re[C], $n(P, u.value[C]), L.messages = u.value;
-  }
-  function g(C) {
-    return f.value[C] || {};
-  }
-  function b(C, P) {
-    f.value[C] = P, L.datetimeFormats = f.value, $r(L, C, P);
-  }
-  function I(C, P) {
-    f.value[C] = Le(f.value[C] || {}, P), L.datetimeFormats = f.value, $r(L, C, P);
-  }
-  function G(C) {
-    return m.value[C] || {};
-  }
-  function me(C, P) {
-    m.value[C] = P, L.numberFormats = m.value, Gr(L, C, P);
-  }
-  function ce(C, P) {
-    m.value[C] = Le(m.value[C] || {}, P), L.numberFormats = m.value, Gr(L, C, P);
-  }
-  Yr++, n && yt && (he(n.locale, (C) => {
-    l && (c.value = C, L.locale = C, gn(L, c.value, d.value));
-  }), he(n.fallbackLocale, (C) => {
-    l && (d.value = C, L.fallbackLocale = C, gn(L, c.value, d.value));
-  }));
-  const se = {
-    id: Yr,
-    locale: $,
-    fallbackLocale: j,
-    get inheritLocale() {
-      return l;
-    },
-    set inheritLocale(C) {
-      l = C, C && n && (c.value = n.locale.value, d.value = n.fallbackLocale.value, gn(L, c.value, d.value));
-    },
-    get availableLocales() {
-      return Object.keys(u.value).sort();
-    },
-    messages: ee,
-    get modifiers() {
-      return A;
-    },
-    get pluralRules() {
-      return O || {};
-    },
-    get isGlobal() {
-      return r;
-    },
-    get missingWarn() {
-      return _;
-    },
-    set missingWarn(C) {
-      _ = C, L.missingWarn = _;
-    },
-    get fallbackWarn() {
-      return y;
-    },
-    set fallbackWarn(C) {
-      y = C, L.fallbackWarn = y;
-    },
-    get fallbackRoot() {
-      return v;
-    },
-    set fallbackRoot(C) {
-      v = C;
-    },
-    get fallbackFormat() {
-      return S;
-    },
-    set fallbackFormat(C) {
-      S = C, L.fallbackFormat = S;
-    },
-    get warnHtmlMessage() {
-      return T;
-    },
-    set warnHtmlMessage(C) {
-      T = C, L.warnHtmlMessage = C;
-    },
-    get escapeParameter() {
-      return E;
-    },
-    set escapeParameter(C) {
-      E = C, L.escapeParameter = C;
-    },
-    t: pe,
-    getLocaleMessage: Dt,
-    setLocaleMessage: _n,
-    mergeLocaleMessage: so,
-    getPostTranslationHandler: te,
-    setPostTranslationHandler: D,
-    getMissingHandler: Ee,
-    setMissingHandler: Pe,
-    [Pc]: dt
-  };
-  return se.datetimeFormats = le, se.numberFormats = Z, se.rt = de, se.te = M, se.tm = mn, se.d = Ke, se.n = ut, se.getDateTimeFormat = g, se.setDateTimeFormat = b, se.mergeDateTimeFormat = I, se.getNumberFormat = G, se.setNumberFormat = me, se.mergeNumberFormat = ce, se[Is] = o, se[Oo] = Te, se[Ao] = xe, se[No] = Be, process.env.NODE_ENV !== "production" && (se[Co] = (C) => {
-    L.__v_emitter = C;
-  }, se[Lo] = () => {
-    L.__v_emitter = void 0;
-  }), se;
-}
-const er = {
-  tag: {
-    type: [String, Object]
-  },
-  locale: {
-    type: String
-  },
-  scope: {
-    type: String,
-    // NOTE: avoid https://github.com/microsoft/rushstack/issues/1050
-    validator: (e) => e === "parent" || e === "global",
-    default: "parent"
-    /* ComponentI18nScope */
-  },
-  i18n: {
-    type: Object
-  }
-};
-function Dc({ slots: e }, t) {
-  return t.length === 1 && t[0] === "default" ? (e.default ? e.default() : []).reduce((o, r) => [
-    ...o,
-    // prettier-ignore
-    ...r.type === Nt ? r.children : [r]
-  ], []) : t.reduce((n, o) => {
-    const r = e[o];
-    return r && (n[o] = r()), n;
-  }, ie());
-}
-function Ms(e) {
-  return Nt;
-}
-Le({
-  keypath: {
-    type: String,
-    required: !0
-  },
-  plural: {
-    type: [Number, String],
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    validator: (e) => Ae(e) || !isNaN(e)
-  }
-}, er);
-function Fc(e) {
-  return ve(e) && !x(e[0]);
-}
-function ks(e, t, n, o) {
-  const { slots: r, attrs: a } = t;
-  return () => {
-    const s = { part: !0 };
-    let i = ie();
-    e.locale && (s.locale = e.locale), x(e.format) ? s.key = e.format : Q(e.format) && (x(e.format.key) && (s.key = e.format.key), i = Object.keys(e.format).reduce((f, m) => n.includes(m) ? Le(ie(), f, { [m]: e.format[m] }) : f, ie()));
-    const l = o(e.value, s, i);
-    let c = [s.key];
-    ve(l) ? c = l.map((f, m) => {
-      const _ = r[f.type], y = _ ? _({ [f.type]: f.value, index: m, parts: l }) : [f.value];
-      return Fc(y) && (y[0].key = `${f.type}-${m}`), y;
-    }) : x(l) && (c = [l]);
-    const d = Le(ie(), a), u = x(e.tag) || Q(e.tag) ? e.tag : Ms();
-    return Ze(u, d, c);
-  };
-}
-Le({
-  value: {
-    type: Number,
-    required: !0
-  },
-  format: {
-    type: [String, Object]
-  }
-}, er);
-Le({
-  value: {
-    type: [Number, Date],
-    required: !0
-  },
-  format: {
-    type: [String, Object]
-  }
-}, er);
-function jr(e, t) {
-}
-const Bc = /* @__PURE__ */ Et("global-vue-i18n");
-function Qn(e = {}) {
-  const t = nt();
-  if (t == null)
-    throw Ct(_e.MUST_BE_CALL_SETUP_TOP);
-  if (!t.isCE && t.appContext.app != null && !t.appContext.app.__VUE_I18N_SYMBOL__)
-    throw Ct(_e.NOT_INSTALLED);
-  const n = Vc(t), o = Uc(n), r = Ps(t), a = $c(e, r);
-  if (__VUE_I18N_LEGACY_API__ && n.mode === "legacy" && !e.__useComponent) {
-    if (!n.allowComposition)
-      throw Ct(_e.NOT_AVAILABLE_IN_LEGACY_MODE);
-    return Hc(t, a, o, e);
-  }
-  if (a === "global")
-    return Mc(o, e, r), o;
-  if (a === "parent") {
-    let l = Gc(n, t, e.__useComponent);
-    return l == null && (process.env.NODE_ENV !== "production" && Tt(Kn(De.NOT_FOUND_PARENT_SCOPE)), l = o), l;
-  }
-  const s = n;
-  let i = s.__getInstance(t);
-  if (i == null) {
-    const l = Le({}, e);
-    "__i18n" in r && (l.__i18n = r.__i18n), o && (l.__root = o), i = Rc(l), s.__composerExtend && (i[Io] = s.__composerExtend(i)), Kc(s, t, i), s.__setInstance(t, i);
-  }
+const Pt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3cpolygon%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='50.954%2036%2052.259%2038.26%2053.564%2040.521%2050.954%2040.521%2048.344%2040.521%2049.649%2038.26%2050.954%2036'/%3e%3cg%3e%3cpath%20fill='%23fff'%20d='M55.0483,41.7818c0,5.4893-1.8016,9.9393-4.0241,9.9393S47,47.2711,47,41.7818Z'/%3e%3cpath%20d='M54.0279,42.7818c-.2013,4.8789-1.8477,7.9393-3.0037,7.9393s-2.8025-3.06-3.0038-7.9393h6.0075m1.02-1H47c0,5.4893,1.8017,9.9393,4.0242,9.9393s4.0241-4.45,4.0241-9.9393Z'/%3e%3c/g%3e%3cellipse%20cx='45.9058'%20cy='41.1927'%20rx='1'%20ry='0.5'%20transform='translate(-14.7874%2030.2147)%20rotate(-31.65)'%20fill='%23a57939'%20stroke='%236a462f'%20stroke-miterlimit='10'/%3e%3cellipse%20cx='43.8277'%20cy='49.9495'%20rx='0.5'%20ry='1'%20transform='translate(-19.6914%2030.4267)%20rotate(-31.65)'%20fill='%23a57939'%20stroke='%236a462f'%20stroke-miterlimit='10'/%3e%3cpath%20fill='%23a57939'%20stroke='%236a462f'%20stroke-miterlimit='10'%20d='M40.757,49.4724c-1.3634-.3235-1.9723-2.6772-1.36-5.2572s2.2138-4.4091,3.5772-4.0856a2.0232,2.0232,0,0,1,1.3007,1.4393l-1.7092,7.2022A2.0226,2.0226,0,0,1,40.757,49.4724Z'/%3e%3cellipse%20cx='56.0942'%20cy='41.1927'%20rx='0.5'%20ry='1'%20transform='translate(-8.4062%2067.329)%20rotate(-58.35)'%20fill='%23a57939'%20stroke='%236a462f'%20stroke-miterlimit='10'/%3e%3cellipse%20cx='58.1723'%20cy='49.9495'%20rx='1'%20ry='0.5'%20transform='translate(-14.8729%2073.2599)%20rotate(-58.35)'%20fill='%23a57939'%20stroke='%236a462f'%20stroke-miterlimit='10'/%3e%3cpath%20fill='%23a57939'%20stroke='%236a462f'%20stroke-miterlimit='10'%20d='M61.243,49.4724c1.3634-.3235,1.9723-2.6772,1.36-5.2572s-2.2138-4.4091-3.5772-4.0856a2.0232,2.0232,0,0,0-1.3007,1.4393l1.7092,7.2022A2.0226,2.0226,0,0,0,61.243,49.4724Z'/%3e%3cpath%20fill='%235c9e31'%20d='M53.5645,48.0205a.5009.5009,0,0,1-.3477-.1406l-2.2627-2.1846L48.6914,47.88a.5.5,0,0,1-.6953-.7188l2.61-2.52a.5.5,0,0,1,.6954,0l2.61,2.52a.5.5,0,0,1-.3476.8594Z'/%3e%3cpath%20d='M54.0279,42.7818c-.2013,4.8789-1.8477,7.9393-3.0037,7.9393s-2.8025-3.06-3.0038-7.9393h6.0075m1.02-1H47c0,5.4893,1.8017,9.9393,4.0242,9.9393s4.0241-4.45,4.0241-9.9393Z'/%3e%3cellipse%20cx='57.5784'%20cy='38.785'%20rx='1'%20ry='1.5'%20transform='translate(-7.3995%2014.3429)%20rotate(-13.35)'%20fill='%23a57939'%20stroke='%236a462f'%20stroke-miterlimit='10'/%3e%3cellipse%20cx='44.4216'%20cy='38.785'%20rx='1.5'%20ry='1'%20transform='translate(-3.5722%2073.0508)%20rotate(-76.65)'%20fill='%23a57939'%20stroke='%236a462f'%20stroke-miterlimit='10'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ot = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3cg%3e%3cpath%20fill='%23d22f27'%20d='M42,32.1538V44a2.0059,2.0059,0,0,1-2,2H32a2.0059,2.0059,0,0,1-2-2V32.1538'/%3e%3crect%20x='36'%20y='32.1538'%20width='6'%20height='6.1538'%20fill='%23f1b31c'/%3e%3crect%20x='30'%20y='38.3077'%20width='6'%20height='7.6923'%20fill='%23f1b31c'/%3e%3cellipse%20cx='36'%20cy='38.3077'%20rx='2.25'%20ry='2.3077'%20fill='%236a462f'/%3e%3cg%3e%3cpath%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M30,27.5385A12.5962,12.5962,0,0,1,36,26'/%3e%3cpath%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M42,27.5385A12.5962,12.5962,0,0,0,36,26'/%3e%3cline%20x1='30'%20x2='42'%20y1='32.1538'%20y2='32.1538'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M42,32.1538V44a2.0059,2.0059,0,0,1-2,2H32a2.0059,2.0059,0,0,1-2-2V32.1538'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Lt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Vt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3cpath%20fill='%23fff'%20stroke-width='0.845'%20d='m36%2048.88a12.89%2012.89%200%200%201-9.111-22%200.845%200.845%200%200%201%201.195%201.195%2011.2%2011.2%200%201%200%2015.83%200%200.845%200.845%200%201%201%201.195-1.195%2012.89%2012.89%200%200%201-9.111%2022z'/%3e%3cpath%20fill='%23fff'%20stroke-width='0.8598'%20d='m39.38%2034.52h-6.76a0.845%200.875%200%200%201%200-1.75h6.76a0.845%200.875%200%200%201%200%201.75z'/%3e%3ccircle%20cx='36'%20cy='30.3'%20r='1.69'%20fill='%23fff'%20stroke-width='0.845'/%3e%3cpath%20fill='%23fff'%20stroke-width='0.8598'%20d='m41.07%2044.76h-10.14a0.845%200.875%200%200%201%200-1.75h10.14a0.845%200.875%200%200%201%200%201.75z'/%3e%3cpath%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.775'%20d='m32.58%2028.68v15.07'/%3e%3cpath%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.766'%20d='m39.4%2028.67v14.91'/%3e%3crect%20x='-18.88'%20y='42.61'%20width='4.161'%20height='1.607'%20transform='rotate(-60)'%20fill='%23fff'%20fill-rule='evenodd'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.771'%20paint-order='normal'/%3e%3crect%20x='50.72'%20y='-19.75'%20width='4.161'%20height='1.607'%20transform='rotate(60)'%20fill='%23fff'%20fill-rule='evenodd'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.771'%20paint-order='normal'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", It = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='35.61%2028.038%2036%2020%2036.39%2028.038%2039.827%2020.761%2037.111%2028.337%2043.071%2022.929%2037.663%2028.889%2045.239%2026.173%2037.962%2029.61%2046%2030%2037.962%2030.39%2045.239%2033.827%2037.663%2031.111%2043.071%2037.071%2037.111%2031.663%2039.827%2039.239%2036.39%2031.962%2036%2040%2035.61%2031.962%2032.173%2039.239%2034.889%2031.663%2028.929%2037.071%2034.337%2031.111%2026.761%2033.827%2034.038%2030.39%2026%2030%2034.038%2029.61%2026.761%2026.173%2034.337%2028.889%2028.929%2022.929%2034.889%2028.337%2032.173%2020.761%2035.61%2028.038'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23d22f27'%20points='5%2055%2036%2055%205%2017%205%2055'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2055%2067%2055%2067%2017%2036%2055'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Rt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpath%20fill='%23fff'%20d='M59,29v5c0,9-2.6667,13-8,15-5.3333-2-8-6-8-15V29Z'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M54.5,32.5c-2.204-.506-3.5006.187-4,2'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M46.5359,35.9019c.6638,2.1617,1.9122,2.9381,3.732,2.4641'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M53.4641,41.0981c1.54-1.6557,1.5883-3.1251.268-4.4641'/%3e%3cpath%20fill='%2392d3f5'%20d='M44.4545,43A10.67,10.67,0,0,0,51,49a10.67,10.67,0,0,0,6.5455-6Z'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M59,29v5c0,9-2.6667,13-8,15-5.3333-2-8-6-8-15V29Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Zt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cg%3e%3cpolyline%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2038%2040%2041%2036%2038%2036%2045%2036%2038%2032%2041'/%3e%3cpolyline%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2038%2036%2031%2039%2027'/%3e%3cline%20x1='36'%20x2='33'%20y1='31'%20y2='27'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='36'%20x2='42'%20y1='32.5'%20y2='32.5'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='36'%20x2='42'%20y1='36'%20y2='36'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='30'%20x2='36'%20y1='32.5'%20y2='32.5'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='30'%20x2='36'%20y1='36'%20y2='36'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Nt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Dt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='19'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='36.996%2029.035%2038.668%2034.179%2034.291%2031%2039.701%2031%2035.325%2034.179%2036.996%2029.035'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M44.804,41.0736q.0544-.081.1073-.163a9.9962,9.9962,0,0,0-6.5995-15.2385'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M30.709,43.6426A9.9892,9.9892,0,0,0,39.4737,45.05q.4654-.1448.9107-.3329'/%3e%3cline%20x1='30.415'%20x2='47'%20y1='34.6554'%20y2='46'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", $t = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17.08'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='m23.59%2033.2c0.1669-0.868-0.04314-1.763-0.5644-1.353-1.067-0.4851-2.39-2.864-2.527-3.269%204.986%203.782%209.793%204.234%2010.72-1.684%200.9256-5.918%204.905-4.075%207.306-3.63%202.983%200.4838%206.239%201.854%208.872%203.304%201.459%200.7628%201.705%203.005%201.34%204.707-0.7856%201.686%200.6629%202.657%201.791%203.562%201.517%201.584%200.955%203.955%200.4262%205.831-0.4979%201.562-2.163%203.021-1.797%204.634%200.1987%200.8754-0.9009%201.524-1.493%202.192-2.176%202.243-5.569%202.092-8.394%201.502-1.493%200.02412%200.5204-0.8074%200.1759-1.801%200.6309-1.816-1.043-2.689-2.849-2.888-2.538-0.3144-3.007-0.02543-5.544-0.5997-1.324%200.8931-5.073-0.8008-5.456-2.743-0.3229-1.639-1.799-2.888-2.049-4.516%201.44%200.2821-0.2505-1.575%201.289-2.164-0.07913-0.7664-0.7052-1.763-1.246-1.084z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Gt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%2361b2e4'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='36%2033.897%2037.236%2032%2037.176%2034.299%2039.236%2033.528%2037.902%2035.35%2040%2036%2037.902%2036.65%2039.236%2038.472%2037.176%2037.701%2037.236%2040%2036%2038.103%2034.764%2040%2034.824%2037.701%2032.764%2038.472%2034.098%2036.65%2032%2036%2034.098%2035.35%2032.764%2033.528%2034.824%2034.299%2034.764%2032%2036%2033.897'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", zt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cg%3e%3cpolygon%20fill='%231e50a0'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='5%2017%205%2036%2067%2017%205%2017'/%3e%3cpolygon%20fill='%231e50a0'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='5%2036%205%2055%2067%2055%205%2036'/%3e%3c/g%3e%3cg%3e%3cg%3e%3cpath%20fill='%23a57939'%20d='M46.0234,38.8825s-2.1058-4.7163,5.49-4.297c0,0,1.6922-7.057,12.2217-9.3977,0,0,1.02,9.8122-8.8748,13.31a4.1454,4.1454,0,0,0,3.3844,3.9128c.4513.1048,1.1282-.1048,1.2786,0,.8273.7686-5.2451,1.8956-6.5237,1.5113V41.2056s-2.3511.0525-3.5921-3.0916C49.37,38.114,48.543,36.5419,46.0234,38.8825Z'/%3e%3cpath%20fill='%236a462f'%20d='M52.0944,33.9612S50.9346,25.1529,53.9056,24c0,0,2.85,2,2.85,4Z'/%3e%3cpath%20fill='%23fff'%20d='M50.2833,39.3945s-1.8056-2.8619-3.6222-.9055c0,0-2.6263-4.6637,5.0944-4.489Z'/%3e%3cpath%20d='M54.4762,44.7153a2.8485,2.8485,0,0,1-1.9824-.5512.75.75,0,0,1-.1406-.8662v0a2.773,2.773,0,0,0,.05-1.2724c-.961-.128-2.6221-.772-3.5879-3.5488a.3236.3236,0,0,0-.1973-.0918c-.1416-.02-.6845.0117-1.7353,1.0625a.76.76,0,0,1-.6973.2011.7519.7519,0,0,1-.541-.4834,4.6707,4.6707,0,0,1,.1728-3.4521,3.31,3.31,0,0,1,2.336-1.5825,11.2583,11.2583,0,0,1,2.3906-.2622c.1279-.002.2793-.0044.375-.0127.0322-.1221.1-.4405.1777-.9258a19.4218,19.4218,0,0,0,.1709-2.3726c.0938-2.5972.209-5.83,2.2207-7.18a.75.75,0,0,1,.5166-.1211,2.6873,2.6873,0,0,1,2.462,2.5547.75.75,0,0,1-1.5,0,1.0927,1.0927,0,0,0-.878-1c-1.1523,1.0738-1.2461,3.6812-1.3222,5.8008a20.1992,20.1992,0,0,1-.1914,2.5674,2.9115,2.9115,0,0,1-.7129,1.8789,2.0372,2.0372,0,0,1-1.295.3106,9.7854,9.7854,0,0,0-2.1015.23,1.8612,1.8612,0,0,0-1.3379.8462,2.1754,2.1754,0,0,0-.2442,1.0464,2.7941,2.7941,0,0,1,1.9854-.5849,1.8,1.8,0,0,1,1.2949.9018.7467.7467,0,0,1,.043.1021c.9531,2.8276,2.6357,2.6528,2.709,2.6411a.7694.7694,0,0,1,.8369.5639,5.5691,5.5691,0,0,1,.1494,2.0977,11.0916,11.0916,0,0,0,3.3262-.4048A4.0469,4.0469,0,0,1,53.85,38.457a.75.75,0,0,1,.3789-.5781,24.4836,24.4836,0,0,0,3.3282-2.2168,6.3988,6.3988,0,0,0-.5147-1.9551.75.75,0,0,1,1.3965-.5488c.81,2.062.61,2.9351.53,3.1533a.75.75,0,0,1-.2266.3194A25.0572,25.0572,0,0,1,55.35,38.9668a2.6623,2.6623,0,0,0,.5957,1.5029,3.3445,3.3445,0,0,0,2.4336.9829c.5713.0342,1.6338.0977,1.8155.9034.0742.3281.0049.8066-.7461,1.2207A13.0255,13.0255,0,0,1,54.4762,44.7153Z'/%3e%3cpath%20d='M51.7565,35.75a.76.76,0,0,1-.1045-.0073.7506.7506,0,0,1-.64-.8462c.415-2.9732,5.1005-6.7349,5.6328-7.1538.2041-.15,4.55-3.3047,7.5214-3.3047a.749.749,0,0,1,.7354.604A11.0427,11.0427,0,0,1,62.08,34.0674a.75.75,0,0,1-1.2216-.1563,12.405,12.405,0,0,0-1.4707-2.2187.75.75,0,1,1,1.0839-1.0371,9.9241,9.9241,0,0,1,1.1612,1.5893,9.6344,9.6344,0,0,0,1.873-6.2441,18.1327,18.1327,0,0,0-5.9531,2.937c-1.2959,1.02-4.7734,4.1509-5.0537,6.166A.751.751,0,0,1,51.7565,35.75Z'/%3e%3cpath%20d='M50.6842,43.958a.7571.7571,0,0,1-.2031-.0278,4.3691,4.3691,0,0,0-1.376-.1953A.75.75,0,0,1,48.1305,42.6a2.2712,2.2712,0,0,1,1.9444-.3l.1835-1.1016a.75.75,0,0,1,1.48.2471l-.3144,1.8862a.7513.7513,0,0,1-.74.6265Zm-1.6133-.2153Zm.12-.0816-.001.001Z'/%3e%3c/g%3e%3cg%3e%3cline%20x1='42.7555'%20x2='54.7555'%20y1='42'%20y2='47'%20fill='%23fff'/%3e%3cpath%20d='M54.7555,47.75a.7485.7485,0,0,1-.2881-.0576l-12-5a.75.75,0,1,1,.5762-1.3848l12,5a.75.75,0,0,1-.2881,1.4424Z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ft = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ht = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='54.233%2038.945%2055.16%2035.945%2056.087%2038.945%2053.66%2037.09%2056.66%2037.091%2054.233%2038.945'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='20.5%2046.999%2018.942%2048.476%2019.097%2046.306%2017%2045.978%2018.75%2044.748%2017.693%2042.862%2019.721%2043.499%2020.5%2041.476%2021.279%2043.499%2023.307%2042.862%2022.25%2044.748%2024%2045.978%2021.903%2046.306%2022.058%2048.476%2020.5%2046.999'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='44.5%2035.421%2043.387%2036.476%2043.498%2034.926%2042%2034.691%2043.25%2033.813%2042.495%2032.466%2043.944%2032.921%2044.5%2031.476%2045.056%2032.921%2046.505%2032.466%2045.75%2033.813%2047%2034.691%2045.502%2034.926%2045.613%2036.476%2044.5%2035.421'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='59.5%2032.421%2058.387%2033.476%2058.498%2031.926%2057%2031.691%2058.25%2030.813%2057.495%2029.466%2058.944%2029.921%2059.5%2028.476%2060.056%2029.921%2061.505%2029.466%2060.75%2030.813%2062%2031.691%2060.502%2031.926%2060.613%2033.476%2059.5%2032.421'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='51.5%2026.421%2050.387%2027.476%2050.498%2025.926%2049%2025.691%2050.25%2024.813%2049.495%2023.466%2050.944%2023.921%2051.5%2022.476%2052.056%2023.921%2053.505%2023.466%2052.75%2024.813%2054%2025.691%2052.502%2025.926%2052.613%2027.476%2051.5%2026.421'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='51.5%2047.421%2050.387%2048.476%2050.498%2046.926%2049%2046.691%2050.25%2045.813%2049.495%2044.466%2050.944%2044.921%2051.5%2043.476%2052.056%2044.921%2053.505%2044.466%2052.75%2045.813%2054%2046.691%2052.502%2046.926%2052.613%2048.476%2051.5%2047.421'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Kt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='47'%20width='62'%20height='2'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='43'%20width='62'%20height='2'%20fill='%23f1b31c'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='12.707%2023.293%2016%2024%2012.707%2024.707%2012%2028%2011.293%2024.707%208%2024%2011.293%2023.293%2012%2020%2012.707%2023.293'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Wt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23f1b31c'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2030%2033%2030%2017%2024%2017%2024%2033%205%2033%205%2039%2024%2039%2024%2055%2030%2055%2030%2039%2067%2039%2067%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ut = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%2361b2e4'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='38.436%2034.61%2039.022%2033%2039.584%2034.618%2041.137%2033.894%2040.39%2035.436%2042%2036.022%2040.382%2036.584%2041.106%2038.137%2039.564%2037.39%2038.978%2039%2038.416%2037.382%2036.863%2038.106%2037.61%2036.564%2036%2035.978%2037.618%2035.416%2036.894%2033.863%2038.436%2034.61'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M30.5307,36a4.0529,4.0529,0,0,1,3.3784-3.9236A4.3955,4.3955,0,0,0,33.0983,32a4.0043,4.0043,0,1,0,0,8,4.3955,4.3955,0,0,0,.8108-.0764A4.0529,4.0529,0,0,1,30.5307,36Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Yt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23f1b31c'%20points='50%2055%2015%2016.999%2049.999%2016.999%2050%2055'/%3e%3ccircle%20cx='11.1'%20cy='18'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='44.1'%20cy='54'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='40.1'%20cy='49.5'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='35.1'%20cy='45'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='31.1'%20cy='40.5'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='23.1'%20cy='31.5'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='27.1'%20cy='36'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='15.1'%20cy='22.5'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='19.1'%20cy='27'%20r='1.75'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", qt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20id='_'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='33.415%2029.501%2036%2026.712%2038.585%2029.501%2037.943%2030.096%2036.439%2028.467%2036.439%2045.288%2035.561%2045.288%2035.561%2028.467%2034.057%2030.096%2033.415%2029.501'/%3e%3cpolygon%20id='_2'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='41.5%2039.212%2040.703%2039.212%2040.703%2031.9%2039.685%2033.003%2039.25%2032.6%2041.5%2030.212%2041.5%2039.212'/%3e%3cpolygon%20id='_3'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='30.5%2030.212%2032.75%2032.6%2032.315%2033.003%2031.297%2031.9%2031.297%2039.212%2030.5%2039.212%2030.5%2030.212'/%3e%3cpolygon%20id='_4'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='41.5%2039.297%2030.5%2039.297%2030.5%2038.703%2041.5%2038.703%2041.5%2039.297'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Jt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3ccircle%20cx='36'%20cy='36'%20r='9'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Qt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Xt = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='19'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='33.688%2039.509%2036.16%2031.509%2038.632%2039.509%2032.16%2034.564%2040.16%2034.564%2033.688%2039.509'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", eo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", to = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpath%20fill='%23fff'%20d='m21%2018-16-1v38l16-1%209.067-3.6-9.067-3.6%209.067-3.6-9.067-3.6%208.933-3.6-8.933-3.6%208.933-3.6-8.933-3.6%208.933-3.6z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", oo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d22f27'%20points='63.173%2017%208.827%2017%2036%2033.654%2063.173%2017'/%3e%3cpolygon%20fill='%23d22f27'%20points='63.173%2055%2036%2038.346%208.827%2055%2063.173%2055'/%3e%3cpolygon%20fill='%235c9e31'%20points='67%2019.346%2039.827%2036%2067%2052.654%2067%2019.346'/%3e%3cpolygon%20fill='%235c9e31'%20points='5%2052.654%2032.173%2036%205%2019.346%205%2052.654'/%3e%3ccircle%20cx='36'%20cy='36'%20r='10'%20fill='%23fff'/%3e%3ccircle%20cx='36'%20cy='31'%20r='2'%20fill='%23d22f27'/%3e%3ccircle%20cx='40.3301'%20cy='38.5'%20r='2'%20fill='%23d22f27'/%3e%3ccircle%20cx='31.6699'%20cy='38.5'%20r='2'%20fill='%23d22f27'/%3e%3cline%20x1='31.6699'%20x2='36'%20y1='38.5'%20y2='36'%20fill='none'/%3e%3cline%20x1='40.3301'%20x2='36'%20y1='38.5'%20y2='36'%20fill='none'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", io = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", no = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cg%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='43.5%2025.91%2044.5%2022.91%2027.5%2022.91%2028.5%2025.91%2043.5%2025.91'/%3e%3cpath%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M36,45.91s7.5-2.5,7.5-10v-10h-15v10C28.5,43.41,36,45.91,36,45.91Z'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20d='M28.5,32.41v3.5a10.1844,10.1844,0,0,0,.3063,2.5H43.1938a10.1845,10.1845,0,0,0,.3062-2.5v-3.5Z'/%3e%3cg%3e%3cg%3e%3cline%20x1='36'%20x2='36'%20y1='30.1603'%20y2='27.6603'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='35.375'%20x2='36.625'%20y1='28.4936'%20y2='28.4936'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%3e%3cline%20x1='40.5'%20x2='40.5'%20y1='30.1603'%20y2='27.6603'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='39.875'%20x2='41.125'%20y1='28.4936'%20y2='28.4936'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%3e%3cline%20x1='31.5'%20x2='31.5'%20y1='30.1603'%20y2='27.6603'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='30.875'%20x2='32.125'%20y1='28.4936'%20y2='28.4936'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cline%20x1='36'%20x2='36'%20y1='36.6603'%20y2='34.1603'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='37.25'%20x2='34.75'%20y1='35.4103'%20y2='35.4103'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3ccircle%20cx='36'%20cy='43.9103'%20r='1'%20fill='%23fcea2b'/%3e%3ccircle%20cx='33'%20cy='40.9103'%20r='1'%20fill='%23fcea2b'/%3e%3ccircle%20cx='39'%20cy='40.9103'%20r='1'%20fill='%23fcea2b'/%3e%3cpath%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M47,46.2692A23.0924,23.0924,0,0,1,36,49.09'/%3e%3cpath%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M25,46.2692A23.093,23.093,0,0,0,36,49.09'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ro = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='31'%20height='19'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3crect%20x='44'%20y='29'%20width='20'%20height='17'%20fill='%23fff'/%3e%3cpath%20fill='%235c9e31'%20d='M43.9133,45v.4933a3.8071,3.8071,0,0,0,.1237,1.2247,3.8582,3.8582,0,0,0,.269.6564,4.561,4.561,0,0,0,.3533.5593,4.0657,4.0657,0,0,0,.399.4567,5.2435,5.2435,0,0,0,.56.4889c.2175.16.43.3255.6594.4672.2.1233.4038.2394.6066.3575.25.1455.5135.26.7682.3929.2874.1505.592.2574.8871.388.1621.0718.3281.1354.4954.1933.112.0388.2221.0881.3348.1181.1877.05.3638.134.5536.1776.1633.0376.3182.109.482.15.1116.0279.22.07.33.1027.1142.0333.2284.0688.3449.0912.13.025.2575.0616.3836.0962s.2539.0741.3807.0974c.1951.0358.3832.0989.5786.1336.1883.0334.3758.0774.5629.1192.0781.0174.1576.02.2334.0391a4.9463,4.9463,0,0,0,.6426.1149.305.305,0,0,0,.2166-.001,1.4022,1.4022,0,0,0,.1538-.0116c.1857-.0345.37-.0805.5563-.1055.0979-.0131.1939-.0371.29-.056.1657-.0328.3306-.0736.4958-.1114.0707-.0163.1438-.0237.2122-.0452.1471-.0463.2983-.0717.4472-.1089.1281-.0321.2591-.0541.3847-.0946.1728-.0557.35-.0944.5236-.1442a3.4119,3.4119,0,0,0,.3336-.0947,4.1273,4.1273,0,0,1,.4371-.1379c.1871-.0518.3675-.1233.5534-.1782.24-.0711.4728-.172.7076-.263.1879-.0729.3772-.1417.5607-.2272q.2709-.126.5451-.2443c.24-.1031.47-.225.7015-.344a4.6368,4.6368,0,0,0,.4491-.2594c.2123-.1413.2954-.4162.4545-.62.1833-.235.395-.4463.5779-.6818a5.3028,5.3028,0,0,0,.368-.5522c.1687-.2846.3237-.5771.4785-.87l.2008-.3793.369-.6969A1.2625,1.2625,0,0,0,63.9982,45Z'/%3e%3ccircle%20cx='56.25'%20cy='31.75'%20r='1'%20fill='%23d22f27'/%3e%3ccircle%20cx='51.75'%20cy='31.75'%20r='1'%20fill='%23d22f27'/%3e%3crect%20x='51'%20y='31'%20rx='2.5'%20ry='2.5'%20width='6'%20height='8'%20fill='%23d22f27'/%3e%3crect%20x='58'%20y='40'%20rx='1'%20ry='1'%20width='4'%20height='2'%20fill='%23d22f27'/%3e%3crect%20x='56'%20y='46'%20rx='1'%20ry='1'%20width='4'%20height='2'%20transform='translate(50.2218%20-27.2462)%20rotate(45)'%20fill='%23d22f27'/%3e%3crect%20x='48'%20y='46'%20rx='1'%20ry='1'%20width='4'%20height='2'%20transform='translate(118.5894%2044.8787)%20rotate(135)'%20fill='%23d22f27'/%3e%3crect%20x='46'%20y='40'%20rx='1'%20ry='1'%20width='4'%20height='2'%20fill='%23d22f27'/%3e%3cpath%20fill='%2392d3f5'%20d='M60,36c-2.5714,2.3636-6,0-6,0s-3.4286,2.3636-6,0v2.3636a2.0759,2.0759,0,0,1,0,2.3637S48.8571,49,54,49s6-8.2727,6-8.2727a2.0759,2.0759,0,0,1,0-2.3637Z'/%3e%3cpath%20fill='none'%20stroke='%23000000'%20stroke-miterlimit='10'%20d='M53.75,28.5H43.5V43.54s0,7.52,10.25,8.46C64,51.06,64,43.54,64,43.54V28.5Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", lo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20d='M5,19v5L67,47V42Z'/%3e%3cpath%20stroke='%23000'%20stroke-miterlimit='10'%20d='M5,25v5L67,53V48Z'/%3e%3cg%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%3e%3cpath%20d='M41.528%2034.915c.30362%20.71783%20.47151%201.507%20.47151%202.3355%200%203.3137-2.6863%206-6%206s-6-2.6863-6-6c0-.82843%20.16789-1.6176%20.47151-2.3355'/%3e%3cpath%20d='M36%2028v12.5'/%3e%3cpath%20d='M42%2043.25c-3.7143%203.1429-8.1429%203.2143-12%200'/%3e%3cpath%20d='M26%2041.75v-5.75l-2-4.25'/%3e%3cpath%20d='M46%2041.75v-5.25l2-4.75'/%3e%3cpath%20d='M39.385%2031.592c-2.2775-.81785-4.6618-.75339-6.8641-.02937'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", co = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3cg%3e%3cellipse%20cx='38.5'%20cy='33.2'%20rx='2.2'%20ry='1.2'%20transform='translate(-12.1996%2036.9477)%20rotate(-45)'/%3e%3cellipse%20cx='34.5'%20cy='33.2'%20rx='1.2'%20ry='2.2'%20transform='translate(-13.3711%2034.1192)%20rotate(-45)'/%3e%3cellipse%20cx='36.5'%20cy='36.8667'%20rx='2'%20ry='3.1333'%20fill='%2361b2e4'/%3e%3cpath%20fill='%23d22f27'%20d='M40,41a1,1,0,0,1-.707-1.707,1.725,1.725,0,0,0-.0059-2.5918,1,1,0,0,1,1.42-1.4082,3.7206,3.7206,0,0,1,0,5.414A.9967.9967,0,0,1,40,41Z'/%3e%3cpath%20fill='%23d22f27'%20d='M32.8887,41a.9971.9971,0,0,1-.7071-.293,3.7208,3.7208,0,0,1,0-5.414,1,1,0,0,1,1.419,1.41,1.7242,1.7242,0,0,0-.0049,2.59A1,1,0,0,1,32.8887,41Z'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", so = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpolygon%20fill='%23fff'%20points='5%2017%205%2055%2067%2017%205%2017'/%3e%3cg%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='19.518%2031%2023.132%2037.259%2015.904%2037.259%2019.518%2031'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='19.518%2039.345%2015.904%2033.086%2023.132%2033.086%2019.518%2039.345'/%3e%3c/g%3e%3ccircle%20cx='19.518'%20cy='35.1726'%20r='6'%20fill='none'%20stroke='%23000'%20stroke-miterlimit='10'/%3e%3cpolygon%20fill='%23f1b31c'%20points='5%2017%205%2033%2030%2017%205%2017'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ao = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3cpolygon%20fill='%23fcea2b'%20points='59.023%2036.023%2035.866%2050.653%2012.977%2036.291%2036.134%2021.661%2059.023%2036.023'/%3e%3ccircle%20cx='36'%20cy='36'%20r='9'%20fill='%231e50a0'/%3e%3cpath%20fill='%23fff'%20d='M44.1587,39.7815a9.0459,9.0459,0,0,0,.6963-2.2587,11.4735,11.4735,0,0,0-17.4766-4.0415,8.9839,8.9839,0,0,0-.3529,2.0137,10.9983,10.9983,0,0,1,17.1332,4.2865Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", fo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%2361b2e4'/%3e%3cpolygon%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", go = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23f1b31c'%20points='5%2017%205%2055%2067%2017'/%3e%3cg%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='3'%20d='m46.24%2027.67c0.2011%200.1408-9.044-2.459-5.06%206.075%203.623%207.761-10.23-2.525-11.32%203.865-0.7428%204.356-3.086%207.037-7.395%207.782'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='m40.81%2032.58c2.651%201.756%205.4%203.373%207.745%201.011'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='m41.33%2036.44c-0.966%204.229-0.4486%204.465%202.864%205.502'/%3e%3ccircle%20cx='46.92'%20cy='43.06'%20r='1.5'%20fill='%23fff'/%3e%3ccircle%20cx='51.01'%20cy='32.07'%20r='1.5'%20fill='%23fff'/%3e%3cg%20transform='matrix(1.5%200%200%201.5%20-22.39%20-22.64)'%20stroke-width='0.6667'%3e%3ccircle%20cx='35.19'%20cy='47.37'%20r='1'%20fill='%23fff'%20stroke-width='0.4444'/%3e%3c/g%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='m29.21%2040.36c1.304%202.327%201.453%203.054%201.085%205.196'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='m29.3%2038.71c1.54%200.5389%202.636%201.603%204.377%201.421'/%3e%3cg%20transform='matrix(1.5%200%200%201.5%20-16.34%20-31.18)'%20stroke-width='0.6667'%3e%3ccircle%20cx='35.19'%20cy='47.37'%20r='1'%20fill='%23fff'%20stroke-width='0.4444'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ho = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpolygon%20fill='%231e50a0'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2030%2033%2030%2017%2024%2017%2024%2033%205%2033%205%2039%2024%2039%2024%2055%2030%2055%2030%2039%2067%2039%2067%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", uo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='31'%20width='62'%20height='10'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", po = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='12'%20height='38'%20fill='%23fff'/%3e%3crect%20x='9.0252'%20y='19.5251'%20width='4.9497'%20height='4.9497'%20transform='translate(-12.1881%2014.5754)%20rotate(-45)'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='9.0252'%20y='26.5251'%20width='4.9497'%20height='4.9497'%20transform='translate(-17.1378%2016.6257)%20rotate(-45)'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='9.0252'%20y='33.5251'%20width='4.9497'%20height='4.9497'%20transform='translate(-22.0876%2018.6759)%20rotate(-45)'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='9.0252'%20y='40.5251'%20width='4.9497'%20height='4.9497'%20transform='translate(-27.0373%2020.7262)%20rotate(-45)'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='9.0252'%20y='47.5251'%20width='4.9497'%20height='4.9497'%20transform='translate(-31.9871%2022.7764)%20rotate(-45)'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ko = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5.0834'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5.0834'%20y='49'%20width='62'%20height='6'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='6'%20fill='%23d22f27'/%3e%3ccircle%20cx='36.0834'%20cy='36'%20r='9'%20fill='%23fff'/%3e%3ccircle%20cx='36.0834'%20cy='36'%20r='7.5'%20fill='%23fff'%20stroke='%235c9e31'%20stroke-miterlimit='10'/%3e%3cg%3e%3cpolygon%20fill='%23fcea2b'%20points='38.583%2038.5%2036.083%2038.5%2036.083%2033%2039.083%2033%2038.583%2038.5'/%3e%3cpath%20fill='%2361b2e4'%20stroke='%2361b2e4'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M36.0833,41a4.9451,4.9451,0,0,0,2.5876-2.2291L36,36.1l-2.5576,2.5576A4.9084,4.9084,0,0,0,36.0833,41Z'/%3e%3cpath%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M36.0834,41s3-1,3-4V33h-6v4C33.0834,40,36.0834,41,36.0834,41Z'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5.0834'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", wo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='17'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='50'%20y='17'%20width='17'%20height='38'%20fill='%23d22f27'/%3e%3cline%20x1='36'%20x2='36'%20y1='46'%20y2='41'%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpolyline%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2041%2042.8%2041%2042%2039%2046%2035%2046%2032%2043%2032%2039%2036%2039%2029%2036%2026'/%3e%3cpolyline%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2041%2029.2%2041%2030%2039%2026%2035%2026%2032%2029%2032%2033%2036%2033%2029%2036%2026'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", yo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='52.233%2039.354%2053.16%2036.354%2054.087%2039.354%2051.66%2037.5%2054.66%2037.5%2052.233%2039.354'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='42.5%2035.831%2041.387%2036.885%2041.498%2035.336%2040%2035.101%2041.25%2034.223%2040.495%2032.876%2041.944%2033.331%2042.5%2031.885%2043.056%2033.331%2044.505%2032.876%2043.75%2034.223%2045%2035.101%2043.502%2035.336%2043.613%2036.885%2042.5%2035.831'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='57.5%2032.831%2056.387%2033.885%2056.498%2032.336%2055%2032.101%2056.25%2031.223%2055.495%2029.876%2056.944%2030.331%2057.5%2028.885%2058.056%2030.331%2059.505%2029.876%2058.75%2031.223%2060%2032.101%2058.502%2032.336%2058.613%2033.885%2057.5%2032.831'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='49.5%2026.831%2048.387%2027.885%2048.498%2026.336%2047%2026.101%2048.25%2025.223%2047.495%2023.876%2048.944%2024.331%2049.5%2022.885%2050.056%2024.331%2051.505%2023.876%2050.75%2025.223%2052%2026.101%2050.502%2026.336%2050.613%2027.885%2049.5%2026.831'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='49.5%2047.831%2048.387%2048.885%2048.498%2047.336%2047%2047.101%2048.25%2046.223%2047.495%2044.876%2048.944%2045.331%2049.5%2043.885%2050.056%2045.331%2051.505%2044.876%2050.75%2046.223%2052%2047.101%2050.502%2047.336%2050.613%2048.885%2049.5%2047.831'/%3e%3ccircle%20cx='13'%20cy='25'%20r='4'%20fill='%23fcea2b'/%3e%3cpath%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M32.98,42.5958A6.5958,6.5958,0,1,1,36,30.13,8.3947,8.3947,0,1,0,36,41.87,6.6516,6.6516,0,0,1,32.98,42.5958Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", xo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='67%2024%2067%2017%2059%2017%205%2048%205%2055%2013%2055%2067%2024'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='12.348%2030.583%2014.671%2023.583%2016.674%2030.476%2011.11%2026.322%2018.11%2026.15%2012.348%2030.583'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", vo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='10'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='27'%20width='62'%20height='9'%20fill='%23fff'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='9'%20fill='%235c9e31'/%3e%3crect%20x='33'%20y='17'%20width='6'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='12.906%2019.603%2014.451%2024.603%2010.406%2021.513%2015.406%2021.513%2011.361%2024.603%2012.906%2019.603'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", mo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%235c9e31'%20points='5%2017%205%2055%2067%2017%205%2017'/%3e%3cpolygon%20fill='%23f1b31c'%20points='67%2017%2054%2017%205%2055%2018%2055%2067%2017'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", _o = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='17'%20y='17'%20width='38'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'%20points='47%2032.462%2039.538%2032.462%2039.538%2025%2032.462%2025%2032.462%2032.462%2025%2032.462%2025%2039.538%2032.462%2039.538%2032.462%2047%2039.538%2047%2039.538%2039.538%2047%2039.538%2047%2032.462'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='17'%20y='17'%20width='38'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", bo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%23e27022'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", jo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3ccircle%20cx='51.1'%20cy='50'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='51.1'%20cy='30'%20r='1.75'%20fill='%23fff'/%3e%3cg%3e%3ccircle%20cx='56.1'%20cy='48.6603'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='46.1'%20cy='31.3397'%20r='1.75'%20fill='%23fff'/%3e%3c/g%3e%3ccircle%20cx='41.1'%20cy='40'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='61.1'%20cy='40'%20r='1.75'%20fill='%23fff'/%3e%3cg%3e%3ccircle%20cx='59.7603'%20cy='45'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='42.4398'%20cy='35'%20r='1.75'%20fill='%23fff'/%3e%3c/g%3e%3cg%3e%3ccircle%20cx='46.1'%20cy='48.6603'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='56.1'%20cy='31.3397'%20r='1.75'%20fill='%23fff'/%3e%3c/g%3e%3cg%3e%3ccircle%20cx='42.4398'%20cy='45'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='59.7603'%20cy='35'%20r='1.75'%20fill='%23fff'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Mo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='19'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='12.688%2030.445%2015.16%2022.445%2017.632%2030.445%2011.16%2025.5%2019.16%2025.5%2012.688%2030.445'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ao = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23f1b31c'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='33.528%2040%2036%2032%2038.473%2040%2032%2035.055%2040%2035.056%2033.528%2040'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Bo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3ccircle%20cx='24'%20cy='34'%20r='1.75'%20fill='%23f1b31c'/%3e%3ccircle%20cx='24'%20cy='24'%20r='1.75'%20fill='%23f1b31c'/%3e%3ccircle%20cx='28'%20cy='31'%20r='1.75'%20fill='%23f1b31c'/%3e%3ccircle%20cx='28'%20cy='26'%20r='1.75'%20fill='%23f1b31c'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='13.528%2032.445%2016%2024.445%2018.473%2032.445%2012%2027.5%2020%2027.5%2013.528%2032.445'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", So = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='45'%20width='62'%20height='10'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='9'%20fill='%231e50a0'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Co = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Eo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='29.5'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='49'%20width='62'%20height='6'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='6'%20fill='%231e50a0'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", To = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='32'%20width='62'%20height='8'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='47'%20width='62'%20height='8'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='8'%20fill='%231e50a0'/%3e%3cpath%20fill='%23d22f27'%20d='m5%2055-1e-6%20-19%201e-6%20-19%2032.91%2019-16.45%209.5z'/%3e%3cpath%20transform='rotate(-120%2015.368%2032.9)%20scale(.8682)'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m19.5%2039.74-4.253-0.8137-2.241%203.705-0.5402-4.296-4.216-0.9863%203.919-1.841-0.3648-4.314%202.962%203.158%203.991-1.68-2.088%203.793z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Po = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='41'%20width='62'%20height='6'%20fill='%23d22f27'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cg%3e%3cg%3e%3ccircle%20cx='25.1'%20cy='51'%20r='1.75'%20fill='%23f1b31c'/%3e%3ccircle%20cx='25.1'%20cy='37'%20r='1.75'%20fill='%23f1b31c'/%3e%3c/g%3e%3cg%3e%3ccircle%20cx='29.2145'%20cy='49.6631'%20r='1.75'%20fill='%23f1b31c'/%3e%3ccircle%20cx='20.9855'%20cy='38.3369'%20r='1.75'%20fill='%23f1b31c'/%3e%3c/g%3e%3cg%3e%3ccircle%20cx='29.2145'%20cy='38.3369'%20r='1.75'%20fill='%23f1b31c'/%3e%3ccircle%20cx='20.9855'%20cy='49.6631'%20r='1.75'%20fill='%23f1b31c'/%3e%3c/g%3e%3cg%3e%3ccircle%20cx='31.7574'%20cy='41.8369'%20r='1.75'%20fill='%23f1b31c'/%3e%3ccircle%20cx='18.4426'%20cy='46.1631'%20r='1.75'%20fill='%23f1b31c'/%3e%3c/g%3e%3cg%3e%3ccircle%20cx='31.7574'%20cy='46.1631'%20r='1.75'%20fill='%23f1b31c'/%3e%3ccircle%20cx='18.4426'%20cy='41.8369'%20r='1.75'%20fill='%23f1b31c'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Oo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='41'%20width='62'%20height='6'%20fill='%23f1b31c'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='17.5%2026%2019.045%2031%2015%2027.91%2020%2027.91%2015.955%2031%2017.5%2026'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='11.5%2021%2013.045%2026%209%2022.91%2014%2022.91%209.955%2026%2011.5%2021'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Lo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%235c9e31'%20points='67%2017%2067%2055%205%2017%2067%2017'/%3e%3ccircle%20cx='36'%20cy='36'%20r='9'%20fill='%23f1b31c'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='18.174%2044.737%2018.87%2042.487%2019.565%2044.737%2017.745%2043.346%2019.995%2043.346%2018.174%2044.737'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='10.875%2042.094%2010.041%2042.885%2010.123%2041.723%209%2041.547%209.938%2040.889%209.371%2039.878%2010.458%2040.219%2010.875%2039.135%2011.292%2040.219%2012.379%2039.878%2011.813%2040.889%2012.75%2041.547%2011.627%2041.723%2011.709%2042.885%2010.875%2042.094'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='22.125%2039.844%2021.291%2040.635%2021.373%2039.473%2020.25%2039.297%2021.188%2038.639%2020.621%2037.628%2021.708%2037.969%2022.125%2036.885%2022.542%2037.969%2023.629%2037.628%2023.063%2038.639%2024%2039.297%2022.877%2039.473%2022.959%2040.635%2022.125%2039.844'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='16.125%2035.344%2015.291%2036.135%2015.373%2034.973%2014.25%2034.797%2015.188%2034.139%2014.621%2033.128%2015.708%2033.469%2016.125%2032.385%2016.542%2033.469%2017.629%2033.128%2017.063%2034.139%2018%2034.797%2016.877%2034.973%2016.959%2036.135%2016.125%2035.344'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='16.125%2051.094%2015.291%2051.885%2015.373%2050.723%2014.25%2050.547%2015.188%2049.889%2014.621%2048.878%2015.708%2049.219%2016.125%2048.135%2016.542%2049.219%2017.629%2048.878%2017.063%2049.889%2018%2050.547%2016.877%2050.723%2016.959%2051.885%2016.125%2051.094'/%3e%3cpath%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M31.6167,33.9578a3.9219,3.9219,0,0,1,1.3637.618,3.7837,3.7837,0,0,0,4.1357.1622,7.3908,7.3908,0,0,0,1.383-1.2213l1.3647-1.4247a1.767,1.767,0,0,0,1.2557.0939,5.833,5.833,0,0,0,.6047,3.0157,7.2091,7.2091,0,0,0-2.5037,2.7337,10.1762,10.1762,0,0,0-.4691,2.74,2.3962,2.3962,0,0,1-.2922,1.0169.9378.9378,0,0,1-.8912.47c-.6224-.1-.8053-.9185-.7177-1.5428s.2827-1.3239-.0822-1.838a2.008,2.008,0,0,0-1.2545-.6339l-2.7566-.6358c-.644-.1485-1.4613-.2346-1.8317.3128a.55.55,0,0,1-.1781.2081c-.2479.1248-.4224-.2919-.3351-.5554a4.2479,4.2479,0,0,1,1.0534-1.3153c.3756-.4246.6276-1.1023.26-1.5345C31.2641,34.0837,31.3394,33.9275,31.6167,33.9578Z'/%3e%3cline%20x1='49.4349'%20x2='62.4349'%20y1='30.2958'%20y2='26.2958'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='54.5'%20x2='58.5'%20y1='24.5'%20y2='27.5'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpolyline%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='58.5%2021.5%2059.85%2024.125%2058.5%2027.5'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Vo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpath%20fill='%23e27022'%20stroke='%23e27022'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M53.3956,25.8867a22.4569,22.4569,0,0,0-3.912,1.7784,1.2328,1.2328,0,0,1-1.08.2357,8.4457,8.4457,0,0,1-2.772,1.677c-.5144.188-1.0457.3253-1.5759.4624l-1.6436.4247a15.6892,15.6892,0,0,1-2.54.5091,15.6949,15.6949,0,0,1-2.77-.084l-1.9812-.1773a4.5448,4.5448,0,0,1-2.4609-.7106,4.9509,4.9509,0,0,1,.1615,2.3536c-.1173.6706-.511,1.4233-1.19,1.4691a2.816,2.816,0,0,1-1.23-.4253,2.6661,2.6661,0,0,0-2.2932.1061c-.4684.4485-.66,1.1472-1.1813,1.533-.6371.4716-1.1327.1157-1.7391-.107-.9379-.3444-.4842.42-.2224,1.0519a2.6344,2.6344,0,0,1,.1524,1.4925,2.1325,2.1325,0,0,1,1.1052,1.9224,26.0579,26.0579,0,0,0,2.93,1.3147,2.6293,2.6293,0,0,0,.9883.225c.516-.0153.9953-.3174,1.5114-.3086a1.3283,1.3283,0,0,1,1.2364,1.4653,3.4945,3.4945,0,0,1,1.24-.0275c-.546-.35-.327-1.2705.2195-1.62a3.8876,3.8876,0,0,1,1.8876-.365,8.0513,8.0513,0,0,0,3.78-1.2291,1.4765,1.4765,0,0,1,1.16-.3631c.55-.3392.2986-1.22.63-1.775.3865-.6478,1.3656-.5691,2.0385-.228a1.159,1.159,0,0,0,.58.1884,1.3224,1.3224,0,0,0,.5192-.22,2.29,2.29,0,0,1,2.3387.11,12.3481,12.3481,0,0,0-2.3708-2.9752,3.5207,3.5207,0,0,1,.1563-1.458,1.2014,1.2014,0,0,1,1.1224-.8041,1.5714,1.5714,0,0,0,.377.0285c.2865-.0456.4344-.3548.5849-.6028.8345-1.3751,2.8112-1.5874,3.86-2.8067a4.6449,4.6449,0,0,1,.534-.6082,4.9435,4.9435,0,0,1,1.1279-.5264A1.0671,1.0671,0,0,0,53.3956,25.8867Z'/%3e%3cg%3e%3cpath%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M23.5,42a18.0342,18.0342,0,0,0,11,4'/%3e%3cpath%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M48.5,42a18.0339,18.0339,0,0,1-11,4'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Io = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23d22f27'/%3e%3cpath%20fill='%231e50a0'%20d='m36%2036-31%2018.6v-37.2z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ro = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Zo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpath%20fill='%23fff'%20d='M67,44a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,44V42a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,42Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,46a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,46V44a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,44Z'/%3e%3cpath%20fill='%23fff'%20d='M67,48a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,48V46a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,46Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,50a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,50V48a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,48Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,55s-4.6307-.9506-6.2-1-4.6308.9506-6.2,1-4.6308-.9506-6.2-1-4.6307.9506-6.2,1-4.6307-.9506-6.2-1-4.6308.9508-6.2,1-4.6308-.9519-6.2-1-4.6306.9585-6.2,1-4.63-1-6.2-1A50.8361,50.8361,0,0,0,5,55V51a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,51Z'/%3e%3cpath%20fill='%23fff'%20d='M67,52a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,52V50a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,50Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,38a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,38V36a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,36Z'/%3e%3cpath%20fill='%23fff'%20d='M67,40a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,40V38a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,38Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,42a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,42V40a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,40Z'/%3e%3cpath%20fill='%23fff'%20d='M67,44a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,44V42a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,42Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,30a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,30V28a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,28Z'/%3e%3cpath%20fill='%23fff'%20d='M67,32a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,32V30a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,30Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,34a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,34V32a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,32Z'/%3e%3cpath%20fill='%23fff'%20d='M67,36a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,36V34a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,34Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,22a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,22V20a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,20Z'/%3e%3cpath%20fill='%23fff'%20d='M67,24a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,24V22a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,22Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,18a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,18V16a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,16Z'/%3e%3cpath%20fill='%23fff'%20d='M67,20a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,20V18a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,18Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,26a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,26V24a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,24Z'/%3e%3cpath%20fill='%23fff'%20d='M67,28a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,28V26a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,26Z'/%3e%3crect%20x='5'%20y='17'%20width='31'%20height='19'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", No = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%235c9e31'/%3e%3cpolygon%20fill='%23fff'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='11.413%2039.046%2013.736%2032.046%2015.739%2038.939%2010.175%2034.785%2017.175%2034.613%2011.413%2039.046'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Do = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2030%2033%2030%2017%2024%2017%2024%2033%205%2033%205%2039%2024%2039%2024%2055%2030%2055%2030%2039%2067%2039%2067%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", $o = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23186648'/%3e%3crect%20x='38'%20y='16.9999'%20width='4'%20height='38'%20fill='%23ffffff'%20stroke-width='2'/%3e%3crect%20x='5'%20y='34'%20width='62'%20height='4'/%3e%3crect%20x='5'%20y='38'%20width='62'%20height='4'%20fill='%23ffffff'%20stroke-width='2'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='4'%20fill='%23fcea2b'/%3e%3crect%20x='34'%20y='16.9999'%20width='4'%20height='38'/%3e%3crect%20x='30'%20y='16.9999'%20width='4'%20height='38'%20fill='%23fcea2b'/%3e%3ccircle%20cx='36'%20cy='36'%20r='13'%20fill='%23d22f27'/%3e%3cg%3e%3cpath%20d='M36.3668,34.9556A5.1,5.1,0,0,0,39.2812,38.46a.2572.2572,0,0,0,.3528-.1087.1829.1829,0,0,0-.0858-.2935h0a4.81,4.81,0,0,1-2.6927-3.1408h0a.2261.2261,0,0,0-.2408-.1658A.2317.2317,0,0,0,36.3668,34.9556Z'/%3e%3cpath%20fill='%238967aa'%20d='m%2038.76838,36.930886%20-0.04049,-0.07964%20c%20-0.35042,-0.700289%20-0.900863,-1.247485%20-1.279496,-1.921372%20-0.3688,-0.656515%200.523623,-1.402075%201.152692,-1.766677%200.735111,-0.425818%200.540407,-1.883677%200.185768,-2.432192%20L%2037.245235,28.7955%20c%200,0%20-0.81116,-1.158456%20-3.568533,0.201086%200,0%20-3.539239,0.856733%20-3.846066,1.5378%200,0%202.683445,-0.73296%202.954423,0.520945%200.270979,1.253904%20-1.404094,1.699196%200.241578,4.689899%200,0%201.39113,2.968668%203.114979,3.446877%20a%206.2,6.2%200%200%201%202.542156,0.423068%20c%20-0.222069,-0.587995%200.171291,-2.063302%200.08461,-2.684289%20z'/%3e%3cpath%20d='m%2036.546061,40.353075%20c%20-0.02413,-0.0043%20-0.04798,-0.0095%20-0.0716,-0.01608%20-1.880332,-0.521946%20-3.872761,-3.835772%20-4.093515,-4.211819%20-1.156731,-2.193184%20-0.677442,-3.058197%20-0.08869,-3.758501%200.190669,-0.226735%200.189081,-0.234428%200.171232,-0.324394%20-0.0715,-0.308604%20-1.465792,-0.825676%20-2.947315,-0.971861%20a%200.7645,0.7645%200%200%201%20-0.575368,-0.370134%200.7471,0.7471%200%200%201%20-0.03515,-0.683487%20c%200.125943,-0.281203%200.458813,-1.021853%205.183722,-1.908856%20a%203.1158,3.1158%200%200%201%203.03469,-0.716314%20c%201.632216,0.629901%202.056766,2.90519%202.099993,3.162201%20a%200.75,0.75%200%200%201%20-1.478873,0.249385%20c%20-0.07498,-0.435131%20-0.44983,-1.739743%20-1.16317,-2.013269%20-0.521466,-0.203036%20-1.221084,0.221324%20-1.714145,0.611025%20a%200.7464,0.7464%200%200%201%20-0.328729,0.148777%20c%20-0.811766,0.149916%20-1.698281,0.346562%20-2.462138,0.545542%20a%202.5786,2.5786%200%200%201%201.859247,1.659669%201.7587,1.7587%200%200%201%20-0.496261,1.576882%20c%20-0.276065,0.328655%20-0.514158,0.612421%200.250862,2.064222%200.753312,1.278636%202.257123,3.238546%203.185376,3.49625%20a%200.75,0.75%200%200%201%20-0.33,1.4615%20z%20m%20-6.359238,-9.592806%20z'/%3e%3cg%3e%3cpath%20fill='%23186648'%20d='m%2036.064435,37.754768%20c%20-0.30154,-2.450592%201.415024,-5.90865%203.020755,-4.276826%201.605732,1.631823%200.736585,11.198537%200.736585,11.198537%200,0%20-3.455817,-4.471021%20-3.75734,-6.921711%20z'/%3e%3cpath%20d='M%2039.892396,45.388561%20A%200.75,0.75%200%200%201%2039.444515,45.12813%20c%20-0.381778,-0.461404%20-3.745087,-4.585186%20-4.149067,-7.153353%20l%208.7e-5,-4.92e-4%20c%20-0.301704,-1.921584%200.463771,-4.649199%201.940178,-5.424198%20a%201.8249,1.8249%200%200%201%202.193312,0.388771%20c%201.819223,1.72887%201.436977,10.094283%201.342634,11.754016%20a%200.75,0.75%200%200%201%20-0.879263,0.695687%20z%20M%2036.77649,37.74131%20c%200.199565,1.263855%201.483043,3.286457%202.5771,4.803688%200.08008,-3.890399%20-0.220846,-7.818734%20-0.958078,-8.519397%20-0.263163,-0.250707%20-0.37794,-0.190625%20-0.462799,-0.147607%20-0.695015,0.364855%20-1.394724,2.342293%20-1.155239,3.86349%20z'/%3e%3c/g%3e%3ccircle%20cx='36'%20cy='25'%20r='1'%20fill='%23186648'/%3e%3ccircle%20cx='50.2849'%20cy='-3.0357'%20r='1'%20transform='rotate(36)'%20fill='%23186648'/%3e%3ccircle%20cx='45.3626'%20cy='-34.1134'%20r='1'%20transform='rotate(72)'%20fill='%23186648'/%3e%3ccircle%20cx='23.1134'%20cy='-56.3626'%20r='1'%20transform='rotate(108)'%20fill='%23186648'/%3e%3ccircle%20cx='-7.9643'%20cy='-61.2849'%20r='1'%20transform='rotate(144)'%20fill='%23186648'/%3e%3ccircle%20cx='-36'%20cy='-47'%20r='1'%20transform='scale(-1)'%20fill='%23186648'/%3e%3ccircle%20cx='-50.2849'%20cy='-18.9643'%20r='1'%20transform='rotate(-144)'%20fill='%23186648'/%3e%3ccircle%20cx='-45.3626'%20cy='12.1134'%20r='1'%20transform='rotate(-108)'%20fill='%23186648'/%3e%3ccircle%20cx='-23.1134'%20cy='34.3626'%20r='1'%20transform='rotate(-72)'%20fill='%23186648'/%3e%3ccircle%20cx='7.9643'%20cy='39.2849'%20r='1'%20transform='rotate(-36)'%20fill='%23186648'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Go = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='36'%20width='31'%20height='19'%20fill='%23d22f27'/%3e%3crect%20x='36'%20y='17'%20width='31'%20height='19'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='33'%20width='62'%20height='6'%20fill='%23fff'/%3e%3crect%20x='33'%20y='17'%20width='6'%20height='38'%20fill='%23fff'/%3e%3ccircle%20cx='36'%20cy='36'%20r='3'%20fill='%235c9e31'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", zo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='36'%20y='17'%20width='31'%20height='38'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='43.863%2038.5%2041.457%2033.928%2046.034%2036.326%2041.034%2037.018%2044.547%2033.5%2043.863%2038.5'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M39.2921,44.6429A8.6429,8.6429,0,1,1,43.25,28.3078a11,11,0,1,0,0,15.3844A8.715,8.715,0,0,1,39.2921,44.6429Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Fo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3cpath%20fill='%23d22f27'%20d='M23,33v7a2.0059,2.0059,0,0,1-2,2H17a2.0059,2.0059,0,0,1-2-2V33'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='9'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='46'%20width='62'%20height='9'%20fill='%23d22f27'/%3e%3crect%20x='19'%20y='33'%20width='4'%20height='4'%20fill='%23f1b31c'/%3e%3ccircle%20cx='19'%20cy='37'%20r='1.5'%20fill='%236a462f'/%3e%3cg%3e%3cline%20x1='27'%20x2='27'%20y1='33'%20y2='42'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='11'%20x2='11'%20y1='33'%20y2='42'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M15,30a8.5678,8.5678,0,0,1,4-1'/%3e%3cpath%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M23,30a8.5678,8.5678,0,0,0-4-1'/%3e%3cline%20x1='15'%20x2='23'%20y1='33'%20y2='33'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M23,33v7a2.0059,2.0059,0,0,1-2,2H17a2.0059,2.0059,0,0,1-2-2V33'/%3e%3cline%20x1='10'%20x2='12'%20y1='42'%20y2='42'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='26'%20x2='28'%20y1='42'%20y2='42'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ho = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='45'%20width='62'%20height='10'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='9'%20fill='%231e50a0'/%3e%3cellipse%20cx='36'%20cy='36'%20rx='4.5'%20ry='6'%20fill='%2392d3f5'/%3e%3cpath%20fill='%235c9e31'%20d='M40.5,36c0,3.3137-2.0147,6-4.5,6s-4.5-2.6863-4.5-6Z'/%3e%3cline%20x1='36'%20x2='36'%20y1='46'%20y2='42'%20fill='none'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M42.0652,42A10.9284,10.9284,0,0,0,44.5,35V30H46'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M26,30h1.5v5a10.9284,10.9284,0,0,0,2.4348,7'/%3e%3cpath%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M29,26c3.5-1,5.25,0,7,3,1.75-3,3.5-4,7-3'/%3e%3cellipse%20cx='36'%20cy='36'%20rx='4.5'%20ry='6'%20fill='none'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ko = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%231e50a0'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Wo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='33'%20y='33'%20width='6'%20height='6'%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='36'%20x2='36'%20y1='32'%20y2='40'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Uo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'/%3e%3cpolygon%20fill='%23d22f27'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M35.1216,36A4.0529,4.0529,0,0,1,38.5,32.0764,4.3955,4.3955,0,0,0,37.6892,32a4.0043,4.0043,0,1,0,0,8,4.3955,4.3955,0,0,0,.8108-.0764A4.0529,4.0529,0,0,1,35.1216,36Z'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='38.707%2038%2040.035%2034%2041.18%2037.939%2038%2035.565%2042%2035.467%2038.707%2038'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Yo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2039%2033%2039%2017%2033%2017%2033%2033%205%2033%205%2039%2033%2039%2033%2055%2039%2055%2039%2039%2067%2039%2067%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", qo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%2361b2e4'/%3e%3cpolygon%20fill='%23d22f27'%20points='66%2036%206%2054%206%2018%2066%2036'/%3e%3ccircle%20cx='19'%20cy='36.5'%20r='9.5'%20fill='none'%20stroke='%23f1b31c'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cline%20x1='19'%20x2='19'%20y1='46'%20y2='33'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='19'%20x2='22'%20y1='41'%20y2='41'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='19'%20x2='22'%20y1='37'%20y2='37'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='16'%20x2='19'%20y1='39'%20y2='39'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='16'%20x2='19'%20y1='35'%20y2='35'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Jo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3cpath%20fill='%23d22f27'%20d='M23,33v7a2.0059,2.0059,0,0,1-2,2H17a2.0059,2.0059,0,0,1-2-2V33'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='9'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='46'%20width='62'%20height='9'%20fill='%23d22f27'/%3e%3crect%20x='19'%20y='33'%20width='4'%20height='4'%20fill='%23f1b31c'/%3e%3ccircle%20cx='19'%20cy='37'%20r='1.5'%20fill='%236a462f'/%3e%3cg%3e%3cline%20x1='27'%20x2='27'%20y1='33'%20y2='42'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='11'%20x2='11'%20y1='33'%20y2='42'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M15,30a8.5678,8.5678,0,0,1,4-1'/%3e%3cpath%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M23,30a8.5678,8.5678,0,0,0-4-1'/%3e%3cline%20x1='15'%20x2='23'%20y1='33'%20y2='33'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M23,33v7a2.0059,2.0059,0,0,1-2,2H17a2.0059,2.0059,0,0,1-2-2V33'/%3e%3cline%20x1='10'%20x2='12'%20y1='42'%20y2='42'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='26'%20x2='28'%20y1='42'%20y2='42'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Qo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%235c9e31'/%3e%3ccircle%20cx='36'%20cy='36'%20r='10'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'%20points='36%2031%2038.781%2040%2031.5%2034.438%2040.5%2034.438%2033.219%2040%2036%2031'/%3e%3cline%20x1='36'%20x2='36'%20y1='44'%20y2='42'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'/%3e%3cline%20x1='43.6085'%20x2='41.7064'%20y1='38.4722'%20y2='37.8541'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'/%3e%3cline%20x1='40.7023'%20x2='39.5268'%20y1='29.5279'%20y2='31.1459'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'/%3e%3cline%20x1='31.2978'%20x2='32.4733'%20y1='29.5278'%20y2='31.1459'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'/%3e%3cline%20x1='28.3916'%20x2='30.2937'%20y1='38.4721'%20y2='37.8541'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'/%3e%3ccircle%20cx='36'%20cy='36'%20r='1.75'%20fill='%231e50a0'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Xo = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='35.105%2026.794%2036.024%2024.099%2036.816%2026.753%2034.616%2025.154%2037.384%2025.087%2035.105%2026.794'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='35.105%2047.901%2036.024%2045.206%2036.816%2047.859%2034.616%2046.261%2037.384%2046.194%2035.105%2047.901'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='26.093%2031.922%2027.011%2029.227%2027.804%2031.88%2025.603%2030.282%2028.371%2030.215%2026.093%2031.922'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='44.371%2042.475%2045.29%2039.78%2046.082%2042.434%2043.882%2040.835%2046.65%2040.768%2044.371%2042.475'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='29.838%2028.242%2030.757%2025.547%2031.549%2028.2%2029.348%2026.602%2032.116%2026.535%2029.838%2028.242'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='40.391%2046.52%2041.31%2043.826%2042.102%2046.479%2039.901%2044.88%2042.67%2044.814%2040.391%2046.52'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='45.659%2037.347%2046.578%2034.653%2047.37%2037.306%2045.169%2035.707%2047.937%2035.641%2045.659%2037.347'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='24.552%2037.347%2025.471%2034.653%2026.263%2037.306%2024.063%2035.707%2026.831%2035.641%2024.552%2037.347'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='40.281%2028.216%2041.2%2025.522%2041.992%2028.175%2039.792%2026.576%2042.56%2026.51%2040.281%2028.216'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='29.728%2046.495%2030.647%2043.8%2031.439%2046.454%2029.238%2044.855%2032.007%2044.788%2029.728%2046.495'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='44.13%2031.886%2045.048%2029.191%2045.841%2031.845%2043.64%2030.246%2046.408%2030.179%2044.13%2031.886'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='25.851%2042.439%2026.77%2039.745%2027.562%2042.398%2025.361%2040.799%2028.129%2040.733%2025.851%2042.439'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ei = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpolygon%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2030%2033%2030%2017%2024%2017%2024%2033%205%2033%205%2039%2024%2039%2024%2055%2030%2055%2030%2039%2067%2039%2067%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ti = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='17'%20width='31'%20height='19'%20fill='%231e50a0'/%3e%3cpath%20fill='%23d22f27'%20d='M52,48s6-1.9375,6-7.75V34.5H46v5.75C46,46.0625,52,48,52,48Z'/%3e%3crect%20x='53'%20y='37'%20width='5'%20height='4'%20fill='%23fff'/%3e%3crect%20x='46'%20y='37'%20width='5'%20height='4'%20fill='%23fff'/%3e%3cpath%20fill='%23fff'%20d='M51,47.5743V43H46.5118A9.0283,9.0283,0,0,0,51,47.5743Z'/%3e%3cpath%20fill='%23fff'%20d='M57.4882,43H53v4.5743A9.028,9.028,0,0,0,57.4882,43Z'/%3e%3crect%20x='46.5'%20y='34'%20width='11'%20height='2'%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", oi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3cpath%20fill='%2361b2e4'%20d='M59,29v5c0,9-2.6667,13-8,15-5.3333-2-8-6-8-15V29Z'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M59,29v5c0,9-2.6667,13-8,15-5.3333-2-8-6-8-15V29Z'/%3e%3crect%20x='49'%20y='33'%20width='5'%20height='2'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='54'%20x2='54'%20y1='35'%20y2='37'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='49'%20x2='49'%20y1='35'%20y2='37'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='47'%20x2='49'%20y1='33'%20y2='33'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M44.035,40.115C45.035,40.548,45.945,40.925,47,41c2,0,2,-1,4,-1'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M45.721,44.814C46.142,44.978,46.579,44.971,47,45c2,0,2,-1,4,-1'/%3e%3cpath%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M57.965,40.115C56.965,40.548,56.055,40.925,55,41c-2,0-2-1-4-1'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M56.279,44.814C55.858,44.978,55.421,44.971,55,45c-2,0-2-1-4-1'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ii = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2392d3f5'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='41.523%2034.356%2046.477%2036.045%2041.599%2037.501%2044.538%2033.456%2044.66%2038.544%2041.523%2034.356'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='30.477%2037.644%2025.523%2035.955%2030.401%2034.499%2027.462%2038.544%2027.34%2033.456%2030.477%2037.644'/%3e%3c/g%3e%3cg%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='34.356%2030.477%2036.045%2025.523%2037.501%2030.401%2033.456%2027.462%2038.544%2027.34%2034.356%2030.477'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='37.644%2041.523%2035.955%2046.477%2034.499%2041.599%2038.544%2044.538%2033.456%2044.66%2037.644%2041.523'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ni = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%231e50a0'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2030%2033%2030%2017%2024%2017%2024%2033%205%2033%205%2039%2024%2039%2024%2055%2030%2055%2030%2039%2067%2039%2067%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ri = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", li = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%235c9e31'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ci = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='40%2028.856%2040%2032%2050.181%2032%2067%2021.691%2067%2017%2059.346%2017%2040%2028.856'/%3e%3cpolygon%20fill='%23d22f27'%20points='67%2017%2067%2017%2063.173%2017%2040%2031.203%2040%2032%2043.482%2032%2067%2017.586%2067%2017'/%3e%3cpolygon%20fill='%23fff'%20points='59.347%2055%2067%2055%2067%2055%2067%2050.308%2050.182%2040%2040%2040%2040%2043.143%2059.347%2055'/%3e%3cpolygon%20fill='%23d22f27'%20points='67%2055%2067%2052.653%2046.355%2040%2041.568%2040%2066.042%2055%2067%2055%2067%2055'/%3e%3cpolygon%20fill='%23fff'%20points='32%2043.144%2032%2040%2021.819%2040%205%2050.309%205%2055%2012.654%2055%2032%2043.144'/%3e%3cpolygon%20fill='%23d22f27'%20points='5%2055%205%2055%208.827%2055%2032%2040.797%2032%2040%2028.518%2040%205%2054.414%205%2055'/%3e%3cpolygon%20fill='%23fff'%20points='12.653%2017%205%2017%205%2017%205%2021.692%2021.818%2032%2032%2032%2032%2028.857%2012.653%2017'/%3e%3cpolygon%20fill='%23d22f27'%20points='5%2017%205%2019.347%2025.646%2032%2030.432%2032%205.958%2017%205%2017%205%2017'/%3e%3crect%20x='5'%20y='31'%20width='62'%20height='10'%20fill='%23fff'/%3e%3crect%20x='31'%20y='17'%20width='10'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='33'%20width='62'%20height='6'%20fill='%23d22f27'/%3e%3crect%20x='33'%20y='17'%20width='6'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", si = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3cpolygon%20fill='%235c9e31'%20points='12%2048%2036%2036%2012%2024%2012%2048'/%3e%3cpolygon%20fill='%235c9e31'%20points='60%2048%2036%2036%2060%2024%2060%2048'/%3e%3ccircle%20cx='36'%20cy='36'%20r='5'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='36%2033.5%2037.545%2038.5%2033.5%2035.41%2038.5%2035.41%2034.455%2038.5%2036%2033.5'/%3e%3cpath%20fill='%23d22f27'%20d='M5,17V55H67V17ZM60,48H12V24H60Z'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='35.105%2022.242%2036.024%2019.547%2036.816%2022.2%2034.616%2020.602%2037.384%2020.535%2035.105%2022.242'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='45.105%2022.242%2046.024%2019.547%2046.816%2022.2%2044.616%2020.602%2047.384%2020.535%2045.105%2022.242'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='25.105%2022.242%2026.024%2019.547%2026.816%2022.2%2024.616%2020.602%2027.384%2020.535%2025.105%2022.242'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='35.105%2052.242%2036.024%2049.547%2036.816%2052.2%2034.616%2050.602%2037.384%2050.535%2035.105%2052.242'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='45.105%2052.242%2046.024%2049.547%2046.816%2052.2%2044.616%2050.602%2047.384%2050.535%2045.105%2052.242'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='25.105%2052.242%2026.024%2049.547%2026.816%2052.2%2024.616%2050.602%2027.384%2050.535%2025.105%2052.242'/%3e%3cg%3e%3cpath%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M18.6308,37.9167a6.7812,6.7812,0,0,0-1.258-2.6215,6.7812,6.7812,0,0,0,2.6215,1.258,1.7666,1.7666,0,0,0-1.5618-2.1251c-.0249-.0023-.05-.0017-.0749-.003l.0025-.0022c-.0212,0-.0414,0-.0623,0-.0284-.0005-.0566-.0012-.0849,0a5.7735,5.7735,0,0,1-2.09-.3772A5.7764,5.7764,0,0,1,16.5,36.1434c-.0008.0321-.0006.0642,0,.0963,0,.0145,0,.0282,0,.0428l.0018-.0021a1.7633,1.7633,0,0,0,2.1285,1.6363Z'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M18.8014,36.2773a1.77,1.77,0,0,1,.4464.8929,1.5782,1.5782,0,0,1-1.3393-1.3393A1.77,1.77,0,0,1,18.8014,36.2773Z'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ai = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2039%2033%2039%2017%2033%2017%2033%2033%205%2033%205%2039%2033%2039%2033%2055%2039%2055%2039%2039%2067%2039%2067%2033'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='54.958%2024.684%2053.316%2024.684%2053.316%2023%2052.684%2023%2052.684%2024.684%2051.042%2024.684%2051.042%2025.316%2052.684%2025.316%2052.684%2027%2053.316%2027%2053.316%2025.316%2054.958%2025.316%2054.958%2024.684'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='54.958%2046.684%2053.316%2046.684%2053.316%2045%2052.684%2045%2052.684%2046.684%2051.042%2046.684%2051.042%2047.316%2052.684%2047.316%2052.684%2049%2053.316%2049%2053.316%2047.316%2054.958%2047.316%2054.958%2046.684'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='20.958%2046.684%2019.316%2046.684%2019.316%2045%2018.684%2045%2018.684%2046.684%2017.042%2046.684%2017.042%2047.316%2018.684%2047.316%2018.684%2049%2019.316%2049%2019.316%2047.316%2020.958%2047.316%2020.958%2046.684'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='20.958%2024.684%2019.316%2024.684%2019.316%2023%2018.684%2023%2018.684%2024.684%2017.042%2024.684%2017.042%2025.316%2018.684%2025.316%2018.684%2027%2019.316%2027%2019.316%2025.316%2020.958%2025.316%2020.958%2024.684'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", di = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3cpolygon%20fill='%235c9e31'%20points='67%2017%2067%2055%205%2017%2067%2017'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='33.703%2039.269%2036.242%2031.823%2038.431%2039.155%2032.35%2034.737%2040%2034.553%2033.703%2039.269'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", fi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2039%2033%2039%2017%2033%2017%2033%2033%205%2033%205%2039%2033%2039%2033%2055%2039%2055%2039%2039%2067%2039%2067%2033'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linejoin='round'%20points='49.958%2034.684%2037.316%2034.684%2037.316%2022%2034.684%2022%2034.684%2034.684%2022.042%2034.684%2022.042%2037.316%2034.684%2037.316%2034.684%2050%2037.316%2050%2037.316%2037.316%2049.958%2037.316%2049.958%2034.684'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", gi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3cpolygon%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='33.528%2039.723%2036.067%2032.277%2038.256%2039.609%2032.175%2035.191%2039.825%2035.007%2033.528%2039.723'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", hi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='27'%20y='32'%20width='18'%20height='9'%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='34'%20y='22'%20width='4'%20height='9'%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='43'%20y='25'%20width='2'%20height='10'%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='27'%20y='25'%20width='2'%20height='10'%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='30'%20x2='30'%20y1='37'%20y2='42'%20fill='%23d22f27'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='4'/%3e%3cline%20x1='36'%20x2='36'%20y1='37'%20y2='42'%20fill='%23d22f27'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='4'/%3e%3cline%20x1='42'%20x2='42'%20y1='37'%20y2='42'%20fill='%23d22f27'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='4'/%3e%3crect%20x='5'%20y='45'%20width='62'%20height='10'%20fill='%23d22f27'/%3e%3cline%20x1='36'%20x2='36'%20y1='45'%20y2='51'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='4.5'%20y='42'%20width='62'%20height='3'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ui = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23d22f27'/%3e%3ccircle%20cx='24'%20cy='36'%20r='9'%20fill='%23d22f27'/%3e%3cpath%20fill='%23fff'%20d='M24,45a9,9,0,0,0,9-9H15A9,9,0,0,0,24,45Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", pi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30.5'%20width='62'%20height='11'%20fill='%231e50a0'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ki = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", wi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%231e50a0'/%3e%3cline%20x1='25.2835'%20x2='46.7165'%20y1='36.0628'%20y2='48.4372'%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='4'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='36%2037.832%2037.293%2035.75%2037.691%2038.168%2039.682%2036.74%2039.124%2039.126%2041.51%2038.568%2040.082%2040.559%2042.5%2040.957%2040.418%2042.25%2042.5%2043.543%2040.082%2043.941%2041.51%2045.932%2039.124%2045.374%2039.682%2047.76%2037.691%2046.332%2037.293%2048.75%2036%2046.668%2034.707%2048.75%2034.309%2046.332%2032.318%2047.76%2032.876%2045.374%2030.49%2045.932%2031.918%2043.941%2029.5%2043.543%2031.582%2042.25%2029.5%2040.957%2031.918%2040.559%2030.49%2038.568%2032.876%2039.126%2032.318%2036.74%2034.309%2038.168%2034.707%2035.75%2036%2037.832'/%3e%3cg%3e%3cg%3e%3cline%20x1='36'%20x2='36'%20y1='21.25'%20y2='27.25'%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='37.5'%20x2='34.5'%20y1='25.25'%20y2='25.25'%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%3e%3cline%20x1='23'%20x2='23'%20y1='21.25'%20y2='27.25'%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='24.5'%20x2='21.5'%20y1='25.25'%20y2='25.25'%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%3e%3cline%20x1='49'%20x2='49'%20y1='21.25'%20y2='27.25'%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='50.5'%20x2='47.5'%20y1='25.25'%20y2='25.25'%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", yi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%235c9e31'/%3e%3cpolygon%20fill='%231e50a0'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cline%20x1='40'%20x2='40'%20y1='34.5'%20y2='38.5'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='38'%20x2='42'%20y1='33.5'%20y2='33.5'%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='3'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", xi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='34'%20width='62'%20height='4'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='25.75'%20width='62'%20height='4'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='42.25'%20width='62'%20height='4'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='50'%20width='62'%20height='5'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='5'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='22'%20height='21'%20fill='%231e50a0'/%3e%3crect%20x='14.5001'%20y='17'%20width='4'%20height='22'%20fill='%23fff'/%3e%3crect%20x='5.0001'%20y='25.75'%20width='22.0001'%20height='4'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", vi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cline%20x1='49'%20x2='51'%20y1='25'%20y2='23'%20fill='none'%20stroke='%239b9b9a'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='49'%20x2='47'%20y1='25'%20y2='23'%20fill='none'%20stroke='%239b9b9a'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3crect%20x='50'%20y='26'%20width='4'%20height='1'%20fill='none'%20stroke='%23e27022'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='54'%20x2='54'%20y1='27'%20y2='30'%20fill='none'%20stroke='%23e27022'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='50'%20x2='50'%20y1='27'%20y2='30'%20fill='none'%20stroke='%23e27022'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='49'%20x2='50'%20y1='25'%20y2='26'%20fill='none'%20stroke='%23e27022'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M59.1357,49a9.9864,9.9864,0,0,0-14.2714,0'/%3e%3cpolygon%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='52%2042%2055%2034%2049%2034%2052%2042'/%3e%3cg%3e%3cpath%20d='M59,31V41a1.0029,1.0029,0,0,0,1,1h1a1.0029,1.0029,0,0,0,1-1V36a2.094,2.094,0,0,0-.8321-1.5547L59,33'/%3e%3cpath%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M59,31V41a1.0029,1.0029,0,0,0,1,1h1a1.0029,1.0029,0,0,0,1-1V36a2.094,2.094,0,0,0-.8321-1.5547L59,33'/%3e%3c/g%3e%3cg%3e%3cpath%20fill='%239b9b9a'%20d='M45,31V41a1.0029,1.0029,0,0,1-1,1H43a1.0029,1.0029,0,0,1-1-1V36a2.094,2.094,0,0,1,.8321-1.5547L45,33'/%3e%3cpath%20fill='none'%20stroke='%239b9b9a'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M45,31V41a1.0029,1.0029,0,0,1-1,1H43a1.0029,1.0029,0,0,1-1-1V36a2.094,2.094,0,0,1,.8321-1.5547L45,33'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", mi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%2392d3f5'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%2392d3f5'/%3e%3cpath%20fill='none'%20stroke='%23b1cc33'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M31.1056,30a7,7,0,1,0,9.7889,0'/%3e%3cline%20x1='32'%20x2='29'%20y1='38'%20y2='42'%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='40'%20x2='43'%20y1='39'%20y2='42'%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M35,36a4.9253,4.9253,0,0,0,2.5-4A4.9253,4.9253,0,0,0,35,28Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", _i = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpath%20fill='%2392d3f5'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M36.0018,46.5A11.7362,11.7362,0,0,0,42,36.0005,11.736,11.736,0,0,0,36,25.5a11.736,11.736,0,0,0-6,10.5005A11.7364,11.7364,0,0,0,35.9982,46.5Z'/%3e%3cpath%20fill='%23fcea2b'%20d='M30.64,40a11.2419,11.2419,0,0,0,5.3581,6.5h.0035A11.2419,11.2419,0,0,0,41.36,40Z'/%3e%3crect%20x='7'%20y='19'%20width='58'%20height='34'%20fill='none'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cline%20x1='28'%20x2='44'%20y1='39'%20y2='39'%20fill='none'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M36.0018,46.5A11.7362,11.7362,0,0,0,42,36.0005,11.736,11.736,0,0,0,36,25.5a11.736,11.736,0,0,0-6,10.5005A11.7364,11.7364,0,0,0,35.9982,46.5Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", bi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='15.5%2033.5%2017.045%2038.5%2013%2035.41%2018%2035.41%2013.955%2038.5%2015.5%2033.5'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ji = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='66%2036%205%2055%205%2017%2066%2036'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Mi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m36.7%2031.62c0.9815-0.658%201.256-2.365%200.7196-3.238-0.5361-0.8724-0.3786-2.135-0.1436-2.686-5.763%201.337-5.569%207.762-2.637%209.448-0.3602-2.147%201.079-2.866%202.061-3.524z'/%3e%3ccircle%20cx='35.44'%20cy='29.67'%20r='0.75'%20fill='%23d22f27'%20fill-rule='evenodd'%20paint-order='normal'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m40.47%2036.18c0.9291%200.7302%202.638%200.4633%203.302-0.3161%200.664-0.7794%201.913-1.02%202.51-0.9667-3.052-5.067-9.103-2.898-9.8%200.4118%201.931-1.006%203.059%200.1408%203.988%200.871z'/%3e%3ccircle%20cx='45.65'%20cy='-29.26'%20r='0.75'%20transform='rotate(72)'%20fill='%23d22f27'%20fill-rule='evenodd'%20paint-order='normal'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m37.3%2041.17c-0.4073%201.109%200.3744%202.652%201.321%203.042%200.9464%200.3907%201.561%201.505%201.695%202.089%203.876-4.469-0.0571-9.553-3.42-9.193%201.554%201.526%200.8113%202.953%200.404%204.062z'/%3e%3ccircle%20cx='-7.242'%20cy='-57.19'%20r='0.75'%20transform='rotate(144)'%20fill='%23d22f27'%20fill-rule='evenodd'%20paint-order='normal'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m31.57%2039.7c-1.181-0.04461-2.406%201.176-2.485%202.196-0.07908%201.021-0.9486%201.95-1.463%202.258%205.448%202.306%209.068-3.006%207.686-6.094-0.9708%201.949-2.558%201.684-3.738%201.639z'/%3e%3ccircle%20cx='-50.14'%20cy='-15.51'%20r='0.75'%20transform='rotate(216)'%20fill='%23d22f27'%20fill-rule='evenodd'%20paint-order='normal'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m31.21%2033.8c-0.3225-1.137-1.862-1.925-2.857-1.685s-2.147-0.2996-2.599-0.6935c-0.5094%205.894%205.661%207.695%208.171%205.427-2.154-0.321-2.392-1.912-2.714-3.049z'/%3e%3ccircle%20cx='-23.77'%20cy='38.16'%20r='0.75'%20transform='rotate(-72)'%20fill='%23d22f27'%20fill-rule='evenodd'%20paint-order='normal'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ai = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='54.233%2038.945%2055.16%2035.945%2056.087%2038.945%2053.66%2037.09%2056.66%2037.091%2054.233%2038.945'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='20.5%2046.999%2018.942%2048.476%2019.097%2046.306%2017%2045.978%2018.75%2044.748%2017.693%2042.862%2019.721%2043.499%2020.5%2041.476%2021.279%2043.499%2023.307%2042.862%2022.25%2044.748%2024%2045.978%2021.903%2046.306%2022.058%2048.476%2020.5%2046.999'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='44.5%2035.421%2043.387%2036.476%2043.498%2034.926%2042%2034.691%2043.25%2033.813%2042.495%2032.466%2043.944%2032.921%2044.5%2031.476%2045.056%2032.921%2046.505%2032.466%2045.75%2033.813%2047%2034.691%2045.502%2034.926%2045.613%2036.476%2044.5%2035.421'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='59.5%2032.421%2058.387%2033.476%2058.498%2031.926%2057%2031.691%2058.25%2030.813%2057.495%2029.466%2058.944%2029.921%2059.5%2028.476%2060.056%2029.921%2061.505%2029.466%2060.75%2030.813%2062%2031.691%2060.502%2031.926%2060.613%2033.476%2059.5%2032.421'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='51.5%2026.421%2050.387%2027.476%2050.498%2025.926%2049%2025.691%2050.25%2024.813%2049.495%2023.466%2050.944%2023.921%2051.5%2022.476%2052.056%2023.921%2053.505%2023.466%2052.75%2024.813%2054%2025.691%2052.502%2025.926%2052.613%2027.476%2051.5%2026.421'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='51.5%2047.421%2050.387%2048.476%2050.498%2046.926%2049%2046.691%2050.25%2045.813%2049.495%2044.466%2050.944%2044.921%2051.5%2043.476%2052.056%2044.921%2053.505%2044.466%2052.75%2045.813%2054%2046.691%2052.502%2046.926%2052.613%2048.476%2051.5%2047.421'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Bi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'%20fill='%2361b2e4'/%3e%3ccircle%20cx='36'%20cy='36'%20r='1.5'%20fill='%2361b2e4'/%3e%3ccircle%20cx='43'%20cy='39'%20r='1.5'%20fill='%2361b2e4'/%3e%3ccircle%20cx='43'%20cy='33'%20r='1.5'%20fill='%2361b2e4'/%3e%3ccircle%20cx='29'%20cy='39'%20r='1.5'%20fill='%2361b2e4'/%3e%3ccircle%20cx='29'%20cy='33'%20r='1.5'%20fill='%2361b2e4'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Si = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3cg%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3c/g%3e%3cg%3e%3cpath%20fill='%23d22f27'%20d='M40.5,43.7918A6.7093,6.7093,0,0,0,42.4885,42H40.5Z'/%3e%3cpath%20fill='%23fff'%20d='M37.5,42v2.88a8.4378,8.4378,0,0,0,3-1.0877V42Z'/%3e%3cpath%20fill='%23d22f27'%20d='M34.5,42v2.88a9.3963,9.3963,0,0,0,3,0V42Z'/%3e%3cpath%20fill='%23fff'%20d='M31.5,42v1.7918a8.4378,8.4378,0,0,0,3,1.0877V42Z'/%3e%3cpath%20fill='%23d22f27'%20d='M29.5115,42A6.7093,6.7093,0,0,0,31.5,43.7918V42Z'/%3e%3cpath%20fill='%23fff'%20d='M40.5,42h1.9885A5.0877,5.0877,0,0,0,43.5,39h-3Z'/%3e%3crect%20x='37.5'%20y='39'%20width='3'%20height='3'%20fill='%23d22f27'/%3e%3crect%20x='34.5'%20y='39'%20width='3'%20height='3'%20fill='%23fff'/%3e%3crect%20x='31.5'%20y='39'%20width='3'%20height='3'%20fill='%23d22f27'/%3e%3cpath%20fill='%23fff'%20d='M31.5,39h-3a5.0877,5.0877,0,0,0,1.0115,3H31.5Z'/%3e%3crect%20x='40.5'%20y='36'%20width='3'%20height='3'%20fill='%23d22f27'/%3e%3crect%20x='37.5'%20y='36'%20width='3'%20height='3'%20fill='%23fff'/%3e%3crect%20x='34.5'%20y='36'%20width='3'%20height='3'%20fill='%23d22f27'/%3e%3crect%20x='31.5'%20y='36'%20width='3'%20height='3'%20fill='%23fff'/%3e%3crect%20x='28.5'%20y='36'%20width='3'%20height='3'%20fill='%23d22f27'/%3e%3crect%20x='40.5'%20y='33'%20width='3'%20height='3'%20fill='%23fff'/%3e%3crect%20x='37.5'%20y='33'%20width='3'%20height='3'%20fill='%23d22f27'/%3e%3crect%20x='34.5'%20y='33'%20width='3'%20height='3'%20fill='%23fff'/%3e%3crect%20x='31.5'%20y='33'%20width='3'%20height='3'%20fill='%23d22f27'/%3e%3crect%20x='28.5'%20y='33'%20width='3'%20height='3'%20fill='%23fff'/%3e%3crect%20x='40.5'%20y='30'%20width='3'%20height='3'%20fill='%23d22f27'/%3e%3crect%20x='37.5'%20y='30'%20width='3'%20height='3'%20fill='%23fff'/%3e%3crect%20x='34.5'%20y='30'%20width='3'%20height='3'%20fill='%23d22f27'/%3e%3crect%20x='31.5'%20y='30'%20width='3'%20height='3'%20fill='%23fff'/%3e%3crect%20x='28.5'%20y='30'%20width='3'%20height='3'%20fill='%23d22f27'/%3e%3c/g%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20d='M43.5,39c0,3.3137-3.3579,6-7.5,6s-7.5-2.6863-7.5-6V30h15Z'/%3e%3cg%3e%3cpath%20fill='%2361b2e4'%20stroke='%2361b2e4'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M30.1872,24.3719,31.84,22.5087l2.1937,1.2321L36,22.1781l1.9663,1.5627L40.16,22.5087l1.6528,1.8632L44.1869,23.5l1.2922,2.104L43.5,30a15.9375,15.9375,0,0,0-15,0l-1.9791-4.396L27.8131,23.5Z'/%3e%3cpolygon%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-miterlimit='10'%20stroke-width='0.25'%20points='37.619%2028.21%2037.966%2023.741%2040.16%2022.509%2041.813%2024.372%2040.674%2028.83%2037.619%2028.21'/%3e%3cpolygon%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-miterlimit='10'%20stroke-width='0.25'%20points='34.381%2028.21%2034.034%2023.741%2031.84%2022.509%2030.187%2024.372%2031.326%2028.83%2034.381%2028.21'/%3e%3cpath%20fill='none'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M30.1872,24.3719,31.84,22.5087l2.1937,1.2321L36,22.1781l1.9663,1.5627L40.16,22.5087l1.6528,1.8632L44.1869,23.5l1.2922,2.104L43.5,30a15.9375,15.9375,0,0,0-15,0l-1.9791-4.396L27.8131,23.5Z'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ci = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23d22f27'/%3e%3crect%20x='29'%20y='29'%20width='14'%20height='14'%20fill='%23fff'/%3e%3cline%20x1='36'%20x2='36'%20y1='33'%20y2='41'%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='40'%20x2='36'%20y1='37'%20y2='41'%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='3'/%3e%3cline%20x1='32'%20x2='36'%20y1='37'%20y2='41'%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='3'/%3e%3cline%20x1='33'%20x2='39'%20y1='32'%20y2='32'%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='29'%20y='41'%20width='14'%20height='2'%20fill='%235c9e31'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ei = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ti = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%23fff'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23fcea2b'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Pi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Oi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23e27022'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Li = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='20'%20width='62'%20height='3'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='49'%20width='62'%20height='3'%20fill='%231e50a0'/%3e%3cpolygon%20fill='none'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2026%2027%2041%2045%2041%2036%2026'/%3e%3cpolygon%20fill='none'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2046%2027%2031%2045%2031%2036%2046'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Vi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m42.34%2034.23%203.988-6.744%202.792-0.6478-2.484%201.423-3.372%207.467-6.186%200.3526-5.546%202.496%203.527%206.996-0.9624%202.697%200.1428-2.857-4.468-6.868%203.191-4.973%200.2343-5.676-7.834%200.3142-2.06-1.992%202.545%201.312%208.106-1.223%203.471%204.805z'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='m35.82%2033.58%201.256%202.492'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='m37.42%2031.11-1.603%202.476-2.858-0.01662'/%3e%3cpolygon%20transform='matrix(.6713%20-.3266%20.3266%20.6706%20.7123%2021.38)'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.34'%20points='24.21%2028.34%2025.16%2025.34%2026.06%2028.32%2023.65%2026.5%2026.65%2026.47'/%3e%3cpolygon%20transform='matrix(.3343%20-.6675%20.6671%20.3338%207.886%2051.12)'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.34'%20points='51.06%2029.32%2048.65%2027.5%2051.65%2027.47%2049.21%2029.34%2050.16%2026.34'/%3e%3cpolygon%20transform='matrix(.4707%20-.5794%20.5792%20.4701%20-7.299%2042.64)'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.34'%20points='36.16%2046.34%2037.06%2049.32%2034.65%2047.5%2037.65%2047.47%2035.21%2049.34'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ii = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23e27022'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3cpolygon%20fill='none'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='36.296%2034.896%2038%2032.536%2036.808%2035.192%2039.464%2034%2037.104%2035.704%2040%2036%2037.104%2036.296%2039.464%2038%2036.808%2036.808%2038%2039.464%2036.296%2037.104%2036%2040%2035.704%2037.104%2034%2039.464%2035.192%2036.808%2032.536%2038%2034.896%2036.296%2032%2036%2034.896%2035.704%2032.536%2034%2035.192%2035.192%2034%2032.536%2035.704%2034.896%2036%2032%2036.296%2034.896'/%3e%3ccircle%20cx='36'%20cy='36'%20r='5'%20fill='none'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ri = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpath%20fill='%23fff'%20d='M67,44a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,44V42a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,42Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,46a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,46V44a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,44Z'/%3e%3cpath%20fill='%23fff'%20d='M67,48a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,48V46a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,46Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,50a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,50V48a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,48Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,55s-4.6307-.9506-6.2-1-4.6308.9506-6.2,1-4.6308-.9506-6.2-1-4.6307.9506-6.2,1-4.6307-.9506-6.2-1-4.6308.9508-6.2,1-4.6308-.9519-6.2-1-4.6306.9585-6.2,1-4.63-1-6.2-1A50.8361,50.8361,0,0,0,5,55V51a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,51Z'/%3e%3cpath%20fill='%23fff'%20d='M67,52a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,52V50a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,50Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,38a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,38V36a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,36Z'/%3e%3cpath%20fill='%23fff'%20d='M67,40a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,40V38a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,38Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,42a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,42V40a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,40Z'/%3e%3cpath%20fill='%23fff'%20d='M67,44a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,44V42a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,42Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,30a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,30V28a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,28Z'/%3e%3cpath%20fill='%23fff'%20d='M67,32a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,32V30a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,30Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,34a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,34V32a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,32Z'/%3e%3cpath%20fill='%23fff'%20d='M67,36a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,36V34a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,34Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,22a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,22V20a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,20Z'/%3e%3cpath%20fill='%23fff'%20d='M67,24a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,24V22a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,22Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,18a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,18V16a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,16Z'/%3e%3cpath%20fill='%23fff'%20d='M67,20a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,20V18a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,18Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,26a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,26V24a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,24Z'/%3e%3cpath%20fill='%23fff'%20d='M67,28a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,28V26a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,26Z'/%3e%3crect%20x='5'%20y='17'%20width='31'%20height='19'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Zi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3cpath%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='4'%20d='m25.76%2036h20.47'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ni = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3cline%20x1='36'%20x2='36'%20y1='32'%20y2='40'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M38,32a4,4,0,0,1,0,8'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M36,40a4.0012,4.0012,0,0,0,1.2285-6.7678'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M36,40a4.0013,4.0013,0,0,1-1.2284-6.7678'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M34,32a4,4,0,0,0,0,8'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Di = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2030%2033%2030%2017%2024%2017%2024%2033%205%2033%205%2039%2024%2039%2024%2055%2030%2055%2030%2039%2067%2039%2067%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", $i = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Gi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d22f27'%20points='67%2020%2067%2017%2063%2017%205%2052%205%2055%209%2055'/%3e%3cpolygon%20fill='%23d22f27'%20points='5%2020%205%2017%209%2017%2067%2052%2067%2055%2063%2055'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.522'%20d='m38.74%2022.34s0.2958%200.5821%200.2996%202.759c0.0038%202.177-0.9878%204.162-3.017%205.113-2.03-0.9514-3.071-2.972-3.071-5.113%200-2.141%200.3002-2.759%200.3002-2.759z'/%3e%3cpath%20fill='%23fcea2b'%20fill-rule='evenodd'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-miterlimit='10'%20stroke-width='0.9856'%20d='m32.66%2019.96h6.683l-0.5663%201.193h-5.604z'%20paint-order='normal'/%3e%3crect%20x='33.26'%20y='22.72'%20ry='0.0166'%20width='5.478'%20height='0.8682'%20fill='%23fcea2b'%20fill-rule='evenodd'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-miterlimit='10'%20stroke-width='0.6318'%20paint-order='stroke%20fill%20markers'/%3e%3crect%20x='33.26'%20y='25.08'%20ry='0.0166'%20width='5.478'%20height='0.8682'%20fill='%23fcea2b'%20fill-rule='evenodd'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-miterlimit='10'%20stroke-width='0.6318'%20paint-order='stroke%20fill%20markers'/%3e%3crect%20x='33.74'%20y='27.39'%20ry='0.0137'%20width='4.526'%20height='0.7173'%20fill='%23fcea2b'%20fill-rule='evenodd'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-miterlimit='10'%20stroke-width='0.522'%20paint-order='stroke%20fill%20markers'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", zi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3cpolygon%20points='36%2036%205%2055%205%2017%2036%2036'/%3e%3cpolygon%20points='36%2036%2067%2055%2067%2017%2036%2036'/%3e%3cpolygon%20fill='%23fcea2b'%20points='5%2023%205%2017%2012%2017%2067%2049%2067%2055%2060%2055%205%2023'/%3e%3cpolygon%20fill='%23fcea2b'%20points='67%2023%2067%2017%2060%2017%205%2049%205%2055%2012%2055%2067%2023'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Fi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'/%3e%3cpolygon%20fill='%23d22f27'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='13%2033.5%2013.556%2034.945%2015.005%2034.49%2014.25%2035.838%2015.5%2036.716%2014.002%2036.95%2014.113%2038.5%2013%2037.445%2011.887%2038.5%2011.998%2036.95%2010.5%2036.716%2011.75%2035.838%2010.995%2034.49%2012.444%2034.945%2013%2033.5'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Hi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3ccircle%20cx='36'%20cy='36'%20r='9'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ki = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'/%3e%3crect%20x='5'%20y='30.5'%20width='62'%20height='11'%20fill='%23d22f27'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M29.25,47.6913l13.5-23.3826'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M29.25,24.3087l13.5,23.3826'/%3e%3cpath%20fill='%23d22f27'%20d='M36.231,25.0566a.4958.4958,0,0,0-.4619,0A12.2986,12.2986,0,0,0,29.5,36a12.2988,12.2988,0,0,0,6.2671,10.9434.5.5,0,0,0,.231.0566h.0039a.5.5,0,0,0,.2309-.0566A12.2986,12.2986,0,0,0,42.5,36,12.2985,12.2985,0,0,0,36.231,25.0566Z'/%3e%3cpath%20d='M41.7033,31.501A6.2884,6.2884,0,0,0,40,36a6.2883,6.2883,0,0,0,1.7037,4.4991,13.1042,13.1042,0,0,0,0-8.9979Z'/%3e%3cpath%20d='M30.2964,40.4989A6.2883,6.2883,0,0,0,32,36a6.2884,6.2884,0,0,0-1.7033-4.4988,13.1034,13.1034,0,0,0,0,8.9979Z'/%3e%3cline%20x1='36'%20x2='36'%20y1='27'%20y2='45'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Wi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='36%2030%2037.326%2025.08%2037.436%2030.174%2039.901%2025.715%2038.788%2030.687%2042.249%2026.947%2039.979%2031.509%2044.234%2028.706%2040.938%2032.592%2045.74%2030.888%2041.61%2033.872%2046.68%2033.368%2041.956%2035.277%2047%2036%2041.956%2036.723%2046.68%2038.632%2041.61%2038.128%2045.74%2041.112%2040.938%2039.408%2044.234%2043.294%2039.979%2040.491%2042.249%2045.053%2038.788%2041.313%2039.901%2046.285%2037.436%2041.826%2037.326%2046.92%2036%2042%2034.674%2046.92%2034.564%2041.826%2032.099%2046.285%2033.212%2041.313%2029.751%2045.053%2032.021%2040.491%2027.766%2043.294%2031.062%2039.408%2026.26%2041.112%2030.39%2038.128%2025.32%2038.632%2030.044%2036.723%2025%2036%2030.044%2035.277%2025.32%2033.368%2030.39%2033.872%2026.26%2030.888%2031.062%2032.592%2027.766%2028.706%2032.021%2031.509%2029.751%2026.947%2033.212%2030.687%2032.099%2025.715%2034.564%2030.174%2034.674%2025.08%2036%2030'/%3e%3ccircle%20cx='36'%20cy='36'%20r='6'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M30.55,33.5024a5.9922,5.9922,0,0,0,9.4709,6.9422A10,10,0,0,0,30.55,33.5024Z'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M41.4505,33.5024a5.9923,5.9923,0,0,1-9.471,6.9422A10,10,0,0,1,41.4505,33.5024Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ui = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='45'%20width='62'%20height='10'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='10'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='45.882%2042%2026.118%2042%2028.235%2037.765%2043.765%2037.765%2045.882%2042'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='38.824%2035.647%2033.176%2035.647%2036%2030%2038.824%2035.647'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='43.059%2035.647%2039.529%2035.647%2040.853%2032.824%2041.735%2032.824%2043.059%2035.647'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='32.471%2035.647%2028.941%2035.647%2030.265%2032.824%2031.147%2032.824%2032.471%2035.647'/%3e%3crect%20x='28.2353'%20y='35.6471'%20width='15.5294'%20height='2.1176'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Yi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='36%2036%2037.326%2031.08%2037.436%2036.174%2039.901%2031.715%2038.788%2036.687%2042.249%2032.947%2039.979%2037.509%2044.234%2034.706%2040.938%2038.592%2045.74%2036.888%2041.61%2039.872%2046.68%2039.368%2041.956%2041.277%2047%2042%2041.956%2042.723%2046.68%2044.632%2041.61%2044.128%2045.74%2047.112%2040.938%2045.408%2044.234%2049.294%2039.979%2046.491%2042.249%2051.053%2038.788%2047.313%2039.901%2052.285%2037.436%2047.826%2037.326%2052.92%2036%2048%2034.674%2052.92%2034.564%2047.826%2032.099%2052.285%2033.212%2047.313%2029.751%2051.053%2032.021%2046.491%2027.766%2049.294%2031.062%2045.408%2026.26%2047.112%2030.39%2044.128%2025.32%2044.632%2030.044%2042.723%2025%2042%2030.044%2041.277%2025.32%2039.368%2030.39%2039.872%2026.26%2036.888%2031.062%2038.592%2027.766%2034.706%2032.021%2037.509%2029.751%2032.947%2033.212%2036.687%2032.099%2031.715%2034.564%2036.174%2034.674%2031.08%2036%2036'/%3e%3cpath%20fill='%23fff'%20d='M67,44a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,44V42a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,42Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,46a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,46V44a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,44Z'/%3e%3cpath%20fill='%23fff'%20d='M67,48a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,48V46a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,46Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,50a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,50V48a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,48Z'/%3e%3cpath%20fill='%231e50a0'%20d='M67,55s-4.6307-.9506-6.2-1-4.6308.9506-6.2,1-4.6308-.9506-6.2-1-4.6307.9506-6.2,1-4.6307-.9506-6.2-1-4.6308.9508-6.2,1-4.6308-.9519-6.2-1-4.6306.9585-6.2,1-4.63-1-6.2-1A50.8361,50.8361,0,0,0,5,55V51a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,51Z'/%3e%3cpath%20fill='%23fff'%20d='M67,52a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,52V50a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,50Z'/%3e%3cg%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M45.5,22a17.1366,17.1366,0,0,1-8,2'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M26.5,22a17.1366,17.1366,0,0,0,8,2'/%3e%3c/g%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M31.4946,25.9334a10.9861,10.9861,0,0,1,9.0109-.0011'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", qi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='27'%20width='62'%20height='9'%20fill='%23fff'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='9'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='10'%20fill='%23f1b31c'/%3e%3cpolygon%20fill='%235c9e31'%20points='37%2036%205%2055%205%2017%2037%2036'/%3e%3cg%3e%3ccircle%20cx='19'%20cy='31'%20r='1.0435'%20fill='%23fff'/%3e%3ccircle%20cx='19'%20cy='34.3333'%20r='1.0435'%20fill='%23fff'/%3e%3ccircle%20cx='19'%20cy='37.6667'%20r='1.0435'%20fill='%23fff'/%3e%3ccircle%20cx='19'%20cy='41'%20r='1.0435'%20fill='%23fff'/%3e%3c/g%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M11.6929,36.125a7.4815,7.4815,0,0,1,5.9889-7.3567,7.3762,7.3762,0,0,0-1.4373-.1433,7.5,7.5,0,0,0,0,15,7.3839,7.3839,0,0,0,1.4373-.1432A7.4817,7.4817,0,0,1,11.6929,36.125Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ji = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpolygon%20fill='%235c9e31'%20points='5%2017%205%2055%2067%2017%205%2017'/%3e%3cpolygon%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='67%2024%2067%2017%2059%2017%205%2048%205%2055%2013%2055%2067%2024'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='44.799%2033.5%2043.78%2028.5%2047.5%2031.905%2042.5%2031.396%2046.87%2028.815%2044.799%2033.5'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='25.799%2044.5%2024.78%2039.5%2028.5%2042.905%2023.5%2042.396%2027.87%2039.815%2025.799%2044.5'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Qi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3ccircle%20cx='22.5873'%20cy='36.013'%20r='8.5'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='19.122%2041.513%2022.628%2030.513%2025.921%2041.442%2017.087%2034.758%2028.087%2034.643%2019.122%2041.513'/%3e%3crect%20x='5'%20y='49'%20width='62'%20height='6'%20fill='%231e50a0'%20stroke='%23fff'%20stroke-miterlimit='10'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='6'%20fill='%231e50a0'%20stroke='%23fff'%20stroke-miterlimit='10'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Xi = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cg%3e%3ccircle%20cx='36'%20cy='36'%20r='9'%20fill='%23d22f27'/%3e%3cg%3e%3cpath%20fill='%231e50a0'%20d='M28.1267,31.6756A4.4922,4.4922,0,0,0,36,36c.023-.04.0338-.0828.0554-.123l.0232.0138a4.4932,4.4932,0,0,1,7.7243,4.59l.003.0018a8.9918,8.9918,0,0,1-15.6792-8.8071Z'/%3e%3cpath%20fill='%231e50a0'%20d='M28.3313,31.2869l.02.0115c-.03.046-.0668.085-.0954.1325C28.283,31.3844,28.3029,31.3328,28.3313,31.2869Z'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cg%3e%3cline%20x1='24.2321'%20x2='27.2321'%20y1='41.9019'%20y2='47.0981'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='20.768'%20x2='23.768'%20y1='43.9019'%20y2='49.0981'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='22.5'%20x2='23.5'%20y1='42.9019'%20y2='44.634'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='24.5'%20x2='25.5'%20y1='46.366'%20y2='48.0981'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%3e%3cline%20x1='45.5'%20x2='46.5'%20y1='48.0981'%20y2='46.366'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='47.5'%20x2='48.5'%20y1='44.634'%20y2='42.9019'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='47.2321'%20x2='48.2321'%20y1='49.0981'%20y2='47.366'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='49.2321'%20x2='50.2321'%20y1='45.634'%20y2='43.9019'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='43.768'%20x2='44.768'%20y1='47.0981'%20y2='45.366'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='45.768'%20x2='46.768'%20y1='43.634'%20y2='41.9019'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%3e%3cline%20x1='20.768'%20x2='23.768'%20y1='28.0981'%20y2='22.9019'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='22.5'%20x2='25.5'%20y1='29.0981'%20y2='23.9019'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='24.2321'%20x2='27.2321'%20y1='30.0981'%20y2='24.9019'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%3e%3cline%20x1='44.768'%20x2='45.768'%20y1='24.9019'%20y2='26.634'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='46.768'%20x2='47.768'%20y1='28.366'%20y2='30.0981'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='48.2321'%20x2='49.2321'%20y1='22.9019'%20y2='24.634'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='50.2321'%20x2='51.2321'%20y1='26.366'%20y2='28.0981'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='46.5'%20x2='49.5'%20y1='23.9019'%20y2='29.0981'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", en = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23b1cc33'/%3e%3cpolygon%20points='19.368%2042%205%2055%205%2017%2019.37%2030.001%2019.368%2042'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", tn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3ccircle%20cx='51'%20cy='39'%20r='5'%20fill='%2361b2e4'/%3e%3crect%20x='46'%20y='32'%20width='10'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='46'%20y='36'%20width='10'%20height='3'%20fill='%2361b2e4'/%3e%3cline%20x1='54.25'%20x2='56.25'%20y1='42.25'%20y2='44.25'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cline%20x1='47.75'%20x2='45.75'%20y1='42.25'%20y2='44.25'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='2'%20d='M55.25,43.2352a6,6,0,0,1-8.4927.0075'/%3e%3ccircle%20cx='51'%20cy='26'%20r='1'%20fill='none'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M54,29c0-.5523-1.3431-1-3-1s-3,.4477-3,1Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", on = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3cpolygon%20transform='translate(14.6%208.726)%20scale(.6848)'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='44.23%2028.71%2040.94%2032.59%2045.74%2030.89%2041.61%2033.87%2046.68%2033.37%2041.96%2035.28%2047%2036%2041.96%2036.72%2046.68%2038.63%2041.61%2038.13%2045.74%2041.11%2040.94%2039.41%2044.23%2043.29%2039.98%2040.49%2042.25%2045.05%2038.79%2041.31%2039.9%2046.28%2037.44%2041.83%2037.33%2046.92%2036%2042%2034.67%2046.92%2034.56%2041.83%2032.1%2046.28%2033.21%2041.31%2029.75%2045.05%2032.02%2040.49%2027.77%2043.29%2031.06%2039.41%2026.26%2041.11%2030.39%2038.13%2025.32%2038.63%2030.04%2036.72%2025%2036%2030.04%2035.28%2025.32%2033.37%2030.39%2033.87%2026.26%2030.89%2031.06%2032.59%2027.77%2028.71%2032.02%2031.51%2029.75%2026.95%2033.21%2030.69%2032.1%2025.72%2034.56%2030.17%2034.67%2025.08%2036%2030%2037.33%2025.08%2037.44%2030.17%2039.9%2025.72%2038.79%2030.69%2042.25%2026.95%2039.98%2031.51'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='m31.09%2039.13s2.312%204.125%206.688%204.688c2.768%200.3559%201.376%200.6496-0.04232%201.065-0.8236%200.2413-1.676%200.5633-1.676%200.5633s1.315-0.5202%203.443-0.616c2.104-0.09466%201.471-0.06925%200.8339-0.2106-0.4556-0.1011-1.57-0.1957-1.263-0.2675%204.083-0.9558%207.427-2.98%208.33-5.222'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='3.995'%20d='m10.5%2022.02v27.95'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", nn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3ccircle%20cx='36'%20cy='36.013'%20r='8.5'%20fill='%23fff'/%3e%3crect%20x='5'%20y='48'%20width='62'%20height='7'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='7'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", rn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='7'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='48'%20width='62'%20height='7'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2027%2029%2032%2036%2031%2043%2032%2036%2027'/%3e%3cpolygon%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2031%2028%2036%2036%2035%2044%2036%2036%2031'/%3e%3cpolygon%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2035%2027%2040%2036%2039%2045%2040%2036%2035'/%3e%3cg%3e%3cpath%20fill='%235c9e31'%20d='M38,39v3.5a2.2272,2.2272,0,0,0,1.4231,1.9743l.1539.0514h0l-.1539-.0514A11.1134,11.1134,0,0,0,36.5,44h-1a11.1126,11.1126,0,0,0-2.923.4743l-.1539.0514h0l.1539-.0514A2.2271,2.2271,0,0,0,34,42.5V39'/%3e%3cpath%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M38,39v3.5a2.2272,2.2272,0,0,0,1.4231,1.9743l.1539.0514h0l-.1539-.0514A11.1134,11.1134,0,0,0,36.5,44h-1a11.1126,11.1126,0,0,0-2.923.4743l-.1539.0514h0l.1539-.0514A2.2271,2.2271,0,0,0,34,42.5V39'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ln = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3cpolygon%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2023%2048%2049%2024%2049%2036%2023'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2037%2048%2049%2024%2049%2036%2037'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", cn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23d22f27'/%3e%3cline%20x1='18'%20x2='18'%20y1='22'%20y2='30'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M18,28a3,3,0,0,1,3-3c1.6569,0,4.1391,1.4725,2,6H13c-2.1391-4.5275.3431-6,2-6a3,3,0,0,1,3,3'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", sn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='11'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='16'%20y='17'%20width='10'%20height='38'%20fill='%23e27022'/%3e%3cline%20x1='26'%20x2='26'%20y1='18'%20y2='54'%20fill='none'%20stroke='%23f1b31c'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3crect%20x='7'%20y='19'%20width='58'%20height='34'%20fill='none'%20stroke='%23f1b31c'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cg%3e%3cpolyline%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='50%2045%2052%2045%2053%2043%2050%2037'/%3e%3cpolyline%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='41%2045%2043%2045%2044%2043%2041%2037'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M37,26a7.0706,7.0706,0,0,0-1,4V42'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M44,41c3,0,3-2,7-2l5,2c-1-2,2-3,1-6H42s-3,2-3,5h3Z'/%3e%3cpolyline%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='54%2045%2056%2045%2057%2043%2054%2037'/%3e%3cline%20x1='35'%20x2='39'%20y1='37'%20y2='40'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M56,31a2,2,0,0,1,0,4'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M52,31a2,2,0,0,1,0-4'/%3e%3cg%3e%3crect%20x='42'%20y='30'%20rx='1'%20ry='1'%20width='4'%20height='5'%20fill='%23f1b31c'/%3e%3crect%20x='42'%20y='30'%20rx='1'%20ry='1'%20width='4'%20height='5'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cline%20x1='52'%20x2='56'%20y1='31'%20y2='31'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='60'%20x2='61'%20y1='24'%20y2='23'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='31'%20x2='30'%20y1='24'%20y2='23'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='43'%20x2='40'%20y1='32'%20y2='31'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='43'%20x2='40'%20y1='33'%20y2='34'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='60'%20x2='61'%20y1='48'%20y2='49'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='31'%20x2='30'%20y1='48'%20y2='49'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", an = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='26'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='34'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='50'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='17'%20height='17'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='14.455%2026.09%2016%2024.91%2014.09%2024.91%2013.5%2023%2012.91%2024.91%2011%2024.91%2012.545%2026.09%2011.955%2028%2013.5%2026.82%2015.045%2028%2014.455%2026.09'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", dn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='36%2034.75%2032.536%2040.75%2039.464%2040.75%2036%2034.75'/%3e%3cellipse%20cx='36'%20cy='34.25'%20rx='2'%20ry='3'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='36'%20x2='36'%20y1='31.25'%20y2='37.25'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='34.5'%20x2='37.5'%20y1='33.75'%20y2='33.75'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", fn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23f1b31c'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", gn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", hn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23781e32'/%3e%3crect%20x='5'%20y='32'%20width='62'%20height='8'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", un = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M32.1358,36.125a4.0528,4.0528,0,0,1,3.3783-3.9236,4.3947,4.3947,0,0,0-.8108-.0764,4.0043,4.0043,0,1,0,0,8,4.3947,4.3947,0,0,0,.8108-.0764A4.0527,4.0527,0,0,1,32.1358,36.125Z'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='38.193%2037.166%2039.521%2033.166%2040.666%2037.105%2037.486%2034.732%2041.486%2034.633%2038.193%2037.166'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", pn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'%20points='25%2033.03%2047%2033.03%2029.202%2045.962%2036%2025.038%2042.798%2045.962%2025%2033.03'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", kn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", wn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3cpath%20fill='%23a57939'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M34.6566,30.5657,34.1579,32.27h-2.21A2.0412,2.0412,0,0,0,29,32.27v8.1052l2.9474-2.9473h2.21L31.8283,44h8.4848l-2.471-6.572H40.79L43,40.3753V32.27a2.0412,2.0412,0,0,0-2.9474,0h-2.21l-.3573-1.7044V29.1515a2.5259,2.5259,0,0,0-1.8481-2.6862,1.8866,1.8866,0,0,0-1.5806.2582l-1.5207,1.0139,2.1212,1.4141Z'/%3e%3cg%3e%3crect%20x='32.2194'%20y='31.5'%20width='7.7641'%20height='4.529'%20fill='%23d22f27'/%3e%3cpath%20fill='%231e50a0'%20d='M32.2194,35.382h7.7641c.3235,4.5291-4.2056,6.47-4.2056,6.47S30.9254,38.6171,32.2194,35.382Z'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='35.454%2035.25%2036.748%2035.25%2036.101%2037.2%2035.454%2035.25'/%3e%3cpath%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M35.9936,41.8521s3.882-1.294,3.882-5.1761V31.5h-7.764v5.176C32.1116,40.5581,35.9936,41.8521,35.9936,41.8521Z'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", yn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M39,35c1.501,0,3.5084-3.5564,1.9248-7.3049A8,8,0,0,1,36,42'/%3e%3cline%20x1='36'%20x2='42'%20y1='42'%20y2='44'%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M33,35c-1.501,0-3.5084-3.5564-1.9248-7.3049A8,8,0,0,0,36,42'/%3e%3cline%20x1='36'%20x2='30'%20y1='42'%20y2='44'%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2043%2034%2045.5%2036%2046%2038%2045.5%2036%2043'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M38,31c-2,0-2,2.4424-1,4'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M34,31c2,0,2,2.4424,1,4'/%3e%3cpath%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M38,38c0,1.2-.6509,1.6174-2,2-1.3491-.3826-2-.8-2-2'/%3e%3crect%20x='33'%20y='34'%20width='6'%20height='4'%20fill='%231e50a0'/%3e%3cline%20x1='35'%20x2='37'%20y1='28'%20y2='28'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", xn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", vn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", mn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23f1b31c'%20points='67%2024%2067%2018%206%2053%206%2054%2067%2024'/%3e%3cpolygon%20fill='%23fff'%20points='67%2030%2067%2024%206%2054%206%2055%2067%2030'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='16.725%2026.966%2017.852%2023.78%2017.081%2027.059%2019.043%2024.257%2017.4%2027.236%2020.062%2025.01%2017.659%2027.485%2020.84%2025.985%2017.841%2027.789%2021.324%2027.118%2017.933%2028.127%2023.119%2028.315%2017.93%2028.476%2021.302%2029.541%2017.831%2028.813%2020.797%2030.665%2017.644%2029.113%2020.001%2031.628%2017.38%2029.358%2018.968%2032.364%2017.059%2029.53%2017.769%2032.821%2016.701%2029.617%2016.511%2035.29%2016.331%2029.614%2015.204%2032.8%2015.975%2029.521%2014.014%2032.323%2015.657%2029.344%2012.995%2031.57%2015.398%2029.095%2012.217%2030.595%2015.216%2028.791%2011.732%2029.462%2015.123%2028.453%209.119%2028.273%2015.127%2028.104%2011.755%2027.039%2015.225%2027.768%2012.26%2025.915%2015.413%2027.467%2013.056%2024.952%2015.677%2027.222%2014.089%2024.217%2015.998%2027.05%2015.288%2023.759%2016.356%2026.963%2016.546%2021.29%2016.725%2026.966'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", _n = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23f1b31c'%20points='15%2017%205%2017%2036%2036%2036%2034%2015%2017'/%3e%3cpolygon%20fill='%23f1b31c'%20points='15%2055%205%2055%2036%2036%2036%2038%2015%2055'/%3e%3cpolygon%20fill='%23f1b31c'%20points='57%2017%2067%2017%2036%2036%2036%2034%2057%2017'/%3e%3cpolygon%20fill='%23f1b31c'%20points='57%2055%2067%2055%2036%2036%2036%2038%2057%2055'/%3e%3cpolygon%20fill='%23f1b31c'%20points='33%2055%2039%2055%2037%2036%2035%2036%2033%2055'/%3e%3cpolygon%20fill='%23f1b31c'%20points='67%2039%2067%2033%2036%2035%2036%2037%2067%2039'/%3e%3cpolygon%20fill='%23f1b31c'%20points='5%2039%205%2033%2036%2035%2036%2037%205%2039'/%3e%3cpolygon%20fill='%23f1b31c'%20points='33%2017%2039%2017%2037%2036%2035%2036%2033%2017'/%3e%3ccircle%20cx='36'%20cy='36'%20r='7'%20fill='%23f1b31c'%20stroke='%23d22f27'%20stroke-miterlimit='10'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", bn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", jn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%235c9e31'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='30.183%2046%2036.158%2028%2041.309%2045.725%2027%2035.044%2045%2034.6%2030.183%2046'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Mn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5.2273'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5.2273'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='46.2273'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3ccircle%20cx='16'%20cy='29'%20r='1'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3ccircle%20cx='16'%20cy='41'%20r='1'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M17,24a1,1,0,0,1-2,0l1-1Z'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='15%2033%2017%2033%2016%2034%2015%2033'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='15%2048%2017%2048%2016%2049%2015%2048'/%3e%3cline%20x1='15'%20x2='17'%20y1='37'%20y2='37'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='15'%20x2='17'%20y1='45'%20y2='45'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='11'%20y='33'%20width='1'%20height='16'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='20'%20y='33'%20width='1'%20height='16'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", An = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23186648'/%3e%3cg%3e%3cline%20x1='32.4077'%20x2='39.4077'%20y1='49.977'%20y2='49.977'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='43.9077'%20x2='27.9077'%20y1='47.977'%20y2='47.977'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='25.4077'%20x2='46.4077'%20y1='45.977'%20y2='45.977'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='34.467%2027.023%2036.127%2022.023%2037.557%2026.946%2033.583%2023.98%2038.583%2023.856%2034.467%2027.023'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='42.993%2028.307%2042.355%2025.211%2044.576%2027.34%2041.621%2026.991%2044.182%2025.427%2042.993%2028.307'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='46.094%2033.047%2047.09%2030.047%2047.949%2033.001%2045.564%2031.221%2048.564%2031.147%2046.094%2033.047'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='29.007%2028.155%2029.645%2025.059%2027.424%2027.188%2030.379%2026.839%2027.818%2025.275%2029.007%2028.155'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='25.906%2032.895%2024.91%2029.895%2024.051%2032.849%2026.436%2031.069%2023.436%2030.995%2025.906%2032.895'/%3e%3cg%3e%3cg%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M35.0066,41.34c1.3822,1.2555,4.0028,1.8321,6.8351,1.3326s5.0984-1.9379,5.9676-3.5908c-1.3821-1.2559-4.0031-1.8327-6.8359-1.3332s-5.0976,1.9374-5.9671,3.59Z'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M24.0062,39.083c.8695,1.6525,3.1348,3.09,5.9671,3.59s5.4538-.0773,6.8358-1.3332c-.8691-1.6529-3.1347-3.0913-5.9675-3.5908s-5.4529.0771-6.8351,1.3326Z'/%3e%3c/g%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M35.907,29.977c-1.4765,1.0443-2.4993,3.31-2.4993,5.9373s1.0232,4.8938,2.5,5.9378c1.4769-1.044,2.5-3.31,2.5-5.9378s-1.0228-4.893-2.4992-5.9373Z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Bn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3cg%3e%3cellipse%20cx='36'%20cy='36'%20rx='10.4661'%20ry='10.4999'%20fill='none'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='3'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M46.4658,35.9315a10.4661,10.4661,0,1,1-20.9317.137'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M25.5343,36.0685a10.4661,10.4661,0,1,1,20.9317-.137'/%3e%3cpolygon%20fill='%239b9b9a'%20stroke='%239b9b9a'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='40.5%2050%2031.5%2050%2034.5%2032%2037.5%2032%2040.5%2050'/%3e%3cpolygon%20fill='%239b9b9a'%20stroke='%239b9b9a'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='38.5%2029%2033.5%2029%2034.5%2033%2037.5%2033%2038.5%2029'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='32.122%2042%2036.105%2030%2039.539%2041.816%2030%2034.696%2042%2034.4%2032.122%2042'/%3e%3cpath%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M25.7466,38.1161A10.6415,10.6415,0,0,1,25.7235,34'/%3e%3cpath%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M46.2535,34a10.6388,10.6388,0,0,1,.023,4.1158'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Sn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67.004%2033.045%2039.004%2033.004%2039.028%2017.004%2033.028%2016.996%2033.004%2032.996%205.004%2032.955%204.996%2038.955%2032.996%2038.996%2032.972%2054.996%2038.972%2055.004%2038.996%2039.004%2066.996%2039.045%2067.004%2033.045'/%3e%3cg%3e%3cline%20x1='16'%20x2='22.5'%20y1='50'%20y2='50'%20fill='%23f1b31c'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='16'%20x2='22.5'%20y1='50'%20y2='49'%20fill='%23f1b31c'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3ccircle%20cx='22.5'%20cy='49.5'%20r='0.5'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M19,47a3,3,0,0,0,3,3'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M17,44h1.5a.5015.5015,0,0,1,.5.5V47'/%3e%3c/g%3e%3cg%3e%3cline%20x1='16'%20x2='22.5'%20y1='28'%20y2='28'%20fill='%23f1b31c'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='16'%20x2='22.5'%20y1='28'%20y2='27'%20fill='%23f1b31c'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3ccircle%20cx='22.5'%20cy='27.5'%20r='0.5'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M19,25a3,3,0,0,0,3,3'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M17,22h1.5a.5015.5015,0,0,1,.5.5V25'/%3e%3c/g%3e%3cg%3e%3cline%20x1='50'%20x2='56.5'%20y1='50'%20y2='50'%20fill='%23f1b31c'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='50'%20x2='56.5'%20y1='50'%20y2='49'%20fill='%23f1b31c'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3ccircle%20cx='56.5'%20cy='49.5'%20r='0.5'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M53,47a3,3,0,0,0,3,3'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M51,44h1.5a.5015.5015,0,0,1,.5.5V47'/%3e%3c/g%3e%3cg%3e%3cline%20x1='50'%20x2='56.5'%20y1='28'%20y2='28'%20fill='%23f1b31c'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='50'%20x2='56.5'%20y1='28'%20y2='27'%20fill='%23f1b31c'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3ccircle%20cx='56.5'%20cy='27.5'%20r='0.5'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M53,25a3,3,0,0,0,3,3'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M51,22h1.5a.5015.5015,0,0,1,.5.5V25'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Cn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='7'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='48'%20width='62'%20height='7'%20fill='%23d22f27'/%3e%3cg%3e%3cpath%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M36,40.8847a6.9294,6.9294,0,0,1-6.8663-5.4054A6.4559,6.4559,0,0,0,29,36.7766a7.0066,7.0066,0,0,0,14,0,6.4486,6.4486,0,0,0-.1337-1.2973A6.9294,6.9294,0,0,1,36,40.8847Z'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='34.707%2034.521%2036.035%2030.521%2037.18%2034.46%2034%2032.086%2038%2031.987%2034.707%2034.521'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", En = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpath%20fill='%2392d3f5'%20stroke='%2392d3f5'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M52.679,47s6.75-2.25,6.75-9V29h-13.5v9C45.929,44.75,52.679,47,52.679,47Z'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M46.2767,40.5C47.6461,45.3127,52.679,47,52.679,47s5.033-1.6873,6.4024-6.5Z'/%3e%3cline%20x1='52.4584'%20x2='52.4584'%20y1='32.0625'%20y2='42.6875'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='55.6459'%20x2='49.2709'%20y1='35.25'%20y2='35.25'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Tn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='31'%20height='38'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d0cfce'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='14%2022.035%2011.965%2022.035%2011.965%2020%2010.035%2020%2010.035%2022.035%208%2022.035%208%2023.965%2010.035%2023.965%2010.035%2026%2011.965%2026%2011.965%2023.965%2014%2023.965%2014%2022.035'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Pn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='27'%20width='62'%20height='9'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='9'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='10'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", On = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='9.431'%20y='21.43'%20width='53.14'%20height='29.14'%20fill='none'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='8.861'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m34.59%2036a6.215%206.215%200%200%201%205.405-5.885%207.487%207.487%200%200%200-1.297-0.1146c-3.702%200-6.703%202.686-6.703%206s3.001%206%206.703%206a7.487%207.487%200%200%200%201.297-0.1146%206.215%206.215%200%200%201-5.405-5.885z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ln = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23d22f27'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20d='M29.2393,30.9991A7.503,7.503,0,0,1,42.76,30.9984Z'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20d='M26.54,31a10.004,10.004,0,0,1,18.92-.0009Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Vn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3ccircle%20cx='36'%20cy='35'%20r='3.5'%20fill='%23a57939'%20stroke='%23a57939'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M30,39.4863a7.48,7.48,0,0,0,12,0'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", In = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='26'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='34'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='50'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='29'%20height='21'%20fill='%231e50a0'/%3e%3cg%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M13.8446,27.5A6.2149,6.2149,0,0,1,19.25,21.6146,7.4868,7.4868,0,0,0,17.9527,21.5c-3.7018,0-6.7027,2.6863-6.7027,6s3.0009,6,6.7027,6a7.4868,7.4868,0,0,0,1.2973-.1146A6.2149,6.2149,0,0,1,13.8446,27.5Z'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='24.612%2025.969%2026.709%2022.551%2025.258%2026.274%2028.667%2024.082%2025.703%2026.822%2029.75%2026.29%2025.861%2027.504%2029.744%2028.737%2025.7%2028.185%2028.649%2030.94%2025.251%2028.731%2026.684%2032.461%2024.605%2029.033%2024.236%2033%2023.888%2029.031%2021.791%2032.449%2023.242%2028.726%2019.833%2030.918%2022.797%2028.178%2018.75%2028.71%2022.639%2027.496%2018.756%2026.263%2022.8%2026.815%2019.851%2024.06%2023.249%2026.269%2021.816%2022.539%2023.895%2025.967%2024.264%2022%2024.612%2025.969'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Rn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23186648'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cpolygon%20fill='%23d22f27'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='10.004%2041.409%2013.593%2030.591%2016.689%2041.245%208.091%2034.825%2018.909%2034.559%2010.004%2041.409'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='16.869%2038.804%2010.131%2038.804%2011.033%2035.585%2015.967%2035.585%2016.869%2038.804'/%3e%3cline%20x1='8.9345'%20x2='16.2625'%20y1='40.121'%20y2='32.7804'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'/%3e%3cline%20x1='10.7376'%20x2='18.0655'%20y1='32.7804'%20y2='40.121'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Zn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3cpolygon%20fill='%231e50a0'%20points='5%2017%205%2055%2067%2017%205%2017'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='67%2024%2067%2017%2059%2017%205%2048%205%2055%2013%2055%2067%2024'/%3e%3ccircle%20cx='17'%20cy='27'%20r='4'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Nn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%231e50a0'/%3e%3ccircle%20cx='25'%20cy='36.5'%20r='13'%20fill='%23fcea2b'%20stroke='%23000'%20stroke-miterlimit='10'/%3e%3cline%20x1='25'%20x2='25'%20y1='23.56'%20y2='48.56'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cellipse%20cx='25'%20cy='36.93'%20rx='1.785'%20ry='1.071'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0'/%3e%3cellipse%20cx='25'%20cy='42.49'%20rx='1.162'%20ry='1.55'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.7749'/%3e%3ccircle%20cx='25'%20cy='31.29'%20r='1.353'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9021'/%3e%3cline%20x1='22.83'%20x2='27.17'%20y1='28.61'%20y2='26.11'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20stroke='%23000'%20stroke-miterlimit='10'%20stroke-width='1.046'%20d='m25%2049.49a10.75%2017.05%200%200%200%203.694-1.05c-0.2219-1.632-1.782-2.902-3.694-2.902s-3.472%201.27-3.694%202.902a10.75%2017.05%200%200%200%203.694%201.05z'/%3e%3cpath%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m22.39%2042.45c1.114-3.639%204.098-3.639%205.216%200'/%3e%3cpath%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m22.4%2031.36c1.11%203.798%204.085%203.798%205.199%200'/%3e%3cline%20x1='23.35'%20x2='26.65'%20y1='35.25'%20y2='35.25'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='23.35'%20x2='26.65'%20y1='38.61'%20y2='38.61'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9999'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Dn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3ccircle%20cx='36'%20cy='36.01'%20r='5.803'%20fill='%23e27022'%20stroke-width='0.6828'/%3e%3crect%20x='5'%20y='42.4'%20width='62'%20height='12.6'%20fill='%235c9e31'%20stroke-width='1.342'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='12.6'%20fill='%23e27022'%20stroke-width='1.342'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", $n = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%23186648'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23186648'/%3e%3cg%3e%3cpolygon%20fill='%23186648'%20stroke='%23186648'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2026%2032%2030%2036%2029.2%2040%2030%2036%2026'/%3e%3cpolygon%20fill='%23186648'%20stroke='%23186648'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2030%2031%2034%2036%2033.2%2041%2034%2036%2030'/%3e%3cpolygon%20fill='%23186648'%20stroke='%23186648'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2034%2030%2038%2036%2037.2%2042%2038%2036%2034'/%3e%3cpolygon%20fill='%23186648'%20stroke='%23186648'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2038%2029%2042%2036%2041.2%2043%2042%2036%2038'/%3e%3cline%20x1='36'%20x2='36'%20y1='40'%20y2='46'%20fill='none'%20stroke='%23186648'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Gn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%23186648'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23186648'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", zn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3cpolygon%20fill='%2361b2e4'%20points='33%2037.5%2036%2032.5%2039%2037.5%2033%2037.5'/%3e%3ccircle%20cx='36'%20cy='36'%20r='5'%20fill='none'%20stroke='%23fcea2b'%20stroke-miterlimit='10'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Fn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Hn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%231e50a0'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2030%2033%2030%2017%2024%2017%2024%2033%205%2033%205%2039%2024%2039%2024%2055%2030%2055%2030%2039%2067%2039%2067%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Kn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3cpolygon%20fill='%23d22f27'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='50%2055%2022%2055%2022%2017%2050%2037%2033%2037%2050%2055'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='30%2042.773%2031.206%2042%2031.864%2043.272%2033.294%2043.206%2033.228%2044.637%2034.5%2045.294%2033.727%2046.5%2034.5%2047.706%2033.228%2048.363%2033.294%2049.794%2031.864%2049.728%2031.206%2051%2030%2050.227%2028.794%2051%2028.137%2049.728%2026.706%2049.794%2026.772%2048.363%2025.5%2047.706%2026.273%2046.5%2025.5%2045.294%2026.772%2044.637%2026.706%2043.206%2028.137%2043.272%2028.794%2042%2030%2042.773'/%3e%3ccircle%20cx='30'%20cy='30'%20r='2'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'%20d='M34,31c-.45,1-1.7187,2-4,2s-3.55-1-4-2'/%3e%3c/g%3e%3cg%20id='line'/%3e%3c/svg%3e", Wn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='35'%20width='62'%20height='2'%20fill='%23f1b31c'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='16.296%2044.896%2018%2042.536%2016.808%2045.192%2019.464%2044%2017.104%2045.704%2020%2046%2017.104%2046.296%2019.464%2048%2016.808%2046.808%2018%2049.464%2016.296%2047.104%2016%2050%2015.704%2047.104%2014%2049.464%2015.192%2046.808%2012.536%2048%2014.896%2046.296%2012%2046%2014.896%2045.704%2012.536%2044%2015.192%2045.192%2014%2042.536%2015.704%2044.896%2016%2042%2016.296%2044.896'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Un = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='31'%20height='19'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3ccircle%20cx='20.5'%20cy='26.5'%20r='2.5'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='19.531%2028%2020.526%2025%2021.385%2027.954%2019%2026.174%2022%2026.1%2019.531%2028'/%3e%3ccircle%20cx='27'%20cy='26.5'%20r='1'%20fill='%23fcea2b'/%3e%3ccircle%20cx='14'%20cy='26.5'%20r='1'%20fill='%23fcea2b'/%3e%3ccircle%20cx='20.5'%20cy='32'%20r='1'%20fill='%23fcea2b'/%3e%3ccircle%20cx='20.5'%20cy='21'%20r='1'%20fill='%23fcea2b'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Yn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3cg%3e%3cpolygon%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='52.594%2027.262%2054.317%2025.937%2052.224%2025.989%2051.625%2023.928%2050.931%2026.021%2048.839%2026.072%2050.502%2027.314%2049.807%2029.406%2051.53%2028.081%2053.193%2029.323%2052.594%2027.262'/%3e%3cpolygon%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='52.594%2045.262%2054.317%2043.937%2052.224%2043.989%2051.625%2041.928%2050.931%2044.021%2048.839%2044.072%2050.502%2045.314%2049.807%2047.406%2051.53%2046.081%2053.193%2047.323%2052.594%2045.262'/%3e%3cpolygon%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='60.594%2032.262%2062.317%2030.937%2060.224%2030.989%2059.625%2028.928%2058.931%2031.021%2056.839%2031.072%2058.502%2032.314%2057.807%2034.406%2059.53%2033.081%2061.193%2034.323%2060.594%2032.262'/%3e%3cpolygon%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='45.594%2034.262%2047.317%2032.937%2045.224%2032.989%2044.625%2030.928%2043.931%2033.021%2041.839%2033.072%2043.502%2034.314%2042.807%2036.406%2044.53%2035.081%2046.193%2036.323%2045.594%2034.262'/%3e%3c/g%3e%3cg%3e%3cpolygon%20fill='%23d22f27'%20points='52.505%2027.211%2054.078%2026.001%2052.168%2026.048%2051.621%2024.167%2050.987%2026.077%2049.078%2026.124%2050.596%2027.257%2049.962%2029.167%2051.534%2027.958%2053.052%2029.091%2052.505%2027.211'/%3e%3cpolygon%20fill='%23d22f27'%20points='52.505%2045.211%2054.078%2044.001%2052.168%2044.048%2051.621%2042.167%2050.987%2044.077%2049.078%2044.124%2050.596%2045.257%2049.962%2047.167%2051.534%2045.958%2053.052%2047.091%2052.505%2045.211'/%3e%3cpolygon%20fill='%23d22f27'%20points='60.505%2032.211%2062.078%2031.001%2060.168%2031.048%2059.621%2029.167%2058.987%2031.077%2057.078%2031.124%2058.596%2032.257%2057.962%2034.167%2059.534%2032.958%2061.052%2034.091%2060.505%2032.211'/%3e%3cpolygon%20fill='%23d22f27'%20points='45.505%2034.211%2047.078%2033.001%2045.168%2033.048%2044.621%2031.167%2043.987%2033.077%2042.078%2033.124%2043.596%2034.257%2042.962%2036.167%2044.534%2034.958%2046.052%2036.091%2045.505%2034.211'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", qn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='16'%20height='38'%20fill='%23d22f27'/%3e%3cg%3e%3cline%20x1='10.5'%20x2='15.5'%20y1='23.9167'%20y2='23.9167'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='13'%20x2='13'%20y1='23.9167'%20y2='19.9167'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M17,20.0833l-4,4s-2,4-5,4'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M9,20.0833l4,4s2,4,5,4'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Jn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='36'%20width='31'%20height='19'%20fill='%231e50a0'/%3e%3crect%20x='36'%20y='17'%20width='31'%20height='19'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='18.962%2029.167%2020.621%2024.167%2022.052%2029.091%2018.078%2026.124%2023.078%2026.001%2018.962%2029.167'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='50.962%2048.167%2052.621%2043.167%2054.052%2048.091%2050.078%2045.124%2055.078%2045.001%2050.962%2048.167'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Qn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Xn = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='9'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='46'%20width='62'%20height='9'%20fill='%23d22f27'/%3e%3cpath%20fill='%2392d3f5'%20stroke='%2392d3f5'%20stroke-linejoin='round'%20stroke-width='0.9333'%20d='M42,36a7,7,0,0,1-14,0'/%3e%3cpath%20fill='%23f4aa41'%20stroke='%23f4aa41'%20stroke-linejoin='round'%20stroke-width='0.9333'%20d='M28,36a7,7,0,0,1,14,0'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linejoin='round'%20d='M36.5417,31s-3.1667,0-3.1667,2.1111v3.1667l3.1667,1.5833V33.6389S34.4306,33.1111,36.5417,31Z'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M33,39.5794s-1.0445.6963-1.7408,0l.05-4.8191'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M37.2592,39.5794s1.0445.6963,1.7408,0L38.95,34.76'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", er = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20points='5%2055%205%2017%2067%2055%205%2055'/%3e%3ccircle%20cx='19'%20cy='50'%20r='1'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3ccircle%20cx='19'%20cy='32'%20r='1'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3ccircle%20cx='12'%20cy='40'%20r='1'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3ccircle%20cx='26'%20cy='40'%20r='1'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3ccircle%20cx='21.5'%20cy='44.5'%20r='0.5'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M42,25c9,1,15,6.0874,15,11a5.166,5.166,0,0,1-3,5'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M50,21c-1.75.6584-3.1544,3.5714-1.9,5L50,27Z'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M50,27c5-3,9,0,9,3H54l-4-3'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M44.81,31.19C44,28,46,26,47.81,26.29l2,.9Z'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M49.81,27.19c-.81,3.81-1,8,2,8l2-5-4-3'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", tr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23fff'%20points='37%2036%205%2055%205%2017%2037%2036'/%3e%3ccircle%20cx='8'%20cy='21'%20r='1.0435'%20fill='%23f1b31c'/%3e%3ccircle%20cx='33'%20cy='36'%20r='1.0435'%20fill='%23f1b31c'/%3e%3ccircle%20cx='8'%20cy='51'%20r='1.0435'%20fill='%23f1b31c'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='17.907%2035.086%2020.04%2033.59%2018.434%2035.642%2021%2036.092%2018.414%2036.407%2019.91%2038.54%2017.859%2036.934%2017.408%2039.5%2017.093%2036.914%2014.96%2038.41%2016.566%2036.359%2014%2035.908%2016.586%2035.593%2015.09%2033.46%2017.142%2035.066%2017.592%2032.5%2017.907%2035.086'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", or = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23186648'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%23fff'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M50,44a11.9921,11.9921,0,0,1-9.8474-18.8474A11.9953,11.9953,0,1,0,56.8474,41.8474,11.9362,11.9362,0,0,1,50,44Z'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='53.453%2029.52%2054.8%2027.666%2052.621%2028.374%2051.273%2026.52%2051.273%2028.812%2049.094%2029.52%2051.273%2030.228%2051.273%2032.52%2052.621%2030.666%2054.8%2031.374%2053.453%2029.52'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ir = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", nr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3cg%3e%3crect%20x='5'%20y='17'%20width='19'%20height='13'%20fill='%23d22f27'/%3e%3cline%20x1='6'%20x2='24'%20y1='30'%20y2='18'%20fill='none'%20stroke='%235c9e31'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cline%20x1='6'%20x2='24'%20y1='18'%20y2='30'%20fill='none'%20stroke='%235c9e31'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cline%20x1='15'%20x2='15'%20y1='30'%20y2='18'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cline%20x1='6'%20x2='24'%20y1='24'%20y2='24'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3c/g%3e%3crect%20x='24'%20y='17'%20width='43'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='30'%20width='19'%20height='12'%20fill='%23fff'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M36,35c0,3,4,5,7,5s11-1,15-9h2c0,4-3,11-6,13H37l-8-9h7'/%3e%3cg%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M24,46c3,0,3-2,6-2s3,2,6,2'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M36,46c3,0,3-2,6-2s3,2,6,2'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M48,46c3,0,3-2,6-2s3,2,6,2'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M60,46c3,0,3-2,6-2'/%3e%3c/g%3e%3crect%20x='5'%20y='42'%20width='19'%20height='13'%20fill='%23d22f27'/%3e%3cline%20x1='10'%20x2='20'%20y1='46'%20y2='46'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='10'%20x2='20'%20y1='50'%20y2='50'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M47,24c-2,4-3,10-2,12l-4-1c0-5,2-9,5-11Z'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M55,24c-2,4-3,10-2,12l-4-1c0-5,2-9,5-11Z'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M33.4213,30.1053A10.2782,10.2782,0,0,1,38,24h1a25.06,25.06,0,0,0-2.1591,6.96Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", rr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3cline%20x1='48'%20x2='53'%20y1='30'%20y2='25'%20fill='%239b9b9a'%20stroke='%239b9b9a'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M58,29c3.0744,4.7618-.8014,9.1557-4,10'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M55.8318,39.9548c2,2,2.9548,6.2551.1682,10.0452'/%3e%3cpath%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M53,38.5q6,0,9,3'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M44,29c-3.0744,4.7618.8014,9.1557,4,10'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M46.1682,39.9548c-2,2-2.9548,6.2551-.1682,10.0452'/%3e%3cpath%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M49,38.5q-6,0-9,3'/%3e%3cpolyline%20fill='%239b9b9a'%20stroke='%239b9b9a'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='50%2036%2050%2028%2051%2027%2054%2036'/%3e%3cpath%20fill='%2361b2e4'%20stroke='%2361b2e4'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M55,35v3.625C55,44.25,53.6667,46.75,51,48c-2.6667-1.25-4-3.75-4-9.375V35Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", lr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='32'%20width='62'%20height='8'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='47'%20width='62'%20height='8'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='8'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%231e50a0'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='13.5%2033.5%2015.045%2038.5%2011%2035.41%2016%2035.41%2011.955%2038.5%2013.5%2033.5'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", cr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'/%3e%3cpolygon%20fill='%23d22f27'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", sr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3ccircle%20cx='26'%20cy='36'%20r='12'%20fill='none'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cline%20x1='26'%20x2='26'%20y1='24'%20y2='48'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpolygon%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='26%2039.5%2017%2044%2035%2044%2026%2039.5'/%3e%3cpolygon%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='26%2033.5%2035%2028%2026.5%2029.5%2017%2028%2026%2033.5'/%3e%3cpolygon%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='38%2036%2026%2041%2014%2036%2026%2031%2038%2036'/%3e%3cpath%20fill='%23fff'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M20.2,29H31.8V39.1c0,2.5-2.6,4.6-5.8,4.6h0c-3.2,0-5.8-2.1-5.8-4.6V29Z'/%3e%3ccircle%20cx='26'%20cy='32.8'%20r='0.7'%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3ccircle%20cx='26'%20cy='38.7'%20r='0.7'%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3ccircle%20cx='26'%20cy='35.7'%20r='0.7'%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3ccircle%20cx='29'%20cy='35.7'%20r='0.7'%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3ccircle%20cx='23'%20cy='35.7'%20r='0.7'%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ar = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='6'%20y='18'%20width='60'%20height='36'%20fill='%2361b2e4'/%3e%3ccircle%20cx='31.2'%20cy='36'%20r='10.8'%20fill='%23fcea2b'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", dr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='34.707%2038%2036.035%2034%2037.18%2037.939%2034%2035.565%2038%2035.467%2034.707%2038'/%3e%3ccircle%20cx='36'%20cy='36'%20r='5'%20fill='none'%20stroke='%235c9e31'%20stroke-miterlimit='10'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", fr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23781e32'/%3e%3cpolygon%20fill='%23fff'%20points='5%2017%2019%2017%2026%2019.5%2019.5%2021.9%2026%2024.2%2019.5%2026.6%2026%2028.9%2019.5%2031.3%2026%2033.7%2019.5%2036%2026%2038.4%2019.5%2040.7%2026%2043.1%2019.5%2045.5%2026%2047.8%2019.5%2050.2%2026%2052.5%2019%2055%205%2055%205%2017'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", gr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='15%2017%205%2017%2036%2036%2036%2036%2015%2017'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='57%2017%2067%2017%2036%2036%2036%2036%2057%2017'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='67%2039%2067%2033%2036%2036%2036%2036%2067%2039'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='5%2039%205%2033%2036%2036%2036%2036%205%2039'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='33%2017%2039%2017%2036%2036%2036%2036%2033%2017'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2036%2067%2055%205%2055%2036%2036'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", hr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ur = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%231e50a0'/%3e%3ccircle%20cx='27'%20cy='40'%20r='7'%20fill='%23fff'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cpolyline%20fill='%23fff'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='2'%20points='34%2040%2034%2029%2020%2029%2020%2040'/%3e%3cline%20x1='22'%20x2='34'%20y1='44'%20y2='30'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cline%20x1='32'%20x2='20'%20y1='44'%20y2='30'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cline%20x1='27'%20x2='27'%20y1='33'%20y2='43'%20fill='none'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cline%20x1='22'%20x2='32'%20y1='38'%20y2='38'%20fill='none'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M27,23c-3.1257.623-5,1.6-4,4h8C32,24.6,30.1257,23.623,27,23Z'/%3e%3cline%20x1='27'%20x2='27'%20y1='21.0488'%20y2='23'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", pr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23fff'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%231e50a0'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", kr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='9'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='45'%20width='62'%20height='10'%20fill='%235c9e31'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='56.296%2024.896%2058%2022.536%2056.808%2025.192%2059.464%2024%2057.104%2025.704%2060%2026%2057.104%2026.296%2059.464%2028%2056.808%2026.808%2058%2029.464%2056.296%2027.104%2056%2030%2055.704%2027.104%2054%2029.464%2055.192%2026.808%2052.536%2028%2054.896%2026.296%2052%2026%2054.896%2025.704%2052.536%2024%2055.192%2025.192%2054%2022.536%2055.704%2024.896%2056%2022%2056.296%2024.896'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", wr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3cline%20x1='49'%20x2='23'%20y1='45'%20y2='45'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='43'%20x2='43'%20y1='43'%20y2='47'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='46'%20x2='46'%20y1='27'%20y2='36'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='51'%20x2='51'%20y1='27'%20y2='36'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='41'%20x2='41'%20y1='27'%20y2='36'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='36'%20x2='36'%20y1='27'%20y2='36'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='31'%20x2='31'%20y1='27'%20y2='36'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='26'%20x2='26'%20y1='27'%20y2='36'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='21'%20x2='21'%20y1='27'%20y2='36'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='49'%20x2='49'%20y1='45'%20y2='47'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", yr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3cpolygon%20fill='%231e50a0'%20points='5%2017%205%2055%2067%2017%205%2017'/%3e%3cpolygon%20fill='%23fcea2b'%20points='67%2021%2067%2017%2062%2017%205%2051%205%2055%2010%2055%2067%2021'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='9.384%2025.5%2011.044%2020.5%2012.475%2025.423%208.5%2022.457%2013.5%2022.333%209.384%2025.5'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='21.384%2025.5%2023.044%2020.5%2024.475%2025.423%2020.5%2022.457%2025.5%2022.333%2021.384%2025.5'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='9.384%2035.5%2011.044%2030.5%2012.475%2035.423%208.5%2032.457%2013.5%2032.333%209.384%2035.5'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='15.384%2030.5%2017.044%2025.5%2018.475%2030.423%2014.5%2027.457%2019.5%2027.333%2015.384%2030.5'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='21.384%2035.5%2023.044%2030.5%2024.475%2035.423%2020.5%2032.457%2025.5%2032.333%2021.384%2035.5'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", xr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpath%20fill='%23d22f27'%20d='M%2067.253,29.579%2067,17%2047.161125,16.945094%206,54%20Z'/%3e%3cpath%20fill='%23f1b31c'%20d='m47.13%2016.98-20.57%203.44e-4%20-20.57%2037.02z'/%3e%3cpath%20fill='%23fff'%20d='m67.2%2041.76-0.03981-12.23-61.16%2024.46z'/%3e%3cpath%20transform='matrix(1%200%200%201.105%20-.001553%20-5.79)'%20fill='%235c9e31'%20d='m67%2055v-11.95l-61%2011.04z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", vr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20d='m10.6%2054.72c-5.599%200.3008-5.599%200.3008-5.645-3.774l56.15-33.69c4.468%200.132%206.208-0.8087%205.843%203.674z'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20d='m10.3%2017.03c-5.301-0.03272-5.301-0.03272-5.432%203.904l56.9%2034.13c5.235-0.06544%205.235-0.06544%205.202-4.018z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", mr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='13'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%235c9e31'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", _r = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2030%2033%2030%2017%2024%2017%2024%2033%205%2033%205%2039%2024%2039%2024%2055%2030%2055%2030%2039%2067%2039%2067%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", br = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23fff'/%3e%3ccircle%20cx='20'%20cy='22'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='18'%20cy='27'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='22'%20cy='27'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='17'%20cy='24'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='23'%20cy='24'%20r='1'%20fill='%23fff'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M11.1987,24.9227A4.873,4.873,0,0,1,15,20.094,4.539,4.539,0,0,0,14.0877,20a4.9273,4.9273,0,0,0,0,9.8454A4.539,4.539,0,0,0,15,29.7514,4.873,4.873,0,0,1,11.1987,24.9227Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", jr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2025.999%2030%2035.999%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016%2024%206%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2015.999%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3cg%3e%3cpath%20fill='%233f3f3f'%20d='M58.5,29h-.2771c.0939.0307.1839.0693.2771.1014Z'/%3e%3cpath%20fill='%233f3f3f'%20d='M45.5,29v.1014c.0932-.0321.1832-.0707.2771-.1014Z'/%3e%3cpath%20fill='%23fcea2b'%20d='M52,28a19.9562,19.9562,0,0,0-6.2229,1H58.2229A19.9562,19.9562,0,0,0,52,28Z'/%3e%3cpath%20fill='%23fcea2b'%20d='M58.5,34.5V29.1014c-.0932-.0321-.1832-.0707-.2771-.1014H45.7771c-.0939.0307-.1839.0693-.2771.1014V34.5Z'/%3e%3c/g%3e%3cpath%20fill='%2392d3f5'%20d='M44.9556,34.81,58.5,34.8635S60,44,52,47'/%3e%3cpath%20fill='%2392d3f5'%20d='M44.9556,34.81S44,45,52,47'/%3e%3cpath%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M56,42.9188c-2.4-1.5567-8,0-8,0L52,47Z'/%3e%3cpolyline%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='46%2037%2049%2041%2049%2044'/%3e%3cellipse%20cx='46.8576'%20cy='40.5894'%20rx='0.5'%20ry='2.6466'%20transform='translate(-10.3208%2016.6359)%20rotate(-18.1699)'%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpolygon%20fill='%23f4aa41'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='53%2032%2051%2032%2050%2030%2053%2032'/%3e%3cpath%20fill='none'%20stroke='%23f4aa41'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M55,41H52A2.8222,2.8222,0,0,0,55,41Z'/%3e%3cpath%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M58.5833,29v9c0,6.75-6.75,9-6.75,9s-6.75-2.25-6.75-9V29S51.9792,25.5937,58.5833,29Z'/%3e%3cline%20x1='58.5'%20x2='45.5'%20y1='34.5'%20y2='34.5'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Mr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23fff'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%231e50a0'/%3e%3cpath%20fill='%231e50a0'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M22.5833,22v9c0,6.75-6.75,9-6.75,9s-6.75-2.25-6.75-9V22S15.9792,18.5937,22.5833,22Z'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20d='M11.9626,33.3515l7.9755.3394A6.8155,6.8155,0,0,1,16,38c-3,1-4.0374-4.6485-4.0374-4.6485'/%3e%3cpolyline%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20points='14.5%2033.5%2015.5%2031.5%2017.765%2034.084%2014.5%2033.5'/%3e%3ccircle%20cx='13'%20cy='24'%20r='1'%20fill='%23fcea2b'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M21,35l-1-3-2,3-2-5-2,5-2-3-1,3S15,44,21,35Z'/%3e%3ccircle%20cx='16'%20cy='26'%20r='1'%20fill='%23fcea2b'/%3e%3ccircle%20cx='19'%20cy='24'%20r='1'%20fill='%23fcea2b'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M22.5833,22v9c0,6.75-6.75,9-6.75,9s-6.75-2.25-6.75-9V22S15.9792,18.5937,22.5833,22Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ar = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%231e50a0'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='2'%20points='67%2033%2030%2033%2030%2017%2024%2017%2024%2033%205%2033%205%2039%2024%2039%2024%2055%2030%2055%2030%2039%2067%2039%2067%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Br = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23fff'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%231e50a0'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M23.8334,45s6.75-2.25,6.75-9V27h-13.5v9C17.0834,42.75,23.8334,45,23.8334,45Z'/%3e%3cline%20x1='23.8334'%20x2='23.8334'%20y1='29.5'%20y2='41.5'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='21.8334'%20x2='25.8334'%20y1='31.5'%20y2='31.5'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='20.3334'%20x2='27.3334'%20y1='34.5'%20y2='34.5'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3ccircle%20cx='23.8334'%20cy='41.5'%20r='3.1667'%20fill='%231e50a0'/%3e%3cpath%20fill='%231e50a0'%20d='M19.25,39.3333a2.1457,2.1457,0,0,0-1.3265.465,9.5792,9.5792,0,0,0,2.7022,3.3628A2.158,2.158,0,0,0,19.25,39.3333Z'/%3e%3cpath%20fill='%231e50a0'%20d='M28.4167,39.3333a2.158,2.158,0,0,0-1.3757,3.8278,9.5792,9.5792,0,0,0,2.7022-3.3628A2.1455,2.1455,0,0,0,28.4167,39.3333Z'/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M23.8334,45s6.75-2.25,6.75-9V27h-13.5v9C17.0834,42.75,23.8334,45,23.8334,45Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Sr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23b1cc33'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Cr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%2361b2e4'/%3e%3cpath%20fill='%2361b2e4'%20d='M41,31a7.191,7.191,0,0,1,2,5,10.0442,10.0442,0,0,1-7,10,10.0442,10.0442,0,0,1-7-10,7.191,7.191,0,0,1,2-5'/%3e%3cpath%20fill='%2361b2e4'%20d='M41,31a7.191,7.191,0,0,1,2,5,10.0442,10.0442,0,0,1-7,10,10.0442,10.0442,0,0,1-7-10,7.191,7.191,0,0,1,2-5'/%3e%3cline%20x1='36'%20x2='36'%20y1='22'%20y2='30'%20fill='%23fcea2b'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M36,28a3,3,0,0,1,3-3c1.6569,0,4.1391,1.4725,2,6H31c-2.1391-4.5275.3431-6,2-6a3,3,0,0,1,3,3'/%3e%3cline%20x1='36'%20x2='36'%20y1='35'%20y2='41'%20fill='none'%20stroke='%236a462f'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='%235c9e31'%20d='M29.6694,40A10.0342,10.0342,0,0,0,36,46a10.0342,10.0342,0,0,0,6.3306-6Z'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M41,31a7.191,7.191,0,0,1,2,5,10.0442,10.0442,0,0,1-7,10,10.0442,10.0442,0,0,1-7-10,7.191,7.191,0,0,1,2-5'/%3e%3cpath%20fill='none'%20stroke='%23186648'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M41,47c3.3484-1.7381,6-6.2282,6-11a12.9874,12.9874,0,0,0-1.066-5'/%3e%3cpath%20fill='none'%20stroke='%23186648'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M31,47c-3.3484-1.7381-6-6.2282-6-11a12.9874,12.9874,0,0,1,1.066-5'/%3e%3cpolyline%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='43%2049%2041%2047%2031%2047%2029%2049'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Er = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='32.122%2042%2036.105%2030%2039.539%2041.816%2030%2034.696%2042%2034.4%2032.122%2042'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Tr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='32.122%2042%2036.105%2030%2039.539%2041.816%2030%2034.696%2042%2034.4%2032.122%2042'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Pr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='50'%20width='62'%20height='5'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='46'%20width='62'%20height='4'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='5'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='22'%20width='62'%20height='4'%20fill='%23fff'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='32.122%2042%2036.105%2030%2039.539%2041.816%2030%2034.696%2042%2034.4%2032.122%2042'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Or = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23d22f27'%20stroke='%23fff'%20stroke-miterlimit='10'/%3e%3cpolygon%20fill='%231e50a0'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='10.5%2036%2015.5%2037.545%2012.41%2033.5%2012.41%2038.5%2015.5%2034.455%2010.5%2036'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Lr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23b1cc33'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fcea2b'/%3e%3cpolygon%20fill='%23d22f27'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cpolygon%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='38.5%2033.59%2040.045%2038.59%2036%2035.5%2041%2035.5%2036.955%2038.59%2038.5%2033.59'/%3e%3cpolygon%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='53.5%2033.59%2055.045%2038.59%2051%2035.5%2056%2035.5%2051.955%2038.59%2053.5%2033.59'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Vr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3cpath%20fill='none'%20stroke='%23186648'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M39.5,36a3.5,3.5,0,0,1-7,0'/%3e%3ccircle%20cx='36'%20cy='36'%20r='4.5'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpolygon%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='36%2034%2034%2037%2038%2037%2036%2034'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ir = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fff'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3ccircle%20cx='13'%20cy='31'%20r='2.5'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20fill='%2392d3f5'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M18,31.7758v4.6121C18,39.847,13.0417,41,13.0417,41S8.0833,39.847,8.0833,36.3879V31.7758A16.6778,16.6778,0,0,1,18,31.7758Z'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M19,39c0,1.933-2.6863,3.5-6,3.5S7,40.933,7,39'/%3e%3crect%20x='11'%20y='34'%20width='4'%20height='3'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Rr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3cpolygon%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='28.5%2033.59%2030.045%2038.59%2026%2035.5%2031%2035.5%2026.955%2038.59%2028.5%2033.59'/%3e%3cpolygon%20fill='%235c9e31'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='43.5%2033.59%2045.045%2038.59%2041%2035.5%2046%2035.5%2041.955%2038.59%2043.5%2033.59'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Zr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='48'%20width='62'%20height='7'%20fill='%231e50a0'%20stroke='%23f1b31c'%20stroke-miterlimit='10'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='7'%20fill='%231e50a0'%20stroke='%23f1b31c'%20stroke-miterlimit='10'/%3e%3cline%20x1='19.3616'%20x2='56.1629'%20y1='28.9275'%20y2='28.9275'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9681'/%3e%3cline%20x1='16.0161'%20x2='52.8173'%20y1='33.1094'%20y2='33.1094'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9681'/%3e%3cline%20x1='11.6763'%20x2='60.5027'%20y1='36.4783'%20y2='36.4783'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9246'/%3e%3cg%3e%3cpath%20d='M48.6477,32.309a17.8474,17.8474,0,0,0-25.2386,0l-3.9549,3.9544a.3035.3035,0,0,0,0,.4293l3.9549,3.9544a17.8474,17.8474,0,0,0,25.2386,0l3.9549-3.9544a.3035.3035,0,0,0,0-.4293Z'/%3e%3cpath%20fill='%23fff'%20d='M36.09,45.6893A.3112.3112,0,0,0,36.4018,46a17.4822,17.4822,0,0,0,12.1535-5.1379l4.1695-4.169a.3036.3036,0,0,0,0-.4293l-4.1695-4.169a17.4813,17.4813,0,0,0-12.1535-5.1382.3111.3111,0,0,0-.3123.3106Z'/%3e%3c/g%3e%3cg%3e%3cline%20x1='23.8897'%20x2='33.5703'%20y1='34.3001'%20y2='34.3001'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.9361'/%3e%3cline%20x1='23.8897'%20x2='33.5703'%20y1='38.6564'%20y2='38.6564'%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.9361'/%3e%3c/g%3e%3cg%3e%3cline%20x1='38.4106'%20x2='48.0911'%20y1='34.3001'%20y2='34.3001'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.9361'/%3e%3cline%20x1='38.4106'%20x2='48.0911'%20y1='38.6564'%20y2='38.6564'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.9361'/%3e%3c/g%3e%3ccircle%20cx='31.1189'%20cy='30.6452'%20r='2.9042'%20fill='%231e50a0'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9681'/%3e%3ccircle%20cx='12.7661'%20cy='38.2922'%20r='2.9042'%20fill='%231e50a0'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9681'/%3e%3ccircle%20cx='60.1776'%20cy='38.2922'%20r='2.9042'%20fill='%231e50a0'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9681'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Nr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3cg%3e%3cpath%20fill='%233f3f3f'%20d='M59.5,30h-.2771c.0939.0307.1839.0693.2771.1014Z'/%3e%3cpath%20fill='%233f3f3f'%20d='M46.5,30v.1014c.0932-.0321.1832-.0707.2771-.1014Z'/%3e%3cpath%20fill='%23fcea2b'%20d='M53,29a19.9562,19.9562,0,0,0-6.2229,1H59.2229A19.9562,19.9562,0,0,0,53,29Z'/%3e%3cpath%20fill='%23fcea2b'%20d='M59.5,35.5V30.1014c-.0932-.0321-.1832-.0707-.2771-.1014H46.7771c-.0939.0307-.1839.0693-.2771.1014V35.5Z'/%3e%3c/g%3e%3cpath%20fill='%2392d3f5'%20d='M45.9556,35.81,59.5,35.8635S61,45,53,48'/%3e%3cpath%20fill='%2392d3f5'%20d='M45.9556,35.81S45,46,53,48'/%3e%3cpath%20fill='%231e50a0'%20stroke='%231e50a0'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M57,43.9188c-2.4-1.5567-8,0-8,0L53,48Z'/%3e%3cpolyline%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='47%2038%2050%2042%2050%2045'/%3e%3cellipse%20cx='47.8576'%20cy='41.5894'%20rx='0.5'%20ry='2.6466'%20transform='translate(-10.5827%2016.9976)%20rotate(-18.1699)'%20fill='none'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpolygon%20fill='%23f4aa41'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='54%2033%2052%2033%2051%2031%2054%2033'/%3e%3cpath%20fill='none'%20stroke='%23f4aa41'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M56,42H53A2.8222,2.8222,0,0,0,56,42Z'/%3e%3cpath%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M59.5833,30v9c0,6.75-6.75,9-6.75,9s-6.75-2.25-6.75-9V30S52.9792,26.5937,59.5833,30Z'/%3e%3cline%20x1='59.5'%20x2='46.5'%20y1='35.5'%20y2='35.5'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Dr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3cg%3e%3cpath%20fill='%23f1b31c'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.0091'%20d='M60.73,29.0911H44.6178s-1.0053,14.0906,8.0395,18.1475v.0165l.0167-.0082.0167.0082v-.0165C61.7356,43.1817,60.73,29.0911,60.73,29.0911Z'/%3e%3cg%3e%3cpath%20fill='%235c9e31'%20d='M49.777,42.7141s0-5.0455,3.0273-5.0455,3.0274,5.0455,3.0274,5.0455S52.8043,45.7415,49.777,42.7141Z'/%3e%3ccircle%20cx='52.8043'%20cy='37.6686'%20r='1.0091'%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='1.0091'/%3e%3c/g%3e%3cg%3e%3cellipse%20cx='47.8891'%20cy='33.506'%20rx='1.5137'%20ry='2.6489'%20transform='translate(-9.6887%2023.4653)%20rotate(-25.0868)'%20fill='%23f4aa41'/%3e%3cellipse%20cx='48.8982'%20cy='33.506'%20rx='1.5137'%20ry='2.6489'%20fill='%23ffa7c0'/%3e%3c/g%3e%3cellipse%20cx='56.9711'%20cy='33.506'%20rx='1.5137'%20ry='2.6489'%20fill='%23a57939'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", $r = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Gr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3ccircle%20cx='46.8595'%20cy='38.8723'%20r='0.5035'%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='1.007'/%3e%3ccircle%20cx='58.9438'%20cy='38.8723'%20r='0.5035'%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='1.007'/%3e%3ccircle%20cx='56.9298'%20cy='47.9356'%20r='0.5035'%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='1.007'/%3e%3ccircle%20cx='48.8736'%20cy='47.9356'%20r='0.5035'%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='1.007'/%3e%3ccircle%20cx='52.9017'%20cy='49.9496'%20r='0.5035'%20fill='%23fff'%20stroke='%23fff'%20stroke-miterlimit='10'%20stroke-width='1.007'/%3e%3cpath%20fill='%23fff'%20d='M58.4616,45.4768l-2.5193-4.3636a.8383.8383,0,0,0-1.1788,0l-1.0191,1.7649V39.9889h1.05a.6653.6653,0,0,0,.6652-.6653v-.3843a.6653.6653,0,0,0-.6652-.6653h-1.05V36.5591H56.45a.7248.7248,0,0,0,.7247-.7247v-.2655a.7248.7248,0,0,0-.7247-.7247h-7.125a.7248.7248,0,0,0-.7247.7247v.2655a.7248.7248,0,0,0,.7247.7247H52.03v6.61l-1.1872-2.0561a.8381.8381,0,0,0-1.1787,0l-2.5194,4.3636a.5336.5336,0,0,0,.1953.7289l.1932.1116a.5338.5338,0,0,0,.7291-.1953L48.84,45.12H51.666l.5783,1.0019a.7441.7441,0,0,0,1.1173,0L53.94,45.12h2.8256l.5786,1.0019a.5335.5335,0,0,0,.7289.1953l.193-.1116A.5335.5335,0,0,0,58.4616,45.4768ZM49.5852,43.83l.6679-1.1567.6678,1.1567Zm5.1,0,.668-1.1567.668,1.1567Z'/%3e%3cpolyline%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='36.5%2017.5%2036.5%2036.5%205.5%2036.5'/%3e%3crect%20x='5'%20y='17'%20width='11'%20height='19'%20fill='%231e50a0'/%3e%3crect%20x='16'%20y='17'%20width='10'%20height='19'%20fill='%23fff'/%3e%3crect%20x='26'%20y='17'%20width='10'%20height='19'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", zr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='32'%20width='62'%20height='8'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='47'%20width='62'%20height='8'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='8'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='23'%20height='23'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='14.415%2033%2017.07%2025%2019.359%2032.878%2013%2028.131%2021%2027.933%2014.415%2033'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Fr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='50'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Hr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3cg%3e%3ccircle%20cx='36'%20cy='35.1554'%20r='0.4969'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='0.9939'/%3e%3crect%20x='35.536'%20y='35.1553'%20rx='0.306'%20ry='0.306'%20width='0.9278'%20height='3.9755'%20fill='%23fcea2b'/%3e%3cpath%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.9877'%20d='M38.982,40.1247a4.2141,4.2141,0,0,0-5.9632,0'/%3e%3c/g%3e%3cg%3e%3ccircle%20cx='41'%20cy='37'%20r='0.5'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='1'/%3e%3ccircle%20cx='40.2'%20cy='34.6'%20r='0.5'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='1'/%3e%3ccircle%20cx='38.4'%20cy='32.9'%20r='0.5'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='1'/%3e%3ccircle%20cx='36'%20cy='32.2'%20r='0.5'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='1'/%3e%3ccircle%20cx='33.6'%20cy='32.9'%20r='0.5'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='1'/%3e%3ccircle%20cx='31.8'%20cy='34.6'%20r='0.5'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='1'/%3e%3ccircle%20cx='31'%20cy='37'%20r='0.5'%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-miterlimit='10'%20stroke-width='1'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Kr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='19.75%2021.972%2020.986%2025.972%2017.75%2023.5%2021.75%2023.5%2018.514%2025.972%2019.75%2021.972'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='19.75%2035.972%2020.986%2039.972%2017.75%2037.5%2021.75%2037.5%2018.514%2039.972%2019.75%2035.972'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='12.5%2027.972%2013.736%2031.972%2010.5%2029.5%2014.5%2029.5%2011.264%2031.972%2012.5%2027.972'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='26.5%2026.972%2027.427%2029.972%2025%2028.118%2028%2028.118%2025.573%2029.972%2026.5%2026.972'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M56.4964,22.0042,22.5,47h32l2-.0008c-2.1713-3.7-5.4086-7.9629-5.4086-12.5009C51.0914,29.9634,54.3273,25.7026,56.4964,22.0042Z'/%3e%3cline%20x1='22.5'%20x2='58.5'%20y1='50'%20y2='50'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Wr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23f1b31c'%20points='38%2036%205%2055%205%2017%2038%2036'/%3e%3cpolygon%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='15.35%2034.05%2010.72%2036.49%2015.76%2037.16%2012.23%2033.63%2012.9%2038.67%2015.35%2034.05'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Ur = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23186648'/%3e%3crect%20x='8.1715'%20y='17'%20width='14.9278'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23781e32'%20points='18.624%2017%2012.658%2017%208.171%2021.216%2015.641%2028.234%2023.11%2021.216%2018.624%2017'/%3e%3cpolygon%20fill='%23f1b31c'%20points='17.114%2019.628%2014.167%2019.628%2012.693%2021.216%2014.167%2022.804%2017.114%2022.804%2018.588%2021.216%2017.114%2019.628'/%3e%3cpolygon%20fill='%23781e32'%20points='15.641%2038.16%208.171%2031.142%2015.641%2024.123%2023.11%2031.142%2015.641%2038.16'/%3e%3cpolygon%20fill='%23f1b31c'%20points='17.114%2029.554%2014.167%2029.554%2012.693%2031.142%2014.167%2032.73%2017.114%2032.73%2018.588%2031.142%2017.114%2029.554'/%3e%3cpolygon%20fill='%23781e32'%20points='15.641%2048.086%208.171%2041.067%2015.641%2034.049%2023.11%2041.067%2015.641%2048.086'/%3e%3cpolygon%20fill='%23f1b31c'%20points='17.114%2039.479%2014.167%2039.479%2012.693%2041.067%2014.167%2042.655%2017.114%2042.655%2018.588%2041.067%2017.114%2039.479'/%3e%3cpolygon%20fill='%23781e32'%20points='18.846%2055%2023.11%2050.993%2015.641%2043.975%208.171%2050.993%2012.435%2055%2018.846%2055'/%3e%3cpolygon%20fill='%23f1b31c'%20points='17.114%2049.405%2014.167%2049.405%2012.693%2050.993%2014.167%2052.581%2017.114%2052.581%2018.588%2050.993%2017.114%2049.405'/%3e%3cg%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9952'%20d='M37.4927,21.8329a7.7649,7.7649,0,0,1-6.8143,13.66,7.77,7.77,0,1,0,6.8143-13.66Z'/%3e%3ccircle%20cx='32.7629'%20cy='23.0551'%20r='0.7385'%20fill='%23fff'/%3e%3ccircle%20cx='32.7629'%20cy='26.0091'%20r='0.7385'%20fill='%23fff'/%3e%3ccircle%20cx='29.8089'%20cy='26.0091'%20r='0.7385'%20fill='%23fff'/%3e%3ccircle%20cx='35.717'%20cy='26.0091'%20r='0.7385'%20fill='%23fff'/%3e%3ccircle%20cx='32.7629'%20cy='28.9631'%20r='0.7385'%20fill='%23fff'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Yr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3ccircle%20cx='36'%20cy='36'%20r='9'%20fill='%23fff'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M38.0229,40.7143a4.7143,4.7143,0,1,1,2.1589-8.91,6,6,0,1,0,0,8.3914A4.753,4.753,0,0,1,38.0229,40.7143Z'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='38.388%2038.71%2038.238%2033.443%2041.266%2037.581%2036.516%2036.152%2041.173%2034.326%2038.388%2038.71'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", qr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5.0009'%20y='17.0014'%20width='31.9982'%20height='19.9971'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='27.5%2026%2022.5%2026%2022.5%2021%2019.5%2021%2019.5%2026%2014.5%2026%2014.5%2029%2019.5%2029%2019.5%2034%2022.5%2034%2022.5%2029%2027.5%2029%2027.5%2026'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Jr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m40.64%2033.05s3.052%204.019%203.052%204.019l-4.934-1.532%204.932-1.541s-3.046%204.025-3.046%204.025l-0.003536-4.972'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='m31.29%2044.64a8.643%208.643%200%201%201%203.958-16.34%2011%2011%200%201%200%200%2015.38%208.715%208.715%200%200%201-3.958%200.9507z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Qr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20stroke='%23fff'%20stroke-miterlimit='10'%20points='66%2055%2054%2055%206%2017%2018%2017%2066%2055'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", Xr = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2392d3f5'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='58.707%2025%2060.035%2021%2061.18%2024.939%2058%2022.565%2062%2022.467%2058.707%2025'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='58.707%2041%2060.035%2037%2061.18%2040.939%2058%2038.565%2062%2038.467%2058.707%2041'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='51.709%2045%2053.037%2041%2054.181%2044.939%2051.002%2042.565%2055.002%2042.467%2051.709%2045'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='26.709%2052%2028.037%2048%2029.181%2051.939%2026.002%2049.565%2030.002%2049.467%2026.709%2052'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='47.294%2045%2045.967%2049%2044.822%2045.061%2048.002%2047.435%2044.002%2047.533%2047.294%2045'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='37.294%2046%2035.967%2050%2034.822%2046.061%2038.002%2048.435%2034.002%2048.533%2037.294%2046'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='37.294%2039%2035.967%2043%2034.822%2039.061%2038.002%2041.435%2034.002%2041.533%2037.294%2039'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='50.891%2029.207%2050.041%2025.079%2053.002%2027.918%2049.061%2027.452%2052.476%2025.366%2050.891%2029.207'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='44.891%2031.207%2044.041%2027.079%2047.002%2029.918%2043.061%2029.452%2046.476%2027.366%2044.891%2031.207'/%3e%3crect%20x='5'%20y='17'%20width='31'%20height='19'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20points='9.887%2018%206%2018%206%2020.332%2032.113%2036%2036%2036%2036%2033.668%209.887%2018'/%3e%3cpolygon%20fill='%23fff'%20points='36%2020.332%2036%2018%2032.113%2018%206%2033.668%206%2036%209.887%2036%2036%2020.332'/%3e%3crect%20x='6'%20y='24'%20width='30'%20height='6'%20fill='%23fff'/%3e%3crect%20x='18'%20y='18'%20width='6'%20height='18'%20fill='%23fff'/%3e%3crect%20x='20'%20y='18'%20width='2'%20height='18'%20fill='%23d22f27'/%3e%3crect%20x='6'%20y='26'%20width='30'%20height='2'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2033.668%2029.887%2030%2026%2030%2036%2036%2036%2035.999%2036%2033.668'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2018%2032.113%2018%2024%2022.868%2024%2024%2026.001%2024%2036%2018.001%2036%2018'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2020.332%2012.113%2024%2016.001%2024%206.001%2018%206%2018.001%206%2020.332'/%3e%3cpolygon%20fill='%23d22f27'%20points='6%2036%209.887%2036%2018%2031.132%2018%2030%2016%2030%206%2035.999%206%2036'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", el = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5.0009'%20y='17.0014'%20width='31.9982'%20height='19.9971'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='19.523%2025.523%2018.324%2021.999%2020.776%2024.8%2021.5%2021.148%2022.223%2024.8%2024.675%2021.999%2023.476%2025.523%2027%2024.323%2024.199%2026.776%2027.851%2027.499%2024.199%2028.223%2027%2030.675%2023.476%2029.475%2024.675%2033%2022.223%2030.199%2021.5%2033.851%2020.776%2030.199%2018.324%2033%2019.523%2029.475%2015.999%2030.675%2018.8%2028.223%2015.148%2027.499%2018.8%2026.776%2015.999%2024.323%2019.523%2025.523'/%3e%3ccircle%20cx='21.4995'%20cy='27.4992'%20r='4.0888'%20fill='none'%20stroke='%231e50a0'%20stroke-miterlimit='10'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", tl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3cpolygon%20fill='%235c9e31'%20points='5%2017%205%2055%2067%2017%205%2017'/%3e%3cpolygon%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='67%2017%2054%2017%205%2055%2018%2055%2067%2017'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ol = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%23fcea2b'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", il = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='6'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='6'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='48'%20width='62'%20height='7'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='24'%20width='62'%20height='6'%20fill='%23f1b31c'/%3e%3ccircle%20cx='36'%20cy='36'%20r='6'%20fill='%23fff'/%3e%3ccircle%20cx='35.215'%20cy='32.6639'%20r='0.9933'%20stroke='%23000'%20stroke-miterlimit='10'%20stroke-width='1.3347'/%3e%3ccircle%20cx='36.7049'%20cy='36.1404'%20r='0.9933'%20stroke='%23000'%20stroke-miterlimit='10'%20stroke-width='1.6683'/%3e%3cline%20x1='32.7318'%20x2='35.7116'%20y1='33.1606'%20y2='33.1606'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.001'/%3e%3cline%20x1='35.7116'%20x2='35.7116'%20y1='36.1404'%20y2='33.1606'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.6683'/%3e%3cline%20x1='36.7049'%20x2='36.7049'%20y1='40.1135'%20y2='37.1337'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.001'/%3e%3cpath%20stroke='%23000000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.3337'%20d='M38.5822,34.9626c-1.2029-.676-2.5481-.5659-3.0044.246l4.3563,2.4483C40.39,36.8451,39.7851,35.6387,38.5822,34.9626Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", nl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='26'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='34'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='32'%20height='21'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3ccircle%20cx='9'%20cy='22'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='17'%20cy='22'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='25'%20cy='22'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='33'%20cy='22'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='29'%20cy='26'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='21'%20cy='26'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='13'%20cy='26'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='9'%20cy='30'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='17'%20cy='30'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='25'%20cy='30'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='33'%20cy='30'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='29'%20cy='34'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='21'%20cy='34'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='13'%20cy='34'%20r='1.75'%20fill='%23fff'/%3e%3crect%20x='5'%20y='50'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", rl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5.3191'%20y='17'%20width='61.6809'%20height='37.8044'%20fill='%2361b2e4'/%3e%3cg%3e%3cg%3e%3cg%3e%3cg%3e%3ccircle%20cx='36.1595'%20cy='32.9384'%20r='11.5953'%20fill='none'%20stroke='%2392d3f5'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.1529'/%3e%3ccircle%20cx='36.1595'%20cy='32.9384'%20r='8.6965'%20fill='none'%20stroke='%2392d3f5'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.1529'/%3e%3cline%20x1='36.1595'%20x2='36.1595'%20y1='44.5337'%20y2='21.3431'%20fill='none'%20stroke='%2392d3f5'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.1529'/%3e%3cline%20x1='24.5643'%20x2='47.7548'%20y1='32.9384'%20y2='32.9384'%20fill='none'%20stroke='%2392d3f5'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.1529'/%3e%3cline%20x1='27.9604'%20x2='44.3587'%20y1='41.1375'%20y2='24.7393'%20fill='none'%20stroke='%2392d3f5'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.1529'/%3e%3cline%20x1='44.3587'%20x2='27.9604'%20y1='41.1375'%20y2='24.7393'%20fill='none'%20stroke='%2392d3f5'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.1529'/%3e%3c/g%3e%3ccircle%20cx='36.1595'%20cy='32.9384'%20r='5.7976'%20fill='%2361b2e4'%20stroke='%2392d3f5'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.2821'/%3e%3c/g%3e%3cpath%20fill='%23fff'%20d='M26.4716,37.6969a.486.486,0,0,1,.4176-.7476h1.4837a.9062.9062,0,0,0,.9253-.9252.9062.9062,0,0,1,.9253-.9253c.9253,0,.9253,2.7758,1.85,3.7011s.9253,1.8506,0,1.8506a3.3991,3.3991,0,0,1-2.7758-.9253C28.6221,39.0491,26.958,38.373,26.4716,37.6969Z'/%3e%3cpath%20fill='%23fff'%20d='M30.9606,34.9267a.8909.8909,0,0,1-.3922-1.1073c.4016-.9922,1.1891-2.6457,1.9765-2.6457,1.1249,0,1.1249-2.25,3.3748,0s-1.1249,2.25-1.1249,3.3748,1.1249,0,2.25,0,1.125,1.1249-1.1249,1.1249C33.7363,35.6734,37.91,38.8519,30.9606,34.9267Z'/%3e%3cpath%20fill='%23fff'%20d='M38.8661,40.5337a1.9333,1.9333,0,0,1-2.6-1.733c0-1.733,1.733-.8665,1.733-1.733s0-2.6.8665-2.6,0-.8665,0-1.733,1.733-1.733,1.733-1.733,1.733-.8665,2.6,0,0,1.733,0,2.5995,1.733.8665,0,1.733-2.1663,1.3-1.3,1.3,2.5995.8665,2.5995,1.733,0,1.7331-.8665.8666-.8665,0-.8665.8665,0,2.6-1.733,2.6S39.4322,40.2992,38.8661,40.5337Z'/%3e%3cpath%20fill='%23fff'%20d='M42.0289,26.8669c-.0738-.4542-.8232-2.47,1.6463-.8232s2.47,3.2928,1.6464,3.2928S42.1607,27.68,42.0289,26.8669Z'/%3e%3cpath%20fill='%23fff'%20d='M40.3825,27.69s0-1.6464.8232,0,2.4695,1.6464,2.4695,2.47c0,.57-1.1856-.0448-1.9138-.4765A2.9534,2.9534,0,0,1,40.56,28.4087,1.7432,1.7432,0,0,1,40.3825,27.69Z'/%3e%3cellipse%20cx='38.7361'%20cy='23.1626'%20rx='0.8232'%20ry='0.4116'%20fill='%23fff'/%3e%3cpath%20fill='%23fff'%20d='M35.9484,30.7272c.5176.2144,1.12,1.12,2.2409,0s1.12,1.12,0,1.12,1.12,1.12,0,1.12S33.8782,29.87,35.9484,30.7272Z'/%3e%3c/g%3e%3cg%3e%3cpath%20fill='%23fff'%20d='M51.9928,24.4406a10.8943,10.8943,0,0,0-3.3112-2.9654c-.2439-.1415-.4913-.2739-.7411-.4a.5558.5558,0,0,0-.7362.7587c.4879.9619,1.8007,3.92,1.8007,3.92A14.3473,14.3473,0,0,1,36.9287,46.4775c-.1291.0068-.2575.0106-.3858.0139s-.2551.0063-.3834.0064-.2558-.003-.3833-.0064-.2567-.0071-.3858-.0139A14.3473,14.3473,0,0,1,23.3141,25.754s1.3128-2.9585,1.8007-3.92a.5558.5558,0,0,0-.7362-.7587c-.25.1264-.4972.2588-.7411.4a10.8943,10.8943,0,0,0-3.3112,2.9654A14.3927,14.3927,0,0,0,17.45,34.1674q.0068.0885.0144.1772a18.717,18.717,0,0,0,7.3065,13.2441,8.3031,8.3031,0,0,0,9.3539.5949,3.7255,3.7255,0,0,1,1.4013-.522c.0246-.0041.0478-.012.0726-.0156a3.8329,3.8329,0,0,1,1.1223,0c.025.0036.0486.0116.0735.0158a3.7233,3.7233,0,0,1,1.4.5218,8.3031,8.3031,0,0,0,9.3539-.5949A18.717,18.717,0,0,0,54.855,34.3446q.0077-.0887.0144-.1772A14.3927,14.3927,0,0,0,51.9928,24.4406Z'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.6871'%20d='M45.2409,47.7376a4.3178,4.3178,0,0,1-2.1156.351,5.3,5.3,0,0,1-1.8837-.5537,15.2989,15.2989,0,0,0-1.6114-.6543,6.1261,6.1261,0,0,0-2.0875-.3638,7.3981,7.3981,0,0,0-.9019.0959,2.958,2.958,0,0,0-.4714.12l-.01.002-.01-.002a2.958,2.958,0,0,0-.4714-.12,7.3981,7.3981,0,0,0-.9019-.0959,6.1261,6.1261,0,0,0-2.0875.3638,15.2989,15.2989,0,0,0-1.6114.6543,5.3007,5.3007,0,0,1-1.8837.5537,4.3178,4.3178,0,0,1-2.1156-.351c-.1487-.0684-.2906-.1516-.4582-.24a2.0946,2.0946,0,0,0,.3063.3158,4.6012,4.6012,0,0,0,1.02.73,4.3585,4.3585,0,0,0,1.58.5073,4.5816,4.5816,0,0,0,2.5895-.5249,12.066,12.066,0,0,0,1.3766-.8858,7.6787,7.6787,0,0,1,.8382-.5231,1.7348,1.7348,0,0,1,1.26-.1508c.03.0075.0591.02.1117.0388a12.1472,12.1472,0,0,0-3.2638,2.2736c-.143.1125-.771.63-.771,1.0444a.4229.4229,0,0,0,.281.4278l.0115.0045a.4069.4069,0,0,0,.1753.0354.2593.2593,0,0,0,.09-.0181.5329.5329,0,0,0,.2557-.1405,2.3508,2.3508,0,0,0,.3061-.3124,7.46,7.46,0,0,1,.9208-1.03l1.9688-1.7471c.0584-.0368.1189-.07.1809-.1013a.5525.5525,0,0,1,.6045,0c.062.0313.1225.0645.1809.1013l1.9688,1.7471a7.46,7.46,0,0,1,.9208,1.03,2.3508,2.3508,0,0,0,.3061.3124.5329.5329,0,0,0,.2557.1405.2593.2593,0,0,0,.09.0181.4069.4069,0,0,0,.1753-.0354l.0115-.0045a.4229.4229,0,0,0,.281-.4278c0-.4147-.628-.9319-.771-1.0444a12.1472,12.1472,0,0,0-3.2638-2.2736c.0526-.0185.0815-.0313.1117-.0388a1.7348,1.7348,0,0,1,1.26.1508,7.6787,7.6787,0,0,1,.8382.5231,12.066,12.066,0,0,0,1.3766.8858,4.5816,4.5816,0,0,0,2.59.5249,4.3585,4.3585,0,0,0,1.58-.5073,4.6012,4.6012,0,0,0,1.02-.73,2.0946,2.0946,0,0,0,.3063-.3158C45.5315,47.586,45.39,47.6692,45.2409,47.7376Z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ll = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='26'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='34'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='32'%20height='21'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='4'%20fill='%23d22f27'/%3e%3ccircle%20cx='9.5'%20cy='22'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='17.5'%20cy='22'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='25.5'%20cy='22'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='33.5'%20cy='22'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='29.5'%20cy='26'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='21.5'%20cy='26'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='13.5'%20cy='26'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='9.5'%20cy='30'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='17.5'%20cy='30'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='25.5'%20cy='30'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='33.5'%20cy='30'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='29.5'%20cy='34'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='21.5'%20cy='34'%20r='1.75'%20fill='%23fff'/%3e%3ccircle%20cx='13.5'%20cy='34'%20r='1.75'%20fill='%23fff'/%3e%3crect%20x='5'%20y='50'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", cl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='5'%20fill='%23fff'/%3e%3crect%20x='5'%20y='26'%20width='62'%20height='4'%20fill='%23fff'/%3e%3crect%20x='5'%20y='34'%20width='62'%20height='4'%20fill='%23fff'/%3e%3crect%20x='5'%20y='42'%20width='62'%20height='4'%20fill='%23fff'/%3e%3crect%20x='5'%20y='50'%20width='62'%20height='5'%20fill='%23fff'/%3e%3crect%20x='5.0006'%20y='17.0015'%20width='20.9988'%20height='20.997'%20fill='%23fff'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='15.296%2026.896%2017%2024.536%2015.808%2027.192%2018.464%2026%2016.104%2027.704%2019%2028%2016.104%2028.296%2018.464%2030%2015.808%2028.808%2017%2031.464%2015.296%2029.104%2015%2032%2014.704%2029.104%2013%2031.464%2014.192%2028.808%2011.536%2030%2013.896%2028.296%2011%2028%2013.896%2027.704%2011.536%2026%2014.192%2027.192%2013%2024.536%2014.704%2026.896%2015%2024%2015.296%2026.896'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", sl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23b1cc33'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%2361b2e4'/%3e%3crect%20x='5'%20y='30.25'%20width='62'%20height='11.5'%20fill='%23fff'%20stroke='%23d22f27'%20stroke-miterlimit='10'%20stroke-width='1.5'/%3e%3ccircle%20cx='29.25'%20cy='21'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='29.25'%20cy='24'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='29.25'%20cy='27'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='26.25'%20cy='21'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='26.25'%20cy='24'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='26.25'%20cy='27'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='23.25'%20cy='21'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='23.25'%20cy='24'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='23.25'%20cy='27'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='20.25'%20cy='24'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='20.25'%20cy='27'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='17.25'%20cy='27'%20r='1'%20fill='%23fff'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M11.2973,24A3.4648,3.4648,0,0,1,14,20.5668a3.2286,3.2286,0,0,0-.6486-.0668,3.5033,3.5033,0,0,0,0,7A3.2286,3.2286,0,0,0,14,27.4332,3.4648,3.4648,0,0,1,11.2973,24Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", al = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='17'%20y='17'%20width='38'%20height='38'%20fill='%23fff'/%3e%3crect%20x='17'%20y='17'%20width='19'%20height='38'%20fill='%23fcea2b'/%3e%3cg%3e%3cellipse%20cx='44.7274'%20cy='29.8602'%20rx='1.9462'%20ry='2.703'%20fill='%239b9b9a'/%3e%3cg%3e%3cline%20x1='43.6125'%20x2='45.8423'%20y1='28.7453'%20y2='28.7453'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9103'/%3e%3cline%20x1='43.6125'%20x2='45.8423'%20y1='29.8602'%20y2='29.8602'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9103'/%3e%3cline%20x1='43.6125'%20x2='45.8423'%20y1='30.9751'%20y2='30.9751'%20fill='none'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9103'/%3e%3c/g%3e%3c/g%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.1468'%20d='M40.2017,42.2844c2.54,2.54,6.8992,2.29,9.747-.5575'/%3e%3cg%3e%3cpath%20fill='%239b9b9a'%20d='M47.9343,36.1387a3.2621,3.2621,0,1,0,3.9646,2.3588A3.2622,3.2622,0,0,0,47.9343,36.1387Zm1.3,5.1189a2.0193,2.0193,0,1,1,1.46-2.4542A2.0193,2.0193,0,0,1,49.2342,41.2576Z'/%3e%3crect%20x='42.8454'%20y='30.3687'%20rx='0.4164'%20ry='0.4164'%20width='1.4686'%20height='8.8114'%20transform='translate(-11.2822%2044.7052)%20rotate(-48.8483)'%20fill='%239b9b9a'/%3e%3crect%20x='39.7038'%20y='32.3358'%20rx='0.369'%20ry='0.369'%20width='1.4686'%20height='1.8096'%20transform='translate(31.8635%20-18.3991)%20rotate(41.1517)'%20fill='%239b9b9a'/%3e%3crect%20x='41.2676'%20y='33.7025'%20rx='0.369'%20ry='0.369'%20width='1.4686'%20height='1.8096'%20transform='translate(33.1492%20-19.0905)%20rotate(41.1517)'%20fill='%239b9b9a'/%3e%3c/g%3e%3cg%3e%3cpath%20fill='%23fcea2b'%20d='M37.5178,38.8188a3.262,3.262,0,1,0,3.8347-2.5645A3.262,3.262,0,0,0,37.5178,38.8188Zm1.2189.2419a2.0193,2.0193,0,1,1,1.5875,2.3739A2.0192,2.0192,0,0,1,38.7367,39.0607Z'/%3e%3crect%20x='44.8948'%20y='30.2566'%20rx='0.4164'%20ry='0.4164'%20width='1.4686'%20height='8.8114'%20transform='translate(52.5644%2091.5427)%20rotate(-134.1739)'%20fill='%23fcea2b'/%3e%3crect%20x='47.9512'%20y='32.0601'%20rx='0.369'%20ry='0.369'%20width='1.4686'%20height='1.8096'%20transform='translate(106.5753%2022.6824)%20rotate(135.8261)'%20fill='%23fcea2b'/%3e%3crect%20x='46.4616'%20y='33.5073'%20rx='0.369'%20ry='0.369'%20width='1.4686'%20height='1.8096'%20transform='translate(105.0258%2026.2056)%20rotate(135.8261)'%20fill='%23fcea2b'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='17'%20y='17'%20width='38'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", dl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fcea2b'/%3e%3crect%20x='5'%20y='17'%20width='21'%20height='38'%20fill='%231e50a0'/%3e%3crect%20x='46'%20y='17'%20width='21'%20height='38'%20fill='%235c9e31'/%3e%3cg%3e%3cpolygon%20fill='%235c9e31'%20points='39.182%2041%2036%2046%2032.818%2041%2036%2036%2039.182%2041'/%3e%3cpolygon%20fill='%235c9e31'%20points='43%2035%2039.818%2040%2036.636%2035%2039.818%2030%2043%2035'/%3e%3cpolygon%20fill='%235c9e31'%20points='35.364%2035%2032.182%2040%2029%2035%2032.182%2030%2035.364%2035'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", fl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%231e50a0'/%3e%3cg%3e%3ccircle%20cx='34'%20cy='33'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='38'%20cy='33'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='30'%20cy='34'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='27'%20cy='36'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='25'%20cy='39'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='42'%20cy='34'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='45'%20cy='36'%20r='1'%20fill='%23fff'/%3e%3ccircle%20cx='47'%20cy='39'%20r='1'%20fill='%23fff'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", gl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3crect%20x='5'%20y='17'%20width='31'%20height='19'%20fill='%231e50a0'/%3e%3cpath%20fill='%23fff'%20d='M9.5,36H5L31.5,17H36Z'/%3e%3cpath%20fill='%23fff'%20d='M36,32.5,5,17v3.5L36,36Z'/%3e%3cpath%20fill='%23d22f27'%20d='M36,33.5,5,18v1.5L36,35Z'/%3e%3cpath%20fill='%23d22f27'%20d='M8.5,36H6L32.5,17H35Z'/%3e%3cpolygon%20fill='%23d22f27'%20points='36%2025%2022%2025%2022%2017%2019%2017%2019%2025%205%2025%205%2028%2019%2028%2019%2036%2022%2036%2022%2028%2036%2028%2036%2025'/%3e%3cg%3e%3cpolyline%20fill='none'%20stroke='%23fff'%20stroke-linejoin='round'%20points='5%2028%2019%2028%2019%2036'/%3e%3cpolyline%20fill='none'%20stroke='%23fff'%20stroke-linejoin='round'%20points='19%2017%2019%2025%205%2025'/%3e%3cpolyline%20fill='none'%20stroke='%23fff'%20stroke-linejoin='round'%20points='36%2025%2022%2025%2022%2017'/%3e%3cpolyline%20fill='none'%20stroke='%23fff'%20stroke-linejoin='round'%20points='22%2036%2022%2028%2036%2028'/%3e%3c/g%3e%3c/g%3e%3cpath%20fill='%23fcea2b'%20d='M57.4518,44.7545c-4.5023,3.939-9.0187,3.8068-13.3557.1308-.4754.112-.8438.3264-1.1072.2357-.6456-.2222-.704-.8505-.1978-1.3206a8.0456,8.0456,0,0,0,.9669-.9378c.3463-.4526.6265-.3777.9966-.0522a19.9329,19.9329,0,0,0,1.9685,1.6365,7.357,7.357,0,0,0,9.6994-1.4055c.6294-.7476.8221-.7463,1.4606-.0087a3.6555,3.6555,0,0,0,.6087.6286c.4793.3369.7014.7127.3,1.2333C58.4718,45.31,58.0566,45.2755,57.4518,44.7545Z'/%3e%3cpath%20fill='%23186648'%20d='M50.6427,27.723H45.5671a1.8626,1.8626,0,0,0-1.8626,1.8626V40.3379c0,2.0873,4.749,3.7429,6.389,4.2524a1.84,1.84,0,0,0,1.0983,0c1.64-.5095,6.389-2.1651,6.389-4.2524V29.5856a1.8626,1.8626,0,0,0-1.8625-1.8626Z'/%3e%3ccircle%20cx='55.2155'%20cy='30.246'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='55.2155'%20cy='32.1382'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='55.2155'%20cy='34.0305'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='55.2155'%20cy='35.9227'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='55.2155'%20cy='37.8149'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='55.2155'%20cy='39.7072'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='46.3851'%20cy='30.246'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='51.1157'%20cy='29.9306'%20r='0.9461'%20fill='%23ffa7c0'/%3e%3ccircle%20cx='46.3851'%20cy='32.1382'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='46.3851'%20cy='34.0305'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='47.6466'%20cy='35.9227'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='46.3851'%20cy='37.8149'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='46.3851'%20cy='39.7072'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='50.1696'%20cy='41.5994'%20r='0.6307'%20fill='%23fcea2b'/%3e%3ccircle%20cx='51.4311'%20cy='41.5994'%20r='0.6307'%20fill='%23fcea2b'/%3e%3cline%20x1='49.8542'%20x2='47.962'%20y1='32.4536'%20y2='34.9766'%20fill='none'%20stroke='%23ffa7c0'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.6307'/%3e%3crect%20x='49.46'%20y='31.5075'%20rx='1.1546'%20ry='1.1546'%20width='3.1537'%20height='10.0919'%20fill='%23fff'/%3e%3cline%20x1='52.3772'%20x2='52.9628'%20y1='32.4536'%20y2='35.8994'%20fill='none'%20stroke='%23ffa7c0'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.6307'/%3e%3cpath%20fill='%23a57939'%20stroke='%23a57939'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.6307'%20d='M52.081,29.1231a.9461.9461,0,0,0-1.338,0l1.338,1.338A.9461.9461,0,0,0,52.081,29.1231Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", hl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpath%20fill='%233f3f3f'%20d='M24.4675,38.6242a5.6221,5.6221,0,0,0,.8728-1.9518.1112.1112,0,0,1,.09-.1206.8321.8321,0,0,0,.6065-.3025c.0559-.0793.1623-.0427.1755.0621a2.5167,2.5167,0,0,1-1.37,2.84.0929.0929,0,0,1-.1076-.0337l-.2588-.3321A.1442.1442,0,0,1,24.4675,38.6242Z'/%3e%3cg%3e%3cellipse%20cx='19.7469'%20cy='38.9532'%20rx='1.7908'%20ry='4.782'%20transform='translate(-21.3357%2024.1373)%20rotate(-43.2865)'%20fill='%235c9e31'/%3e%3cline%20x1='17.4756'%20x2='29.6735'%20y1='36.5771'%20y2='49.2456'%20fill='none'%20stroke='%235c9e31'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.9978'/%3e%3c/g%3e%3cg%3e%3cline%20x1='54.363'%20x2='42.7795'%20y1='39.2544'%20y2='48.6826'%20fill='none'%20stroke='%2361b2e4'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9989'/%3e%3cline%20x1='53.3623'%20x2='44.3163'%20y1='36.6219'%20y2='50.9509'%20fill='none'%20stroke='%2361b2e4'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9989'/%3e%3cline%20x1='51.3436'%20x2='46.3351'%20y1='35.5728'%20y2='52'%20fill='none'%20stroke='%2361b2e4'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.9989'/%3e%3c/g%3e%3cpath%20fill='%23fcea2b'%20stroke='%23fcea2b'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.7984'%20d='M59.8284,22.3314a1.3315,1.3315,0,0,0-1.7081-.3466c-3.1855,1.2833-11.0738,3.2634-13.0377,4.3272a1.6411,1.6411,0,0,0-1.011,1.3913,1.4672,1.4672,0,0,0,.6979,1.2474l-.0089.0756a6.2765,6.2765,0,0,1-4.7213-.9382l-.2218-.2218c-.6347-1.4524-.6167-5.65-2.9639-6.0133a1.4644,1.4644,0,0,0-.3259-.039c-2.9447,0-4.417,2.9447-3.6808,2.2085s3.6808-.7362,1.6662,2.5988a5.4325,5.4325,0,0,1-.3437.4956l-.9711.9712a6.2766,6.2766,0,0,1-4.7213.9382l-.009-.0756a1.4673,1.4673,0,0,0,.698-1.2474,1.641,1.641,0,0,0-1.0111-1.3913c-1.9639-1.0638-9.8522-3.0439-13.0376-4.3272a1.3315,1.3315,0,0,0-1.7081.3466,1.35,1.35,0,0,0-.4348.8435,2.1454,2.1454,0,0,0,.2519.94c.5725,1.4909,6.9885,6.4578,11.1327,9.4016a10.6548,10.6548,0,0,1,1.703,1.5608,2.2031,2.2031,0,0,0,1.037.6425,4.3339,4.3339,0,0,1,1.4781.6644c.4583.3468.99.7948,1.53,1.27-.3152.1564-2.3573,1.26-1.6772,3.3.5484,1.6452-.9449,1.6561-1.7428,1.5547a1.4684,1.4684,0,1,0,1.0067,1.39,2.723,2.723,0,0,1,2.2085-1.4724,1.442,1.442,0,0,0,1.4723-1.4723,2.57,2.57,0,0,1,1.4724-.7362l.5575.5575-2.0919,2.092a1.4585,1.4585,0,0,0,0,2.0627l4.1838,4.1839a1.45,1.45,0,0,0,1.1865.4124,1.435,1.435,0,0,0,1.0584-.4124L41.9251,44.93a1.4585,1.4585,0,0,0,0-2.0627l-2.092-2.092.5576-.5575a2.57,2.57,0,0,1,1.4724.7362,1.442,1.442,0,0,0,1.4723,1.4723,2.7232,2.7232,0,0,1,2.2085,1.4724,1.4974,1.4974,0,1,0,1.0067-1.39c-.7979.1014-2.2913.0905-1.7429-1.5547.68-2.0406-1.3619-3.144-1.6771-3.3.54-.4749,1.0715-.9229,1.53-1.27a4.3334,4.3334,0,0,1,1.478-.6644,2.2029,2.2029,0,0,0,1.0371-.6425,10.6505,10.6505,0,0,1,1.703-1.5608c4.1441-2.9438,10.56-7.9107,11.1327-9.4016a2.1467,2.1467,0,0,0,.2519-.94A1.3514,1.3514,0,0,0,59.8284,22.3314Z'/%3e%3cline%20x1='61.6382'%20x2='61.6382'%20y1='31.2655'%20y2='39.2566'%20fill='none'%20stroke='%2361b2e4'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.9978'/%3e%3cg%3e%3cline%20x1='8.374'%20x2='11.0235'%20y1='31.2655'%20y2='39.0055'%20fill='none'%20stroke='%2361b2e4'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.9978'/%3e%3cline%20x1='14.0704'%20x2='11.4209'%20y1='31.2655'%20y2='39.0055'%20fill='none'%20stroke='%2361b2e4'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.9978'/%3e%3c/g%3e%3cg%3e%3crect%20x='27.563'%20y='27.6004'%20width='17.9801'%20height='5.9934'%20fill='%231e50a0'/%3e%3cg%3e%3cpath%20fill='%23781e32'%20d='M27.5859,34.0682a8.965,8.965,0,0,0,.2279,1.624,14.7772,14.7772,0,0,0,7.909,10.5133,1.8422,1.8422,0,0,0,1.66,0,14.7776,14.7776,0,0,0,7.9091-10.5133,8.9827,8.9827,0,0,0,.2279-1.624c.0211-.2849.0228-.4528.0228-.4528H27.563S27.5648,33.7833,27.5859,34.0682Z'/%3e%3cg%3e%3cpath%20fill='%23fff'%20d='M33.0786,33.5745V44.49q.4533.3556.9567.6913V33.5745Z'/%3e%3cpath%20fill='%23fff'%20d='M30.0719,33.5745v7.7138a14.3529,14.3529,0,0,0,.9358,1.22V33.5745Z'/%3e%3cpath%20fill='%23fff'%20d='M39.0918,33.5745V45.183q.48-.32.9148-.6583v-10.95Z'/%3e%3cpath%20fill='%23fff'%20d='M36.1062,33.5745v12.73a1.8972,1.8972,0,0,0,.9147.0009V33.5745Z'/%3e%3cpath%20fill='%23fff'%20d='M42.0774,33.5745v8.9864a14.3157,14.3157,0,0,0,.9568-1.2385V33.5745Z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ul = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='28.89%2047%2036.193%2025%2042.488%2046.663%2025%2033.61%2047%2033.067%2028.89%2047'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", pl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%235c9e31'/%3e%3cpolygon%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cpolygon%20fill='%23f1b31c'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='26%2034%205%2017%205%2021%2023.529%2036%205%2051%205%2055%2026%2038%2067%2038%2067%2034%2026%2034'/%3e%3cpath%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M12.3334,39.2727A3.9286,3.9286,0,0,0,16.5,35.6364a3.1429,3.1429,0,0,0-3.3333-2.9091A2.5143,2.5143,0,0,0,10.5,35.0545a2.0116,2.0116,0,0,0,2.1334,1.8619'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", kl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='19'%20fill='%23fff'/%3e%3cpolygon%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='59%2027.5%2059%2023%2056.231%2026.462%2059%2027.5'/%3e%3cellipse%20cx='53'%20cy='31'%20rx='1.5'%20ry='1'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M58,26c-1.2829,3.7235-2.7439,6-5,6'/%3e%3cpolyline%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='53%2050%2051%2049%2048%2049%2045%2050.5'/%3e%3cline%20x1='48'%20x2='46'%20y1='49'%20y2='48'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='51'%20x2='48'%20y1='49'%20y2='40'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpolyline%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='38%2050%2036%2049%2033%2049%2030%2050.5'/%3e%3cline%20x1='33'%20x2='31'%20y1='49'%20y2='48'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpolyline%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='23%2050%2021%2049%2018%2049%2015%2050.5'/%3e%3cline%20x1='18'%20x2='16'%20y1='49'%20y2='48'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='21'%20x2='27'%20y1='49'%20y2='43'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='21'%20x2='24'%20y1='49'%20y2='43'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpolyline%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='14%2038%2015%2036%2015%2033%2013.5%2030'/%3e%3cline%20x1='15'%20x2='16'%20y1='33'%20y2='31'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='15'%20x2='21'%20y1='36'%20y2='41'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M12,23a4,4,0,0,0,4,4'/%3e%3cline%20x1='16'%20x2='18'%20y1='27'%20y2='27'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M42,21l-6.5858,6.5858A5.565,5.565,0,0,0,34,31v1a3,3,0,0,1-3,3H27V23H22l-4,4h6c0,4.403-3,4.5428-3,10v6H34l3.3846,2.5385L36,49l5-5c-2.5-1.6186-1.1176-4.5,1-5,2.3383,2.447,6,3,9,3V40.5L46,38h7V36c-3.8571,0-5.1429-1-9-1a4,4,0,0,1,4-4c-2.7965-2.327-.2664-6.8723,3-9-3,2-4.5,3-6.5,3-1.7446,0-2.5-1.2969-2.5-4'/%3e%3cline%20x1='41'%20x2='43'%20y1='44'%20y2='45'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='51'%20x2='51'%20y1='49'%20y2='40.5'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='51'%20x2='54'%20y1='40.5'%20y2='42'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M53,36c2.5911,0,4.327-2.5526,3.3657-4.1623'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M53,30a4,4,0,0,1,0,8'/%3e%3cline%20x1='27'%20x2='28'%20y1='23'%20y2='22'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20d='M34,43H21a2.1886,2.1886,0,0,1-1.5812-.8137L15,36'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", wl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='46.5'%20y='36.5'%20width='11'%20height='11'%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='44.5'%20x2='59.5'%20y1='34.5'%20y2='49.5'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3cline%20x1='59.5'%20x2='44.5'%20y1='34.5'%20y2='49.5'%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3crect%20x='5'%20y='17'%20width='11'%20height='19'%20fill='%231e50a0'/%3e%3crect%20x='16'%20y='17'%20width='10'%20height='19'%20fill='%23fff'/%3e%3crect%20x='26'%20y='17'%20width='10'%20height='19'%20fill='%23d22f27'/%3e%3cpolyline%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='36.5%2017.5%2036.5%2036.5%205.5%2036.5'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", yl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='32'%20height='21'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='20.081%2024.089%2021.313%2020.089%2022.553%2024.087%2019.315%2021.618%2023.315%2021.615%2020.081%2024.089'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='20.081%2035.971%2021.313%2031.971%2022.553%2035.969%2019.315%2033.5%2023.315%2033.497%2020.081%2035.971'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='26.581%2027.471%2027.813%2023.471%2029.053%2027.469%2025.815%2025%2029.815%2024.997%2026.581%2027.471'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='13.581%2027.471%2014.813%2023.471%2016.053%2027.469%2012.815%2025%2016.815%2024.997%2013.581%2027.471'/%3e%3ccircle%20cx='24.75'%20cy='30'%20r='0.5'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", xl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%231e50a0'/%3e%3cg%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='31.516%2026.089%2032.749%2022.089%2033.989%2026.087%2030.75%2023.618%2034.75%2023.615%2031.516%2026.089'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='38.016%2026.089%2039.249%2022.089%2040.489%2026.087%2037.25%2023.618%2041.25%2023.615%2038.016%2026.089'/%3e%3c/g%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='43.581%2028.471%2044.813%2024.471%2046.053%2028.469%2042.815%2026%2046.815%2025.997%2043.581%2028.471'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='49.581%2030.471%2050.813%2026.471%2052.053%2030.469%2048.815%2028%2052.815%2027.997%2049.581%2030.471'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='25.581%2028.471%2026.813%2024.471%2028.053%2028.469%2024.815%2026%2028.815%2025.997%2025.581%2028.471'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='19.581%2030.471%2020.813%2026.471%2022.053%2030.469%2018.815%2028%2022.815%2027.997%2019.581%2030.471'/%3e%3cpath%20fill='%23f1b31c'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20d='M29.82,35.7794c.7763-.1309,1.5819-.21,1.9521-.85-.4534-.0176-.5355-.7276-.2233-1.0568a3.9713,3.9713,0,0,1,1.2-.6194c.4054-.2037.7722-.6831.5574-1.0827.2839-.0362.4037-.4169.2944-.6815a1.7427,1.7427,0,0,0-.58-.62,1.0377,1.0377,0,0,1-.4568-.6961c.755.3016,1.52-.8745,2.2743-.5718-.0541-.8706.9657.5222,1.0943.6242a.3132.3132,0,0,0-.42.0438.3923.3923,0,0,0,.0589.5124,1.1425,1.1425,0,0,0,.5039.2481l1.9305.578a.3427.3427,0,0,0,.3742-.2565.8223.8223,0,0,0,.6188.302,2.5089,2.5089,0,0,0,.5317,1.6872l.2376-.3913c.5867.2457.2566,1.2414.7057,1.6919a1.1708,1.1708,0,0,0,.4218.2387,10.2882,10.2882,0,0,0,1.6127.4733l-.4944,1.8145a4.406,4.406,0,0,1,3.21,1.2378.7776.7776,0,0,1,1.4476.3358c-.3669.0158-.4525.5115-.471.8783s-.2784.8514-.6122.6983c.15.2716-.0854.5929-.323.7922s-.5232.4342-.4916.7427c.018.1763.1427.3337.1355.5107-.0257.6244-1.3678.3943-1.3993,1.0184-.025.4958.9185.77.687,1.2091-.0993.1882-.355.2108-.5678.2093a.7287.7287,0,0,0-.6232-.5c-.2831.001-.5358.3445-.3807.5813a1.5951,1.5951,0,0,0-1.5308,1.9874l-1.035.2053a7.612,7.612,0,0,0-.5581-1.2853.688.688,0,0,0-.274-.3137.7281.7281,0,0,0-.6136.0978L35.638,47.0376c-.5576.2744-1.1916.6569-1.2329,1.2769-.0344.5149.3752,1.0107.245,1.51-.136.5214-.7631.7219-1.2981.7867-.2951.0357-.6575.0249-.8074-.2319-.1992-.3415.16-.7262.2781-1.1035a2.2413,2.2413,0,0,0-.29-1.4406,17.9857,17.9857,0,0,0-.933-2.6125,3.4261,3.4261,0,0,0-3.1072-1.6408,4.6472,4.6472,0,0,0-1.1278-2.8058,4.2641,4.2641,0,0,1-.809-1.0411A.91.91,0,0,1,26.85,38.57,8.4823,8.4823,0,0,1,25.51,37.89a.4332.4332,0,0,1-.1967-.1963.38.38,0,0,1,.05-.2979,1.2952,1.2952,0,0,1,1.4639-.6224c.3505.1025.723.356,1.0441.1822.1824-.0988.2723-.3051.3964-.4712A2.2858,2.2858,0,0,1,29.82,35.7794Z'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", vl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='13'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='30'%20width='62'%20height='12'%20fill='%23fff'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", ml = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23fff'/%3e%3cpath%20fill='%231e50a0'%20stroke-width='0.7699'%20d='m28.63%2036.7a1.357%201.357%200%200%200%201.21%201.346v0.0154h12.1v-0.0154a1.342%201.342%200%200%200%200.1513%200.0154%201.362%201.362%200%200%200%200-2.723%201.342%201.342%200%200%200-0.1513%200.0154v-0.0308a1.342%201.342%200%200%200%200.1513%200.0154%201.362%201.362%200%201%200%200-2.723%201.324%201.324%200%200%200-0.1513%200.0154v-0.0308a1.324%201.324%200%200%200%200.1513%200.0154%201.362%201.362%200%201%200-1.346-1.513h-0.333a1.354%201.354%200%200%200-2.693%200h-0.3328a1.354%201.354%200%200%200-2.693%200h-0.333a1.354%201.354%200%200%200-2.692%200h-0.3331a1.358%201.358%200%201%200-1.498%201.498v0.0308a1.354%201.354%200%200%200%200%202.692v0.0308a1.357%201.357%200%200%200-1.21%201.346z'/%3e%3cpath%20fill='%23d22f27'%20stroke-width='0.7699'%20d='m43.45%2039.43a1.357%201.357%200%200%200-1.21-1.346v-0.0154h-12.1v0.0154a1.342%201.342%200%200%200-0.1513-0.0154%201.362%201.362%200%200%200%200%202.723%201.324%201.324%200%200%200%200.1513-0.0154v0.0308a1.324%201.324%200%200%200-0.1513-0.0154%201.362%201.362%200%200%200%200%202.723%201.342%201.342%200%200%200%200.1513-0.0154v0.0308a1.342%201.342%200%200%200-0.1513-0.0154%201.362%201.362%200%201%200%201.346%201.513h0.3331a1.354%201.354%200%200%200%202.692%200h0.333a1.354%201.354%200%200%200%202.693%200h0.333a1.354%201.354%200%200%200%202.693%200h0.333a1.358%201.358%200%201%200%201.498-1.498v-0.0308a1.354%201.354%200%200%200%200-2.692v-0.0308a1.357%201.357%200%200%200%201.21-1.346z'/%3e%3cpath%20fill='%23fff'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.7413'%20d='m36.04%2035.5a2.382%202.382%200%200%201-2.306-1.986%202.581%202.581%200%200%200-0.04496%200.4766%202.354%202.354%200%201%200%204.703%200%202.588%202.588%200%200%200-0.04489-0.4766%202.382%202.382%200%200%201-2.306%201.986z'/%3e%3cpath%20fill='%23f1b31c'%20stroke-width='0.7699'%20d='m33.5%2039.46a0.3537%200.3537%200%200%201%200.3537%200.3537v2.83a0.3537%200.3537%200%200%201-0.3537%200.3537%200.3537%200.3537%200%200%201-0.3537-0.3537v-2.83a0.3537%200.3537%200%200%201%200.3537-0.3537z'/%3e%3cpath%20fill='%23f1b31c'%20stroke-width='0.7699'%20d='m31.97%2040.34a0.3537%200.3537%200%200%201%200.4832-0.1295l2.451%201.415a0.3537%200.3537%200%200%201%200.1295%200.4831%200.3537%200.3537%200%200%201-0.4832%200.1295l-2.451-1.415a0.3537%200.3537%200%200%201-0.1295-0.4832z'/%3e%3cpath%20fill='%23f1b31c'%20stroke-width='0.7699'%20d='m31.97%2042.11a0.3537%200.3537%200%200%201%200.1294-0.4831l2.451-1.415a0.3537%200.3537%200%200%201%200.4832%200.1295%200.3537%200.3537%200%200%201-0.1294%200.4831l-2.451%201.415a0.3537%200.3537%200%200%201-0.4832-0.1295z'/%3e%3cpath%20fill='%23f1b31c'%20stroke-width='0.7699'%20d='m38.58%2039.46a0.3537%200.3537%200%200%201%200.3537%200.3537v2.83a0.3537%200.3537%200%200%201-0.3537%200.3537%200.3537%200.3537%200%200%201-0.3537-0.3537v-2.83a0.3537%200.3537%200%200%201%200.3537-0.3537z'/%3e%3cpath%20fill='%23f1b31c'%20stroke-width='0.7699'%20d='m37.04%2040.34a0.3537%200.3537%200%200%201%200.4831-0.1295l2.451%201.415a0.3537%200.3537%200%200%201%200.1295%200.4831%200.3537%200.3537%200%200%201-0.4832%200.1295l-2.45-1.415a0.3537%200.3537%200%200%201-0.1295-0.4832z'/%3e%3cpath%20fill='%23f1b31c'%20stroke-width='0.7699'%20d='m37.04%2042.11a0.3537%200.3537%200%200%201%200.1295-0.4831l2.451-1.415a0.3537%200.3537%200%200%201%200.4831%200.1295%200.3537%200.3537%200%200%201-0.1295%200.4832l-2.45%201.415a0.3537%200.3537%200%200%201-0.4832-0.1295z'/%3e%3cpath%20fill='%239b9b9a'%20stroke='%239b9b9a'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.7413'%20d='m50.78%2040.82c1.466-0.6358%202.694-2.471%203.014-2.864%200.7899-0.9716%201.58-4.797-1.038-7.285a5.519%205.519%200%200%200-1.245-0.8671c-2.557-1.347-2.557-0.4474-2.557-0.4474a1.538%201.538%200%200%201%201.076%200.6615c0.5377%200.6615%200%200.6615-1.076%201.323s-0.5378%201.985-1.076%202.646c-0.5381%200.6615-1.076%200.6615-0.5377%201.323%200.5378%200.6615%202.282-1.038%202.282-1.038l0.0034-0.0028a1.412%201.412%200%200%200%200.9415%200.379%201.781%201.781%200%200%200%201.597-1.789%200.3873%200.3873%200%200%201%200.2848%200.1347c0.5365%200.6599%200.05351%202.131-3.738%203.955-4.91%202.362-4.68%207.095-4.385%208.916a3.977%203.977%200%200%200%200.4345%201.271c0.1405%200.2571%200.2843%200.5062%200.4287%200.7423a5.625%205.625%200%200%200%205.109%202.977c2.198%200%203.986-2.163%204.032-4.853%201e-3%20-0.06467-0.0055-0.1283-0.0092-0.1925-0.1041%202.259-1.622%204.053-3.485%204.053-0.0629%200-0.1243-0.0077-0.1862-0.0117-0.0522-0.0022-0.104-0.0035-0.1559-0.0095-1.77-0.2116-3.153-2.046-3.153-4.279a5.271%205.271%200%200%201%203.44-4.744z'/%3e%3cpath%20fill='%239b9b9a'%20stroke='%239b9b9a'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.7413'%20d='m21.28%2040.82c-1.466-0.6358-2.694-2.471-3.014-2.864-0.7899-0.9716-1.58-4.797%201.038-7.285a5.521%205.521%200%200%201%201.245-0.8671c2.557-1.347%202.557-0.4474%202.557-0.4474a1.538%201.538%200%200%200-1.076%200.6615c-0.5377%200.6615%200%200.6615%201.076%201.323s0.5378%201.985%201.076%202.646c0.5377%200.6615%201.076%200.6615%200.5378%201.323-0.5377%200.6615-2.282-1.038-2.282-1.038l-0.0034-0.0028a1.412%201.412%200%200%201-0.9415%200.379%201.781%201.781%200%200%201-1.597-1.789%200.3875%200.3875%200%200%200-0.2848%200.1347c-0.5365%200.6599-0.05343%202.131%203.738%203.955%204.91%202.362%204.68%207.095%204.385%208.916a3.977%203.977%200%200%201-0.4345%201.271c-0.1405%200.2571-0.2843%200.5062-0.4287%200.7423a5.625%205.625%200%200%201-5.109%202.977c-2.198%200-3.986-2.163-4.032-4.853-0.0011-0.06467%200.0055-0.1283%200.0092-0.1925%200.1045%202.259%201.623%204.053%203.485%204.053%200.06282%200%200.1242-0.0077%200.1862-0.0117%200.0522-0.0022%200.104-0.0035%200.1558-0.0095%201.77-0.2116%203.154-2.046%203.154-4.279a5.271%205.271%200%200%200-3.44-4.744z'/%3e%3cpath%20fill='%233f3f3f'%20stroke-width='0.7699'%20d='m18.25%2039.7c-0.4458-0.6433-1.984-2.941-2.03-4.092a0.2377%200.2377%200%200%200-0.2027-0.2497%201.778%201.778%200%200%201-1.321-0.5939c-0.1262-0.1644-0.3502-0.07698-0.3695%200.1477-0.1296%201.516-0.01879%204.816%203.168%205.944a0.1987%200.1987%200%200%200%200.2269-0.08114l0.5239-0.7314a0.3079%200.3079%200%200%200%200.0042-0.344z'/%3e%3cpath%20fill='%233f3f3f'%20stroke-width='0.7699'%20d='m53.75%2039.7c0.4458-0.6433%201.984-2.941%202.03-4.092a0.2377%200.2377%200%200%201%200.2027-0.2497%201.778%201.778%200%200%200%201.321-0.5939c0.1262-0.1644%200.3502-0.07698%200.3695%200.1477%200.1296%201.516%200.01879%204.816-3.168%205.944a0.1986%200.1986%200%200%201-0.2268-0.08114l-0.5235-0.7314a0.3079%200.3079%200%200%201-0.0047-0.344z'/%3e%3cpath%20fill='none'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2.997'%20d='m20.67%2023.34%2030.66%200.1154'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", _l = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%235c9e31'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='5%2055%2026%2042%2067%2042%2067%2030%2026%2030%205%2017%205%2055'/%3e%3cpolygon%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='20%2036%205%2046%205%2026%2020%2036'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", bl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='61.0006'%20y='36.0001'%20width='6'%20height='18.9997'%20fill='%23f1b31c'/%3e%3crect%20x='51.0006'%20y='36.0001'%20width='5'%20height='18.9997'%20fill='%23d22f27'/%3e%3crect%20x='56.0006'%20y='36.0001'%20width='5'%20height='18.9997'/%3e%3cpolyline%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='53%2031%2058.75%2032%2064%2031'/%3e%3cg%3e%3cline%20x1='58'%20x2='58'%20y1='32'%20y2='34'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='59'%20x2='59'%20y1='32'%20y2='34'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cline%20x1='58.5'%20x2='58.5'%20y1='30.5'%20y2='32.5'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e", jl = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'/%3e%3crect%20x='5'%20y='49'%20width='62'%20height='6'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='44'%20width='62'%20height='5'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='39'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='6'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='23'%20width='62'%20height='5'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='28'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cg%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.5399'%20d='M15.2661,35.6693,19,32.7964l-4.5363.1121-1.2981-4.4669L11.66,32.9777l-4.5369.112,3.6062,2.6918-.974,2.9344a2.2833,2.2833,0,0,1,1.0806.362l2.1222-1.6328,3.6063,2.6918Z'/%3e%3cpath%20fill='%23fcea2b'%20d='M10.7012,30.9391A.8847.8847,0,0,0,9.277,31.64v8.7433a.8848.8848,0,0,0,.8848.8848h6.0475a.8847.8847,0,0,0,.8847-.8848V36.2923a.8847.8847,0,0,0-.3453-.7013Z'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e";
+function B3(e) {
+  var t, o, i = "";
+  if (typeof e == "string" || typeof e == "number") i += e;
+  else if (typeof e == "object") if (Array.isArray(e)) {
+    var n = e.length;
+    for (t = 0; t < n; t++) e[t] && (o = B3(e[t])) && (i && (i += " "), i += o);
+  } else for (o in e) e[o] && (i && (i += " "), i += o);
   return i;
 }
-function Vc(e) {
-  {
-    const t = Wo(e.isCE ? Bc : e.appContext.app.__VUE_I18N_SYMBOL__);
-    if (!t)
-      throw Ct(e.isCE ? _e.NOT_INSTALLED_WITH_PROVIDE : _e.UNEXPECTED_ERROR);
-    return t;
-  }
+function Ml() {
+  for (var e, t, o = 0, i = "", n = arguments.length; o < n; o++) (e = arguments[o]) && (t = B3(e)) && (i && (i += " "), i += t);
+  return i;
 }
-function $c(e, t) {
-  return jn(e) ? "__i18n" in t ? "local" : "global" : e.useScope ? e.useScope : "local";
-}
-function Uc(e) {
-  return e.mode === "composition" ? e.global : e.global.__composer;
-}
-function Gc(e, t, n = !1) {
-  let o = null;
-  const r = t.root;
-  let a = Wc(t, n);
-  for (; a != null; ) {
-    const s = e;
-    if (e.mode === "composition")
-      o = s.__getInstance(a);
-    else if (__VUE_I18N_LEGACY_API__) {
-      const i = s.__getInstance(a);
-      i != null && (o = i.__composer, n && o && !o[Is] && (o = null));
-    }
-    if (o != null || r === a)
-      break;
-    a = a.parent;
-  }
-  return o;
-}
-function Wc(e, t = !1) {
-  return e == null ? null : t && e.vnode.ctx || e.parent;
-}
-function Kc(e, t, n) {
-  let o = null;
-  lt(() => {
-    if (process.env.NODE_ENV !== "production" && t.vnode.el) {
-      t.vnode.el.__VUE_I18N__ = n, o = qi();
-      const r = n;
-      r[Co] && r[Co](o), o.on("*", jr);
-    }
-  }, t), Ko(() => {
-    const r = n;
-    process.env.NODE_ENV !== "production" && t.vnode.el && t.vnode.el.__VUE_I18N__ && (o && o.off("*", jr), r[Lo] && r[Lo](), delete t.vnode.el.__VUE_I18N__), e.__deleteInstance(t);
-    const a = r[Io];
-    a && (a(), delete r[Io]);
-  }, t);
-}
-function Hc(e, t, n, o = {}) {
-  const r = t === "local", a = Nn(null);
-  if (r && e.proxy && !(e.proxy.$options.i18n || e.proxy.$options.__i18n))
-    throw Ct(_e.MUST_DEFINE_I18N_OPTION_IN_ALLOW_COMPOSITION);
-  const s = ue(o.inheritLocale) ? o.inheritLocale : !x(o.locale), i = R(
-    // prettier-ignore
-    !r || s ? n.locale.value : x(o.locale) ? o.locale : wn
-  ), l = R(
-    // prettier-ignore
-    !r || s ? n.fallbackLocale.value : x(o.fallbackLocale) || ve(o.fallbackLocale) || X(o.fallbackLocale) || o.fallbackLocale === !1 ? o.fallbackLocale : i.value
-  ), c = R(Qo(i.value, o)), d = R(X(o.datetimeFormats) ? o.datetimeFormats : { [i.value]: {} }), u = R(X(o.numberFormats) ? o.numberFormats : { [i.value]: {} }), f = r ? n.missingWarn : ue(o.missingWarn) || an(o.missingWarn) ? o.missingWarn : !0, m = r ? n.fallbackWarn : ue(o.fallbackWarn) || an(o.fallbackWarn) ? o.fallbackWarn : !0, _ = r ? n.fallbackRoot : ue(o.fallbackRoot) ? o.fallbackRoot : !0, y = !!o.fallbackFormat, v = fe(o.missing) ? o.missing : null, S = fe(o.postTranslation) ? o.postTranslation : null, w = r ? n.warnHtmlMessage : ue(o.warnHtmlMessage) ? o.warnHtmlMessage : !0, p = !!o.escapeParameter, h = r ? n.modifiers : X(o.modifiers) ? o.modifiers : {}, T = o.pluralRules || r && n.pluralRules;
-  function E() {
-    return [
-      i.value,
-      l.value,
-      c.value,
-      d.value,
-      u.value
-    ];
-  }
-  const A = k({
-    get: () => a.value ? a.value.locale.value : i.value,
-    set: (M) => {
-      a.value && (a.value.locale.value = M), i.value = M;
-    }
-  }), O = k({
-    get: () => a.value ? a.value.fallbackLocale.value : l.value,
-    set: (M) => {
-      a.value && (a.value.fallbackLocale.value = M), l.value = M;
-    }
-  }), L = k(() => a.value ? a.value.messages.value : c.value), V = k(() => d.value), U = k(() => u.value);
-  function $() {
-    return a.value ? a.value.getPostTranslationHandler() : S;
-  }
-  function j(M) {
-    a.value && a.value.setPostTranslationHandler(M);
-  }
-  function ee() {
-    return a.value ? a.value.getMissingHandler() : v;
-  }
-  function le(M) {
-    a.value && a.value.setMissingHandler(M);
-  }
-  function Z(M) {
-    return E(), M();
-  }
-  function te(...M) {
-    return a.value ? Z(() => Reflect.apply(a.value.t, null, [...M])) : Z(() => "");
-  }
-  function D(...M) {
-    return a.value ? Reflect.apply(a.value.rt, null, [...M]) : "";
-  }
-  function Ee(...M) {
-    return a.value ? Z(() => Reflect.apply(a.value.d, null, [...M])) : Z(() => "");
-  }
-  function Pe(...M) {
-    return a.value ? Z(() => Reflect.apply(a.value.n, null, [...M])) : Z(() => "");
-  }
-  function ot(M) {
-    return a.value ? a.value.tm(M) : {};
-  }
-  function ye(M, oe) {
-    return a.value ? a.value.te(M, oe) : !1;
-  }
-  function pe(M) {
-    return a.value ? a.value.getLocaleMessage(M) : {};
-  }
-  function de(M, oe) {
-    a.value && (a.value.setLocaleMessage(M, oe), c.value[M] = oe);
-  }
-  function Ke(M, oe) {
-    a.value && a.value.mergeLocaleMessage(M, oe);
-  }
-  function ut(M) {
-    return a.value ? a.value.getDateTimeFormat(M) : {};
-  }
-  function J(M, oe) {
-    a.value && (a.value.setDateTimeFormat(M, oe), d.value[M] = oe);
-  }
-  function Ce(M, oe) {
-    a.value && a.value.mergeDateTimeFormat(M, oe);
-  }
-  function Se(M) {
-    return a.value ? a.value.getNumberFormat(M) : {};
-  }
-  function Te(M, oe) {
-    a.value && (a.value.setNumberFormat(M, oe), u.value[M] = oe);
-  }
-  function Be(M, oe) {
-    a.value && a.value.mergeNumberFormat(M, oe);
-  }
-  const xe = {
-    get id() {
-      return a.value ? a.value.id : -1;
-    },
-    locale: A,
-    fallbackLocale: O,
-    messages: L,
-    datetimeFormats: V,
-    numberFormats: U,
-    get inheritLocale() {
-      return a.value ? a.value.inheritLocale : s;
-    },
-    set inheritLocale(M) {
-      a.value && (a.value.inheritLocale = M);
-    },
-    get availableLocales() {
-      return a.value ? a.value.availableLocales : Object.keys(c.value);
-    },
-    get modifiers() {
-      return a.value ? a.value.modifiers : h;
-    },
-    get pluralRules() {
-      return a.value ? a.value.pluralRules : T;
-    },
-    get isGlobal() {
-      return a.value ? a.value.isGlobal : !1;
-    },
-    get missingWarn() {
-      return a.value ? a.value.missingWarn : f;
-    },
-    set missingWarn(M) {
-      a.value && (a.value.missingWarn = M);
-    },
-    get fallbackWarn() {
-      return a.value ? a.value.fallbackWarn : m;
-    },
-    set fallbackWarn(M) {
-      a.value && (a.value.missingWarn = M);
-    },
-    get fallbackRoot() {
-      return a.value ? a.value.fallbackRoot : _;
-    },
-    set fallbackRoot(M) {
-      a.value && (a.value.fallbackRoot = M);
-    },
-    get fallbackFormat() {
-      return a.value ? a.value.fallbackFormat : y;
-    },
-    set fallbackFormat(M) {
-      a.value && (a.value.fallbackFormat = M);
-    },
-    get warnHtmlMessage() {
-      return a.value ? a.value.warnHtmlMessage : w;
-    },
-    set warnHtmlMessage(M) {
-      a.value && (a.value.warnHtmlMessage = M);
-    },
-    get escapeParameter() {
-      return a.value ? a.value.escapeParameter : p;
-    },
-    set escapeParameter(M) {
-      a.value && (a.value.escapeParameter = M);
-    },
-    t: te,
-    getPostTranslationHandler: $,
-    setPostTranslationHandler: j,
-    getMissingHandler: ee,
-    setMissingHandler: le,
-    rt: D,
-    d: Ee,
-    n: Pe,
-    tm: ot,
-    te: ye,
-    getLocaleMessage: pe,
-    setLocaleMessage: de,
-    mergeLocaleMessage: Ke,
-    getDateTimeFormat: ut,
-    setDateTimeFormat: J,
-    mergeDateTimeFormat: Ce,
-    getNumberFormat: Se,
-    setNumberFormat: Te,
-    mergeNumberFormat: Be
-  };
-  function dt(M) {
-    M.locale.value = i.value, M.fallbackLocale.value = l.value, Object.keys(c.value).forEach((oe) => {
-      M.mergeLocaleMessage(oe, c.value[oe]);
-    }), Object.keys(d.value).forEach((oe) => {
-      M.mergeDateTimeFormat(oe, d.value[oe]);
-    }), Object.keys(u.value).forEach((oe) => {
-      M.mergeNumberFormat(oe, u.value[oe]);
-    }), M.escapeParameter = p, M.fallbackFormat = y, M.fallbackRoot = _, M.fallbackWarn = m, M.missingWarn = f, M.warnHtmlMessage = w;
-  }
-  return hi(() => {
-    if (e.proxy == null || e.proxy.$i18n == null)
-      throw Ct(_e.NOT_AVAILABLE_COMPOSITION_IN_LEGACY);
-    const M = a.value = e.proxy.$i18n.__composer;
-    t === "global" ? (i.value = M.locale.value, l.value = M.fallbackLocale.value, c.value = M.messages.value, d.value = M.datetimeFormats.value, u.value = M.numberFormats.value) : r && dt(M);
-  }), xe;
-}
-Cc();
-__INTLIFY_JIT_COMPILATION__ ? Mr(Ec) : Mr(bc);
-dc(Hl);
-fc(ds);
-if (process.env.NODE_ENV !== "production" || __INTLIFY_PROD_DEVTOOLS__) {
-  const e = ht();
-  e.__INTLIFY__ = !0, ec(e.__INTLIFY_DEVTOOLS_GLOBAL_HOOK__);
-}
-process.env.NODE_ENV;
-function xs(e) {
-  var t, n, o = "";
-  if (typeof e == "string" || typeof e == "number") o += e;
-  else if (typeof e == "object") if (Array.isArray(e)) {
-    var r = e.length;
-    for (t = 0; t < r; t++) e[t] && (n = xs(e[t])) && (o && (o += " "), o += n);
-  } else for (n in e) e[n] && (o && (o += " "), o += n);
-  return o;
-}
-function Yc() {
-  for (var e, t, n = 0, o = "", r = arguments.length; n < r; n++) (e = arguments[n]) && (t = xs(e)) && (o && (o += " "), o += t);
-  return o;
-}
-const tr = "-", zc = (e) => {
-  const t = Xc(e), {
-    conflictingClassGroups: n,
-    conflictingClassGroupModifiers: o
+const ce = "-", Al = (e) => {
+  const t = Sl(e), {
+    conflictingClassGroups: o,
+    conflictingClassGroupModifiers: i
   } = e;
   return {
-    getClassGroupId: (s) => {
-      const i = s.split(tr);
-      return i[0] === "" && i.length !== 1 && i.shift(), Rs(i, t) || jc(s);
+    getClassGroupId: (l) => {
+      const c = l.split(ce);
+      return c[0] === "" && c.length !== 1 && c.shift(), S3(c, t) || Bl(l);
     },
-    getConflictingClassGroupIds: (s, i) => {
-      const l = n[s] || [];
-      return i && o[s] ? [...l, ...o[s]] : l;
+    getConflictingClassGroupIds: (l, c) => {
+      const s = o[l] || [];
+      return c && i[l] ? [...s, ...i[l]] : s;
     }
   };
-}, Rs = (e, t) => {
-  var s;
+}, S3 = (e, t) => {
+  var l;
   if (e.length === 0)
     return t.classGroupId;
-  const n = e[0], o = t.nextPart.get(n), r = o ? Rs(e.slice(1), o) : void 0;
-  if (r)
-    return r;
+  const o = e[0], i = t.nextPart.get(o), n = i ? S3(e.slice(1), i) : void 0;
+  if (n)
+    return n;
   if (t.validators.length === 0)
     return;
-  const a = e.join(tr);
-  return (s = t.validators.find(({
-    validator: i
-  }) => i(a))) == null ? void 0 : s.classGroupId;
-}, Xr = /^\[(.+)\]$/, jc = (e) => {
-  if (Xr.test(e)) {
-    const t = Xr.exec(e)[1], n = t == null ? void 0 : t.substring(0, t.indexOf(":"));
-    if (n)
-      return "arbitrary.." + n;
+  const r = e.join(ce);
+  return (l = t.validators.find(({
+    validator: c
+  }) => c(r))) == null ? void 0 : l.classGroupId;
+}, je = /^\[(.+)\]$/, Bl = (e) => {
+  if (je.test(e)) {
+    const t = je.exec(e)[1], o = t == null ? void 0 : t.substring(0, t.indexOf(":"));
+    if (o)
+      return "arbitrary.." + o;
   }
-}, Xc = (e) => {
+}, Sl = (e) => {
   const {
     theme: t,
-    classGroups: n
-  } = e, o = {
+    classGroups: o
+  } = e, i = {
     nextPart: /* @__PURE__ */ new Map(),
     validators: []
   };
-  for (const r in n)
-    Po(n[r], o, r, t);
-  return o;
-}, Po = (e, t, n, o) => {
-  e.forEach((r) => {
-    if (typeof r == "string") {
-      const a = r === "" ? t : Zr(t, r);
-      a.classGroupId = n;
+  for (const n in o)
+    H0(o[n], i, n, t);
+  return i;
+}, H0 = (e, t, o, i) => {
+  e.forEach((n) => {
+    if (typeof n == "string") {
+      const r = n === "" ? t : Me(t, n);
+      r.classGroupId = o;
       return;
     }
-    if (typeof r == "function") {
-      if (Zc(r)) {
-        Po(r(o), t, n, o);
+    if (typeof n == "function") {
+      if (Cl(n)) {
+        H0(n(i), t, o, i);
         return;
       }
       t.validators.push({
-        validator: r,
-        classGroupId: n
+        validator: n,
+        classGroupId: o
       });
       return;
     }
-    Object.entries(r).forEach(([a, s]) => {
-      Po(s, Zr(t, a), n, o);
+    Object.entries(n).forEach(([r, l]) => {
+      H0(l, Me(t, r), o, i);
     });
   });
-}, Zr = (e, t) => {
-  let n = e;
-  return t.split(tr).forEach((o) => {
-    n.nextPart.has(o) || n.nextPart.set(o, {
+}, Me = (e, t) => {
+  let o = e;
+  return t.split(ce).forEach((i) => {
+    o.nextPart.has(i) || o.nextPart.set(i, {
       nextPart: /* @__PURE__ */ new Map(),
       validators: []
-    }), n = n.nextPart.get(o);
-  }), n;
-}, Zc = (e) => e.isThemeGetter, Jc = (e) => {
+    }), o = o.nextPart.get(i);
+  }), o;
+}, Cl = (e) => e.isThemeGetter, El = (e) => {
   if (e < 1)
     return {
       get: () => {
@@ -5245,178 +2179,178 @@ const tr = "-", zc = (e) => {
       set: () => {
       }
     };
-  let t = 0, n = /* @__PURE__ */ new Map(), o = /* @__PURE__ */ new Map();
-  const r = (a, s) => {
-    n.set(a, s), t++, t > e && (t = 0, o = n, n = /* @__PURE__ */ new Map());
+  let t = 0, o = /* @__PURE__ */ new Map(), i = /* @__PURE__ */ new Map();
+  const n = (r, l) => {
+    o.set(r, l), t++, t > e && (t = 0, i = o, o = /* @__PURE__ */ new Map());
   };
   return {
-    get(a) {
-      let s = n.get(a);
-      if (s !== void 0)
-        return s;
-      if ((s = o.get(a)) !== void 0)
-        return r(a, s), s;
+    get(r) {
+      let l = o.get(r);
+      if (l !== void 0)
+        return l;
+      if ((l = i.get(r)) !== void 0)
+        return n(r, l), l;
     },
-    set(a, s) {
-      n.has(a) ? n.set(a, s) : r(a, s);
+    set(r, l) {
+      o.has(r) ? o.set(r, l) : n(r, l);
     }
   };
-}, Mo = "!", ko = ":", qc = ko.length, Qc = (e) => {
+}, K0 = "!", W0 = ":", Tl = W0.length, Pl = (e) => {
   const {
     prefix: t,
-    experimentalParseClassName: n
+    experimentalParseClassName: o
   } = e;
-  let o = (r) => {
-    const a = [];
-    let s = 0, i = 0, l = 0, c;
-    for (let _ = 0; _ < r.length; _++) {
-      let y = r[_];
-      if (s === 0 && i === 0) {
-        if (y === ko) {
-          a.push(r.slice(l, _)), l = _ + qc;
+  let i = (n) => {
+    const r = [];
+    let l = 0, c = 0, s = 0, a;
+    for (let u = 0; u < n.length; u++) {
+      let w = n[u];
+      if (l === 0 && c === 0) {
+        if (w === W0) {
+          r.push(n.slice(s, u)), s = u + Tl;
           continue;
         }
-        if (y === "/") {
-          c = _;
+        if (w === "/") {
+          a = u;
           continue;
         }
       }
-      y === "[" ? s++ : y === "]" ? s-- : y === "(" ? i++ : y === ")" && i--;
+      w === "[" ? l++ : w === "]" ? l-- : w === "(" ? c++ : w === ")" && c--;
     }
-    const d = a.length === 0 ? r : r.substring(l), u = eu(d), f = u !== d, m = c && c > l ? c - l : void 0;
+    const f = r.length === 0 ? n : n.substring(s), d = Ol(f), h = d !== f, g = a && a > s ? a - s : void 0;
     return {
-      modifiers: a,
-      hasImportantModifier: f,
-      baseClassName: u,
-      maybePostfixModifierPosition: m
+      modifiers: r,
+      hasImportantModifier: h,
+      baseClassName: d,
+      maybePostfixModifierPosition: g
     };
   };
   if (t) {
-    const r = t + ko, a = o;
-    o = (s) => s.startsWith(r) ? a(s.substring(r.length)) : {
+    const n = t + W0, r = i;
+    i = (l) => l.startsWith(n) ? r(l.substring(n.length)) : {
       isExternal: !0,
       modifiers: [],
       hasImportantModifier: !1,
-      baseClassName: s,
+      baseClassName: l,
       maybePostfixModifierPosition: void 0
     };
   }
-  if (n) {
-    const r = o;
-    o = (a) => n({
-      className: a,
-      parseClassName: r
+  if (o) {
+    const n = i;
+    i = (r) => o({
+      className: r,
+      parseClassName: n
     });
   }
-  return o;
-}, eu = (e) => e.endsWith(Mo) ? e.substring(0, e.length - 1) : e.startsWith(Mo) ? e.substring(1) : e, tu = (e) => {
-  const t = Object.fromEntries(e.orderSensitiveModifiers.map((o) => [o, !0]));
-  return (o) => {
-    if (o.length <= 1)
-      return o;
-    const r = [];
-    let a = [];
-    return o.forEach((s) => {
-      s[0] === "[" || t[s] ? (r.push(...a.sort(), s), a = []) : a.push(s);
-    }), r.push(...a.sort()), r;
+  return i;
+}, Ol = (e) => e.endsWith(K0) ? e.substring(0, e.length - 1) : e.startsWith(K0) ? e.substring(1) : e, Ll = (e) => {
+  const t = Object.fromEntries(e.orderSensitiveModifiers.map((i) => [i, !0]));
+  return (i) => {
+    if (i.length <= 1)
+      return i;
+    const n = [];
+    let r = [];
+    return i.forEach((l) => {
+      l[0] === "[" || t[l] ? (n.push(...r.sort(), l), r = []) : r.push(l);
+    }), n.push(...r.sort()), n;
   };
-}, nu = (e) => ({
-  cache: Jc(e.cacheSize),
-  parseClassName: Qc(e),
-  sortModifiers: tu(e),
-  ...zc(e)
-}), ou = /\s+/, ru = (e, t) => {
+}, Vl = (e) => ({
+  cache: El(e.cacheSize),
+  parseClassName: Pl(e),
+  sortModifiers: Ll(e),
+  ...Al(e)
+}), Il = /\s+/, Rl = (e, t) => {
   const {
-    parseClassName: n,
-    getClassGroupId: o,
-    getConflictingClassGroupIds: r,
-    sortModifiers: a
-  } = t, s = [], i = e.trim().split(ou);
-  let l = "";
-  for (let c = i.length - 1; c >= 0; c -= 1) {
-    const d = i[c], {
-      isExternal: u,
-      modifiers: f,
-      hasImportantModifier: m,
-      baseClassName: _,
-      maybePostfixModifierPosition: y
-    } = n(d);
-    if (u) {
-      l = d + (l.length > 0 ? " " + l : l);
+    parseClassName: o,
+    getClassGroupId: i,
+    getConflictingClassGroupIds: n,
+    sortModifiers: r
+  } = t, l = [], c = e.trim().split(Il);
+  let s = "";
+  for (let a = c.length - 1; a >= 0; a -= 1) {
+    const f = c[a], {
+      isExternal: d,
+      modifiers: h,
+      hasImportantModifier: g,
+      baseClassName: u,
+      maybePostfixModifierPosition: w
+    } = o(f);
+    if (d) {
+      s = f + (s.length > 0 ? " " + s : s);
       continue;
     }
-    let v = !!y, S = o(v ? _.substring(0, y) : _);
-    if (!S) {
-      if (!v) {
-        l = d + (l.length > 0 ? " " + l : l);
+    let k = !!w, v = i(k ? u.substring(0, w) : u);
+    if (!v) {
+      if (!k) {
+        s = f + (s.length > 0 ? " " + s : s);
         continue;
       }
-      if (S = o(_), !S) {
-        l = d + (l.length > 0 ? " " + l : l);
+      if (v = i(u), !v) {
+        s = f + (s.length > 0 ? " " + s : s);
         continue;
       }
-      v = !1;
+      k = !1;
     }
-    const w = a(f).join(":"), p = m ? w + Mo : w, h = p + S;
-    if (s.includes(h))
+    const x = r(h).join(":"), y = g ? x + K0 : x, m = y + v;
+    if (l.includes(m))
       continue;
-    s.push(h);
-    const T = r(S, v);
-    for (let E = 0; E < T.length; ++E) {
-      const A = T[E];
-      s.push(p + A);
+    l.push(m);
+    const b = n(v, k);
+    for (let j = 0; j < b.length; ++j) {
+      const M = b[j];
+      l.push(y + M);
     }
-    l = d + (l.length > 0 ? " " + l : l);
+    s = f + (s.length > 0 ? " " + s : s);
   }
-  return l;
+  return s;
 };
-function au() {
-  let e = 0, t, n, o = "";
+function Zl() {
+  let e = 0, t, o, i = "";
   for (; e < arguments.length; )
-    (t = arguments[e++]) && (n = Ds(t)) && (o && (o += " "), o += n);
-  return o;
+    (t = arguments[e++]) && (o = C3(t)) && (i && (i += " "), i += o);
+  return i;
 }
-const Ds = (e) => {
+const C3 = (e) => {
   if (typeof e == "string")
     return e;
-  let t, n = "";
-  for (let o = 0; o < e.length; o++)
-    e[o] && (t = Ds(e[o])) && (n && (n += " "), n += t);
-  return n;
+  let t, o = "";
+  for (let i = 0; i < e.length; i++)
+    e[i] && (t = C3(e[i])) && (o && (o += " "), o += t);
+  return o;
 };
-function su(e, ...t) {
-  let n, o, r, a = s;
-  function s(l) {
-    const c = t.reduce((d, u) => u(d), e());
-    return n = nu(c), o = n.cache.get, r = n.cache.set, a = i, i(l);
+function Nl(e, ...t) {
+  let o, i, n, r = l;
+  function l(s) {
+    const a = t.reduce((f, d) => d(f), e());
+    return o = Vl(a), i = o.cache.get, n = o.cache.set, r = c, c(s);
   }
-  function i(l) {
-    const c = o(l);
-    if (c)
-      return c;
-    const d = ru(l, n);
-    return r(l, d), d;
+  function c(s) {
+    const a = i(s);
+    if (a)
+      return a;
+    const f = Rl(s, o);
+    return n(s, f), f;
   }
   return function() {
-    return a(au.apply(null, arguments));
+    return r(Zl.apply(null, arguments));
   };
 }
-const we = (e) => {
-  const t = (n) => n[e] || [];
+const q = (e) => {
+  const t = (o) => o[e] || [];
   return t.isThemeGetter = !0, t;
-}, Fs = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, Bs = /^\((?:(\w[\w-]*):)?(.+)\)$/i, iu = /^\d+\/\d+$/, lu = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, cu = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, uu = /^(rgba?|hsla?|hwb|(ok)?(lab|lch))\(.+\)$/, du = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, fu = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, qt = (e) => iu.test(e), z = (e) => !!e && !Number.isNaN(Number(e)), Ot = (e) => !!e && Number.isInteger(Number(e)), uo = (e) => e.endsWith("%") && z(e.slice(0, -1)), mt = (e) => lu.test(e), pu = () => !0, mu = (e) => (
+}, E3 = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, T3 = /^\((?:(\w[\w-]*):)?(.+)\)$/i, Dl = /^\d+\/\d+$/, $l = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, Gl = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, zl = /^(rgba?|hsla?|hwb|(ok)?(lab|lch))\(.+\)$/, Fl = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, Hl = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, Y2 = (e) => Dl.test(e), I = (e) => !!e && !Number.isNaN(Number(e)), C2 = (e) => !!e && Number.isInteger(Number(e)), L0 = (e) => e.endsWith("%") && I(e.slice(0, -1)), _2 = (e) => $l.test(e), Kl = () => !0, Wl = (e) => (
   // `colorFunctionRegex` check is necessary because color functions can have percentages in them which which would be incorrectly classified as lengths.
   // For example, `hsl(0 0% 0%)` would be classified as a length without this check.
   // I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
-  cu.test(e) && !uu.test(e)
-), Vs = () => !1, _u = (e) => du.test(e), hu = (e) => fu.test(e), gu = (e) => !F(e) && !B(e), yu = (e) => un(e, Gs, Vs), F = (e) => Fs.test(e), $t = (e) => un(e, Ws, mu), fo = (e) => un(e, wu, z), Jr = (e) => un(e, $s, Vs), vu = (e) => un(e, Us, hu), Mn = (e) => un(e, Ks, _u), B = (e) => Bs.test(e), yn = (e) => dn(e, Ws), bu = (e) => dn(e, Su), qr = (e) => dn(e, $s), Eu = (e) => dn(e, Gs), Tu = (e) => dn(e, Us), kn = (e) => dn(e, Ks, !0), un = (e, t, n) => {
-  const o = Fs.exec(e);
-  return o ? o[1] ? t(o[1]) : n(o[2]) : !1;
-}, dn = (e, t, n = !1) => {
-  const o = Bs.exec(e);
-  return o ? o[1] ? t(o[1]) : n : !1;
-}, $s = (e) => e === "position" || e === "percentage", Us = (e) => e === "image" || e === "url", Gs = (e) => e === "length" || e === "size" || e === "bg-size", Ws = (e) => e === "length", wu = (e) => e === "number", Su = (e) => e === "family-name", Ks = (e) => e === "shadow", Ou = () => {
-  const e = we("color"), t = we("font"), n = we("text"), o = we("font-weight"), r = we("tracking"), a = we("leading"), s = we("breakpoint"), i = we("container"), l = we("spacing"), c = we("radius"), d = we("shadow"), u = we("inset-shadow"), f = we("text-shadow"), m = we("drop-shadow"), _ = we("blur"), y = we("perspective"), v = we("aspect"), S = we("ease"), w = we("animate"), p = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], h = () => [
+  Gl.test(e) && !zl.test(e)
+), P3 = () => !1, Ul = (e) => Fl.test(e), Yl = (e) => Hl.test(e), ql = (e) => !A(e) && !B(e), Jl = (e) => o0(e, V3, P3), A = (e) => E3.test(e), N2 = (e) => o0(e, I3, Wl), V0 = (e) => o0(e, oc, I), Ae = (e) => o0(e, O3, P3), Ql = (e) => o0(e, L3, Yl), u0 = (e) => o0(e, R3, Ul), B = (e) => T3.test(e), c0 = (e) => i0(e, I3), Xl = (e) => i0(e, ic), Be = (e) => i0(e, O3), ec = (e) => i0(e, V3), tc = (e) => i0(e, L3), p0 = (e) => i0(e, R3, !0), o0 = (e, t, o) => {
+  const i = E3.exec(e);
+  return i ? i[1] ? t(i[1]) : o(i[2]) : !1;
+}, i0 = (e, t, o = !1) => {
+  const i = T3.exec(e);
+  return i ? i[1] ? t(i[1]) : o : !1;
+}, O3 = (e) => e === "position" || e === "percentage", L3 = (e) => e === "image" || e === "url", V3 = (e) => e === "length" || e === "size" || e === "bg-size", I3 = (e) => e === "length", oc = (e) => e === "number", ic = (e) => e === "family-name", R3 = (e) => e === "shadow", nc = () => {
+  const e = q("color"), t = q("font"), o = q("text"), i = q("font-weight"), n = q("tracking"), r = q("leading"), l = q("breakpoint"), c = q("container"), s = q("spacing"), a = q("radius"), f = q("shadow"), d = q("inset-shadow"), h = q("text-shadow"), g = q("drop-shadow"), u = q("blur"), w = q("perspective"), k = q("aspect"), v = q("ease"), x = q("animate"), y = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], m = () => [
     "center",
     "top",
     "bottom",
@@ -5434,51 +2368,51 @@ const we = (e) => {
     "bottom-left",
     // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
     "left-bottom"
-  ], T = () => [...h(), B, F], E = () => ["auto", "hidden", "clip", "visible", "scroll"], A = () => ["auto", "contain", "none"], O = () => [B, F, l], L = () => [qt, "full", "auto", ...O()], V = () => [Ot, "none", "subgrid", B, F], U = () => ["auto", {
-    span: ["full", Ot, B, F]
-  }, Ot, B, F], $ = () => [Ot, "auto", B, F], j = () => ["auto", "min", "max", "fr", B, F], ee = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], le = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], Z = () => ["auto", ...O()], te = () => [qt, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...O()], D = () => [e, B, F], Ee = () => [...h(), qr, Jr, {
-    position: [B, F]
-  }], Pe = () => ["no-repeat", {
+  ], b = () => [...m(), B, A], j = () => ["auto", "hidden", "clip", "visible", "scroll"], M = () => ["auto", "contain", "none"], _ = () => [B, A, s], O = () => [Y2, "full", "auto", ..._()], R = () => [C2, "none", "subgrid", B, A], L = () => ["auto", {
+    span: ["full", C2, B, A]
+  }, C2, B, A], F = () => [C2, "auto", B, A], Y = () => ["auto", "min", "max", "fr", B, A], G = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], K = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], H = () => ["auto", ..._()], z = () => [Y2, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ..._()], E = () => [e, B, A], o2 = () => [...m(), Be, Ae, {
+    position: [B, A]
+  }], m2 = () => ["no-repeat", {
     repeat: ["", "x", "y", "space", "round"]
-  }], ot = () => ["auto", "cover", "contain", Eu, yu, {
-    size: [B, F]
-  }], ye = () => [uo, yn, $t], pe = () => [
+  }], h0 = () => ["auto", "cover", "contain", ec, Jl, {
+    size: [B, A]
+  }], R2 = () => [L0, c0, N2], Q = () => [
     // Deprecated since Tailwind CSS v4.0.0
     "",
     "none",
     "full",
-    c,
+    a,
     B,
-    F
-  ], de = () => ["", z, yn, $t], Ke = () => ["solid", "dashed", "dotted", "double"], ut = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], J = () => [z, uo, qr, Jr], Ce = () => [
+    A
+  ], J = () => ["", I, c0, N2], W2 = () => ["solid", "dashed", "dotted", "double"], P0 = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], $ = () => [I, L0, Be, Ae], d2 = () => [
     // Deprecated since Tailwind CSS v4.0.0
     "",
     "none",
-    _,
+    u,
     B,
-    F
-  ], Se = () => ["none", z, B, F], Te = () => ["none", z, B, F], Be = () => [z, B, F], xe = () => [qt, "full", ...O()];
+    A
+  ], c2 = () => ["none", I, B, A], s2 = () => ["none", I, B, A], Z2 = () => [I, B, A], S2 = () => [Y2, "full", ..._()];
   return {
     cacheSize: 500,
     theme: {
       animate: ["spin", "ping", "pulse", "bounce"],
       aspect: ["video"],
-      blur: [mt],
-      breakpoint: [mt],
-      color: [pu],
-      container: [mt],
-      "drop-shadow": [mt],
+      blur: [_2],
+      breakpoint: [_2],
+      color: [Kl],
+      container: [_2],
+      "drop-shadow": [_2],
       ease: ["in", "out", "in-out"],
-      font: [gu],
+      font: [ql],
       "font-weight": ["thin", "extralight", "light", "normal", "medium", "semibold", "bold", "extrabold", "black"],
-      "inset-shadow": [mt],
+      "inset-shadow": [_2],
       leading: ["none", "tight", "snug", "normal", "relaxed", "loose"],
       perspective: ["dramatic", "near", "normal", "midrange", "distant", "none"],
-      radius: [mt],
-      shadow: [mt],
-      spacing: ["px", z],
-      text: [mt],
-      "text-shadow": [mt],
+      radius: [_2],
+      shadow: [_2],
+      spacing: ["px", I],
+      text: [_2],
+      "text-shadow": [_2],
       tracking: ["tighter", "tight", "normal", "wide", "wider", "widest"]
     },
     classGroups: {
@@ -5490,7 +2424,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/aspect-ratio
        */
       aspect: [{
-        aspect: ["auto", "square", qt, F, B, v]
+        aspect: ["auto", "square", Y2, A, B, k]
       }],
       /**
        * Container
@@ -5503,21 +2437,21 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/columns
        */
       columns: [{
-        columns: [z, F, B, i]
+        columns: [I, A, B, c]
       }],
       /**
        * Break After
        * @see https://tailwindcss.com/docs/break-after
        */
       "break-after": [{
-        "break-after": p()
+        "break-after": y()
       }],
       /**
        * Break Before
        * @see https://tailwindcss.com/docs/break-before
        */
       "break-before": [{
-        "break-before": p()
+        "break-before": y()
       }],
       /**
        * Break Inside
@@ -5581,49 +2515,49 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/object-position
        */
       "object-position": [{
-        object: T()
+        object: b()
       }],
       /**
        * Overflow
        * @see https://tailwindcss.com/docs/overflow
        */
       overflow: [{
-        overflow: E()
+        overflow: j()
       }],
       /**
        * Overflow X
        * @see https://tailwindcss.com/docs/overflow
        */
       "overflow-x": [{
-        "overflow-x": E()
+        "overflow-x": j()
       }],
       /**
        * Overflow Y
        * @see https://tailwindcss.com/docs/overflow
        */
       "overflow-y": [{
-        "overflow-y": E()
+        "overflow-y": j()
       }],
       /**
        * Overscroll Behavior
        * @see https://tailwindcss.com/docs/overscroll-behavior
        */
       overscroll: [{
-        overscroll: A()
+        overscroll: M()
       }],
       /**
        * Overscroll Behavior X
        * @see https://tailwindcss.com/docs/overscroll-behavior
        */
       "overscroll-x": [{
-        "overscroll-x": A()
+        "overscroll-x": M()
       }],
       /**
        * Overscroll Behavior Y
        * @see https://tailwindcss.com/docs/overscroll-behavior
        */
       "overscroll-y": [{
-        "overscroll-y": A()
+        "overscroll-y": M()
       }],
       /**
        * Position
@@ -5635,63 +2569,63 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       inset: [{
-        inset: L()
+        inset: O()
       }],
       /**
        * Right / Left
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       "inset-x": [{
-        "inset-x": L()
+        "inset-x": O()
       }],
       /**
        * Top / Bottom
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       "inset-y": [{
-        "inset-y": L()
+        "inset-y": O()
       }],
       /**
        * Start
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       start: [{
-        start: L()
+        start: O()
       }],
       /**
        * End
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       end: [{
-        end: L()
+        end: O()
       }],
       /**
        * Top
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       top: [{
-        top: L()
+        top: O()
       }],
       /**
        * Right
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       right: [{
-        right: L()
+        right: O()
       }],
       /**
        * Bottom
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       bottom: [{
-        bottom: L()
+        bottom: O()
       }],
       /**
        * Left
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       left: [{
-        left: L()
+        left: O()
       }],
       /**
        * Visibility
@@ -5703,7 +2637,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/z-index
        */
       z: [{
-        z: [Ot, "auto", B, F]
+        z: [C2, "auto", B, A]
       }],
       // ------------------------
       // --- Flexbox and Grid ---
@@ -5713,7 +2647,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/flex-basis
        */
       basis: [{
-        basis: [qt, "full", "auto", i, ...O()]
+        basis: [Y2, "full", "auto", c, ..._()]
       }],
       /**
        * Flex Direction
@@ -5734,84 +2668,84 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/flex
        */
       flex: [{
-        flex: [z, qt, "auto", "initial", "none", F]
+        flex: [I, Y2, "auto", "initial", "none", A]
       }],
       /**
        * Flex Grow
        * @see https://tailwindcss.com/docs/flex-grow
        */
       grow: [{
-        grow: ["", z, B, F]
+        grow: ["", I, B, A]
       }],
       /**
        * Flex Shrink
        * @see https://tailwindcss.com/docs/flex-shrink
        */
       shrink: [{
-        shrink: ["", z, B, F]
+        shrink: ["", I, B, A]
       }],
       /**
        * Order
        * @see https://tailwindcss.com/docs/order
        */
       order: [{
-        order: [Ot, "first", "last", "none", B, F]
+        order: [C2, "first", "last", "none", B, A]
       }],
       /**
        * Grid Template Columns
        * @see https://tailwindcss.com/docs/grid-template-columns
        */
       "grid-cols": [{
-        "grid-cols": V()
+        "grid-cols": R()
       }],
       /**
        * Grid Column Start / End
        * @see https://tailwindcss.com/docs/grid-column
        */
       "col-start-end": [{
-        col: U()
+        col: L()
       }],
       /**
        * Grid Column Start
        * @see https://tailwindcss.com/docs/grid-column
        */
       "col-start": [{
-        "col-start": $()
+        "col-start": F()
       }],
       /**
        * Grid Column End
        * @see https://tailwindcss.com/docs/grid-column
        */
       "col-end": [{
-        "col-end": $()
+        "col-end": F()
       }],
       /**
        * Grid Template Rows
        * @see https://tailwindcss.com/docs/grid-template-rows
        */
       "grid-rows": [{
-        "grid-rows": V()
+        "grid-rows": R()
       }],
       /**
        * Grid Row Start / End
        * @see https://tailwindcss.com/docs/grid-row
        */
       "row-start-end": [{
-        row: U()
+        row: L()
       }],
       /**
        * Grid Row Start
        * @see https://tailwindcss.com/docs/grid-row
        */
       "row-start": [{
-        "row-start": $()
+        "row-start": F()
       }],
       /**
        * Grid Row End
        * @see https://tailwindcss.com/docs/grid-row
        */
       "row-end": [{
-        "row-end": $()
+        "row-end": F()
       }],
       /**
        * Grid Auto Flow
@@ -5825,70 +2759,70 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/grid-auto-columns
        */
       "auto-cols": [{
-        "auto-cols": j()
+        "auto-cols": Y()
       }],
       /**
        * Grid Auto Rows
        * @see https://tailwindcss.com/docs/grid-auto-rows
        */
       "auto-rows": [{
-        "auto-rows": j()
+        "auto-rows": Y()
       }],
       /**
        * Gap
        * @see https://tailwindcss.com/docs/gap
        */
       gap: [{
-        gap: O()
+        gap: _()
       }],
       /**
        * Gap X
        * @see https://tailwindcss.com/docs/gap
        */
       "gap-x": [{
-        "gap-x": O()
+        "gap-x": _()
       }],
       /**
        * Gap Y
        * @see https://tailwindcss.com/docs/gap
        */
       "gap-y": [{
-        "gap-y": O()
+        "gap-y": _()
       }],
       /**
        * Justify Content
        * @see https://tailwindcss.com/docs/justify-content
        */
       "justify-content": [{
-        justify: [...ee(), "normal"]
+        justify: [...G(), "normal"]
       }],
       /**
        * Justify Items
        * @see https://tailwindcss.com/docs/justify-items
        */
       "justify-items": [{
-        "justify-items": [...le(), "normal"]
+        "justify-items": [...K(), "normal"]
       }],
       /**
        * Justify Self
        * @see https://tailwindcss.com/docs/justify-self
        */
       "justify-self": [{
-        "justify-self": ["auto", ...le()]
+        "justify-self": ["auto", ...K()]
       }],
       /**
        * Align Content
        * @see https://tailwindcss.com/docs/align-content
        */
       "align-content": [{
-        content: ["normal", ...ee()]
+        content: ["normal", ...G()]
       }],
       /**
        * Align Items
        * @see https://tailwindcss.com/docs/align-items
        */
       "align-items": [{
-        items: [...le(), {
+        items: [...K(), {
           baseline: ["", "last"]
         }]
       }],
@@ -5897,7 +2831,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/align-self
        */
       "align-self": [{
-        self: ["auto", ...le(), {
+        self: ["auto", ...K(), {
           baseline: ["", "last"]
         }]
       }],
@@ -5906,21 +2840,21 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/place-content
        */
       "place-content": [{
-        "place-content": ee()
+        "place-content": G()
       }],
       /**
        * Place Items
        * @see https://tailwindcss.com/docs/place-items
        */
       "place-items": [{
-        "place-items": [...le(), "baseline"]
+        "place-items": [...K(), "baseline"]
       }],
       /**
        * Place Self
        * @see https://tailwindcss.com/docs/place-self
        */
       "place-self": [{
-        "place-self": ["auto", ...le()]
+        "place-self": ["auto", ...K()]
       }],
       // Spacing
       /**
@@ -5928,133 +2862,133 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/padding
        */
       p: [{
-        p: O()
+        p: _()
       }],
       /**
        * Padding X
        * @see https://tailwindcss.com/docs/padding
        */
       px: [{
-        px: O()
+        px: _()
       }],
       /**
        * Padding Y
        * @see https://tailwindcss.com/docs/padding
        */
       py: [{
-        py: O()
+        py: _()
       }],
       /**
        * Padding Start
        * @see https://tailwindcss.com/docs/padding
        */
       ps: [{
-        ps: O()
+        ps: _()
       }],
       /**
        * Padding End
        * @see https://tailwindcss.com/docs/padding
        */
       pe: [{
-        pe: O()
+        pe: _()
       }],
       /**
        * Padding Top
        * @see https://tailwindcss.com/docs/padding
        */
       pt: [{
-        pt: O()
+        pt: _()
       }],
       /**
        * Padding Right
        * @see https://tailwindcss.com/docs/padding
        */
       pr: [{
-        pr: O()
+        pr: _()
       }],
       /**
        * Padding Bottom
        * @see https://tailwindcss.com/docs/padding
        */
       pb: [{
-        pb: O()
+        pb: _()
       }],
       /**
        * Padding Left
        * @see https://tailwindcss.com/docs/padding
        */
       pl: [{
-        pl: O()
+        pl: _()
       }],
       /**
        * Margin
        * @see https://tailwindcss.com/docs/margin
        */
       m: [{
-        m: Z()
+        m: H()
       }],
       /**
        * Margin X
        * @see https://tailwindcss.com/docs/margin
        */
       mx: [{
-        mx: Z()
+        mx: H()
       }],
       /**
        * Margin Y
        * @see https://tailwindcss.com/docs/margin
        */
       my: [{
-        my: Z()
+        my: H()
       }],
       /**
        * Margin Start
        * @see https://tailwindcss.com/docs/margin
        */
       ms: [{
-        ms: Z()
+        ms: H()
       }],
       /**
        * Margin End
        * @see https://tailwindcss.com/docs/margin
        */
       me: [{
-        me: Z()
+        me: H()
       }],
       /**
        * Margin Top
        * @see https://tailwindcss.com/docs/margin
        */
       mt: [{
-        mt: Z()
+        mt: H()
       }],
       /**
        * Margin Right
        * @see https://tailwindcss.com/docs/margin
        */
       mr: [{
-        mr: Z()
+        mr: H()
       }],
       /**
        * Margin Bottom
        * @see https://tailwindcss.com/docs/margin
        */
       mb: [{
-        mb: Z()
+        mb: H()
       }],
       /**
        * Margin Left
        * @see https://tailwindcss.com/docs/margin
        */
       ml: [{
-        ml: Z()
+        ml: H()
       }],
       /**
        * Space Between X
        * @see https://tailwindcss.com/docs/margin#adding-space-between-children
        */
       "space-x": [{
-        "space-x": O()
+        "space-x": _()
       }],
       /**
        * Space Between X Reverse
@@ -6066,7 +3000,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/margin#adding-space-between-children
        */
       "space-y": [{
-        "space-y": O()
+        "space-y": _()
       }],
       /**
        * Space Between Y Reverse
@@ -6081,14 +3015,14 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/width#setting-both-width-and-height
        */
       size: [{
-        size: te()
+        size: z()
       }],
       /**
        * Width
        * @see https://tailwindcss.com/docs/width
        */
       w: [{
-        w: [i, "screen", ...te()]
+        w: [c, "screen", ...z()]
       }],
       /**
        * Min-Width
@@ -6096,11 +3030,11 @@ const we = (e) => {
        */
       "min-w": [{
         "min-w": [
-          i,
+          c,
           "screen",
           /** Deprecated. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
           "none",
-          ...te()
+          ...z()
         ]
       }],
       /**
@@ -6109,16 +3043,16 @@ const we = (e) => {
        */
       "max-w": [{
         "max-w": [
-          i,
+          c,
           "screen",
           "none",
           /** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
           "prose",
           /** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
           {
-            screen: [s]
+            screen: [l]
           },
-          ...te()
+          ...z()
         ]
       }],
       /**
@@ -6126,21 +3060,21 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/height
        */
       h: [{
-        h: ["screen", ...te()]
+        h: ["screen", ...z()]
       }],
       /**
        * Min-Height
        * @see https://tailwindcss.com/docs/min-height
        */
       "min-h": [{
-        "min-h": ["screen", "none", ...te()]
+        "min-h": ["screen", "none", ...z()]
       }],
       /**
        * Max-Height
        * @see https://tailwindcss.com/docs/max-height
        */
       "max-h": [{
-        "max-h": ["screen", ...te()]
+        "max-h": ["screen", ...z()]
       }],
       // ------------------
       // --- Typography ---
@@ -6150,7 +3084,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/font-size
        */
       "font-size": [{
-        text: ["base", n, yn, $t]
+        text: ["base", o, c0, N2]
       }],
       /**
        * Font Smoothing
@@ -6167,21 +3101,21 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/font-weight
        */
       "font-weight": [{
-        font: [o, B, fo]
+        font: [i, B, V0]
       }],
       /**
        * Font Stretch
        * @see https://tailwindcss.com/docs/font-stretch
        */
       "font-stretch": [{
-        "font-stretch": ["ultra-condensed", "extra-condensed", "condensed", "semi-condensed", "normal", "semi-expanded", "expanded", "extra-expanded", "ultra-expanded", uo, F]
+        "font-stretch": ["ultra-condensed", "extra-condensed", "condensed", "semi-condensed", "normal", "semi-expanded", "expanded", "extra-expanded", "ultra-expanded", L0, A]
       }],
       /**
        * Font Family
        * @see https://tailwindcss.com/docs/font-family
        */
       "font-family": [{
-        font: [bu, F, t]
+        font: [Xl, A, t]
       }],
       /**
        * Font Variant Numeric
@@ -6218,14 +3152,14 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/letter-spacing
        */
       tracking: [{
-        tracking: [r, B, F]
+        tracking: [n, B, A]
       }],
       /**
        * Line Clamp
        * @see https://tailwindcss.com/docs/line-clamp
        */
       "line-clamp": [{
-        "line-clamp": [z, "none", B, fo]
+        "line-clamp": [I, "none", B, V0]
       }],
       /**
        * Line Height
@@ -6234,8 +3168,8 @@ const we = (e) => {
       leading: [{
         leading: [
           /** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
-          a,
-          ...O()
+          r,
+          ..._()
         ]
       }],
       /**
@@ -6243,7 +3177,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/list-style-image
        */
       "list-image": [{
-        "list-image": ["none", B, F]
+        "list-image": ["none", B, A]
       }],
       /**
        * List Style Position
@@ -6257,7 +3191,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/list-style-type
        */
       "list-style-type": [{
-        list: ["disc", "decimal", "none", B, F]
+        list: ["disc", "decimal", "none", B, A]
       }],
       /**
        * Text Alignment
@@ -6272,14 +3206,14 @@ const we = (e) => {
        * @see https://v3.tailwindcss.com/docs/placeholder-color
        */
       "placeholder-color": [{
-        placeholder: D()
+        placeholder: E()
       }],
       /**
        * Text Color
        * @see https://tailwindcss.com/docs/text-color
        */
       "text-color": [{
-        text: D()
+        text: E()
       }],
       /**
        * Text Decoration
@@ -6291,28 +3225,28 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/text-decoration-style
        */
       "text-decoration-style": [{
-        decoration: [...Ke(), "wavy"]
+        decoration: [...W2(), "wavy"]
       }],
       /**
        * Text Decoration Thickness
        * @see https://tailwindcss.com/docs/text-decoration-thickness
        */
       "text-decoration-thickness": [{
-        decoration: [z, "from-font", "auto", B, $t]
+        decoration: [I, "from-font", "auto", B, N2]
       }],
       /**
        * Text Decoration Color
        * @see https://tailwindcss.com/docs/text-decoration-color
        */
       "text-decoration-color": [{
-        decoration: D()
+        decoration: E()
       }],
       /**
        * Text Underline Offset
        * @see https://tailwindcss.com/docs/text-underline-offset
        */
       "underline-offset": [{
-        "underline-offset": [z, "auto", B, F]
+        "underline-offset": [I, "auto", B, A]
       }],
       /**
        * Text Transform
@@ -6336,14 +3270,14 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/text-indent
        */
       indent: [{
-        indent: O()
+        indent: _()
       }],
       /**
        * Vertical Alignment
        * @see https://tailwindcss.com/docs/vertical-align
        */
       "vertical-align": [{
-        align: ["baseline", "top", "middle", "bottom", "text-top", "text-bottom", "sub", "super", B, F]
+        align: ["baseline", "top", "middle", "bottom", "text-top", "text-bottom", "sub", "super", B, A]
       }],
       /**
        * Whitespace
@@ -6378,7 +3312,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/content
        */
       content: [{
-        content: ["none", B, F]
+        content: ["none", B, A]
       }],
       // -------------------
       // --- Backgrounds ---
@@ -6409,21 +3343,21 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/background-position
        */
       "bg-position": [{
-        bg: Ee()
+        bg: o2()
       }],
       /**
        * Background Repeat
        * @see https://tailwindcss.com/docs/background-repeat
        */
       "bg-repeat": [{
-        bg: Pe()
+        bg: m2()
       }],
       /**
        * Background Size
        * @see https://tailwindcss.com/docs/background-size
        */
       "bg-size": [{
-        bg: ot()
+        bg: h0()
       }],
       /**
        * Background Image
@@ -6433,59 +3367,59 @@ const we = (e) => {
         bg: ["none", {
           linear: [{
             to: ["t", "tr", "r", "br", "b", "bl", "l", "tl"]
-          }, Ot, B, F],
-          radial: ["", B, F],
-          conic: [Ot, B, F]
-        }, Tu, vu]
+          }, C2, B, A],
+          radial: ["", B, A],
+          conic: [C2, B, A]
+        }, tc, Ql]
       }],
       /**
        * Background Color
        * @see https://tailwindcss.com/docs/background-color
        */
       "bg-color": [{
-        bg: D()
+        bg: E()
       }],
       /**
        * Gradient Color Stops From Position
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-from-pos": [{
-        from: ye()
+        from: R2()
       }],
       /**
        * Gradient Color Stops Via Position
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-via-pos": [{
-        via: ye()
+        via: R2()
       }],
       /**
        * Gradient Color Stops To Position
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-to-pos": [{
-        to: ye()
+        to: R2()
       }],
       /**
        * Gradient Color Stops From
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-from": [{
-        from: D()
+        from: E()
       }],
       /**
        * Gradient Color Stops Via
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-via": [{
-        via: D()
+        via: E()
       }],
       /**
        * Gradient Color Stops To
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-to": [{
-        to: D()
+        to: E()
       }],
       // ---------------
       // --- Borders ---
@@ -6495,175 +3429,175 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/border-radius
        */
       rounded: [{
-        rounded: pe()
+        rounded: Q()
       }],
       /**
        * Border Radius Start
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-s": [{
-        "rounded-s": pe()
+        "rounded-s": Q()
       }],
       /**
        * Border Radius End
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-e": [{
-        "rounded-e": pe()
+        "rounded-e": Q()
       }],
       /**
        * Border Radius Top
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-t": [{
-        "rounded-t": pe()
+        "rounded-t": Q()
       }],
       /**
        * Border Radius Right
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-r": [{
-        "rounded-r": pe()
+        "rounded-r": Q()
       }],
       /**
        * Border Radius Bottom
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-b": [{
-        "rounded-b": pe()
+        "rounded-b": Q()
       }],
       /**
        * Border Radius Left
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-l": [{
-        "rounded-l": pe()
+        "rounded-l": Q()
       }],
       /**
        * Border Radius Start Start
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-ss": [{
-        "rounded-ss": pe()
+        "rounded-ss": Q()
       }],
       /**
        * Border Radius Start End
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-se": [{
-        "rounded-se": pe()
+        "rounded-se": Q()
       }],
       /**
        * Border Radius End End
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-ee": [{
-        "rounded-ee": pe()
+        "rounded-ee": Q()
       }],
       /**
        * Border Radius End Start
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-es": [{
-        "rounded-es": pe()
+        "rounded-es": Q()
       }],
       /**
        * Border Radius Top Left
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-tl": [{
-        "rounded-tl": pe()
+        "rounded-tl": Q()
       }],
       /**
        * Border Radius Top Right
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-tr": [{
-        "rounded-tr": pe()
+        "rounded-tr": Q()
       }],
       /**
        * Border Radius Bottom Right
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-br": [{
-        "rounded-br": pe()
+        "rounded-br": Q()
       }],
       /**
        * Border Radius Bottom Left
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-bl": [{
-        "rounded-bl": pe()
+        "rounded-bl": Q()
       }],
       /**
        * Border Width
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w": [{
-        border: de()
+        border: J()
       }],
       /**
        * Border Width X
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-x": [{
-        "border-x": de()
+        "border-x": J()
       }],
       /**
        * Border Width Y
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-y": [{
-        "border-y": de()
+        "border-y": J()
       }],
       /**
        * Border Width Start
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-s": [{
-        "border-s": de()
+        "border-s": J()
       }],
       /**
        * Border Width End
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-e": [{
-        "border-e": de()
+        "border-e": J()
       }],
       /**
        * Border Width Top
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-t": [{
-        "border-t": de()
+        "border-t": J()
       }],
       /**
        * Border Width Right
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-r": [{
-        "border-r": de()
+        "border-r": J()
       }],
       /**
        * Border Width Bottom
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-b": [{
-        "border-b": de()
+        "border-b": J()
       }],
       /**
        * Border Width Left
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-l": [{
-        "border-l": de()
+        "border-l": J()
       }],
       /**
        * Divide Width X
        * @see https://tailwindcss.com/docs/border-width#between-children
        */
       "divide-x": [{
-        "divide-x": de()
+        "divide-x": J()
       }],
       /**
        * Divide Width X Reverse
@@ -6675,7 +3609,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/border-width#between-children
        */
       "divide-y": [{
-        "divide-y": de()
+        "divide-y": J()
       }],
       /**
        * Divide Width Y Reverse
@@ -6687,112 +3621,112 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/border-style
        */
       "border-style": [{
-        border: [...Ke(), "hidden", "none"]
+        border: [...W2(), "hidden", "none"]
       }],
       /**
        * Divide Style
        * @see https://tailwindcss.com/docs/border-style#setting-the-divider-style
        */
       "divide-style": [{
-        divide: [...Ke(), "hidden", "none"]
+        divide: [...W2(), "hidden", "none"]
       }],
       /**
        * Border Color
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color": [{
-        border: D()
+        border: E()
       }],
       /**
        * Border Color X
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-x": [{
-        "border-x": D()
+        "border-x": E()
       }],
       /**
        * Border Color Y
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-y": [{
-        "border-y": D()
+        "border-y": E()
       }],
       /**
        * Border Color S
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-s": [{
-        "border-s": D()
+        "border-s": E()
       }],
       /**
        * Border Color E
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-e": [{
-        "border-e": D()
+        "border-e": E()
       }],
       /**
        * Border Color Top
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-t": [{
-        "border-t": D()
+        "border-t": E()
       }],
       /**
        * Border Color Right
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-r": [{
-        "border-r": D()
+        "border-r": E()
       }],
       /**
        * Border Color Bottom
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-b": [{
-        "border-b": D()
+        "border-b": E()
       }],
       /**
        * Border Color Left
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-l": [{
-        "border-l": D()
+        "border-l": E()
       }],
       /**
        * Divide Color
        * @see https://tailwindcss.com/docs/divide-color
        */
       "divide-color": [{
-        divide: D()
+        divide: E()
       }],
       /**
        * Outline Style
        * @see https://tailwindcss.com/docs/outline-style
        */
       "outline-style": [{
-        outline: [...Ke(), "none", "hidden"]
+        outline: [...W2(), "none", "hidden"]
       }],
       /**
        * Outline Offset
        * @see https://tailwindcss.com/docs/outline-offset
        */
       "outline-offset": [{
-        "outline-offset": [z, B, F]
+        "outline-offset": [I, B, A]
       }],
       /**
        * Outline Width
        * @see https://tailwindcss.com/docs/outline-width
        */
       "outline-w": [{
-        outline: ["", z, yn, $t]
+        outline: ["", I, c0, N2]
       }],
       /**
        * Outline Color
        * @see https://tailwindcss.com/docs/outline-color
        */
       "outline-color": [{
-        outline: D()
+        outline: E()
       }],
       // ---------------
       // --- Effects ---
@@ -6806,9 +3740,9 @@ const we = (e) => {
           // Deprecated since Tailwind CSS v4.0.0
           "",
           "none",
-          d,
-          kn,
-          Mn
+          f,
+          p0,
+          u0
         ]
       }],
       /**
@@ -6816,28 +3750,28 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-shadow-color
        */
       "shadow-color": [{
-        shadow: D()
+        shadow: E()
       }],
       /**
        * Inset Box Shadow
        * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-shadow
        */
       "inset-shadow": [{
-        "inset-shadow": ["none", u, kn, Mn]
+        "inset-shadow": ["none", d, p0, u0]
       }],
       /**
        * Inset Box Shadow Color
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-inset-shadow-color
        */
       "inset-shadow-color": [{
-        "inset-shadow": D()
+        "inset-shadow": E()
       }],
       /**
        * Ring Width
        * @see https://tailwindcss.com/docs/box-shadow#adding-a-ring
        */
       "ring-w": [{
-        ring: de()
+        ring: J()
       }],
       /**
        * Ring Width Inset
@@ -6851,7 +3785,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-ring-color
        */
       "ring-color": [{
-        ring: D()
+        ring: E()
       }],
       /**
        * Ring Offset Width
@@ -6860,7 +3794,7 @@ const we = (e) => {
        * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
        */
       "ring-offset-w": [{
-        "ring-offset": [z, $t]
+        "ring-offset": [I, N2]
       }],
       /**
        * Ring Offset Color
@@ -6869,56 +3803,56 @@ const we = (e) => {
        * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
        */
       "ring-offset-color": [{
-        "ring-offset": D()
+        "ring-offset": E()
       }],
       /**
        * Inset Ring Width
        * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-ring
        */
       "inset-ring-w": [{
-        "inset-ring": de()
+        "inset-ring": J()
       }],
       /**
        * Inset Ring Color
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-inset-ring-color
        */
       "inset-ring-color": [{
-        "inset-ring": D()
+        "inset-ring": E()
       }],
       /**
        * Text Shadow
        * @see https://tailwindcss.com/docs/text-shadow
        */
       "text-shadow": [{
-        "text-shadow": ["none", f, kn, Mn]
+        "text-shadow": ["none", h, p0, u0]
       }],
       /**
        * Text Shadow Color
        * @see https://tailwindcss.com/docs/text-shadow#setting-the-shadow-color
        */
       "text-shadow-color": [{
-        "text-shadow": D()
+        "text-shadow": E()
       }],
       /**
        * Opacity
        * @see https://tailwindcss.com/docs/opacity
        */
       opacity: [{
-        opacity: [z, B, F]
+        opacity: [I, B, A]
       }],
       /**
        * Mix Blend Mode
        * @see https://tailwindcss.com/docs/mix-blend-mode
        */
       "mix-blend": [{
-        "mix-blend": [...ut(), "plus-darker", "plus-lighter"]
+        "mix-blend": [...P0(), "plus-darker", "plus-lighter"]
       }],
       /**
        * Background Blend Mode
        * @see https://tailwindcss.com/docs/background-blend-mode
        */
       "bg-blend": [{
-        "bg-blend": ut()
+        "bg-blend": P0()
       }],
       /**
        * Mask Clip
@@ -6939,106 +3873,106 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/mask-image
        */
       "mask-image-linear-pos": [{
-        "mask-linear": [z]
+        "mask-linear": [I]
       }],
       "mask-image-linear-from-pos": [{
-        "mask-linear-from": J()
+        "mask-linear-from": $()
       }],
       "mask-image-linear-to-pos": [{
-        "mask-linear-to": J()
+        "mask-linear-to": $()
       }],
       "mask-image-linear-from-color": [{
-        "mask-linear-from": D()
+        "mask-linear-from": E()
       }],
       "mask-image-linear-to-color": [{
-        "mask-linear-to": D()
+        "mask-linear-to": E()
       }],
       "mask-image-t-from-pos": [{
-        "mask-t-from": J()
+        "mask-t-from": $()
       }],
       "mask-image-t-to-pos": [{
-        "mask-t-to": J()
+        "mask-t-to": $()
       }],
       "mask-image-t-from-color": [{
-        "mask-t-from": D()
+        "mask-t-from": E()
       }],
       "mask-image-t-to-color": [{
-        "mask-t-to": D()
+        "mask-t-to": E()
       }],
       "mask-image-r-from-pos": [{
-        "mask-r-from": J()
+        "mask-r-from": $()
       }],
       "mask-image-r-to-pos": [{
-        "mask-r-to": J()
+        "mask-r-to": $()
       }],
       "mask-image-r-from-color": [{
-        "mask-r-from": D()
+        "mask-r-from": E()
       }],
       "mask-image-r-to-color": [{
-        "mask-r-to": D()
+        "mask-r-to": E()
       }],
       "mask-image-b-from-pos": [{
-        "mask-b-from": J()
+        "mask-b-from": $()
       }],
       "mask-image-b-to-pos": [{
-        "mask-b-to": J()
+        "mask-b-to": $()
       }],
       "mask-image-b-from-color": [{
-        "mask-b-from": D()
+        "mask-b-from": E()
       }],
       "mask-image-b-to-color": [{
-        "mask-b-to": D()
+        "mask-b-to": E()
       }],
       "mask-image-l-from-pos": [{
-        "mask-l-from": J()
+        "mask-l-from": $()
       }],
       "mask-image-l-to-pos": [{
-        "mask-l-to": J()
+        "mask-l-to": $()
       }],
       "mask-image-l-from-color": [{
-        "mask-l-from": D()
+        "mask-l-from": E()
       }],
       "mask-image-l-to-color": [{
-        "mask-l-to": D()
+        "mask-l-to": E()
       }],
       "mask-image-x-from-pos": [{
-        "mask-x-from": J()
+        "mask-x-from": $()
       }],
       "mask-image-x-to-pos": [{
-        "mask-x-to": J()
+        "mask-x-to": $()
       }],
       "mask-image-x-from-color": [{
-        "mask-x-from": D()
+        "mask-x-from": E()
       }],
       "mask-image-x-to-color": [{
-        "mask-x-to": D()
+        "mask-x-to": E()
       }],
       "mask-image-y-from-pos": [{
-        "mask-y-from": J()
+        "mask-y-from": $()
       }],
       "mask-image-y-to-pos": [{
-        "mask-y-to": J()
+        "mask-y-to": $()
       }],
       "mask-image-y-from-color": [{
-        "mask-y-from": D()
+        "mask-y-from": E()
       }],
       "mask-image-y-to-color": [{
-        "mask-y-to": D()
+        "mask-y-to": E()
       }],
       "mask-image-radial": [{
-        "mask-radial": [B, F]
+        "mask-radial": [B, A]
       }],
       "mask-image-radial-from-pos": [{
-        "mask-radial-from": J()
+        "mask-radial-from": $()
       }],
       "mask-image-radial-to-pos": [{
-        "mask-radial-to": J()
+        "mask-radial-to": $()
       }],
       "mask-image-radial-from-color": [{
-        "mask-radial-from": D()
+        "mask-radial-from": E()
       }],
       "mask-image-radial-to-color": [{
-        "mask-radial-to": D()
+        "mask-radial-to": E()
       }],
       "mask-image-radial-shape": [{
         "mask-radial": ["circle", "ellipse"]
@@ -7050,22 +3984,22 @@ const we = (e) => {
         }]
       }],
       "mask-image-radial-pos": [{
-        "mask-radial-at": h()
+        "mask-radial-at": m()
       }],
       "mask-image-conic-pos": [{
-        "mask-conic": [z]
+        "mask-conic": [I]
       }],
       "mask-image-conic-from-pos": [{
-        "mask-conic-from": J()
+        "mask-conic-from": $()
       }],
       "mask-image-conic-to-pos": [{
-        "mask-conic-to": J()
+        "mask-conic-to": $()
       }],
       "mask-image-conic-from-color": [{
-        "mask-conic-from": D()
+        "mask-conic-from": E()
       }],
       "mask-image-conic-to-color": [{
-        "mask-conic-to": D()
+        "mask-conic-to": E()
       }],
       /**
        * Mask Mode
@@ -7086,21 +4020,21 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/mask-position
        */
       "mask-position": [{
-        mask: Ee()
+        mask: o2()
       }],
       /**
        * Mask Repeat
        * @see https://tailwindcss.com/docs/mask-repeat
        */
       "mask-repeat": [{
-        mask: Pe()
+        mask: m2()
       }],
       /**
        * Mask Size
        * @see https://tailwindcss.com/docs/mask-size
        */
       "mask-size": [{
-        mask: ot()
+        mask: h0()
       }],
       /**
        * Mask Type
@@ -7114,7 +4048,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/mask-image
        */
       "mask-image": [{
-        mask: ["none", B, F]
+        mask: ["none", B, A]
       }],
       // ---------------
       // --- Filters ---
@@ -7129,7 +4063,7 @@ const we = (e) => {
           "",
           "none",
           B,
-          F
+          A
         ]
       }],
       /**
@@ -7137,21 +4071,21 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/blur
        */
       blur: [{
-        blur: Ce()
+        blur: d2()
       }],
       /**
        * Brightness
        * @see https://tailwindcss.com/docs/brightness
        */
       brightness: [{
-        brightness: [z, B, F]
+        brightness: [I, B, A]
       }],
       /**
        * Contrast
        * @see https://tailwindcss.com/docs/contrast
        */
       contrast: [{
-        contrast: [z, B, F]
+        contrast: [I, B, A]
       }],
       /**
        * Drop Shadow
@@ -7162,9 +4096,9 @@ const we = (e) => {
           // Deprecated since Tailwind CSS v4.0.0
           "",
           "none",
-          m,
-          kn,
-          Mn
+          g,
+          p0,
+          u0
         ]
       }],
       /**
@@ -7172,42 +4106,42 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/filter-drop-shadow#setting-the-shadow-color
        */
       "drop-shadow-color": [{
-        "drop-shadow": D()
+        "drop-shadow": E()
       }],
       /**
        * Grayscale
        * @see https://tailwindcss.com/docs/grayscale
        */
       grayscale: [{
-        grayscale: ["", z, B, F]
+        grayscale: ["", I, B, A]
       }],
       /**
        * Hue Rotate
        * @see https://tailwindcss.com/docs/hue-rotate
        */
       "hue-rotate": [{
-        "hue-rotate": [z, B, F]
+        "hue-rotate": [I, B, A]
       }],
       /**
        * Invert
        * @see https://tailwindcss.com/docs/invert
        */
       invert: [{
-        invert: ["", z, B, F]
+        invert: ["", I, B, A]
       }],
       /**
        * Saturate
        * @see https://tailwindcss.com/docs/saturate
        */
       saturate: [{
-        saturate: [z, B, F]
+        saturate: [I, B, A]
       }],
       /**
        * Sepia
        * @see https://tailwindcss.com/docs/sepia
        */
       sepia: [{
-        sepia: ["", z, B, F]
+        sepia: ["", I, B, A]
       }],
       /**
        * Backdrop Filter
@@ -7219,7 +4153,7 @@ const we = (e) => {
           "",
           "none",
           B,
-          F
+          A
         ]
       }],
       /**
@@ -7227,63 +4161,63 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/backdrop-blur
        */
       "backdrop-blur": [{
-        "backdrop-blur": Ce()
+        "backdrop-blur": d2()
       }],
       /**
        * Backdrop Brightness
        * @see https://tailwindcss.com/docs/backdrop-brightness
        */
       "backdrop-brightness": [{
-        "backdrop-brightness": [z, B, F]
+        "backdrop-brightness": [I, B, A]
       }],
       /**
        * Backdrop Contrast
        * @see https://tailwindcss.com/docs/backdrop-contrast
        */
       "backdrop-contrast": [{
-        "backdrop-contrast": [z, B, F]
+        "backdrop-contrast": [I, B, A]
       }],
       /**
        * Backdrop Grayscale
        * @see https://tailwindcss.com/docs/backdrop-grayscale
        */
       "backdrop-grayscale": [{
-        "backdrop-grayscale": ["", z, B, F]
+        "backdrop-grayscale": ["", I, B, A]
       }],
       /**
        * Backdrop Hue Rotate
        * @see https://tailwindcss.com/docs/backdrop-hue-rotate
        */
       "backdrop-hue-rotate": [{
-        "backdrop-hue-rotate": [z, B, F]
+        "backdrop-hue-rotate": [I, B, A]
       }],
       /**
        * Backdrop Invert
        * @see https://tailwindcss.com/docs/backdrop-invert
        */
       "backdrop-invert": [{
-        "backdrop-invert": ["", z, B, F]
+        "backdrop-invert": ["", I, B, A]
       }],
       /**
        * Backdrop Opacity
        * @see https://tailwindcss.com/docs/backdrop-opacity
        */
       "backdrop-opacity": [{
-        "backdrop-opacity": [z, B, F]
+        "backdrop-opacity": [I, B, A]
       }],
       /**
        * Backdrop Saturate
        * @see https://tailwindcss.com/docs/backdrop-saturate
        */
       "backdrop-saturate": [{
-        "backdrop-saturate": [z, B, F]
+        "backdrop-saturate": [I, B, A]
       }],
       /**
        * Backdrop Sepia
        * @see https://tailwindcss.com/docs/backdrop-sepia
        */
       "backdrop-sepia": [{
-        "backdrop-sepia": ["", z, B, F]
+        "backdrop-sepia": ["", I, B, A]
       }],
       // --------------
       // --- Tables ---
@@ -7300,21 +4234,21 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/border-spacing
        */
       "border-spacing": [{
-        "border-spacing": O()
+        "border-spacing": _()
       }],
       /**
        * Border Spacing X
        * @see https://tailwindcss.com/docs/border-spacing
        */
       "border-spacing-x": [{
-        "border-spacing-x": O()
+        "border-spacing-x": _()
       }],
       /**
        * Border Spacing Y
        * @see https://tailwindcss.com/docs/border-spacing
        */
       "border-spacing-y": [{
-        "border-spacing-y": O()
+        "border-spacing-y": _()
       }],
       /**
        * Table Layout
@@ -7338,7 +4272,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/transition-property
        */
       transition: [{
-        transition: ["", "all", "colors", "opacity", "shadow", "transform", "none", B, F]
+        transition: ["", "all", "colors", "opacity", "shadow", "transform", "none", B, A]
       }],
       /**
        * Transition Behavior
@@ -7352,28 +4286,28 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/transition-duration
        */
       duration: [{
-        duration: [z, "initial", B, F]
+        duration: [I, "initial", B, A]
       }],
       /**
        * Transition Timing Function
        * @see https://tailwindcss.com/docs/transition-timing-function
        */
       ease: [{
-        ease: ["linear", "initial", S, B, F]
+        ease: ["linear", "initial", v, B, A]
       }],
       /**
        * Transition Delay
        * @see https://tailwindcss.com/docs/transition-delay
        */
       delay: [{
-        delay: [z, B, F]
+        delay: [I, B, A]
       }],
       /**
        * Animation
        * @see https://tailwindcss.com/docs/animation
        */
       animate: [{
-        animate: ["none", w, B, F]
+        animate: ["none", x, B, A]
       }],
       // ------------------
       // --- Transforms ---
@@ -7390,70 +4324,70 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/perspective
        */
       perspective: [{
-        perspective: [y, B, F]
+        perspective: [w, B, A]
       }],
       /**
        * Perspective Origin
        * @see https://tailwindcss.com/docs/perspective-origin
        */
       "perspective-origin": [{
-        "perspective-origin": T()
+        "perspective-origin": b()
       }],
       /**
        * Rotate
        * @see https://tailwindcss.com/docs/rotate
        */
       rotate: [{
-        rotate: Se()
+        rotate: c2()
       }],
       /**
        * Rotate X
        * @see https://tailwindcss.com/docs/rotate
        */
       "rotate-x": [{
-        "rotate-x": Se()
+        "rotate-x": c2()
       }],
       /**
        * Rotate Y
        * @see https://tailwindcss.com/docs/rotate
        */
       "rotate-y": [{
-        "rotate-y": Se()
+        "rotate-y": c2()
       }],
       /**
        * Rotate Z
        * @see https://tailwindcss.com/docs/rotate
        */
       "rotate-z": [{
-        "rotate-z": Se()
+        "rotate-z": c2()
       }],
       /**
        * Scale
        * @see https://tailwindcss.com/docs/scale
        */
       scale: [{
-        scale: Te()
+        scale: s2()
       }],
       /**
        * Scale X
        * @see https://tailwindcss.com/docs/scale
        */
       "scale-x": [{
-        "scale-x": Te()
+        "scale-x": s2()
       }],
       /**
        * Scale Y
        * @see https://tailwindcss.com/docs/scale
        */
       "scale-y": [{
-        "scale-y": Te()
+        "scale-y": s2()
       }],
       /**
        * Scale Z
        * @see https://tailwindcss.com/docs/scale
        */
       "scale-z": [{
-        "scale-z": Te()
+        "scale-z": s2()
       }],
       /**
        * Scale 3D
@@ -7465,35 +4399,35 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/skew
        */
       skew: [{
-        skew: Be()
+        skew: Z2()
       }],
       /**
        * Skew X
        * @see https://tailwindcss.com/docs/skew
        */
       "skew-x": [{
-        "skew-x": Be()
+        "skew-x": Z2()
       }],
       /**
        * Skew Y
        * @see https://tailwindcss.com/docs/skew
        */
       "skew-y": [{
-        "skew-y": Be()
+        "skew-y": Z2()
       }],
       /**
        * Transform
        * @see https://tailwindcss.com/docs/transform
        */
       transform: [{
-        transform: [B, F, "", "none", "gpu", "cpu"]
+        transform: [B, A, "", "none", "gpu", "cpu"]
       }],
       /**
        * Transform Origin
        * @see https://tailwindcss.com/docs/transform-origin
        */
       "transform-origin": [{
-        origin: T()
+        origin: b()
       }],
       /**
        * Transform Style
@@ -7507,28 +4441,28 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/translate
        */
       translate: [{
-        translate: xe()
+        translate: S2()
       }],
       /**
        * Translate X
        * @see https://tailwindcss.com/docs/translate
        */
       "translate-x": [{
-        "translate-x": xe()
+        "translate-x": S2()
       }],
       /**
        * Translate Y
        * @see https://tailwindcss.com/docs/translate
        */
       "translate-y": [{
-        "translate-y": xe()
+        "translate-y": S2()
       }],
       /**
        * Translate Z
        * @see https://tailwindcss.com/docs/translate
        */
       "translate-z": [{
-        "translate-z": xe()
+        "translate-z": S2()
       }],
       /**
        * Translate None
@@ -7543,7 +4477,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/accent-color
        */
       accent: [{
-        accent: D()
+        accent: E()
       }],
       /**
        * Appearance
@@ -7557,7 +4491,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/just-in-time-mode#caret-color-utilities
        */
       "caret-color": [{
-        caret: D()
+        caret: E()
       }],
       /**
        * Color Scheme
@@ -7571,7 +4505,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/cursor
        */
       cursor: [{
-        cursor: ["auto", "default", "pointer", "wait", "text", "move", "help", "not-allowed", "none", "context-menu", "progress", "cell", "crosshair", "vertical-text", "alias", "copy", "no-drop", "grab", "grabbing", "all-scroll", "col-resize", "row-resize", "n-resize", "e-resize", "s-resize", "w-resize", "ne-resize", "nw-resize", "se-resize", "sw-resize", "ew-resize", "ns-resize", "nesw-resize", "nwse-resize", "zoom-in", "zoom-out", B, F]
+        cursor: ["auto", "default", "pointer", "wait", "text", "move", "help", "not-allowed", "none", "context-menu", "progress", "cell", "crosshair", "vertical-text", "alias", "copy", "no-drop", "grab", "grabbing", "all-scroll", "col-resize", "row-resize", "n-resize", "e-resize", "s-resize", "w-resize", "ne-resize", "nw-resize", "se-resize", "sw-resize", "ew-resize", "ns-resize", "nesw-resize", "nwse-resize", "zoom-in", "zoom-out", B, A]
       }],
       /**
        * Field Sizing
@@ -7606,126 +4540,126 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-m": [{
-        "scroll-m": O()
+        "scroll-m": _()
       }],
       /**
        * Scroll Margin X
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-mx": [{
-        "scroll-mx": O()
+        "scroll-mx": _()
       }],
       /**
        * Scroll Margin Y
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-my": [{
-        "scroll-my": O()
+        "scroll-my": _()
       }],
       /**
        * Scroll Margin Start
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-ms": [{
-        "scroll-ms": O()
+        "scroll-ms": _()
       }],
       /**
        * Scroll Margin End
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-me": [{
-        "scroll-me": O()
+        "scroll-me": _()
       }],
       /**
        * Scroll Margin Top
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-mt": [{
-        "scroll-mt": O()
+        "scroll-mt": _()
       }],
       /**
        * Scroll Margin Right
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-mr": [{
-        "scroll-mr": O()
+        "scroll-mr": _()
       }],
       /**
        * Scroll Margin Bottom
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-mb": [{
-        "scroll-mb": O()
+        "scroll-mb": _()
       }],
       /**
        * Scroll Margin Left
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-ml": [{
-        "scroll-ml": O()
+        "scroll-ml": _()
       }],
       /**
        * Scroll Padding
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-p": [{
-        "scroll-p": O()
+        "scroll-p": _()
       }],
       /**
        * Scroll Padding X
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-px": [{
-        "scroll-px": O()
+        "scroll-px": _()
       }],
       /**
        * Scroll Padding Y
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-py": [{
-        "scroll-py": O()
+        "scroll-py": _()
       }],
       /**
        * Scroll Padding Start
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-ps": [{
-        "scroll-ps": O()
+        "scroll-ps": _()
       }],
       /**
        * Scroll Padding End
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-pe": [{
-        "scroll-pe": O()
+        "scroll-pe": _()
       }],
       /**
        * Scroll Padding Top
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-pt": [{
-        "scroll-pt": O()
+        "scroll-pt": _()
       }],
       /**
        * Scroll Padding Right
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-pr": [{
-        "scroll-pr": O()
+        "scroll-pr": _()
       }],
       /**
        * Scroll Padding Bottom
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-pb": [{
-        "scroll-pb": O()
+        "scroll-pb": _()
       }],
       /**
        * Scroll Padding Left
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-pl": [{
-        "scroll-pl": O()
+        "scroll-pl": _()
       }],
       /**
        * Scroll Snap Align
@@ -7793,7 +4727,7 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/will-change
        */
       "will-change": [{
-        "will-change": ["auto", "scroll", "contents", "transform", B, F]
+        "will-change": ["auto", "scroll", "contents", "transform", B, A]
       }],
       // -----------
       // --- SVG ---
@@ -7803,21 +4737,21 @@ const we = (e) => {
        * @see https://tailwindcss.com/docs/fill
        */
       fill: [{
-        fill: ["none", ...D()]
+        fill: ["none", ...E()]
       }],
       /**
        * Stroke Width
        * @see https://tailwindcss.com/docs/stroke-width
        */
       "stroke-w": [{
-        stroke: [z, yn, $t, fo]
+        stroke: [I, c0, N2, V0]
       }],
       /**
        * Stroke
        * @see https://tailwindcss.com/docs/stroke
        */
       stroke: [{
-        stroke: ["none", ...D()]
+        stroke: ["none", ...E()]
       }],
       // ---------------------
       // --- Accessibility ---
@@ -7885,25 +4819,25 @@ const we = (e) => {
     },
     orderSensitiveModifiers: ["*", "**", "after", "backdrop", "before", "details-content", "file", "first-letter", "first-line", "marker", "placeholder", "selection"]
   };
-}, Au = /* @__PURE__ */ su(Ou);
-function Lt(...e) {
-  return Au(Yc(e));
+}, rc = /* @__PURE__ */ Nl(nc);
+function T2(...e) {
+  return rc(Ml(e));
 }
-function Nu(e) {
-  if (!Vn(e))
-    return Un(e);
+function lc(e) {
+  if (!m0(e))
+    return _0(e);
   const t = new Proxy({}, {
-    get(n, o, r) {
-      return N(Reflect.get(e.value, o, r));
+    get(o, i, n) {
+      return p(Reflect.get(e.value, i, n));
     },
-    set(n, o, r) {
-      return Vn(e.value[o]) && !Vn(r) ? e.value[o].value = r : e.value[o] = r, !0;
+    set(o, i, n) {
+      return m0(e.value[i]) && !m0(n) ? e.value[i].value = n : e.value[i] = n, !0;
     },
-    deleteProperty(n, o) {
-      return Reflect.deleteProperty(e.value, o);
+    deleteProperty(o, i) {
+      return Reflect.deleteProperty(e.value, i);
     },
-    has(n, o) {
-      return Reflect.has(e.value, o);
+    has(o, i) {
+      return Reflect.has(e.value, i);
     },
     ownKeys() {
       return Object.keys(e.value);
@@ -7915,61 +4849,61 @@ function Nu(e) {
       };
     }
   });
-  return Un(t);
+  return _0(t);
 }
-function Cu(e) {
-  return Nu(k(e));
+function cc(e) {
+  return lc(S(e));
 }
-function Lu(e, ...t) {
-  const n = t.flat(), o = n[0];
-  return Cu(() => Object.fromEntries(typeof o == "function" ? Object.entries(rn(e)).filter(([r, a]) => !o(Je(a), r)) : Object.entries(rn(e)).filter((r) => !n.includes(r[0]))));
+function sc(e, ...t) {
+  const o = t.flat(), i = o[0];
+  return cc(() => Object.fromEntries(typeof i == "function" ? Object.entries(e0(e)).filter(([n, r]) => !i(g2(r), n)) : Object.entries(e0(e)).filter((n) => !o.includes(n[0]))));
 }
 typeof WorkerGlobalScope < "u" && globalThis instanceof WorkerGlobalScope;
-const Iu = (e) => typeof e < "u";
-function Pu(e) {
+const ac = (e) => typeof e < "u";
+function dc(e) {
   return JSON.parse(JSON.stringify(e));
 }
-function Mu(e, t, n, o = {}) {
-  var r, a, s;
+function fc(e, t, o, i = {}) {
+  var n, r, l;
   const {
-    clone: i = !1,
-    passive: l = !1,
-    eventName: c,
-    deep: d = !1,
-    defaultValue: u,
-    shouldEmit: f
-  } = o, m = nt(), _ = n || (m == null ? void 0 : m.emit) || ((r = m == null ? void 0 : m.$emit) == null ? void 0 : r.bind(m)) || ((s = (a = m == null ? void 0 : m.proxy) == null ? void 0 : a.$emit) == null ? void 0 : s.bind(m == null ? void 0 : m.proxy));
-  let y = c;
-  y = y || `update:${t.toString()}`;
-  const v = (p) => i ? typeof i == "function" ? i(p) : Pu(p) : p, S = () => Iu(e[t]) ? v(e[t]) : u, w = (p) => {
-    f ? f(p) && _(y, p) : _(y, p);
+    clone: c = !1,
+    passive: s = !1,
+    eventName: a,
+    deep: f = !1,
+    defaultValue: d,
+    shouldEmit: h
+  } = i, g = V2(), u = o || (g == null ? void 0 : g.emit) || ((n = g == null ? void 0 : g.$emit) == null ? void 0 : n.bind(g)) || ((l = (r = g == null ? void 0 : g.proxy) == null ? void 0 : r.$emit) == null ? void 0 : l.bind(g == null ? void 0 : g.proxy));
+  let w = a;
+  w = w || `update:${t.toString()}`;
+  const k = (y) => c ? typeof c == "function" ? c(y) : dc(y) : y, v = () => ac(e[t]) ? k(e[t]) : d, x = (y) => {
+    h ? h(y) && u(w, y) : u(w, y);
   };
-  if (l) {
-    const p = S(), h = R(p);
-    let T = !1;
-    return he(
+  if (s) {
+    const y = v(), m = C(y);
+    let b = !1;
+    return W(
       () => e[t],
-      (E) => {
-        T || (T = !0, h.value = v(E), Ue(() => T = !1));
+      (j) => {
+        b || (b = !0, m.value = k(j), r2(() => b = !1));
       }
-    ), he(
-      h,
-      (E) => {
-        !T && (E !== e[t] || d) && w(E);
+    ), W(
+      m,
+      (j) => {
+        !b && (j !== e[t] || f) && x(j);
       },
-      { deep: d }
-    ), h;
+      { deep: f }
+    ), m;
   } else
-    return k({
+    return S({
       get() {
-        return S();
+        return v();
       },
-      set(p) {
-        w(p);
+      set(y) {
+        x(y);
       }
     });
 }
-const Qr = /* @__PURE__ */ Y({
+const Se = /* @__PURE__ */ V({
   __name: "Input",
   props: {
     defaultValue: {},
@@ -7978,94 +4912,94 @@ const Qr = /* @__PURE__ */ Y({
   },
   emits: ["update:modelValue"],
   setup(e, { emit: t }) {
-    const n = e, r = Mu(n, "modelValue", t, {
+    const o = e, n = fc(o, "modelValue", t, {
       passive: !0,
-      defaultValue: n.defaultValue
+      defaultValue: o.defaultValue
     });
-    return (a, s) => yi((H(), Ne("input", {
-      "onUpdate:modelValue": s[0] || (s[0] = (i) => Vn(r) ? r.value = i : null),
+    return (r, l) => at((P(), X("input", {
+      "onUpdate:modelValue": l[0] || (l[0] = (c) => m0(n) ? n.value = c : null),
       "data-slot": "input",
-      class: Ta(N(Lt)(
+      class: Qe(p(T2)(
         "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
         "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
         "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-        n.class
+        o.class
       ))
     }, null, 2)), [
-      [vi, N(r)]
+      [dt, p(n)]
     ]);
   }
-}), ku = ["top", "right", "bottom", "left"], It = Math.min, $e = Math.max, Hn = Math.round, xn = Math.floor, at = (e) => ({
+}), gc = ["top", "right", "bottom", "left"], P2 = Math.min, n2 = Math.max, b0 = Math.round, k0 = Math.floor, k2 = (e) => ({
   x: e,
   y: e
-}), xu = {
+}), hc = {
   left: "right",
   right: "left",
   bottom: "top",
   top: "bottom"
-}, Ru = {
+}, uc = {
   start: "end",
   end: "start"
 };
-function xo(e, t, n) {
-  return $e(e, It(t, n));
+function U0(e, t, o) {
+  return n2(e, P2(t, o));
 }
-function vt(e, t) {
+function A2(e, t) {
   return typeof e == "function" ? e(t) : e;
 }
-function bt(e) {
+function B2(e) {
   return e.split("-")[0];
 }
-function fn(e) {
+function n0(e) {
   return e.split("-")[1];
 }
-function nr(e) {
+function se(e) {
   return e === "x" ? "y" : "x";
 }
-function or(e) {
+function ae(e) {
   return e === "y" ? "height" : "width";
 }
-function Pt(e) {
-  return ["top", "bottom"].includes(bt(e)) ? "y" : "x";
+function O2(e) {
+  return ["top", "bottom"].includes(B2(e)) ? "y" : "x";
 }
-function rr(e) {
-  return nr(Pt(e));
+function de(e) {
+  return se(O2(e));
 }
-function Du(e, t, n) {
-  n === void 0 && (n = !1);
-  const o = fn(e), r = rr(e), a = or(r);
-  let s = r === "x" ? o === (n ? "end" : "start") ? "right" : "left" : o === "start" ? "bottom" : "top";
-  return t.reference[a] > t.floating[a] && (s = Yn(s)), [s, Yn(s)];
+function pc(e, t, o) {
+  o === void 0 && (o = !1);
+  const i = n0(e), n = de(e), r = ae(n);
+  let l = n === "x" ? i === (o ? "end" : "start") ? "right" : "left" : i === "start" ? "bottom" : "top";
+  return t.reference[r] > t.floating[r] && (l = j0(l)), [l, j0(l)];
 }
-function Fu(e) {
-  const t = Yn(e);
-  return [Ro(e), t, Ro(t)];
+function kc(e) {
+  const t = j0(e);
+  return [Y0(e), t, Y0(t)];
 }
-function Ro(e) {
-  return e.replace(/start|end/g, (t) => Ru[t]);
+function Y0(e) {
+  return e.replace(/start|end/g, (t) => uc[t]);
 }
-function Bu(e, t, n) {
-  const o = ["left", "right"], r = ["right", "left"], a = ["top", "bottom"], s = ["bottom", "top"];
+function wc(e, t, o) {
+  const i = ["left", "right"], n = ["right", "left"], r = ["top", "bottom"], l = ["bottom", "top"];
   switch (e) {
     case "top":
     case "bottom":
-      return n ? t ? r : o : t ? o : r;
+      return o ? t ? n : i : t ? i : n;
     case "left":
     case "right":
-      return t ? a : s;
+      return t ? r : l;
     default:
       return [];
   }
 }
-function Vu(e, t, n, o) {
-  const r = fn(e);
-  let a = Bu(bt(e), n === "start", o);
-  return r && (a = a.map((s) => s + "-" + r), t && (a = a.concat(a.map(Ro)))), a;
+function yc(e, t, o, i) {
+  const n = n0(e);
+  let r = wc(B2(e), o === "start", i);
+  return n && (r = r.map((l) => l + "-" + n), t && (r = r.concat(r.map(Y0)))), r;
 }
-function Yn(e) {
-  return e.replace(/left|right|bottom|top/g, (t) => xu[t]);
+function j0(e) {
+  return e.replace(/left|right|bottom|top/g, (t) => hc[t]);
 }
-function $u(e) {
+function xc(e) {
   return {
     top: 0,
     right: 0,
@@ -8074,296 +5008,296 @@ function $u(e) {
     ...e
   };
 }
-function Hs(e) {
-  return typeof e != "number" ? $u(e) : {
+function Z3(e) {
+  return typeof e != "number" ? xc(e) : {
     top: e,
     right: e,
     bottom: e,
     left: e
   };
 }
-function zn(e) {
+function M0(e) {
   const {
     x: t,
-    y: n,
-    width: o,
-    height: r
+    y: o,
+    width: i,
+    height: n
   } = e;
   return {
-    width: o,
-    height: r,
-    top: n,
+    width: i,
+    height: n,
+    top: o,
     left: t,
-    right: t + o,
-    bottom: n + r,
+    right: t + i,
+    bottom: o + n,
     x: t,
-    y: n
+    y: o
   };
 }
-function ea(e, t, n) {
+function Ce(e, t, o) {
   let {
-    reference: o,
-    floating: r
+    reference: i,
+    floating: n
   } = e;
-  const a = Pt(t), s = rr(t), i = or(s), l = bt(t), c = a === "y", d = o.x + o.width / 2 - r.width / 2, u = o.y + o.height / 2 - r.height / 2, f = o[i] / 2 - r[i] / 2;
-  let m;
-  switch (l) {
+  const r = O2(t), l = de(t), c = ae(l), s = B2(t), a = r === "y", f = i.x + i.width / 2 - n.width / 2, d = i.y + i.height / 2 - n.height / 2, h = i[c] / 2 - n[c] / 2;
+  let g;
+  switch (s) {
     case "top":
-      m = {
-        x: d,
-        y: o.y - r.height
+      g = {
+        x: f,
+        y: i.y - n.height
       };
       break;
     case "bottom":
-      m = {
-        x: d,
-        y: o.y + o.height
+      g = {
+        x: f,
+        y: i.y + i.height
       };
       break;
     case "right":
-      m = {
-        x: o.x + o.width,
-        y: u
+      g = {
+        x: i.x + i.width,
+        y: d
       };
       break;
     case "left":
-      m = {
-        x: o.x - r.width,
-        y: u
+      g = {
+        x: i.x - n.width,
+        y: d
       };
       break;
     default:
-      m = {
-        x: o.x,
-        y: o.y
+      g = {
+        x: i.x,
+        y: i.y
       };
   }
-  switch (fn(t)) {
+  switch (n0(t)) {
     case "start":
-      m[s] -= f * (n && c ? -1 : 1);
+      g[l] -= h * (o && a ? -1 : 1);
       break;
     case "end":
-      m[s] += f * (n && c ? -1 : 1);
+      g[l] += h * (o && a ? -1 : 1);
       break;
   }
-  return m;
+  return g;
 }
-const Uu = async (e, t, n) => {
+const vc = async (e, t, o) => {
   const {
-    placement: o = "bottom",
-    strategy: r = "absolute",
-    middleware: a = [],
-    platform: s
-  } = n, i = a.filter(Boolean), l = await (s.isRTL == null ? void 0 : s.isRTL(t));
-  let c = await s.getElementRects({
+    placement: i = "bottom",
+    strategy: n = "absolute",
+    middleware: r = [],
+    platform: l
+  } = o, c = r.filter(Boolean), s = await (l.isRTL == null ? void 0 : l.isRTL(t));
+  let a = await l.getElementRects({
     reference: e,
     floating: t,
-    strategy: r
+    strategy: n
   }), {
-    x: d,
-    y: u
-  } = ea(c, o, l), f = o, m = {}, _ = 0;
-  for (let y = 0; y < i.length; y++) {
+    x: f,
+    y: d
+  } = Ce(a, i, s), h = i, g = {}, u = 0;
+  for (let w = 0; w < c.length; w++) {
     const {
-      name: v,
-      fn: S
-    } = i[y], {
-      x: w,
-      y: p,
-      data: h,
-      reset: T
-    } = await S({
-      x: d,
-      y: u,
-      initialPlacement: o,
-      placement: f,
-      strategy: r,
-      middlewareData: m,
-      rects: c,
-      platform: s,
+      name: k,
+      fn: v
+    } = c[w], {
+      x,
+      y,
+      data: m,
+      reset: b
+    } = await v({
+      x: f,
+      y: d,
+      initialPlacement: i,
+      placement: h,
+      strategy: n,
+      middlewareData: g,
+      rects: a,
+      platform: l,
       elements: {
         reference: e,
         floating: t
       }
     });
-    d = w ?? d, u = p ?? u, m = {
-      ...m,
-      [v]: {
-        ...m[v],
-        ...h
+    f = x ?? f, d = y ?? d, g = {
+      ...g,
+      [k]: {
+        ...g[k],
+        ...m
       }
-    }, T && _ <= 50 && (_++, typeof T == "object" && (T.placement && (f = T.placement), T.rects && (c = T.rects === !0 ? await s.getElementRects({
+    }, b && u <= 50 && (u++, typeof b == "object" && (b.placement && (h = b.placement), b.rects && (a = b.rects === !0 ? await l.getElementRects({
       reference: e,
       floating: t,
-      strategy: r
-    }) : T.rects), {
-      x: d,
-      y: u
-    } = ea(c, f, l)), y = -1);
+      strategy: n
+    }) : b.rects), {
+      x: f,
+      y: d
+    } = Ce(a, h, s)), w = -1);
   }
   return {
-    x: d,
-    y: u,
-    placement: f,
-    strategy: r,
-    middlewareData: m
+    x: f,
+    y: d,
+    placement: h,
+    strategy: n,
+    middlewareData: g
   };
 };
-async function On(e, t) {
-  var n;
+async function d0(e, t) {
+  var o;
   t === void 0 && (t = {});
   const {
-    x: o,
-    y: r,
-    platform: a,
-    rects: s,
-    elements: i,
-    strategy: l
+    x: i,
+    y: n,
+    platform: r,
+    rects: l,
+    elements: c,
+    strategy: s
   } = e, {
-    boundary: c = "clippingAncestors",
-    rootBoundary: d = "viewport",
-    elementContext: u = "floating",
-    altBoundary: f = !1,
-    padding: m = 0
-  } = vt(t, e), _ = Hs(m), v = i[f ? u === "floating" ? "reference" : "floating" : u], S = zn(await a.getClippingRect({
-    element: (n = await (a.isElement == null ? void 0 : a.isElement(v))) == null || n ? v : v.contextElement || await (a.getDocumentElement == null ? void 0 : a.getDocumentElement(i.floating)),
-    boundary: c,
-    rootBoundary: d,
-    strategy: l
-  })), w = u === "floating" ? {
-    x: o,
-    y: r,
-    width: s.floating.width,
-    height: s.floating.height
-  } : s.reference, p = await (a.getOffsetParent == null ? void 0 : a.getOffsetParent(i.floating)), h = await (a.isElement == null ? void 0 : a.isElement(p)) ? await (a.getScale == null ? void 0 : a.getScale(p)) || {
+    boundary: a = "clippingAncestors",
+    rootBoundary: f = "viewport",
+    elementContext: d = "floating",
+    altBoundary: h = !1,
+    padding: g = 0
+  } = A2(t, e), u = Z3(g), k = c[h ? d === "floating" ? "reference" : "floating" : d], v = M0(await r.getClippingRect({
+    element: (o = await (r.isElement == null ? void 0 : r.isElement(k))) == null || o ? k : k.contextElement || await (r.getDocumentElement == null ? void 0 : r.getDocumentElement(c.floating)),
+    boundary: a,
+    rootBoundary: f,
+    strategy: s
+  })), x = d === "floating" ? {
+    x: i,
+    y: n,
+    width: l.floating.width,
+    height: l.floating.height
+  } : l.reference, y = await (r.getOffsetParent == null ? void 0 : r.getOffsetParent(c.floating)), m = await (r.isElement == null ? void 0 : r.isElement(y)) ? await (r.getScale == null ? void 0 : r.getScale(y)) || {
     x: 1,
     y: 1
   } : {
     x: 1,
     y: 1
-  }, T = zn(a.convertOffsetParentRelativeRectToViewportRelativeRect ? await a.convertOffsetParentRelativeRectToViewportRelativeRect({
-    elements: i,
-    rect: w,
-    offsetParent: p,
-    strategy: l
-  }) : w);
+  }, b = M0(r.convertOffsetParentRelativeRectToViewportRelativeRect ? await r.convertOffsetParentRelativeRectToViewportRelativeRect({
+    elements: c,
+    rect: x,
+    offsetParent: y,
+    strategy: s
+  }) : x);
   return {
-    top: (S.top - T.top + _.top) / h.y,
-    bottom: (T.bottom - S.bottom + _.bottom) / h.y,
-    left: (S.left - T.left + _.left) / h.x,
-    right: (T.right - S.right + _.right) / h.x
+    top: (v.top - b.top + u.top) / m.y,
+    bottom: (b.bottom - v.bottom + u.bottom) / m.y,
+    left: (v.left - b.left + u.left) / m.x,
+    right: (b.right - v.right + u.right) / m.x
   };
 }
-const Gu = (e) => ({
+const mc = (e) => ({
   name: "arrow",
   options: e,
   async fn(t) {
     const {
-      x: n,
-      y: o,
-      placement: r,
-      rects: a,
-      platform: s,
-      elements: i,
-      middlewareData: l
+      x: o,
+      y: i,
+      placement: n,
+      rects: r,
+      platform: l,
+      elements: c,
+      middlewareData: s
     } = t, {
-      element: c,
-      padding: d = 0
-    } = vt(e, t) || {};
-    if (c == null)
+      element: a,
+      padding: f = 0
+    } = A2(e, t) || {};
+    if (a == null)
       return {};
-    const u = Hs(d), f = {
-      x: n,
-      y: o
-    }, m = rr(r), _ = or(m), y = await s.getDimensions(c), v = m === "y", S = v ? "top" : "left", w = v ? "bottom" : "right", p = v ? "clientHeight" : "clientWidth", h = a.reference[_] + a.reference[m] - f[m] - a.floating[_], T = f[m] - a.reference[m], E = await (s.getOffsetParent == null ? void 0 : s.getOffsetParent(c));
-    let A = E ? E[p] : 0;
-    (!A || !await (s.isElement == null ? void 0 : s.isElement(E))) && (A = i.floating[p] || a.floating[_]);
-    const O = h / 2 - T / 2, L = A / 2 - y[_] / 2 - 1, V = It(u[S], L), U = It(u[w], L), $ = V, j = A - y[_] - U, ee = A / 2 - y[_] / 2 + O, le = xo($, ee, j), Z = !l.arrow && fn(r) != null && ee !== le && a.reference[_] / 2 - (ee < $ ? V : U) - y[_] / 2 < 0, te = Z ? ee < $ ? ee - $ : ee - j : 0;
+    const d = Z3(f), h = {
+      x: o,
+      y: i
+    }, g = de(n), u = ae(g), w = await l.getDimensions(a), k = g === "y", v = k ? "top" : "left", x = k ? "bottom" : "right", y = k ? "clientHeight" : "clientWidth", m = r.reference[u] + r.reference[g] - h[g] - r.floating[u], b = h[g] - r.reference[g], j = await (l.getOffsetParent == null ? void 0 : l.getOffsetParent(a));
+    let M = j ? j[y] : 0;
+    (!M || !await (l.isElement == null ? void 0 : l.isElement(j))) && (M = c.floating[y] || r.floating[u]);
+    const _ = m / 2 - b / 2, O = M / 2 - w[u] / 2 - 1, R = P2(d[v], O), L = P2(d[x], O), F = R, Y = M - w[u] - L, G = M / 2 - w[u] / 2 + _, K = U0(F, G, Y), H = !s.arrow && n0(n) != null && G !== K && r.reference[u] / 2 - (G < F ? R : L) - w[u] / 2 < 0, z = H ? G < F ? G - F : G - Y : 0;
     return {
-      [m]: f[m] + te,
+      [g]: h[g] + z,
       data: {
-        [m]: le,
-        centerOffset: ee - le - te,
-        ...Z && {
-          alignmentOffset: te
+        [g]: K,
+        centerOffset: G - K - z,
+        ...H && {
+          alignmentOffset: z
         }
       },
-      reset: Z
+      reset: H
     };
   }
-}), Wu = function(e) {
+}), _c = function(e) {
   return e === void 0 && (e = {}), {
     name: "flip",
     options: e,
     async fn(t) {
-      var n, o;
+      var o, i;
       const {
-        placement: r,
-        middlewareData: a,
-        rects: s,
-        initialPlacement: i,
-        platform: l,
-        elements: c
+        placement: n,
+        middlewareData: r,
+        rects: l,
+        initialPlacement: c,
+        platform: s,
+        elements: a
       } = t, {
-        mainAxis: d = !0,
-        crossAxis: u = !0,
-        fallbackPlacements: f,
-        fallbackStrategy: m = "bestFit",
-        fallbackAxisSideDirection: _ = "none",
-        flipAlignment: y = !0,
-        ...v
-      } = vt(e, t);
-      if ((n = a.arrow) != null && n.alignmentOffset)
+        mainAxis: f = !0,
+        crossAxis: d = !0,
+        fallbackPlacements: h,
+        fallbackStrategy: g = "bestFit",
+        fallbackAxisSideDirection: u = "none",
+        flipAlignment: w = !0,
+        ...k
+      } = A2(e, t);
+      if ((o = r.arrow) != null && o.alignmentOffset)
         return {};
-      const S = bt(r), w = Pt(i), p = bt(i) === i, h = await (l.isRTL == null ? void 0 : l.isRTL(c.floating)), T = f || (p || !y ? [Yn(i)] : Fu(i)), E = _ !== "none";
-      !f && E && T.push(...Vu(i, y, _, h));
-      const A = [i, ...T], O = await On(t, v), L = [];
-      let V = ((o = a.flip) == null ? void 0 : o.overflows) || [];
-      if (d && L.push(O[S]), u) {
-        const ee = Du(r, s, h);
-        L.push(O[ee[0]], O[ee[1]]);
+      const v = B2(n), x = O2(c), y = B2(c) === c, m = await (s.isRTL == null ? void 0 : s.isRTL(a.floating)), b = h || (y || !w ? [j0(c)] : kc(c)), j = u !== "none";
+      !h && j && b.push(...yc(c, w, u, m));
+      const M = [c, ...b], _ = await d0(t, k), O = [];
+      let R = ((i = r.flip) == null ? void 0 : i.overflows) || [];
+      if (f && O.push(_[v]), d) {
+        const G = pc(n, l, m);
+        O.push(_[G[0]], _[G[1]]);
       }
-      if (V = [...V, {
-        placement: r,
-        overflows: L
-      }], !L.every((ee) => ee <= 0)) {
-        var U, $;
-        const ee = (((U = a.flip) == null ? void 0 : U.index) || 0) + 1, le = A[ee];
-        if (le)
+      if (R = [...R, {
+        placement: n,
+        overflows: O
+      }], !O.every((G) => G <= 0)) {
+        var L, F;
+        const G = (((L = r.flip) == null ? void 0 : L.index) || 0) + 1, K = M[G];
+        if (K)
           return {
             data: {
-              index: ee,
-              overflows: V
+              index: G,
+              overflows: R
             },
             reset: {
-              placement: le
+              placement: K
             }
           };
-        let Z = ($ = V.filter((te) => te.overflows[0] <= 0).sort((te, D) => te.overflows[1] - D.overflows[1])[0]) == null ? void 0 : $.placement;
-        if (!Z)
-          switch (m) {
+        let H = (F = R.filter((z) => z.overflows[0] <= 0).sort((z, E) => z.overflows[1] - E.overflows[1])[0]) == null ? void 0 : F.placement;
+        if (!H)
+          switch (g) {
             case "bestFit": {
-              var j;
-              const te = (j = V.filter((D) => {
-                if (E) {
-                  const Ee = Pt(D.placement);
-                  return Ee === w || // Create a bias to the `y` side axis due to horizontal
+              var Y;
+              const z = (Y = R.filter((E) => {
+                if (j) {
+                  const o2 = O2(E.placement);
+                  return o2 === x || // Create a bias to the `y` side axis due to horizontal
                   // reading directions favoring greater width.
-                  Ee === "y";
+                  o2 === "y";
                 }
                 return !0;
-              }).map((D) => [D.placement, D.overflows.filter((Ee) => Ee > 0).reduce((Ee, Pe) => Ee + Pe, 0)]).sort((D, Ee) => D[1] - Ee[1])[0]) == null ? void 0 : j[0];
-              te && (Z = te);
+              }).map((E) => [E.placement, E.overflows.filter((o2) => o2 > 0).reduce((o2, m2) => o2 + m2, 0)]).sort((E, o2) => E[1] - o2[1])[0]) == null ? void 0 : Y[0];
+              z && (H = z);
               break;
             }
             case "initialPlacement":
-              Z = i;
+              H = c;
               break;
           }
-        if (r !== Z)
+        if (n !== H)
           return {
             reset: {
-              placement: Z
+              placement: H
             }
           };
       }
@@ -8371,7 +5305,7 @@ const Gu = (e) => ({
     }
   };
 };
-function ta(e, t) {
+function Ee(e, t) {
   return {
     top: e.top - t.height,
     right: e.right - t.width,
@@ -8379,42 +5313,42 @@ function ta(e, t) {
     left: e.left - t.width
   };
 }
-function na(e) {
-  return ku.some((t) => e[t] >= 0);
+function Te(e) {
+  return gc.some((t) => e[t] >= 0);
 }
-const Ku = function(e) {
+const bc = function(e) {
   return e === void 0 && (e = {}), {
     name: "hide",
     options: e,
     async fn(t) {
       const {
-        rects: n
+        rects: o
       } = t, {
-        strategy: o = "referenceHidden",
-        ...r
-      } = vt(e, t);
-      switch (o) {
+        strategy: i = "referenceHidden",
+        ...n
+      } = A2(e, t);
+      switch (i) {
         case "referenceHidden": {
-          const a = await On(t, {
-            ...r,
+          const r = await d0(t, {
+            ...n,
             elementContext: "reference"
-          }), s = ta(a, n.reference);
+          }), l = Ee(r, o.reference);
           return {
             data: {
-              referenceHiddenOffsets: s,
-              referenceHidden: na(s)
+              referenceHiddenOffsets: l,
+              referenceHidden: Te(l)
             }
           };
         }
         case "escaped": {
-          const a = await On(t, {
-            ...r,
+          const r = await d0(t, {
+            ...n,
             altBoundary: !0
-          }), s = ta(a, n.floating);
+          }), l = Ee(r, o.floating);
           return {
             data: {
-              escapedOffsets: s,
-              escaped: na(s)
+              escapedOffsets: l,
+              escaped: Te(l)
             }
           };
         }
@@ -8424,187 +5358,187 @@ const Ku = function(e) {
     }
   };
 };
-async function Hu(e, t) {
+async function jc(e, t) {
   const {
-    placement: n,
-    platform: o,
-    elements: r
-  } = e, a = await (o.isRTL == null ? void 0 : o.isRTL(r.floating)), s = bt(n), i = fn(n), l = Pt(n) === "y", c = ["left", "top"].includes(s) ? -1 : 1, d = a && l ? -1 : 1, u = vt(t, e);
+    placement: o,
+    platform: i,
+    elements: n
+  } = e, r = await (i.isRTL == null ? void 0 : i.isRTL(n.floating)), l = B2(o), c = n0(o), s = O2(o) === "y", a = ["left", "top"].includes(l) ? -1 : 1, f = r && s ? -1 : 1, d = A2(t, e);
   let {
-    mainAxis: f,
-    crossAxis: m,
-    alignmentAxis: _
-  } = typeof u == "number" ? {
-    mainAxis: u,
+    mainAxis: h,
+    crossAxis: g,
+    alignmentAxis: u
+  } = typeof d == "number" ? {
+    mainAxis: d,
     crossAxis: 0,
     alignmentAxis: null
   } : {
-    mainAxis: u.mainAxis || 0,
-    crossAxis: u.crossAxis || 0,
-    alignmentAxis: u.alignmentAxis
+    mainAxis: d.mainAxis || 0,
+    crossAxis: d.crossAxis || 0,
+    alignmentAxis: d.alignmentAxis
   };
-  return i && typeof _ == "number" && (m = i === "end" ? _ * -1 : _), l ? {
-    x: m * d,
-    y: f * c
+  return c && typeof u == "number" && (g = c === "end" ? u * -1 : u), s ? {
+    x: g * f,
+    y: h * a
   } : {
-    x: f * c,
-    y: m * d
+    x: h * a,
+    y: g * f
   };
 }
-const Yu = function(e) {
+const Mc = function(e) {
   return e === void 0 && (e = 0), {
     name: "offset",
     options: e,
     async fn(t) {
-      var n, o;
+      var o, i;
       const {
-        x: r,
-        y: a,
-        placement: s,
-        middlewareData: i
-      } = t, l = await Hu(t, e);
-      return s === ((n = i.offset) == null ? void 0 : n.placement) && (o = i.arrow) != null && o.alignmentOffset ? {} : {
-        x: r + l.x,
-        y: a + l.y,
+        x: n,
+        y: r,
+        placement: l,
+        middlewareData: c
+      } = t, s = await jc(t, e);
+      return l === ((o = c.offset) == null ? void 0 : o.placement) && (i = c.arrow) != null && i.alignmentOffset ? {} : {
+        x: n + s.x,
+        y: r + s.y,
         data: {
-          ...l,
-          placement: s
+          ...s,
+          placement: l
         }
       };
     }
   };
-}, zu = function(e) {
+}, Ac = function(e) {
   return e === void 0 && (e = {}), {
     name: "shift",
     options: e,
     async fn(t) {
       const {
-        x: n,
-        y: o,
-        placement: r
+        x: o,
+        y: i,
+        placement: n
       } = t, {
-        mainAxis: a = !0,
-        crossAxis: s = !1,
-        limiter: i = {
-          fn: (v) => {
+        mainAxis: r = !0,
+        crossAxis: l = !1,
+        limiter: c = {
+          fn: (k) => {
             let {
-              x: S,
-              y: w
-            } = v;
+              x: v,
+              y: x
+            } = k;
             return {
-              x: S,
-              y: w
+              x: v,
+              y: x
             };
           }
         },
-        ...l
-      } = vt(e, t), c = {
-        x: n,
-        y: o
-      }, d = await On(t, l), u = Pt(bt(r)), f = nr(u);
-      let m = c[f], _ = c[u];
-      if (a) {
-        const v = f === "y" ? "top" : "left", S = f === "y" ? "bottom" : "right", w = m + d[v], p = m - d[S];
-        m = xo(w, m, p);
+        ...s
+      } = A2(e, t), a = {
+        x: o,
+        y: i
+      }, f = await d0(t, s), d = O2(B2(n)), h = se(d);
+      let g = a[h], u = a[d];
+      if (r) {
+        const k = h === "y" ? "top" : "left", v = h === "y" ? "bottom" : "right", x = g + f[k], y = g - f[v];
+        g = U0(x, g, y);
       }
-      if (s) {
-        const v = u === "y" ? "top" : "left", S = u === "y" ? "bottom" : "right", w = _ + d[v], p = _ - d[S];
-        _ = xo(w, _, p);
+      if (l) {
+        const k = d === "y" ? "top" : "left", v = d === "y" ? "bottom" : "right", x = u + f[k], y = u - f[v];
+        u = U0(x, u, y);
       }
-      const y = i.fn({
+      const w = c.fn({
         ...t,
-        [f]: m,
-        [u]: _
+        [h]: g,
+        [d]: u
       });
       return {
-        ...y,
+        ...w,
         data: {
-          x: y.x - n,
-          y: y.y - o,
+          x: w.x - o,
+          y: w.y - i,
           enabled: {
-            [f]: a,
-            [u]: s
+            [h]: r,
+            [d]: l
           }
         }
       };
     }
   };
-}, ju = function(e) {
+}, Bc = function(e) {
   return e === void 0 && (e = {}), {
     options: e,
     fn(t) {
       const {
-        x: n,
-        y: o,
-        placement: r,
-        rects: a,
-        middlewareData: s
+        x: o,
+        y: i,
+        placement: n,
+        rects: r,
+        middlewareData: l
       } = t, {
-        offset: i = 0,
-        mainAxis: l = !0,
-        crossAxis: c = !0
-      } = vt(e, t), d = {
-        x: n,
-        y: o
-      }, u = Pt(r), f = nr(u);
-      let m = d[f], _ = d[u];
-      const y = vt(i, t), v = typeof y == "number" ? {
-        mainAxis: y,
+        offset: c = 0,
+        mainAxis: s = !0,
+        crossAxis: a = !0
+      } = A2(e, t), f = {
+        x: o,
+        y: i
+      }, d = O2(n), h = se(d);
+      let g = f[h], u = f[d];
+      const w = A2(c, t), k = typeof w == "number" ? {
+        mainAxis: w,
         crossAxis: 0
       } : {
         mainAxis: 0,
         crossAxis: 0,
-        ...y
+        ...w
       };
-      if (l) {
-        const p = f === "y" ? "height" : "width", h = a.reference[f] - a.floating[p] + v.mainAxis, T = a.reference[f] + a.reference[p] - v.mainAxis;
-        m < h ? m = h : m > T && (m = T);
+      if (s) {
+        const y = h === "y" ? "height" : "width", m = r.reference[h] - r.floating[y] + k.mainAxis, b = r.reference[h] + r.reference[y] - k.mainAxis;
+        g < m ? g = m : g > b && (g = b);
       }
-      if (c) {
-        var S, w;
-        const p = f === "y" ? "width" : "height", h = ["top", "left"].includes(bt(r)), T = a.reference[u] - a.floating[p] + (h && ((S = s.offset) == null ? void 0 : S[u]) || 0) + (h ? 0 : v.crossAxis), E = a.reference[u] + a.reference[p] + (h ? 0 : ((w = s.offset) == null ? void 0 : w[u]) || 0) - (h ? v.crossAxis : 0);
-        _ < T ? _ = T : _ > E && (_ = E);
+      if (a) {
+        var v, x;
+        const y = h === "y" ? "width" : "height", m = ["top", "left"].includes(B2(n)), b = r.reference[d] - r.floating[y] + (m && ((v = l.offset) == null ? void 0 : v[d]) || 0) + (m ? 0 : k.crossAxis), j = r.reference[d] + r.reference[y] + (m ? 0 : ((x = l.offset) == null ? void 0 : x[d]) || 0) - (m ? k.crossAxis : 0);
+        u < b ? u = b : u > j && (u = j);
       }
       return {
-        [f]: m,
-        [u]: _
+        [h]: g,
+        [d]: u
       };
     }
   };
-}, Xu = function(e) {
+}, Sc = function(e) {
   return e === void 0 && (e = {}), {
     name: "size",
     options: e,
     async fn(t) {
-      var n, o;
+      var o, i;
       const {
-        placement: r,
-        rects: a,
-        platform: s,
-        elements: i
+        placement: n,
+        rects: r,
+        platform: l,
+        elements: c
       } = t, {
-        apply: l = () => {
+        apply: s = () => {
         },
-        ...c
-      } = vt(e, t), d = await On(t, c), u = bt(r), f = fn(r), m = Pt(r) === "y", {
-        width: _,
-        height: y
-      } = a.floating;
-      let v, S;
-      u === "top" || u === "bottom" ? (v = u, S = f === (await (s.isRTL == null ? void 0 : s.isRTL(i.floating)) ? "start" : "end") ? "left" : "right") : (S = u, v = f === "end" ? "top" : "bottom");
-      const w = y - d.top - d.bottom, p = _ - d.left - d.right, h = It(y - d[v], w), T = It(_ - d[S], p), E = !t.middlewareData.shift;
-      let A = h, O = T;
-      if ((n = t.middlewareData.shift) != null && n.enabled.x && (O = p), (o = t.middlewareData.shift) != null && o.enabled.y && (A = w), E && !f) {
-        const V = $e(d.left, 0), U = $e(d.right, 0), $ = $e(d.top, 0), j = $e(d.bottom, 0);
-        m ? O = _ - 2 * (V !== 0 || U !== 0 ? V + U : $e(d.left, d.right)) : A = y - 2 * ($ !== 0 || j !== 0 ? $ + j : $e(d.top, d.bottom));
+        ...a
+      } = A2(e, t), f = await d0(t, a), d = B2(n), h = n0(n), g = O2(n) === "y", {
+        width: u,
+        height: w
+      } = r.floating;
+      let k, v;
+      d === "top" || d === "bottom" ? (k = d, v = h === (await (l.isRTL == null ? void 0 : l.isRTL(c.floating)) ? "start" : "end") ? "left" : "right") : (v = d, k = h === "end" ? "top" : "bottom");
+      const x = w - f.top - f.bottom, y = u - f.left - f.right, m = P2(w - f[k], x), b = P2(u - f[v], y), j = !t.middlewareData.shift;
+      let M = m, _ = b;
+      if ((o = t.middlewareData.shift) != null && o.enabled.x && (_ = y), (i = t.middlewareData.shift) != null && i.enabled.y && (M = x), j && !h) {
+        const R = n2(f.left, 0), L = n2(f.right, 0), F = n2(f.top, 0), Y = n2(f.bottom, 0);
+        g ? _ = u - 2 * (R !== 0 || L !== 0 ? R + L : n2(f.left, f.right)) : M = w - 2 * (F !== 0 || Y !== 0 ? F + Y : n2(f.top, f.bottom));
       }
-      await l({
+      await s({
         ...t,
-        availableWidth: O,
-        availableHeight: A
+        availableWidth: _,
+        availableHeight: M
       });
-      const L = await s.getDimensions(i.floating);
-      return _ !== L.width || y !== L.height ? {
+      const O = await l.getDimensions(c.floating);
+      return u !== O.width || w !== O.height ? {
         reset: {
           rects: !0
         }
@@ -8612,45 +5546,45 @@ const Yu = function(e) {
     }
   };
 };
-function eo() {
+function A0() {
   return typeof window < "u";
 }
-function Ht(e) {
-  return ar(e) ? (e.nodeName || "").toLowerCase() : "#document";
+function G2(e) {
+  return fe(e) ? (e.nodeName || "").toLowerCase() : "#document";
 }
-function We(e) {
+function l2(e) {
   var t;
   return (e == null || (t = e.ownerDocument) == null ? void 0 : t.defaultView) || window;
 }
-function ct(e) {
+function v2(e) {
   var t;
-  return (t = (ar(e) ? e.ownerDocument : e.document) || window.document) == null ? void 0 : t.documentElement;
+  return (t = (fe(e) ? e.ownerDocument : e.document) || window.document) == null ? void 0 : t.documentElement;
 }
-function ar(e) {
-  return eo() ? e instanceof Node || e instanceof We(e).Node : !1;
+function fe(e) {
+  return A0() ? e instanceof Node || e instanceof l2(e).Node : !1;
 }
-function et(e) {
-  return eo() ? e instanceof Element || e instanceof We(e).Element : !1;
+function u2(e) {
+  return A0() ? e instanceof Element || e instanceof l2(e).Element : !1;
 }
-function st(e) {
-  return eo() ? e instanceof HTMLElement || e instanceof We(e).HTMLElement : !1;
+function w2(e) {
+  return A0() ? e instanceof HTMLElement || e instanceof l2(e).HTMLElement : !1;
 }
-function oa(e) {
-  return !eo() || typeof ShadowRoot > "u" ? !1 : e instanceof ShadowRoot || e instanceof We(e).ShadowRoot;
+function Pe(e) {
+  return !A0() || typeof ShadowRoot > "u" ? !1 : e instanceof ShadowRoot || e instanceof l2(e).ShadowRoot;
 }
-function Cn(e) {
+function g0(e) {
   const {
     overflow: t,
-    overflowX: n,
-    overflowY: o,
-    display: r
-  } = tt(e);
-  return /auto|scroll|overlay|hidden|clip/.test(t + o + n) && !["inline", "contents"].includes(r);
+    overflowX: o,
+    overflowY: i,
+    display: n
+  } = p2(e);
+  return /auto|scroll|overlay|hidden|clip/.test(t + i + o) && !["inline", "contents"].includes(n);
 }
-function Zu(e) {
-  return ["table", "td", "th"].includes(Ht(e));
+function Cc(e) {
+  return ["table", "td", "th"].includes(G2(e));
 }
-function to(e) {
+function B0(e) {
   return [":popover-open", ":modal"].some((t) => {
     try {
       return e.matches(t);
@@ -8659,32 +5593,32 @@ function to(e) {
     }
   });
 }
-function sr(e) {
-  const t = ir(), n = et(e) ? tt(e) : e;
-  return ["transform", "translate", "scale", "rotate", "perspective"].some((o) => n[o] ? n[o] !== "none" : !1) || (n.containerType ? n.containerType !== "normal" : !1) || !t && (n.backdropFilter ? n.backdropFilter !== "none" : !1) || !t && (n.filter ? n.filter !== "none" : !1) || ["transform", "translate", "scale", "rotate", "perspective", "filter"].some((o) => (n.willChange || "").includes(o)) || ["paint", "layout", "strict", "content"].some((o) => (n.contain || "").includes(o));
+function ge(e) {
+  const t = he(), o = u2(e) ? p2(e) : e;
+  return ["transform", "translate", "scale", "rotate", "perspective"].some((i) => o[i] ? o[i] !== "none" : !1) || (o.containerType ? o.containerType !== "normal" : !1) || !t && (o.backdropFilter ? o.backdropFilter !== "none" : !1) || !t && (o.filter ? o.filter !== "none" : !1) || ["transform", "translate", "scale", "rotate", "perspective", "filter"].some((i) => (o.willChange || "").includes(i)) || ["paint", "layout", "strict", "content"].some((i) => (o.contain || "").includes(i));
 }
-function Ju(e) {
-  let t = Mt(e);
-  for (; st(t) && !ln(t); ) {
-    if (sr(t))
+function Ec(e) {
+  let t = L2(e);
+  for (; w2(t) && !t0(t); ) {
+    if (ge(t))
       return t;
-    if (to(t))
+    if (B0(t))
       return null;
-    t = Mt(t);
+    t = L2(t);
   }
   return null;
 }
-function ir() {
+function he() {
   return typeof CSS > "u" || !CSS.supports ? !1 : CSS.supports("-webkit-backdrop-filter", "none");
 }
-function ln(e) {
-  return ["html", "body", "#document"].includes(Ht(e));
+function t0(e) {
+  return ["html", "body", "#document"].includes(G2(e));
 }
-function tt(e) {
-  return We(e).getComputedStyle(e);
+function p2(e) {
+  return l2(e).getComputedStyle(e);
 }
-function no(e) {
-  return et(e) ? {
+function S0(e) {
+  return u2(e) ? {
     scrollLeft: e.scrollLeft,
     scrollTop: e.scrollTop
   } : {
@@ -8692,553 +5626,553 @@ function no(e) {
     scrollTop: e.scrollY
   };
 }
-function Mt(e) {
-  if (Ht(e) === "html")
+function L2(e) {
+  if (G2(e) === "html")
     return e;
   const t = (
     // Step into the shadow DOM of the parent of a slotted node.
     e.assignedSlot || // DOM Element detected.
     e.parentNode || // ShadowRoot detected.
-    oa(e) && e.host || // Fallback.
-    ct(e)
+    Pe(e) && e.host || // Fallback.
+    v2(e)
   );
-  return oa(t) ? t.host : t;
+  return Pe(t) ? t.host : t;
 }
-function Ys(e) {
-  const t = Mt(e);
-  return ln(t) ? e.ownerDocument ? e.ownerDocument.body : e.body : st(t) && Cn(t) ? t : Ys(t);
+function N3(e) {
+  const t = L2(e);
+  return t0(t) ? e.ownerDocument ? e.ownerDocument.body : e.body : w2(t) && g0(t) ? t : N3(t);
 }
-function An(e, t, n) {
-  var o;
-  t === void 0 && (t = []), n === void 0 && (n = !0);
-  const r = Ys(e), a = r === ((o = e.ownerDocument) == null ? void 0 : o.body), s = We(r);
-  if (a) {
-    const i = Do(s);
-    return t.concat(s, s.visualViewport || [], Cn(r) ? r : [], i && n ? An(i) : []);
+function f0(e, t, o) {
+  var i;
+  t === void 0 && (t = []), o === void 0 && (o = !0);
+  const n = N3(e), r = n === ((i = e.ownerDocument) == null ? void 0 : i.body), l = l2(n);
+  if (r) {
+    const c = q0(l);
+    return t.concat(l, l.visualViewport || [], g0(n) ? n : [], c && o ? f0(c) : []);
   }
-  return t.concat(r, An(r, [], n));
+  return t.concat(n, f0(n, [], o));
 }
-function Do(e) {
+function q0(e) {
   return e.parent && Object.getPrototypeOf(e.parent) ? e.frameElement : null;
 }
-function zs(e) {
-  const t = tt(e);
-  let n = parseFloat(t.width) || 0, o = parseFloat(t.height) || 0;
-  const r = st(e), a = r ? e.offsetWidth : n, s = r ? e.offsetHeight : o, i = Hn(n) !== a || Hn(o) !== s;
-  return i && (n = a, o = s), {
-    width: n,
-    height: o,
-    $: i
-  };
-}
-function lr(e) {
-  return et(e) ? e : e.contextElement;
-}
-function on(e) {
-  const t = lr(e);
-  if (!st(t))
-    return at(1);
-  const n = t.getBoundingClientRect(), {
+function D3(e) {
+  const t = p2(e);
+  let o = parseFloat(t.width) || 0, i = parseFloat(t.height) || 0;
+  const n = w2(e), r = n ? e.offsetWidth : o, l = n ? e.offsetHeight : i, c = b0(o) !== r || b0(i) !== l;
+  return c && (o = r, i = l), {
     width: o,
-    height: r,
-    $: a
-  } = zs(t);
-  let s = (a ? Hn(n.width) : n.width) / o, i = (a ? Hn(n.height) : n.height) / r;
-  return (!s || !Number.isFinite(s)) && (s = 1), (!i || !Number.isFinite(i)) && (i = 1), {
-    x: s,
-    y: i
+    height: i,
+    $: c
   };
 }
-const qu = /* @__PURE__ */ at(0);
-function js(e) {
-  const t = We(e);
-  return !ir() || !t.visualViewport ? qu : {
+function ue(e) {
+  return u2(e) ? e : e.contextElement;
+}
+function X2(e) {
+  const t = ue(e);
+  if (!w2(t))
+    return k2(1);
+  const o = t.getBoundingClientRect(), {
+    width: i,
+    height: n,
+    $: r
+  } = D3(t);
+  let l = (r ? b0(o.width) : o.width) / i, c = (r ? b0(o.height) : o.height) / n;
+  return (!l || !Number.isFinite(l)) && (l = 1), (!c || !Number.isFinite(c)) && (c = 1), {
+    x: l,
+    y: c
+  };
+}
+const Tc = /* @__PURE__ */ k2(0);
+function $3(e) {
+  const t = l2(e);
+  return !he() || !t.visualViewport ? Tc : {
     x: t.visualViewport.offsetLeft,
     y: t.visualViewport.offsetTop
   };
 }
-function Qu(e, t, n) {
-  return t === void 0 && (t = !1), !n || t && n !== We(e) ? !1 : t;
+function Pc(e, t, o) {
+  return t === void 0 && (t = !1), !o || t && o !== l2(e) ? !1 : t;
 }
-function Kt(e, t, n, o) {
-  t === void 0 && (t = !1), n === void 0 && (n = !1);
-  const r = e.getBoundingClientRect(), a = lr(e);
-  let s = at(1);
-  t && (o ? et(o) && (s = on(o)) : s = on(e));
-  const i = Qu(a, n, o) ? js(a) : at(0);
-  let l = (r.left + i.x) / s.x, c = (r.top + i.y) / s.y, d = r.width / s.x, u = r.height / s.y;
-  if (a) {
-    const f = We(a), m = o && et(o) ? We(o) : o;
-    let _ = f, y = Do(_);
-    for (; y && o && m !== _; ) {
-      const v = on(y), S = y.getBoundingClientRect(), w = tt(y), p = S.left + (y.clientLeft + parseFloat(w.paddingLeft)) * v.x, h = S.top + (y.clientTop + parseFloat(w.paddingTop)) * v.y;
-      l *= v.x, c *= v.y, d *= v.x, u *= v.y, l += p, c += h, _ = We(y), y = Do(_);
+function $2(e, t, o, i) {
+  t === void 0 && (t = !1), o === void 0 && (o = !1);
+  const n = e.getBoundingClientRect(), r = ue(e);
+  let l = k2(1);
+  t && (i ? u2(i) && (l = X2(i)) : l = X2(e));
+  const c = Pc(r, o, i) ? $3(r) : k2(0);
+  let s = (n.left + c.x) / l.x, a = (n.top + c.y) / l.y, f = n.width / l.x, d = n.height / l.y;
+  if (r) {
+    const h = l2(r), g = i && u2(i) ? l2(i) : i;
+    let u = h, w = q0(u);
+    for (; w && i && g !== u; ) {
+      const k = X2(w), v = w.getBoundingClientRect(), x = p2(w), y = v.left + (w.clientLeft + parseFloat(x.paddingLeft)) * k.x, m = v.top + (w.clientTop + parseFloat(x.paddingTop)) * k.y;
+      s *= k.x, a *= k.y, f *= k.x, d *= k.y, s += y, a += m, u = l2(w), w = q0(u);
     }
   }
-  return zn({
-    width: d,
-    height: u,
-    x: l,
-    y: c
+  return M0({
+    width: f,
+    height: d,
+    x: s,
+    y: a
   });
 }
-function cr(e, t) {
-  const n = no(e).scrollLeft;
-  return t ? t.left + n : Kt(ct(e)).left + n;
+function pe(e, t) {
+  const o = S0(e).scrollLeft;
+  return t ? t.left + o : $2(v2(e)).left + o;
 }
-function Xs(e, t, n) {
-  n === void 0 && (n = !1);
-  const o = e.getBoundingClientRect(), r = o.left + t.scrollLeft - (n ? 0 : (
+function G3(e, t, o) {
+  o === void 0 && (o = !1);
+  const i = e.getBoundingClientRect(), n = i.left + t.scrollLeft - (o ? 0 : (
     // RTL <body> scrollbar.
-    cr(e, o)
-  )), a = o.top + t.scrollTop;
+    pe(e, i)
+  )), r = i.top + t.scrollTop;
   return {
-    x: r,
+    x: n,
+    y: r
+  };
+}
+function Oc(e) {
+  let {
+    elements: t,
+    rect: o,
+    offsetParent: i,
+    strategy: n
+  } = e;
+  const r = n === "fixed", l = v2(i), c = t ? B0(t.floating) : !1;
+  if (i === l || c && r)
+    return o;
+  let s = {
+    scrollLeft: 0,
+    scrollTop: 0
+  }, a = k2(1);
+  const f = k2(0), d = w2(i);
+  if ((d || !d && !r) && ((G2(i) !== "body" || g0(l)) && (s = S0(i)), w2(i))) {
+    const g = $2(i);
+    a = X2(i), f.x = g.x + i.clientLeft, f.y = g.y + i.clientTop;
+  }
+  const h = l && !d && !r ? G3(l, s, !0) : k2(0);
+  return {
+    width: o.width * a.x,
+    height: o.height * a.y,
+    x: o.x * a.x - s.scrollLeft * a.x + f.x + h.x,
+    y: o.y * a.y - s.scrollTop * a.y + f.y + h.y
+  };
+}
+function Lc(e) {
+  return Array.from(e.getClientRects());
+}
+function Vc(e) {
+  const t = v2(e), o = S0(e), i = e.ownerDocument.body, n = n2(t.scrollWidth, t.clientWidth, i.scrollWidth, i.clientWidth), r = n2(t.scrollHeight, t.clientHeight, i.scrollHeight, i.clientHeight);
+  let l = -o.scrollLeft + pe(e);
+  const c = -o.scrollTop;
+  return p2(i).direction === "rtl" && (l += n2(t.clientWidth, i.clientWidth) - n), {
+    width: n,
+    height: r,
+    x: l,
+    y: c
+  };
+}
+function Ic(e, t) {
+  const o = l2(e), i = v2(e), n = o.visualViewport;
+  let r = i.clientWidth, l = i.clientHeight, c = 0, s = 0;
+  if (n) {
+    r = n.width, l = n.height;
+    const a = he();
+    (!a || a && t === "fixed") && (c = n.offsetLeft, s = n.offsetTop);
+  }
+  return {
+    width: r,
+    height: l,
+    x: c,
+    y: s
+  };
+}
+function Rc(e, t) {
+  const o = $2(e, !0, t === "fixed"), i = o.top + e.clientTop, n = o.left + e.clientLeft, r = w2(e) ? X2(e) : k2(1), l = e.clientWidth * r.x, c = e.clientHeight * r.y, s = n * r.x, a = i * r.y;
+  return {
+    width: l,
+    height: c,
+    x: s,
     y: a
   };
 }
-function ed(e) {
-  let {
-    elements: t,
-    rect: n,
-    offsetParent: o,
-    strategy: r
-  } = e;
-  const a = r === "fixed", s = ct(o), i = t ? to(t.floating) : !1;
-  if (o === s || i && a)
-    return n;
-  let l = {
-    scrollLeft: 0,
-    scrollTop: 0
-  }, c = at(1);
-  const d = at(0), u = st(o);
-  if ((u || !u && !a) && ((Ht(o) !== "body" || Cn(s)) && (l = no(o)), st(o))) {
-    const m = Kt(o);
-    c = on(o), d.x = m.x + o.clientLeft, d.y = m.y + o.clientTop;
-  }
-  const f = s && !u && !a ? Xs(s, l, !0) : at(0);
-  return {
-    width: n.width * c.x,
-    height: n.height * c.y,
-    x: n.x * c.x - l.scrollLeft * c.x + d.x + f.x,
-    y: n.y * c.y - l.scrollTop * c.y + d.y + f.y
-  };
-}
-function td(e) {
-  return Array.from(e.getClientRects());
-}
-function nd(e) {
-  const t = ct(e), n = no(e), o = e.ownerDocument.body, r = $e(t.scrollWidth, t.clientWidth, o.scrollWidth, o.clientWidth), a = $e(t.scrollHeight, t.clientHeight, o.scrollHeight, o.clientHeight);
-  let s = -n.scrollLeft + cr(e);
-  const i = -n.scrollTop;
-  return tt(o).direction === "rtl" && (s += $e(t.clientWidth, o.clientWidth) - r), {
-    width: r,
-    height: a,
-    x: s,
-    y: i
-  };
-}
-function od(e, t) {
-  const n = We(e), o = ct(e), r = n.visualViewport;
-  let a = o.clientWidth, s = o.clientHeight, i = 0, l = 0;
-  if (r) {
-    a = r.width, s = r.height;
-    const c = ir();
-    (!c || c && t === "fixed") && (i = r.offsetLeft, l = r.offsetTop);
-  }
-  return {
-    width: a,
-    height: s,
-    x: i,
-    y: l
-  };
-}
-function rd(e, t) {
-  const n = Kt(e, !0, t === "fixed"), o = n.top + e.clientTop, r = n.left + e.clientLeft, a = st(e) ? on(e) : at(1), s = e.clientWidth * a.x, i = e.clientHeight * a.y, l = r * a.x, c = o * a.y;
-  return {
-    width: s,
-    height: i,
-    x: l,
-    y: c
-  };
-}
-function ra(e, t, n) {
-  let o;
+function Oe(e, t, o) {
+  let i;
   if (t === "viewport")
-    o = od(e, n);
+    i = Ic(e, o);
   else if (t === "document")
-    o = nd(ct(e));
-  else if (et(t))
-    o = rd(t, n);
+    i = Vc(v2(e));
+  else if (u2(t))
+    i = Rc(t, o);
   else {
-    const r = js(e);
-    o = {
-      x: t.x - r.x,
-      y: t.y - r.y,
+    const n = $3(e);
+    i = {
+      x: t.x - n.x,
+      y: t.y - n.y,
       width: t.width,
       height: t.height
     };
   }
-  return zn(o);
+  return M0(i);
 }
-function Zs(e, t) {
-  const n = Mt(e);
-  return n === t || !et(n) || ln(n) ? !1 : tt(n).position === "fixed" || Zs(n, t);
+function z3(e, t) {
+  const o = L2(e);
+  return o === t || !u2(o) || t0(o) ? !1 : p2(o).position === "fixed" || z3(o, t);
 }
-function ad(e, t) {
-  const n = t.get(e);
-  if (n)
-    return n;
-  let o = An(e, [], !1).filter((i) => et(i) && Ht(i) !== "body"), r = null;
-  const a = tt(e).position === "fixed";
-  let s = a ? Mt(e) : e;
-  for (; et(s) && !ln(s); ) {
-    const i = tt(s), l = sr(s);
-    !l && i.position === "fixed" && (r = null), (a ? !l && !r : !l && i.position === "static" && !!r && ["absolute", "fixed"].includes(r.position) || Cn(s) && !l && Zs(e, s)) ? o = o.filter((d) => d !== s) : r = i, s = Mt(s);
+function Zc(e, t) {
+  const o = t.get(e);
+  if (o)
+    return o;
+  let i = f0(e, [], !1).filter((c) => u2(c) && G2(c) !== "body"), n = null;
+  const r = p2(e).position === "fixed";
+  let l = r ? L2(e) : e;
+  for (; u2(l) && !t0(l); ) {
+    const c = p2(l), s = ge(l);
+    !s && c.position === "fixed" && (n = null), (r ? !s && !n : !s && c.position === "static" && !!n && ["absolute", "fixed"].includes(n.position) || g0(l) && !s && z3(e, l)) ? i = i.filter((f) => f !== l) : n = c, l = L2(l);
   }
-  return t.set(e, o), o;
+  return t.set(e, i), i;
 }
-function sd(e) {
+function Nc(e) {
   let {
     element: t,
-    boundary: n,
-    rootBoundary: o,
-    strategy: r
+    boundary: o,
+    rootBoundary: i,
+    strategy: n
   } = e;
-  const s = [...n === "clippingAncestors" ? to(t) ? [] : ad(t, this._c) : [].concat(n), o], i = s[0], l = s.reduce((c, d) => {
-    const u = ra(t, d, r);
-    return c.top = $e(u.top, c.top), c.right = It(u.right, c.right), c.bottom = It(u.bottom, c.bottom), c.left = $e(u.left, c.left), c;
-  }, ra(t, i, r));
+  const l = [...o === "clippingAncestors" ? B0(t) ? [] : Zc(t, this._c) : [].concat(o), i], c = l[0], s = l.reduce((a, f) => {
+    const d = Oe(t, f, n);
+    return a.top = n2(d.top, a.top), a.right = P2(d.right, a.right), a.bottom = P2(d.bottom, a.bottom), a.left = n2(d.left, a.left), a;
+  }, Oe(t, c, n));
   return {
-    width: l.right - l.left,
-    height: l.bottom - l.top,
-    x: l.left,
-    y: l.top
+    width: s.right - s.left,
+    height: s.bottom - s.top,
+    x: s.left,
+    y: s.top
   };
 }
-function id(e) {
+function Dc(e) {
   const {
     width: t,
-    height: n
-  } = zs(e);
+    height: o
+  } = D3(e);
   return {
     width: t,
-    height: n
+    height: o
   };
 }
-function ld(e, t, n) {
-  const o = st(t), r = ct(t), a = n === "fixed", s = Kt(e, !0, a, t);
-  let i = {
+function $c(e, t, o) {
+  const i = w2(t), n = v2(t), r = o === "fixed", l = $2(e, !0, r, t);
+  let c = {
     scrollLeft: 0,
     scrollTop: 0
   };
-  const l = at(0);
-  if (o || !o && !a)
-    if ((Ht(t) !== "body" || Cn(r)) && (i = no(t)), o) {
-      const f = Kt(t, !0, a, t);
-      l.x = f.x + t.clientLeft, l.y = f.y + t.clientTop;
-    } else r && (l.x = cr(r));
-  const c = r && !o && !a ? Xs(r, i) : at(0), d = s.left + i.scrollLeft - l.x - c.x, u = s.top + i.scrollTop - l.y - c.y;
+  const s = k2(0);
+  if (i || !i && !r)
+    if ((G2(t) !== "body" || g0(n)) && (c = S0(t)), i) {
+      const h = $2(t, !0, r, t);
+      s.x = h.x + t.clientLeft, s.y = h.y + t.clientTop;
+    } else n && (s.x = pe(n));
+  const a = n && !i && !r ? G3(n, c) : k2(0), f = l.left + c.scrollLeft - s.x - a.x, d = l.top + c.scrollTop - s.y - a.y;
   return {
-    x: d,
-    y: u,
-    width: s.width,
-    height: s.height
+    x: f,
+    y: d,
+    width: l.width,
+    height: l.height
   };
 }
-function po(e) {
-  return tt(e).position === "static";
+function I0(e) {
+  return p2(e).position === "static";
 }
-function aa(e, t) {
-  if (!st(e) || tt(e).position === "fixed")
+function Le(e, t) {
+  if (!w2(e) || p2(e).position === "fixed")
     return null;
   if (t)
     return t(e);
-  let n = e.offsetParent;
-  return ct(e) === n && (n = n.ownerDocument.body), n;
+  let o = e.offsetParent;
+  return v2(e) === o && (o = o.ownerDocument.body), o;
 }
-function Js(e, t) {
-  const n = We(e);
-  if (to(e))
-    return n;
-  if (!st(e)) {
-    let r = Mt(e);
-    for (; r && !ln(r); ) {
-      if (et(r) && !po(r))
-        return r;
-      r = Mt(r);
+function F3(e, t) {
+  const o = l2(e);
+  if (B0(e))
+    return o;
+  if (!w2(e)) {
+    let n = L2(e);
+    for (; n && !t0(n); ) {
+      if (u2(n) && !I0(n))
+        return n;
+      n = L2(n);
     }
-    return n;
+    return o;
   }
-  let o = aa(e, t);
-  for (; o && Zu(o) && po(o); )
-    o = aa(o, t);
-  return o && ln(o) && po(o) && !sr(o) ? n : o || Ju(e) || n;
+  let i = Le(e, t);
+  for (; i && Cc(i) && I0(i); )
+    i = Le(i, t);
+  return i && t0(i) && I0(i) && !ge(i) ? o : i || Ec(e) || o;
 }
-const cd = async function(e) {
-  const t = this.getOffsetParent || Js, n = this.getDimensions, o = await n(e.floating);
+const Gc = async function(e) {
+  const t = this.getOffsetParent || F3, o = this.getDimensions, i = await o(e.floating);
   return {
-    reference: ld(e.reference, await t(e.floating), e.strategy),
+    reference: $c(e.reference, await t(e.floating), e.strategy),
     floating: {
       x: 0,
       y: 0,
-      width: o.width,
-      height: o.height
+      width: i.width,
+      height: i.height
     }
   };
 };
-function ud(e) {
-  return tt(e).direction === "rtl";
+function zc(e) {
+  return p2(e).direction === "rtl";
 }
-const dd = {
-  convertOffsetParentRelativeRectToViewportRelativeRect: ed,
-  getDocumentElement: ct,
-  getClippingRect: sd,
-  getOffsetParent: Js,
-  getElementRects: cd,
-  getClientRects: td,
-  getDimensions: id,
-  getScale: on,
-  isElement: et,
-  isRTL: ud
+const Fc = {
+  convertOffsetParentRelativeRectToViewportRelativeRect: Oc,
+  getDocumentElement: v2,
+  getClippingRect: Nc,
+  getOffsetParent: F3,
+  getElementRects: Gc,
+  getClientRects: Lc,
+  getDimensions: Dc,
+  getScale: X2,
+  isElement: u2,
+  isRTL: zc
 };
-function qs(e, t) {
+function H3(e, t) {
   return e.x === t.x && e.y === t.y && e.width === t.width && e.height === t.height;
 }
-function fd(e, t) {
-  let n = null, o;
-  const r = ct(e);
-  function a() {
-    var i;
-    clearTimeout(o), (i = n) == null || i.disconnect(), n = null;
+function Hc(e, t) {
+  let o = null, i;
+  const n = v2(e);
+  function r() {
+    var c;
+    clearTimeout(i), (c = o) == null || c.disconnect(), o = null;
   }
-  function s(i, l) {
-    i === void 0 && (i = !1), l === void 0 && (l = 1), a();
-    const c = e.getBoundingClientRect(), {
-      left: d,
-      top: u,
-      width: f,
-      height: m
-    } = c;
-    if (i || t(), !f || !m)
+  function l(c, s) {
+    c === void 0 && (c = !1), s === void 0 && (s = 1), r();
+    const a = e.getBoundingClientRect(), {
+      left: f,
+      top: d,
+      width: h,
+      height: g
+    } = a;
+    if (c || t(), !h || !g)
       return;
-    const _ = xn(u), y = xn(r.clientWidth - (d + f)), v = xn(r.clientHeight - (u + m)), S = xn(d), p = {
-      rootMargin: -_ + "px " + -y + "px " + -v + "px " + -S + "px",
-      threshold: $e(0, It(1, l)) || 1
+    const u = k0(d), w = k0(n.clientWidth - (f + h)), k = k0(n.clientHeight - (d + g)), v = k0(f), y = {
+      rootMargin: -u + "px " + -w + "px " + -k + "px " + -v + "px",
+      threshold: n2(0, P2(1, s)) || 1
     };
-    let h = !0;
-    function T(E) {
-      const A = E[0].intersectionRatio;
-      if (A !== l) {
-        if (!h)
-          return s();
-        A ? s(!1, A) : o = setTimeout(() => {
-          s(!1, 1e-7);
+    let m = !0;
+    function b(j) {
+      const M = j[0].intersectionRatio;
+      if (M !== s) {
+        if (!m)
+          return l();
+        M ? l(!1, M) : i = setTimeout(() => {
+          l(!1, 1e-7);
         }, 1e3);
       }
-      A === 1 && !qs(c, e.getBoundingClientRect()) && s(), h = !1;
+      M === 1 && !H3(a, e.getBoundingClientRect()) && l(), m = !1;
     }
     try {
-      n = new IntersectionObserver(T, {
-        ...p,
+      o = new IntersectionObserver(b, {
+        ...y,
         // Handle <iframe>s
-        root: r.ownerDocument
+        root: n.ownerDocument
       });
     } catch {
-      n = new IntersectionObserver(T, p);
+      o = new IntersectionObserver(b, y);
     }
-    n.observe(e);
+    o.observe(e);
   }
-  return s(!0), a;
+  return l(!0), r;
 }
-function pd(e, t, n, o) {
-  o === void 0 && (o = {});
+function Kc(e, t, o, i) {
+  i === void 0 && (i = {});
   const {
-    ancestorScroll: r = !0,
-    ancestorResize: a = !0,
-    elementResize: s = typeof ResizeObserver == "function",
-    layoutShift: i = typeof IntersectionObserver == "function",
-    animationFrame: l = !1
-  } = o, c = lr(e), d = r || a ? [...c ? An(c) : [], ...An(t)] : [];
-  d.forEach((S) => {
-    r && S.addEventListener("scroll", n, {
+    ancestorScroll: n = !0,
+    ancestorResize: r = !0,
+    elementResize: l = typeof ResizeObserver == "function",
+    layoutShift: c = typeof IntersectionObserver == "function",
+    animationFrame: s = !1
+  } = i, a = ue(e), f = n || r ? [...a ? f0(a) : [], ...f0(t)] : [];
+  f.forEach((v) => {
+    n && v.addEventListener("scroll", o, {
       passive: !0
-    }), a && S.addEventListener("resize", n);
+    }), r && v.addEventListener("resize", o);
   });
-  const u = c && i ? fd(c, n) : null;
-  let f = -1, m = null;
-  s && (m = new ResizeObserver((S) => {
-    let [w] = S;
-    w && w.target === c && m && (m.unobserve(t), cancelAnimationFrame(f), f = requestAnimationFrame(() => {
-      var p;
-      (p = m) == null || p.observe(t);
-    })), n();
-  }), c && !l && m.observe(c), m.observe(t));
-  let _, y = l ? Kt(e) : null;
-  l && v();
-  function v() {
-    const S = Kt(e);
-    y && !qs(y, S) && n(), y = S, _ = requestAnimationFrame(v);
+  const d = a && c ? Hc(a, o) : null;
+  let h = -1, g = null;
+  l && (g = new ResizeObserver((v) => {
+    let [x] = v;
+    x && x.target === a && g && (g.unobserve(t), cancelAnimationFrame(h), h = requestAnimationFrame(() => {
+      var y;
+      (y = g) == null || y.observe(t);
+    })), o();
+  }), a && !s && g.observe(a), g.observe(t));
+  let u, w = s ? $2(e) : null;
+  s && k();
+  function k() {
+    const v = $2(e);
+    w && !H3(w, v) && o(), w = v, u = requestAnimationFrame(k);
   }
-  return n(), () => {
-    var S;
-    d.forEach((w) => {
-      r && w.removeEventListener("scroll", n), a && w.removeEventListener("resize", n);
-    }), u == null || u(), (S = m) == null || S.disconnect(), m = null, l && cancelAnimationFrame(_);
+  return o(), () => {
+    var v;
+    f.forEach((x) => {
+      n && x.removeEventListener("scroll", o), r && x.removeEventListener("resize", o);
+    }), d == null || d(), (v = g) == null || v.disconnect(), g = null, s && cancelAnimationFrame(u);
   };
 }
-const md = Yu, _d = zu, sa = Wu, hd = Xu, gd = Ku, yd = Gu, vd = ju, bd = (e, t, n) => {
-  const o = /* @__PURE__ */ new Map(), r = {
-    platform: dd,
-    ...n
-  }, a = {
-    ...r.platform,
-    _c: o
+const Wc = Mc, Uc = Ac, Ve = _c, Yc = Sc, qc = bc, Jc = mc, Qc = Bc, Xc = (e, t, o) => {
+  const i = /* @__PURE__ */ new Map(), n = {
+    platform: Fc,
+    ...o
+  }, r = {
+    ...n.platform,
+    _c: i
   };
-  return Uu(e, t, {
-    ...r,
-    platform: a
+  return vc(e, t, {
+    ...n,
+    platform: r
   });
 };
-function Ed(e) {
+function es(e) {
   return e != null && typeof e == "object" && "$el" in e;
 }
-function Fo(e) {
-  if (Ed(e)) {
+function J0(e) {
+  if (es(e)) {
     const t = e.$el;
-    return ar(t) && Ht(t) === "#comment" ? null : t;
+    return fe(t) && G2(t) === "#comment" ? null : t;
   }
   return e;
 }
-function tn(e) {
-  return typeof e == "function" ? e() : N(e);
+function J2(e) {
+  return typeof e == "function" ? e() : p(e);
 }
-function Td(e) {
+function ts(e) {
   return {
     name: "arrow",
     options: e,
     fn(t) {
-      const n = Fo(tn(e.element));
-      return n == null ? {} : yd({
-        element: n,
+      const o = J0(J2(e.element));
+      return o == null ? {} : Jc({
+        element: o,
         padding: e.padding
       }).fn(t);
     }
   };
 }
-function Qs(e) {
+function K3(e) {
   return typeof window > "u" ? 1 : (e.ownerDocument.defaultView || window).devicePixelRatio || 1;
 }
-function ia(e, t) {
-  const n = Qs(e);
-  return Math.round(t * n) / n;
+function Ie(e, t) {
+  const o = K3(e);
+  return Math.round(t * o) / o;
 }
-function wd(e, t, n) {
-  n === void 0 && (n = {});
-  const o = n.whileElementsMounted, r = k(() => {
-    var A;
-    return (A = tn(n.open)) != null ? A : !0;
-  }), a = k(() => tn(n.middleware)), s = k(() => {
-    var A;
-    return (A = tn(n.placement)) != null ? A : "bottom";
-  }), i = k(() => {
-    var A;
-    return (A = tn(n.strategy)) != null ? A : "absolute";
-  }), l = k(() => {
-    var A;
-    return (A = tn(n.transform)) != null ? A : !0;
-  }), c = k(() => Fo(e.value)), d = k(() => Fo(t.value)), u = R(0), f = R(0), m = R(i.value), _ = R(s.value), y = Nn({}), v = R(!1), S = k(() => {
-    const A = {
-      position: m.value,
+function os(e, t, o) {
+  o === void 0 && (o = {});
+  const i = o.whileElementsMounted, n = S(() => {
+    var M;
+    return (M = J2(o.open)) != null ? M : !0;
+  }), r = S(() => J2(o.middleware)), l = S(() => {
+    var M;
+    return (M = J2(o.placement)) != null ? M : "bottom";
+  }), c = S(() => {
+    var M;
+    return (M = J2(o.strategy)) != null ? M : "absolute";
+  }), s = S(() => {
+    var M;
+    return (M = J2(o.transform)) != null ? M : !0;
+  }), a = S(() => J0(e.value)), f = S(() => J0(t.value)), d = C(0), h = C(0), g = C(c.value), u = C(l.value), w = ie({}), k = C(!1), v = S(() => {
+    const M = {
+      position: g.value,
       left: "0",
       top: "0"
     };
-    if (!d.value)
-      return A;
-    const O = ia(d.value, u.value), L = ia(d.value, f.value);
-    return l.value ? {
-      ...A,
-      transform: "translate(" + O + "px, " + L + "px)",
-      ...Qs(d.value) >= 1.5 && {
+    if (!f.value)
+      return M;
+    const _ = Ie(f.value, d.value), O = Ie(f.value, h.value);
+    return s.value ? {
+      ...M,
+      transform: "translate(" + _ + "px, " + O + "px)",
+      ...K3(f.value) >= 1.5 && {
         willChange: "transform"
       }
     } : {
-      position: m.value,
-      left: O + "px",
-      top: L + "px"
+      position: g.value,
+      left: _ + "px",
+      top: O + "px"
     };
   });
-  let w;
-  function p() {
-    if (c.value == null || d.value == null)
+  let x;
+  function y() {
+    if (a.value == null || f.value == null)
       return;
-    const A = r.value;
-    bd(c.value, d.value, {
-      middleware: a.value,
-      placement: s.value,
-      strategy: i.value
-    }).then((O) => {
-      u.value = O.x, f.value = O.y, m.value = O.strategy, _.value = O.placement, y.value = O.middlewareData, v.value = A !== !1;
+    const M = n.value;
+    Xc(a.value, f.value, {
+      middleware: r.value,
+      placement: l.value,
+      strategy: c.value
+    }).then((_) => {
+      d.value = _.x, h.value = _.y, g.value = _.strategy, u.value = _.placement, w.value = _.middlewareData, k.value = M !== !1;
     });
   }
-  function h() {
-    typeof w == "function" && (w(), w = void 0);
+  function m() {
+    typeof x == "function" && (x(), x = void 0);
   }
-  function T() {
-    if (h(), o === void 0) {
-      p();
+  function b() {
+    if (m(), i === void 0) {
+      y();
       return;
     }
-    if (c.value != null && d.value != null) {
-      w = o(c.value, d.value, p);
+    if (a.value != null && f.value != null) {
+      x = i(a.value, f.value, y);
       return;
     }
   }
-  function E() {
-    r.value || (v.value = !1);
+  function j() {
+    n.value || (k.value = !1);
   }
-  return he([a, s, i, r], p, {
+  return W([r, l, c, n], y, {
     flush: "sync"
-  }), he([c, d], T, {
+  }), W([a, f], b, {
     flush: "sync"
-  }), he(r, E, {
+  }), W(n, j, {
     flush: "sync"
-  }), wa() && Sa(h), {
-    x: Jt(u),
-    y: Jt(f),
-    strategy: Jt(m),
-    placement: Jt(_),
-    middlewareData: Jt(y),
-    isPositioned: Jt(v),
-    floatingStyles: S,
-    update: p
+  }), Xe() && e3(m), {
+    x: U2(d),
+    y: U2(h),
+    strategy: U2(g),
+    placement: U2(u),
+    middlewareData: U2(w),
+    isPositioned: U2(k),
+    floatingStyles: v,
+    update: y
   };
 }
-function ur(e) {
-  return e ? e.flatMap((t) => t.type === Nt ? ur(t.children) : [t]) : [];
+function ke(e) {
+  return e ? e.flatMap((t) => t.type === Q2 ? ke(t.children) : [t]) : [];
 }
-const Bo = Y({
+const Q0 = V({
   name: "PrimitiveSlot",
   inheritAttrs: !1,
-  setup(e, { attrs: t, slots: n }) {
+  setup(e, { attrs: t, slots: o }) {
     return () => {
-      var l, c;
-      if (!n.default)
+      var s, a;
+      if (!o.default)
         return null;
-      const o = ur(n.default()), r = o.findIndex((d) => d.type !== bi);
-      if (r === -1)
-        return o;
-      const a = o[r];
-      (l = a.props) == null || delete l.ref;
-      const s = a.props ? be(t, a.props) : t;
-      t.class && ((c = a.props) != null && c.class) && delete a.props.class;
-      const i = Ei(a, s);
-      for (const d in s)
-        d.startsWith("on") && (i.props || (i.props = {}), i.props[d] = s[d]);
-      return o.length === 1 ? i : (o[r] = i, o);
+      const i = ke(o.default()), n = i.findIndex((f) => f.type !== ft);
+      if (n === -1)
+        return i;
+      const r = i[n];
+      (s = r.props) == null || delete s.ref;
+      const l = r.props ? U(t, r.props) : t;
+      t.class && ((a = r.props) != null && a.class) && delete r.props.class;
+      const c = gt(r, l);
+      for (const f in l)
+        f.startsWith("on") && (c.props || (c.props = {}), c.props[f] = l[f]);
+      return i.length === 1 ? c : (i[n] = c, i);
     };
   }
-}), Sd = ["area", "img", "input"], Ie = Y({
+}), is = ["area", "img", "input"], e2 = V({
   name: "Primitive",
   inheritAttrs: !1,
   props: {
@@ -9251,11 +6185,11 @@ const Bo = Y({
       default: "div"
     }
   },
-  setup(e, { attrs: t, slots: n }) {
-    const o = e.asChild ? "template" : e.as;
-    return typeof o == "string" && Sd.includes(o) ? () => Ze(o, t) : o !== "template" ? () => Ze(e.as, t, { default: n.default }) : () => Ze(Bo, t, { default: n.default });
+  setup(e, { attrs: t, slots: o }) {
+    const i = e.asChild ? "template" : e.as;
+    return typeof i == "string" && is.includes(i) ? () => j2(i, t) : i !== "template" ? () => j2(e.as, t, { default: o.default }) : () => j2(Q0, t, { default: o.default });
   }
-}), Od = /* @__PURE__ */ Y({
+}), ns = /* @__PURE__ */ V({
   __name: "VisuallyHidden",
   props: {
     feature: { default: "focusable" },
@@ -9263,7 +6197,7 @@ const Bo = Y({
     as: { default: "span" }
   },
   setup(e) {
-    return (t, n) => (H(), ne(N(Ie), {
+    return (t, o) => (P(), N(p(e2), {
       as: t.as,
       "as-child": t.asChild,
       "aria-hidden": t.feature === "focusable" ? "true" : void 0,
@@ -9284,397 +6218,397 @@ const Bo = Y({
         wordWrap: "normal"
       }
     }, {
-      default: W(() => [
-        q(t.$slots, "default")
+      default: T(() => [
+        Z(t.$slots, "default")
       ]),
       _: 3
     }, 8, ["as", "as-child", "aria-hidden", "data-hidden", "tabindex"]));
   }
 });
-function Ad(e, t) {
-  var n;
-  const o = Nn();
-  return Fe(() => {
-    o.value = e();
+function rs(e, t) {
+  var o;
+  const i = ie();
+  return t2(() => {
+    i.value = e();
   }, {
     ...t,
-    flush: (n = void 0) != null ? n : "sync"
-  }), wi(o);
+    flush: (o = void 0) != null ? o : "sync"
+  }), ut(i);
 }
-function oo(e) {
-  return wa() ? (Sa(e), !0) : !1;
+function C0(e) {
+  return Xe() ? (e3(e), !0) : !1;
 }
-function Nd(e) {
-  let t = !1, n;
-  const o = Oa(!0);
-  return (...r) => (t || (n = o.run(() => e(...r)), t = !0), n);
+function ls(e) {
+  let t = !1, o;
+  const i = t3(!0);
+  return (...n) => (t || (o = i.run(() => e(...n)), t = !0), o);
 }
-function Cd(e) {
-  let t = 0, n, o;
-  const r = () => {
-    t -= 1, o && t <= 0 && (o.stop(), n = void 0, o = void 0);
+function cs(e) {
+  let t = 0, o, i;
+  const n = () => {
+    t -= 1, i && t <= 0 && (i.stop(), o = void 0, i = void 0);
   };
-  return (...a) => (t += 1, o || (o = Oa(!0), n = o.run(() => e(...a))), oo(r), n);
+  return (...r) => (t += 1, i || (i = t3(!0), o = i.run(() => e(...r))), C0(n), o);
 }
-const Rt = typeof window < "u" && typeof document < "u";
+const I2 = typeof window < "u" && typeof document < "u";
 typeof WorkerGlobalScope < "u" && globalThis instanceof WorkerGlobalScope;
-const Ld = (e) => typeof e < "u", Id = Object.prototype.toString, Pd = (e) => Id.call(e) === "[object Object]", la = /* @__PURE__ */ Md();
-function Md() {
+const ss = (e) => typeof e < "u", as = Object.prototype.toString, ds = (e) => as.call(e) === "[object Object]", Re = /* @__PURE__ */ fs();
+function fs() {
   var e, t;
-  return Rt && ((e = window == null ? void 0 : window.navigator) == null ? void 0 : e.userAgent) && (/iP(?:ad|hone|od)/.test(window.navigator.userAgent) || ((t = window == null ? void 0 : window.navigator) == null ? void 0 : t.maxTouchPoints) > 2 && /iPad|Macintosh/.test(window == null ? void 0 : window.navigator.userAgent));
+  return I2 && ((e = window == null ? void 0 : window.navigator) == null ? void 0 : e.userAgent) && (/iP(?:ad|hone|od)/.test(window.navigator.userAgent) || ((t = window == null ? void 0 : window.navigator) == null ? void 0 : t.maxTouchPoints) > 2 && /iPad|Macintosh/.test(window == null ? void 0 : window.navigator.userAgent));
 }
-function kd(e) {
-  return nt();
+function gs(e) {
+  return V2();
 }
-function mo(e) {
+function R0(e) {
   return Array.isArray(e) ? e : [e];
 }
-function xd(e, t = 1e4) {
-  return Ti((n, o) => {
-    let r = Je(e), a;
-    const s = () => setTimeout(() => {
-      r = Je(e), o();
-    }, Je(t));
-    return oo(() => {
-      clearTimeout(a);
+function hs(e, t = 1e4) {
+  return ht((o, i) => {
+    let n = g2(e), r;
+    const l = () => setTimeout(() => {
+      n = g2(e), i();
+    }, g2(t));
+    return C0(() => {
+      clearTimeout(r);
     }), {
       get() {
-        return n(), r;
+        return o(), n;
       },
-      set(i) {
-        r = i, o(), clearTimeout(a), a = s();
+      set(c) {
+        n = c, i(), clearTimeout(r), r = l();
       }
     };
   });
 }
-const Rd = Je;
-function Dd(e, t) {
-  kd() && Ho(e, t);
+const us = g2;
+function ps(e, t) {
+  gs() && ne(e, t);
 }
-function Fd(e, t, n) {
-  return he(
+function ks(e, t, o) {
+  return W(
     e,
     t,
     {
-      ...n,
+      ...o,
       immediate: !0
     }
   );
 }
-const ro = Rt ? window : void 0;
-function it(e) {
+const E0 = I2 ? window : void 0;
+function y2(e) {
   var t;
-  const n = Je(e);
-  return (t = n == null ? void 0 : n.$el) != null ? t : n;
+  const o = g2(e);
+  return (t = o == null ? void 0 : o.$el) != null ? t : o;
 }
-function ei(...e) {
-  const t = [], n = () => {
-    t.forEach((i) => i()), t.length = 0;
-  }, o = (i, l, c, d) => (i.addEventListener(l, c, d), () => i.removeEventListener(l, c, d)), r = k(() => {
-    const i = mo(Je(e[0])).filter((l) => l != null);
-    return i.every((l) => typeof l != "string") ? i : void 0;
-  }), a = Fd(
+function W3(...e) {
+  const t = [], o = () => {
+    t.forEach((c) => c()), t.length = 0;
+  }, i = (c, s, a, f) => (c.addEventListener(s, a, f), () => c.removeEventListener(s, a, f)), n = S(() => {
+    const c = R0(g2(e[0])).filter((s) => s != null);
+    return c.every((s) => typeof s != "string") ? c : void 0;
+  }), r = ks(
     () => {
-      var i, l;
+      var c, s;
       return [
-        (l = (i = r.value) == null ? void 0 : i.map((c) => it(c))) != null ? l : [ro].filter((c) => c != null),
-        mo(Je(r.value ? e[1] : e[0])),
-        mo(N(r.value ? e[2] : e[1])),
+        (s = (c = n.value) == null ? void 0 : c.map((a) => y2(a))) != null ? s : [E0].filter((a) => a != null),
+        R0(g2(n.value ? e[1] : e[0])),
+        R0(p(n.value ? e[2] : e[1])),
         // @ts-expect-error - TypeScript gets the correct types, but somehow still complains
-        Je(r.value ? e[3] : e[2])
+        g2(n.value ? e[3] : e[2])
       ];
     },
-    ([i, l, c, d]) => {
-      if (n(), !(i != null && i.length) || !(l != null && l.length) || !(c != null && c.length))
+    ([c, s, a, f]) => {
+      if (o(), !(c != null && c.length) || !(s != null && s.length) || !(a != null && a.length))
         return;
-      const u = Pd(d) ? { ...d } : d;
+      const d = ds(f) ? { ...f } : f;
       t.push(
-        ...i.flatMap(
-          (f) => l.flatMap(
-            (m) => c.map((_) => o(f, m, _, u))
+        ...c.flatMap(
+          (h) => s.flatMap(
+            (g) => a.map((u) => i(h, g, u, d))
           )
         )
       );
     },
     { flush: "post" }
-  ), s = () => {
-    a(), n();
+  ), l = () => {
+    r(), o();
   };
-  return oo(n), s;
+  return C0(o), l;
 }
-function ti() {
-  const e = Nn(!1), t = nt();
-  return t && lt(() => {
+function U3() {
+  const e = ie(!1), t = V2();
+  return t && x2(() => {
     e.value = !0;
   }, t), e;
 }
-function Bd(e) {
-  const t = ti();
-  return k(() => (t.value, !!e()));
+function ws(e) {
+  const t = U3();
+  return S(() => (t.value, !!e()));
 }
-function Vd(e) {
+function ys(e) {
   return typeof e == "function" ? e : typeof e == "string" ? (t) => t.key === e : Array.isArray(e) ? (t) => e.includes(t.key) : () => !0;
 }
-function $d(...e) {
-  let t, n, o = {};
-  e.length === 3 ? (t = e[0], n = e[1], o = e[2]) : e.length === 2 ? typeof e[1] == "object" ? (t = !0, n = e[0], o = e[1]) : (t = e[0], n = e[1]) : (t = !0, n = e[0]);
+function xs(...e) {
+  let t, o, i = {};
+  e.length === 3 ? (t = e[0], o = e[1], i = e[2]) : e.length === 2 ? typeof e[1] == "object" ? (t = !0, o = e[0], i = e[1]) : (t = e[0], o = e[1]) : (t = !0, o = e[0]);
   const {
-    target: r = ro,
-    eventName: a = "keydown",
-    passive: s = !1,
-    dedupe: i = !1
-  } = o, l = Vd(t);
-  return ei(r, a, (d) => {
-    d.repeat && Je(i) || l(d) && n(d);
-  }, s);
+    target: n = E0,
+    eventName: r = "keydown",
+    passive: l = !1,
+    dedupe: c = !1
+  } = i, s = ys(t);
+  return W3(n, r, (f) => {
+    f.repeat && g2(c) || s(f) && o(f);
+  }, l);
 }
-function Ud(e) {
+function vs(e) {
   return JSON.parse(JSON.stringify(e));
 }
-function Gd(e, t, n = {}) {
-  const { window: o = ro, ...r } = n;
-  let a;
-  const s = Bd(() => o && "ResizeObserver" in o), i = () => {
-    a && (a.disconnect(), a = void 0);
-  }, l = k(() => {
-    const u = Je(e);
-    return Array.isArray(u) ? u.map((f) => it(f)) : [it(u)];
-  }), c = he(
-    l,
-    (u) => {
-      if (i(), s.value && o) {
-        a = new ResizeObserver(t);
-        for (const f of u)
-          f && a.observe(f, r);
+function ms(e, t, o = {}) {
+  const { window: i = E0, ...n } = o;
+  let r;
+  const l = ws(() => i && "ResizeObserver" in i), c = () => {
+    r && (r.disconnect(), r = void 0);
+  }, s = S(() => {
+    const d = g2(e);
+    return Array.isArray(d) ? d.map((h) => y2(h)) : [y2(d)];
+  }), a = W(
+    s,
+    (d) => {
+      if (c(), l.value && i) {
+        r = new ResizeObserver(t);
+        for (const h of d)
+          h && r.observe(h, n);
       }
     },
     { immediate: !0, flush: "post" }
-  ), d = () => {
-    i(), c();
+  ), f = () => {
+    c(), a();
   };
-  return oo(d), {
-    isSupported: s,
-    stop: d
+  return C0(f), {
+    isSupported: l,
+    stop: f
   };
 }
-function ca(e, t, n, o = {}) {
-  var r, a, s;
+function Ze(e, t, o, i = {}) {
+  var n, r, l;
   const {
-    clone: i = !1,
-    passive: l = !1,
-    eventName: c,
-    deep: d = !1,
-    defaultValue: u,
-    shouldEmit: f
-  } = o, m = nt(), _ = n || (m == null ? void 0 : m.emit) || ((r = m == null ? void 0 : m.$emit) == null ? void 0 : r.bind(m)) || ((s = (a = m == null ? void 0 : m.proxy) == null ? void 0 : a.$emit) == null ? void 0 : s.bind(m == null ? void 0 : m.proxy));
-  let y = c;
-  t || (t = "modelValue"), y = y || `update:${t.toString()}`;
-  const v = (p) => i ? typeof i == "function" ? i(p) : Ud(p) : p, S = () => Ld(e[t]) ? v(e[t]) : u, w = (p) => {
-    f ? f(p) && _(y, p) : _(y, p);
+    clone: c = !1,
+    passive: s = !1,
+    eventName: a,
+    deep: f = !1,
+    defaultValue: d,
+    shouldEmit: h
+  } = i, g = V2(), u = o || (g == null ? void 0 : g.emit) || ((n = g == null ? void 0 : g.$emit) == null ? void 0 : n.bind(g)) || ((l = (r = g == null ? void 0 : g.proxy) == null ? void 0 : r.$emit) == null ? void 0 : l.bind(g == null ? void 0 : g.proxy));
+  let w = a;
+  t || (t = "modelValue"), w = w || `update:${t.toString()}`;
+  const k = (y) => c ? typeof c == "function" ? c(y) : vs(y) : y, v = () => ss(e[t]) ? k(e[t]) : d, x = (y) => {
+    h ? h(y) && u(w, y) : u(w, y);
   };
-  if (l) {
-    const p = S(), h = R(p);
-    let T = !1;
-    return he(
+  if (s) {
+    const y = v(), m = C(y);
+    let b = !1;
+    return W(
       () => e[t],
-      (E) => {
-        T || (T = !0, h.value = v(E), Ue(() => T = !1));
+      (j) => {
+        b || (b = !0, m.value = k(j), r2(() => b = !1));
       }
-    ), he(
-      h,
-      (E) => {
-        !T && (E !== e[t] || d) && w(E);
+    ), W(
+      m,
+      (j) => {
+        !b && (j !== e[t] || f) && x(j);
       },
-      { deep: d }
-    ), h;
+      { deep: f }
+    ), m;
   } else
-    return k({
+    return S({
       get() {
-        return S();
+        return v();
       },
-      set(p) {
-        w(p);
+      set(y) {
+        x(y);
       }
     });
 }
-function Yt(e, t) {
-  const n = typeof e == "string" ? `${e}Context` : t, o = Symbol(n);
-  return [(s) => {
-    const i = Wo(o, s);
-    if (i || i === null)
-      return i;
+function z2(e, t) {
+  const o = typeof e == "string" ? `${e}Context` : t, i = Symbol(o);
+  return [(l) => {
+    const c = o3(i, l);
+    if (c || c === null)
+      return c;
     throw new Error(
-      `Injection \`${o.toString()}\` not found. Component must be used within ${Array.isArray(e) ? `one of the following components: ${e.join(
+      `Injection \`${i.toString()}\` not found. Component must be used within ${Array.isArray(e) ? `one of the following components: ${e.join(
         ", "
       )}` : `\`${e}\``}`
     );
-  }, (s) => (Aa(o, s), s)];
+  }, (l) => (i3(i, l), l)];
 }
-function ua(e) {
-  return typeof e == "string" ? `'${e}'` : new Wd().serialize(e);
+function Ne(e) {
+  return typeof e == "string" ? `'${e}'` : new _s().serialize(e);
 }
-const Wd = /* @__PURE__ */ function() {
+const _s = /* @__PURE__ */ function() {
   var t;
   class e {
     constructor() {
-      gr(this, t, /* @__PURE__ */ new Map());
+      _e(this, t, /* @__PURE__ */ new Map());
     }
-    compare(o, r) {
-      const a = typeof o, s = typeof r;
-      return a === "string" && s === "string" ? o.localeCompare(r) : a === "number" && s === "number" ? o - r : String.prototype.localeCompare.call(this.serialize(o, !0), this.serialize(r, !0));
+    compare(i, n) {
+      const r = typeof i, l = typeof n;
+      return r === "string" && l === "string" ? i.localeCompare(n) : r === "number" && l === "number" ? i - n : String.prototype.localeCompare.call(this.serialize(i, !0), this.serialize(n, !0));
     }
-    serialize(o, r) {
-      if (o === null) return "null";
-      switch (typeof o) {
+    serialize(i, n) {
+      if (i === null) return "null";
+      switch (typeof i) {
         case "string":
-          return r ? o : `'${o}'`;
+          return n ? i : `'${i}'`;
         case "bigint":
-          return `${o}n`;
+          return `${i}n`;
         case "object":
-          return this.$object(o);
+          return this.$object(i);
         case "function":
-          return this.$function(o);
+          return this.$function(i);
       }
-      return String(o);
+      return String(i);
     }
-    serializeObject(o) {
-      const r = Object.prototype.toString.call(o);
-      if (r !== "[object Object]") return this.serializeBuiltInType(r.length < 10 ? `unknown:${r}` : r.slice(8, -1), o);
-      const a = o.constructor, s = a === Object || a === void 0 ? "" : a.name;
-      if (s !== "" && globalThis[s] === a) return this.serializeBuiltInType(s, o);
-      if (typeof o.toJSON == "function") {
-        const i = o.toJSON();
-        return s + (i !== null && typeof i == "object" ? this.$object(i) : `(${this.serialize(i)})`);
+    serializeObject(i) {
+      const n = Object.prototype.toString.call(i);
+      if (n !== "[object Object]") return this.serializeBuiltInType(n.length < 10 ? `unknown:${n}` : n.slice(8, -1), i);
+      const r = i.constructor, l = r === Object || r === void 0 ? "" : r.name;
+      if (l !== "" && globalThis[l] === r) return this.serializeBuiltInType(l, i);
+      if (typeof i.toJSON == "function") {
+        const c = i.toJSON();
+        return l + (c !== null && typeof c == "object" ? this.$object(c) : `(${this.serialize(c)})`);
       }
-      return this.serializeObjectEntries(s, Object.entries(o));
+      return this.serializeObjectEntries(l, Object.entries(i));
     }
-    serializeBuiltInType(o, r) {
-      const a = this["$" + o];
-      if (a) return a.call(this, r);
-      if (typeof (r == null ? void 0 : r.entries) == "function") return this.serializeObjectEntries(o, r.entries());
-      throw new Error(`Cannot serialize ${o}`);
+    serializeBuiltInType(i, n) {
+      const r = this["$" + i];
+      if (r) return r.call(this, n);
+      if (typeof (n == null ? void 0 : n.entries) == "function") return this.serializeObjectEntries(i, n.entries());
+      throw new Error(`Cannot serialize ${i}`);
     }
-    serializeObjectEntries(o, r) {
-      const a = Array.from(r).sort((i, l) => this.compare(i[0], l[0]));
-      let s = `${o}{`;
-      for (let i = 0; i < a.length; i++) {
-        const [l, c] = a[i];
-        s += `${this.serialize(l, !0)}:${this.serialize(c)}`, i < a.length - 1 && (s += ",");
+    serializeObjectEntries(i, n) {
+      const r = Array.from(n).sort((c, s) => this.compare(c[0], s[0]));
+      let l = `${i}{`;
+      for (let c = 0; c < r.length; c++) {
+        const [s, a] = r[c];
+        l += `${this.serialize(s, !0)}:${this.serialize(a)}`, c < r.length - 1 && (l += ",");
       }
-      return s + "}";
+      return l + "}";
     }
-    $object(o) {
-      let r = hn(this, t).get(o);
-      return r === void 0 && (hn(this, t).set(o, `#${hn(this, t).size}`), r = this.serializeObject(o), hn(this, t).set(o, r)), r;
+    $object(i) {
+      let n = l0(this, t).get(i);
+      return n === void 0 && (l0(this, t).set(i, `#${l0(this, t).size}`), n = this.serializeObject(i), l0(this, t).set(i, n)), n;
     }
-    $function(o) {
-      const r = Function.prototype.toString.call(o);
-      return r.slice(-15) === "[native code] }" ? `${o.name || ""}()[native]` : `${o.name}(${o.length})${r.replace(/\s*\n\s*/g, "")}`;
+    $function(i) {
+      const n = Function.prototype.toString.call(i);
+      return n.slice(-15) === "[native code] }" ? `${i.name || ""}()[native]` : `${i.name}(${i.length})${n.replace(/\s*\n\s*/g, "")}`;
     }
-    $Array(o) {
-      let r = "[";
-      for (let a = 0; a < o.length; a++) r += this.serialize(o[a]), a < o.length - 1 && (r += ",");
-      return r + "]";
+    $Array(i) {
+      let n = "[";
+      for (let r = 0; r < i.length; r++) n += this.serialize(i[r]), r < i.length - 1 && (n += ",");
+      return n + "]";
     }
-    $Date(o) {
+    $Date(i) {
       try {
-        return `Date(${o.toISOString()})`;
+        return `Date(${i.toISOString()})`;
       } catch {
         return "Date(null)";
       }
     }
-    $ArrayBuffer(o) {
-      return `ArrayBuffer[${new Uint8Array(o).join(",")}]`;
+    $ArrayBuffer(i) {
+      return `ArrayBuffer[${new Uint8Array(i).join(",")}]`;
     }
-    $Set(o) {
-      return `Set${this.$Array(Array.from(o).sort((r, a) => this.compare(r, a)))}`;
+    $Set(i) {
+      return `Set${this.$Array(Array.from(i).sort((n, r) => this.compare(n, r)))}`;
     }
-    $Map(o) {
-      return this.serializeObjectEntries("Map", o.entries());
+    $Map(i) {
+      return this.serializeObjectEntries("Map", i.entries());
     }
   }
   t = new WeakMap();
-  for (const n of ["Error", "RegExp", "URL"]) e.prototype["$" + n] = function(o) {
-    return `${n}(${o})`;
+  for (const o of ["Error", "RegExp", "URL"]) e.prototype["$" + o] = function(i) {
+    return `${o}(${i})`;
   };
-  for (const n of ["Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Uint16Array", "Int32Array", "Uint32Array", "Float32Array", "Float64Array"]) e.prototype["$" + n] = function(o) {
-    return `${n}[${o.join(",")}]`;
+  for (const o of ["Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Uint16Array", "Int32Array", "Uint32Array", "Float32Array", "Float64Array"]) e.prototype["$" + o] = function(i) {
+    return `${o}[${i.join(",")}]`;
   };
-  for (const n of ["BigInt64Array", "BigUint64Array"]) e.prototype["$" + n] = function(o) {
-    return `${n}[${o.join("n,")}${o.length > 0 ? "n" : ""}]`;
+  for (const o of ["BigInt64Array", "BigUint64Array"]) e.prototype["$" + o] = function(i) {
+    return `${o}[${i.join("n,")}${i.length > 0 ? "n" : ""}]`;
   };
   return e;
 }();
-function Kd(e, t) {
-  return e === t || ua(e) === ua(t);
+function bs(e, t) {
+  return e === t || Ne(e) === Ne(t);
 }
-function da(e) {
+function De(e) {
   return e == null;
 }
-const [ao, $p] = Yt("ConfigProvider");
-function Hd(e) {
-  const t = ao({
-    dir: R("ltr")
+const [T0, x6] = z2("ConfigProvider");
+function js(e) {
+  const t = T0({
+    dir: C("ltr")
   });
-  return k(() => {
-    var n;
-    return (e == null ? void 0 : e.value) || ((n = t.dir) == null ? void 0 : n.value) || "ltr";
+  return S(() => {
+    var o;
+    return (e == null ? void 0 : e.value) || ((o = t.dir) == null ? void 0 : o.value) || "ltr";
   });
 }
-function Ye() {
-  const e = nt(), t = R(), n = k(() => {
-    var s, i;
-    return ["#text", "#comment"].includes((s = t.value) == null ? void 0 : s.$el.nodeName) ? (i = t.value) == null ? void 0 : i.$el.nextElementSibling : it(t);
-  }), o = Object.assign({}, e.exposed), r = {};
-  for (const s in e.props)
-    Object.defineProperty(r, s, {
+function a2() {
+  const e = V2(), t = C(), o = S(() => {
+    var l, c;
+    return ["#text", "#comment"].includes((l = t.value) == null ? void 0 : l.$el.nodeName) ? (c = t.value) == null ? void 0 : c.$el.nextElementSibling : y2(t);
+  }), i = Object.assign({}, e.exposed), n = {};
+  for (const l in e.props)
+    Object.defineProperty(n, l, {
       enumerable: !0,
       configurable: !0,
-      get: () => e.props[s]
+      get: () => e.props[l]
     });
-  if (Object.keys(o).length > 0)
-    for (const s in o)
-      Object.defineProperty(r, s, {
+  if (Object.keys(i).length > 0)
+    for (const l in i)
+      Object.defineProperty(n, l, {
         enumerable: !0,
         configurable: !0,
-        get: () => o[s]
+        get: () => i[l]
       });
-  Object.defineProperty(r, "$el", {
+  Object.defineProperty(n, "$el", {
     enumerable: !0,
     configurable: !0,
     get: () => e.vnode.el
-  }), e.exposed = r;
-  function a(s) {
-    t.value = s, s && (Object.defineProperty(r, "$el", {
+  }), e.exposed = n;
+  function r(l) {
+    t.value = l, l && (Object.defineProperty(n, "$el", {
       enumerable: !0,
       configurable: !0,
-      get: () => s instanceof Element ? s : s.$el
-    }), e.exposed = r);
+      get: () => l instanceof Element ? l : l.$el
+    }), e.exposed = n);
   }
-  return { forwardRef: a, currentRef: t, currentElement: n };
+  return { forwardRef: r, currentRef: t, currentElement: o };
 }
-let Yd = 0;
-function ni(e, t = "reka") {
-  const n = ao({ useId: void 0 });
-  return yr.useId ? `${t}-${yr.useId()}` : n.useId ? `${t}-${n.useId()}` : `${t}-${++Yd}`;
+let Ms = 0;
+function Y3(e, t = "reka") {
+  const o = T0({ useId: void 0 });
+  return be.useId ? `${t}-${be.useId()}` : o.useId ? `${t}-${o.useId()}` : `${t}-${++Ms}`;
 }
-function zd(e, t) {
-  const n = R(e);
-  function o(a) {
-    return t[n.value][a] ?? n.value;
+function As(e, t) {
+  const o = C(e);
+  function i(r) {
+    return t[o.value][r] ?? o.value;
   }
   return {
-    state: n,
-    dispatch: (a) => {
-      n.value = o(a);
+    state: o,
+    dispatch: (r) => {
+      o.value = i(r);
     }
   };
 }
-function jd(e, t) {
-  var v;
-  const n = R({}), o = R("none"), r = R(e), a = e.value ? "mounted" : "unmounted";
-  let s;
-  const i = ((v = t.value) == null ? void 0 : v.ownerDocument.defaultView) ?? ro, { state: l, dispatch: c } = zd(a, {
+function Bs(e, t) {
+  var k;
+  const o = C({}), i = C("none"), n = C(e), r = e.value ? "mounted" : "unmounted";
+  let l;
+  const c = ((k = t.value) == null ? void 0 : k.ownerDocument.defaultView) ?? E0, { state: s, dispatch: a } = As(r, {
     mounted: {
       UNMOUNT: "unmounted",
       ANIMATION_OUT: "unmountSuspended"
@@ -9686,61 +6620,61 @@ function jd(e, t) {
     unmounted: {
       MOUNT: "mounted"
     }
-  }), d = (S) => {
-    var w;
-    if (Rt) {
-      const p = new CustomEvent(S, { bubbles: !1, cancelable: !1 });
-      (w = t.value) == null || w.dispatchEvent(p);
+  }), f = (v) => {
+    var x;
+    if (I2) {
+      const y = new CustomEvent(v, { bubbles: !1, cancelable: !1 });
+      (x = t.value) == null || x.dispatchEvent(y);
     }
   };
-  he(
+  W(
     e,
-    async (S, w) => {
-      var h;
-      const p = w !== S;
-      if (await Ue(), p) {
-        const T = o.value, E = Rn(t.value);
-        S ? (c("MOUNT"), d("enter"), E === "none" && d("after-enter")) : E === "none" || E === "undefined" || ((h = n.value) == null ? void 0 : h.display) === "none" ? (c("UNMOUNT"), d("leave"), d("after-leave")) : w && T !== E ? (c("ANIMATION_OUT"), d("leave")) : (c("UNMOUNT"), d("after-leave"));
+    async (v, x) => {
+      var m;
+      const y = x !== v;
+      if (await r2(), y) {
+        const b = i.value, j = w0(t.value);
+        v ? (a("MOUNT"), f("enter"), j === "none" && f("after-enter")) : j === "none" || j === "undefined" || ((m = o.value) == null ? void 0 : m.display) === "none" ? (a("UNMOUNT"), f("leave"), f("after-leave")) : x && b !== j ? (a("ANIMATION_OUT"), f("leave")) : (a("UNMOUNT"), f("after-leave"));
       }
     },
     { immediate: !0 }
   );
-  const u = (S) => {
-    const w = Rn(t.value), p = w.includes(
-      S.animationName
-    ), h = l.value === "mounted" ? "enter" : "leave";
-    if (S.target === t.value && p && (d(`after-${h}`), c("ANIMATION_END"), !r.value)) {
-      const T = t.value.style.animationFillMode;
-      t.value.style.animationFillMode = "forwards", s = i == null ? void 0 : i.setTimeout(() => {
-        var E;
-        ((E = t.value) == null ? void 0 : E.style.animationFillMode) === "forwards" && (t.value.style.animationFillMode = T);
+  const d = (v) => {
+    const x = w0(t.value), y = x.includes(
+      v.animationName
+    ), m = s.value === "mounted" ? "enter" : "leave";
+    if (v.target === t.value && y && (f(`after-${m}`), a("ANIMATION_END"), !n.value)) {
+      const b = t.value.style.animationFillMode;
+      t.value.style.animationFillMode = "forwards", l = c == null ? void 0 : c.setTimeout(() => {
+        var j;
+        ((j = t.value) == null ? void 0 : j.style.animationFillMode) === "forwards" && (t.value.style.animationFillMode = b);
       });
     }
-    S.target === t.value && w === "none" && c("ANIMATION_END");
-  }, f = (S) => {
-    S.target === t.value && (o.value = Rn(t.value));
-  }, m = he(
+    v.target === t.value && x === "none" && a("ANIMATION_END");
+  }, h = (v) => {
+    v.target === t.value && (i.value = w0(t.value));
+  }, g = W(
     t,
-    (S, w) => {
-      S ? (n.value = getComputedStyle(S), S.addEventListener("animationstart", f), S.addEventListener("animationcancel", u), S.addEventListener("animationend", u)) : (c("ANIMATION_END"), s !== void 0 && (i == null || i.clearTimeout(s)), w == null || w.removeEventListener("animationstart", f), w == null || w.removeEventListener("animationcancel", u), w == null || w.removeEventListener("animationend", u));
+    (v, x) => {
+      v ? (o.value = getComputedStyle(v), v.addEventListener("animationstart", h), v.addEventListener("animationcancel", d), v.addEventListener("animationend", d)) : (a("ANIMATION_END"), l !== void 0 && (c == null || c.clearTimeout(l)), x == null || x.removeEventListener("animationstart", h), x == null || x.removeEventListener("animationcancel", d), x == null || x.removeEventListener("animationend", d));
     },
     { immediate: !0 }
-  ), _ = he(l, () => {
-    const S = Rn(t.value);
-    o.value = l.value === "mounted" ? S : "none";
+  ), u = W(s, () => {
+    const v = w0(t.value);
+    i.value = s.value === "mounted" ? v : "none";
   });
-  return Ko(() => {
-    m(), _();
+  return n3(() => {
+    g(), u();
   }), {
-    isPresent: k(
-      () => ["mounted", "unmountSuspended"].includes(l.value)
+    isPresent: S(
+      () => ["mounted", "unmountSuspended"].includes(s.value)
     )
   };
 }
-function Rn(e) {
+function w0(e) {
   return e && getComputedStyle(e).animationName || "none";
 }
-const Xd = Y({
+const Ss = V({
   name: "Presence",
   props: {
     present: {
@@ -9752,66 +6686,66 @@ const Xd = Y({
     }
   },
   slots: {},
-  setup(e, { slots: t, expose: n }) {
-    var c;
-    const { present: o, forceMount: r } = rn(e), a = R(), { isPresent: s } = jd(o, a);
-    n({ present: s });
-    let i = t.default({ present: s.value });
-    i = ur(i || []);
-    const l = nt();
-    if (i && (i == null ? void 0 : i.length) > 1) {
-      const d = (c = l == null ? void 0 : l.parent) != null && c.type.name ? `<${l.parent.type.name} />` : "component";
+  setup(e, { slots: t, expose: o }) {
+    var a;
+    const { present: i, forceMount: n } = e0(e), r = C(), { isPresent: l } = Bs(i, r);
+    o({ present: l });
+    let c = t.default({ present: l.value });
+    c = ke(c || []);
+    const s = V2();
+    if (c && (c == null ? void 0 : c.length) > 1) {
+      const f = (a = s == null ? void 0 : s.parent) != null && a.type.name ? `<${s.parent.type.name} />` : "component";
       throw new Error(
         [
-          `Detected an invalid children for \`${d}\` for  \`Presence\` component.`,
+          `Detected an invalid children for \`${f}\` for  \`Presence\` component.`,
           "",
           "Note: Presence works similarly to `v-if` directly, but it waits for animation/transition to finished before unmounting. So it expect only one direct child of valid VNode type.",
           "You can apply a few solutions:",
           [
             "Provide a single child element so that `presence` directive attach correctly.",
             "Ensure the first child is an actual element instead of a raw text node or comment node."
-          ].map((u) => `  - ${u}`).join(`
+          ].map((d) => `  - ${d}`).join(`
 `)
         ].join(`
 `)
       );
     }
-    return () => r.value || o.value || s.value ? Ze(t.default({ present: s.value })[0], {
-      ref: (d) => {
-        const u = it(d);
-        return typeof (u == null ? void 0 : u.hasAttribute) > "u" || (u != null && u.hasAttribute("data-reka-popper-content-wrapper") ? a.value = u.firstElementChild : a.value = u), u;
+    return () => n.value || i.value || l.value ? j2(t.default({ present: l.value })[0], {
+      ref: (f) => {
+        const d = y2(f);
+        return typeof (d == null ? void 0 : d.hasAttribute) > "u" || (d != null && d.hasAttribute("data-reka-popper-content-wrapper") ? r.value = d.firstElementChild : r.value = d), d;
       }
     }) : null;
   }
 });
-function Zd(e) {
-  const t = nt(), n = t == null ? void 0 : t.type.emits, o = {};
-  return n != null && n.length || console.warn(
+function Cs(e) {
+  const t = V2(), o = t == null ? void 0 : t.type.emits, i = {};
+  return o != null && o.length || console.warn(
     `No emitted event found. Please check component: ${t == null ? void 0 : t.type.__name}`
-  ), n == null || n.forEach((r) => {
-    o[Si(Na(r))] = (...a) => e(r, ...a);
-  }), o;
+  ), o == null || o.forEach((n) => {
+    i[pt(r3(n))] = (...r) => e(n, ...r);
+  }), i;
 }
-function zt(e) {
-  const t = nt(), n = Object.keys((t == null ? void 0 : t.type.props) ?? {}).reduce((r, a) => {
-    const s = (t == null ? void 0 : t.type.props[a]).default;
-    return s !== void 0 && (r[a] = s), r;
-  }, {}), o = Oi(e);
-  return k(() => {
-    const r = {}, a = (t == null ? void 0 : t.vnode.props) ?? {};
-    return Object.keys(a).forEach((s) => {
-      r[Na(s)] = a[s];
-    }), Object.keys({ ...n, ...r }).reduce((s, i) => (o.value[i] !== void 0 && (s[i] = o.value[i]), s), {});
+function F2(e) {
+  const t = V2(), o = Object.keys((t == null ? void 0 : t.type.props) ?? {}).reduce((n, r) => {
+    const l = (t == null ? void 0 : t.type.props[r]).default;
+    return l !== void 0 && (n[r] = l), n;
+  }, {}), i = kt(e);
+  return S(() => {
+    const n = {}, r = (t == null ? void 0 : t.vnode.props) ?? {};
+    return Object.keys(r).forEach((l) => {
+      n[r3(l)] = r[l];
+    }), Object.keys({ ...o, ...n }).reduce((l, c) => (i.value[c] !== void 0 && (l[c] = i.value[c]), l), {});
   });
 }
-function dr(e, t) {
-  const n = zt(e), o = t ? Zd(t) : {};
-  return k(() => ({
-    ...n.value,
-    ...o
+function we(e, t) {
+  const o = F2(e), i = t ? Cs(t) : {};
+  return S(() => ({
+    ...o.value,
+    ...i
   }));
 }
-const Jd = /* @__PURE__ */ Y({
+const Es = /* @__PURE__ */ V({
   __name: "Teleport",
   props: {
     to: { default: "body" },
@@ -9820,100 +6754,100 @@ const Jd = /* @__PURE__ */ Y({
     forceMount: { type: Boolean }
   },
   setup(e) {
-    const t = ti();
-    return (n, o) => N(t) || n.forceMount ? (H(), ne(Ca, {
+    const t = U3();
+    return (o, i) => p(t) || o.forceMount ? (P(), N(l3, {
       key: 0,
-      to: n.to,
-      disabled: n.disabled,
-      defer: n.defer
+      to: o.to,
+      disabled: o.disabled,
+      defer: o.defer
     }, [
-      q(n.$slots, "default")
-    ], 8, ["to", "disabled", "defer"])) : gt("", !0);
+      Z(o.$slots, "default")
+    ], 8, ["to", "disabled", "defer"])) : M2("", !0);
   }
 });
-function fr(e, t, n) {
-  const o = n.originalEvent.target, r = new CustomEvent(e, {
+function ye(e, t, o) {
+  const i = o.originalEvent.target, n = new CustomEvent(e, {
     bubbles: !1,
     cancelable: !0,
-    detail: n
+    detail: o
   });
-  t && o.addEventListener(e, t, { once: !0 }), o.dispatchEvent(r);
+  t && i.addEventListener(e, t, { once: !0 }), i.dispatchEvent(n);
 }
-const qd = "dismissableLayer.pointerDownOutside", Qd = "dismissableLayer.focusOutside";
-function oi(e, t) {
-  const n = t.closest(
+const Ts = "dismissableLayer.pointerDownOutside", Ps = "dismissableLayer.focusOutside";
+function q3(e, t) {
+  const o = t.closest(
     "[data-dismissable-layer]"
-  ), o = e.dataset.dismissableLayer === "" ? e : e.querySelector(
+  ), i = e.dataset.dismissableLayer === "" ? e : e.querySelector(
     "[data-dismissable-layer]"
-  ), r = Array.from(
+  ), n = Array.from(
     e.ownerDocument.querySelectorAll("[data-dismissable-layer]")
   );
-  return !!(n && o === n || r.indexOf(o) < r.indexOf(n));
+  return !!(o && i === o || n.indexOf(i) < n.indexOf(o));
 }
-function ef(e, t) {
-  var a;
-  const n = ((a = t == null ? void 0 : t.value) == null ? void 0 : a.ownerDocument) ?? (globalThis == null ? void 0 : globalThis.document), o = R(!1), r = R(() => {
+function Os(e, t) {
+  var r;
+  const o = ((r = t == null ? void 0 : t.value) == null ? void 0 : r.ownerDocument) ?? (globalThis == null ? void 0 : globalThis.document), i = C(!1), n = C(() => {
   });
-  return Fe((s) => {
-    if (!Rt)
+  return t2((l) => {
+    if (!I2)
       return;
-    const i = async (c) => {
-      const d = c.target;
+    const c = async (a) => {
+      const f = a.target;
       if (t != null && t.value) {
-        if (oi(t.value, d)) {
-          o.value = !1;
+        if (q3(t.value, f)) {
+          i.value = !1;
           return;
         }
-        if (c.target && !o.value) {
-          let u = function() {
-            fr(
-              qd,
+        if (a.target && !i.value) {
+          let d = function() {
+            ye(
+              Ts,
               e,
-              f
+              h
             );
           };
-          const f = { originalEvent: c };
-          c.pointerType === "touch" ? (n.removeEventListener("click", r.value), r.value = u, n.addEventListener("click", r.value, {
+          const h = { originalEvent: a };
+          a.pointerType === "touch" ? (o.removeEventListener("click", n.value), n.value = d, o.addEventListener("click", n.value, {
             once: !0
-          })) : u();
+          })) : d();
         } else
-          n.removeEventListener("click", r.value);
-        o.value = !1;
+          o.removeEventListener("click", n.value);
+        i.value = !1;
       }
-    }, l = window.setTimeout(() => {
-      n.addEventListener("pointerdown", i);
+    }, s = window.setTimeout(() => {
+      o.addEventListener("pointerdown", c);
     }, 0);
-    s(() => {
-      window.clearTimeout(l), n.removeEventListener("pointerdown", i), n.removeEventListener("click", r.value);
+    l(() => {
+      window.clearTimeout(s), o.removeEventListener("pointerdown", c), o.removeEventListener("click", n.value);
     });
   }), {
-    onPointerDownCapture: () => o.value = !0
+    onPointerDownCapture: () => i.value = !0
   };
 }
-function tf(e, t) {
-  var r;
-  const n = ((r = t == null ? void 0 : t.value) == null ? void 0 : r.ownerDocument) ?? (globalThis == null ? void 0 : globalThis.document), o = R(!1);
-  return Fe((a) => {
-    if (!Rt)
+function Ls(e, t) {
+  var n;
+  const o = ((n = t == null ? void 0 : t.value) == null ? void 0 : n.ownerDocument) ?? (globalThis == null ? void 0 : globalThis.document), i = C(!1);
+  return t2((r) => {
+    if (!I2)
       return;
-    const s = async (i) => {
-      t != null && t.value && (await Ue(), await Ue(), !(!t.value || oi(t.value, i.target)) && i.target && !o.value && fr(
-        Qd,
+    const l = async (c) => {
+      t != null && t.value && (await r2(), await r2(), !(!t.value || q3(t.value, c.target)) && c.target && !i.value && ye(
+        Ps,
         e,
-        { originalEvent: i }
+        { originalEvent: c }
       ));
     };
-    n.addEventListener("focusin", s), a(() => n.removeEventListener("focusin", s));
+    o.addEventListener("focusin", l), r(() => o.removeEventListener("focusin", l));
   }), {
-    onFocusCapture: () => o.value = !0,
-    onBlurCapture: () => o.value = !1
+    onFocusCapture: () => i.value = !0,
+    onBlurCapture: () => i.value = !1
   };
 }
-const _t = Un({
+const b2 = _0({
   layersRoot: /* @__PURE__ */ new Set(),
   layersWithOutsidePointerEventsDisabled: /* @__PURE__ */ new Set(),
   branches: /* @__PURE__ */ new Set()
-}), nf = /* @__PURE__ */ Y({
+}), Vs = /* @__PURE__ */ V({
   __name: "DismissableLayer",
   props: {
     disableOutsidePointerEvents: { type: Boolean, default: !1 },
@@ -9922,56 +6856,56 @@ const _t = Un({
   },
   emits: ["escapeKeyDown", "pointerDownOutside", "focusOutside", "interactOutside", "dismiss"],
   setup(e, { emit: t }) {
-    const n = e, o = t, { forwardRef: r, currentElement: a } = Ye(), s = k(
+    const o = e, i = t, { forwardRef: n, currentElement: r } = a2(), l = S(
       () => {
-        var _;
-        return ((_ = a.value) == null ? void 0 : _.ownerDocument) ?? globalThis.document;
+        var u;
+        return ((u = r.value) == null ? void 0 : u.ownerDocument) ?? globalThis.document;
       }
-    ), i = k(() => _t.layersRoot), l = k(() => a.value ? Array.from(i.value).indexOf(a.value) : -1), c = k(() => _t.layersWithOutsidePointerEventsDisabled.size > 0), d = k(() => {
-      const _ = Array.from(i.value), [y] = [..._t.layersWithOutsidePointerEventsDisabled].slice(-1), v = _.indexOf(y);
-      return l.value >= v;
-    }), u = ef(async (_) => {
-      const y = [..._t.branches].some(
-        (v) => v == null ? void 0 : v.contains(_.target)
+    ), c = S(() => b2.layersRoot), s = S(() => r.value ? Array.from(c.value).indexOf(r.value) : -1), a = S(() => b2.layersWithOutsidePointerEventsDisabled.size > 0), f = S(() => {
+      const u = Array.from(c.value), [w] = [...b2.layersWithOutsidePointerEventsDisabled].slice(-1), k = u.indexOf(w);
+      return s.value >= k;
+    }), d = Os(async (u) => {
+      const w = [...b2.branches].some(
+        (k) => k == null ? void 0 : k.contains(u.target)
       );
-      !d.value || y || (o("pointerDownOutside", _), o("interactOutside", _), await Ue(), _.defaultPrevented || o("dismiss"));
-    }, a), f = tf((_) => {
-      [..._t.branches].some(
-        (v) => v == null ? void 0 : v.contains(_.target)
-      ) || (o("focusOutside", _), o("interactOutside", _), _.defaultPrevented || o("dismiss"));
-    }, a);
-    $d("Escape", (_) => {
-      l.value === i.value.size - 1 && (o("escapeKeyDown", _), _.defaultPrevented || o("dismiss"));
+      !f.value || w || (i("pointerDownOutside", u), i("interactOutside", u), await r2(), u.defaultPrevented || i("dismiss"));
+    }, r), h = Ls((u) => {
+      [...b2.branches].some(
+        (k) => k == null ? void 0 : k.contains(u.target)
+      ) || (i("focusOutside", u), i("interactOutside", u), u.defaultPrevented || i("dismiss"));
+    }, r);
+    xs("Escape", (u) => {
+      s.value === c.value.size - 1 && (i("escapeKeyDown", u), u.defaultPrevented || i("dismiss"));
     });
-    let m;
-    return Fe((_) => {
-      a.value && (n.disableOutsidePointerEvents && (_t.layersWithOutsidePointerEventsDisabled.size === 0 && (m = s.value.body.style.pointerEvents, s.value.body.style.pointerEvents = "none"), _t.layersWithOutsidePointerEventsDisabled.add(a.value)), i.value.add(a.value), _(() => {
-        n.disableOutsidePointerEvents && _t.layersWithOutsidePointerEventsDisabled.size === 1 && (s.value.body.style.pointerEvents = m);
+    let g;
+    return t2((u) => {
+      r.value && (o.disableOutsidePointerEvents && (b2.layersWithOutsidePointerEventsDisabled.size === 0 && (g = l.value.body.style.pointerEvents, l.value.body.style.pointerEvents = "none"), b2.layersWithOutsidePointerEventsDisabled.add(r.value)), c.value.add(r.value), u(() => {
+        o.disableOutsidePointerEvents && b2.layersWithOutsidePointerEventsDisabled.size === 1 && (l.value.body.style.pointerEvents = g);
       }));
-    }), Fe((_) => {
-      _(() => {
-        a.value && (i.value.delete(a.value), _t.layersWithOutsidePointerEventsDisabled.delete(a.value));
+    }), t2((u) => {
+      u(() => {
+        r.value && (c.value.delete(r.value), b2.layersWithOutsidePointerEventsDisabled.delete(r.value));
       });
-    }), (_, y) => (H(), ne(N(Ie), {
-      ref: N(r),
-      "as-child": _.asChild,
-      as: _.as,
+    }), (u, w) => (P(), N(p(e2), {
+      ref: p(n),
+      "as-child": u.asChild,
+      as: u.as,
       "data-dismissable-layer": "",
-      style: Yo({
-        pointerEvents: c.value ? d.value ? "auto" : "none" : void 0
+      style: re({
+        pointerEvents: a.value ? f.value ? "auto" : "none" : void 0
       }),
-      onFocusCapture: N(f).onFocusCapture,
-      onBlurCapture: N(f).onBlurCapture,
-      onPointerdownCapture: N(u).onPointerDownCapture
+      onFocusCapture: p(h).onFocusCapture,
+      onBlurCapture: p(h).onBlurCapture,
+      onPointerdownCapture: p(d).onPointerDownCapture
     }, {
-      default: W(() => [
-        q(_.$slots, "default")
+      default: T(() => [
+        Z(u.$slots, "default")
       ]),
       _: 3
     }, 8, ["as-child", "as", "style", "onFocusCapture", "onBlurCapture", "onPointerdownCapture"]));
   }
 });
-function Qe() {
+function h2() {
   let e = document.activeElement;
   if (e == null)
     return null;
@@ -9979,39 +6913,39 @@ function Qe() {
     e = e.shadowRoot.activeElement;
   return e;
 }
-function fa(e) {
-  const t = Qe();
-  for (const n of e)
-    if (n === t || (n.focus(), Qe() !== t))
+function $e(e) {
+  const t = h2();
+  for (const o of e)
+    if (o === t || (o.focus(), h2() !== t))
       return;
 }
-const _o = "focusScope.autoFocusOnMount", ho = "focusScope.autoFocusOnUnmount", pa = { bubbles: !1, cancelable: !0 };
-function of(e, { select: t = !1 } = {}) {
-  const n = Qe();
-  for (const o of e)
-    if (At(o, { select: t }), Qe() !== n)
+const Z0 = "focusScope.autoFocusOnMount", N0 = "focusScope.autoFocusOnUnmount", Ge = { bubbles: !1, cancelable: !0 };
+function Is(e, { select: t = !1 } = {}) {
+  const o = h2();
+  for (const i of e)
+    if (E2(i, { select: t }), h2() !== o)
       return !0;
 }
-function rf(e) {
-  const t = ri(e), n = ma(t, e), o = ma(t.reverse(), e);
-  return [n, o];
+function Rs(e) {
+  const t = J3(e), o = ze(t, e), i = ze(t.reverse(), e);
+  return [o, i];
 }
-function ri(e) {
-  const t = [], n = document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
-    acceptNode: (o) => {
-      const r = o.tagName === "INPUT" && o.type === "hidden";
-      return o.disabled || o.hidden || r ? NodeFilter.FILTER_SKIP : o.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+function J3(e) {
+  const t = [], o = document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
+    acceptNode: (i) => {
+      const n = i.tagName === "INPUT" && i.type === "hidden";
+      return i.disabled || i.hidden || n ? NodeFilter.FILTER_SKIP : i.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
     }
   });
-  for (; n.nextNode(); ) t.push(n.currentNode);
+  for (; o.nextNode(); ) t.push(o.currentNode);
   return t;
 }
-function ma(e, t) {
-  for (const n of e)
-    if (!af(n, { upTo: t }))
-      return n;
+function ze(e, t) {
+  for (const o of e)
+    if (!Zs(o, { upTo: t }))
+      return o;
 }
-function af(e, { upTo: t }) {
+function Zs(e, { upTo: t }) {
   if (getComputedStyle(e).visibility === "hidden")
     return !0;
   for (; e; ) {
@@ -10023,37 +6957,37 @@ function af(e, { upTo: t }) {
   }
   return !1;
 }
-function sf(e) {
+function Ns(e) {
   return e instanceof HTMLInputElement && "select" in e;
 }
-function At(e, { select: t = !1 } = {}) {
+function E2(e, { select: t = !1 } = {}) {
   if (e && e.focus) {
-    const n = Qe();
-    e.focus({ preventScroll: !0 }), e !== n && sf(e) && t && e.select();
+    const o = h2();
+    e.focus({ preventScroll: !0 }), e !== o && Ns(e) && t && e.select();
   }
 }
-const lf = Nd(() => R([]));
-function cf() {
-  const e = lf();
+const Ds = ls(() => C([]));
+function $s() {
+  const e = Ds();
   return {
     add(t) {
-      const n = e.value[0];
-      t !== n && (n == null || n.pause()), e.value = _a(e.value, t), e.value.unshift(t);
+      const o = e.value[0];
+      t !== o && (o == null || o.pause()), e.value = Fe(e.value, t), e.value.unshift(t);
     },
     remove(t) {
-      var n;
-      e.value = _a(e.value, t), (n = e.value[0]) == null || n.resume();
+      var o;
+      e.value = Fe(e.value, t), (o = e.value[0]) == null || o.resume();
     }
   };
 }
-function _a(e, t) {
-  const n = [...e], o = n.indexOf(t);
-  return o !== -1 && n.splice(o, 1), n;
+function Fe(e, t) {
+  const o = [...e], i = o.indexOf(t);
+  return i !== -1 && o.splice(i, 1), o;
 }
-function uf(e) {
+function Gs(e) {
   return e.filter((t) => t.tagName !== "A");
 }
-const df = /* @__PURE__ */ Y({
+const zs = /* @__PURE__ */ V({
   __name: "FocusScope",
   props: {
     loop: { type: Boolean, default: !1 },
@@ -10063,7 +6997,7 @@ const df = /* @__PURE__ */ Y({
   },
   emits: ["mountAutoFocus", "unmountAutoFocus"],
   setup(e, { emit: t }) {
-    const n = e, o = t, { currentRef: r, currentElement: a } = Ye(), s = R(null), i = cf(), l = Un({
+    const o = e, i = t, { currentRef: n, currentElement: r } = a2(), l = C(null), c = $s(), s = _0({
       paused: !1,
       pause() {
         this.paused = !0;
@@ -10072,269 +7006,269 @@ const df = /* @__PURE__ */ Y({
         this.paused = !1;
       }
     });
-    Fe((d) => {
-      if (!Rt)
+    t2((f) => {
+      if (!I2)
         return;
-      const u = a.value;
-      if (!n.trapped)
+      const d = r.value;
+      if (!o.trapped)
         return;
-      function f(v) {
-        if (l.paused || !u)
+      function h(k) {
+        if (s.paused || !d)
           return;
-        const S = v.target;
-        u.contains(S) ? s.value = S : At(s.value, { select: !0 });
+        const v = k.target;
+        d.contains(v) ? l.value = v : E2(l.value, { select: !0 });
       }
-      function m(v) {
-        if (l.paused || !u)
+      function g(k) {
+        if (s.paused || !d)
           return;
-        const S = v.relatedTarget;
-        S !== null && (u.contains(S) || At(s.value, { select: !0 }));
+        const v = k.relatedTarget;
+        v !== null && (d.contains(v) || E2(l.value, { select: !0 }));
       }
-      function _(v) {
-        u.contains(s.value) || At(u);
+      function u(k) {
+        d.contains(l.value) || E2(d);
       }
-      document.addEventListener("focusin", f), document.addEventListener("focusout", m);
-      const y = new MutationObserver(_);
-      u && y.observe(u, { childList: !0, subtree: !0 }), d(() => {
-        document.removeEventListener("focusin", f), document.removeEventListener("focusout", m), y.disconnect();
+      document.addEventListener("focusin", h), document.addEventListener("focusout", g);
+      const w = new MutationObserver(u);
+      d && w.observe(d, { childList: !0, subtree: !0 }), f(() => {
+        document.removeEventListener("focusin", h), document.removeEventListener("focusout", g), w.disconnect();
       });
-    }), Fe(async (d) => {
-      const u = a.value;
-      if (await Ue(), !u)
+    }), t2(async (f) => {
+      const d = r.value;
+      if (await r2(), !d)
         return;
-      i.add(l);
-      const f = Qe();
-      if (!u.contains(f)) {
-        const _ = new CustomEvent(_o, pa);
-        u.addEventListener(_o, (y) => o("mountAutoFocus", y)), u.dispatchEvent(_), _.defaultPrevented || (of(uf(ri(u)), {
+      c.add(s);
+      const h = h2();
+      if (!d.contains(h)) {
+        const u = new CustomEvent(Z0, Ge);
+        d.addEventListener(Z0, (w) => i("mountAutoFocus", w)), d.dispatchEvent(u), u.defaultPrevented || (Is(Gs(J3(d)), {
           select: !0
-        }), Qe() === f && At(u));
+        }), h2() === h && E2(d));
       }
-      d(() => {
-        u.removeEventListener(_o, (v) => o("mountAutoFocus", v));
-        const _ = new CustomEvent(ho, pa), y = (v) => {
-          o("unmountAutoFocus", v);
+      f(() => {
+        d.removeEventListener(Z0, (k) => i("mountAutoFocus", k));
+        const u = new CustomEvent(N0, Ge), w = (k) => {
+          i("unmountAutoFocus", k);
         };
-        u.addEventListener(ho, y), u.dispatchEvent(_), setTimeout(() => {
-          _.defaultPrevented || At(f ?? document.body, { select: !0 }), u.removeEventListener(ho, y), i.remove(l);
+        d.addEventListener(N0, w), d.dispatchEvent(u), setTimeout(() => {
+          u.defaultPrevented || E2(h ?? document.body, { select: !0 }), d.removeEventListener(N0, w), c.remove(s);
         }, 0);
       });
     });
-    function c(d) {
-      if (!n.loop && !n.trapped || l.paused)
+    function a(f) {
+      if (!o.loop && !o.trapped || s.paused)
         return;
-      const u = d.key === "Tab" && !d.altKey && !d.ctrlKey && !d.metaKey, f = Qe();
-      if (u && f) {
-        const m = d.currentTarget, [_, y] = rf(m);
-        _ && y ? !d.shiftKey && f === y ? (d.preventDefault(), n.loop && At(_, { select: !0 })) : d.shiftKey && f === _ && (d.preventDefault(), n.loop && At(y, { select: !0 })) : f === m && d.preventDefault();
+      const d = f.key === "Tab" && !f.altKey && !f.ctrlKey && !f.metaKey, h = h2();
+      if (d && h) {
+        const g = f.currentTarget, [u, w] = Rs(g);
+        u && w ? !f.shiftKey && h === w ? (f.preventDefault(), o.loop && E2(u, { select: !0 })) : f.shiftKey && h === u && (f.preventDefault(), o.loop && E2(w, { select: !0 })) : h === g && f.preventDefault();
       }
     }
-    return (d, u) => (H(), ne(N(Ie), {
+    return (f, d) => (P(), N(p(e2), {
       ref_key: "currentRef",
-      ref: r,
+      ref: n,
       tabindex: "-1",
-      "as-child": d.asChild,
-      as: d.as,
-      onKeydown: c
+      "as-child": f.asChild,
+      as: f.as,
+      onKeydown: a
     }, {
-      default: W(() => [
-        q(d.$slots, "default")
+      default: T(() => [
+        Z(f.$slots, "default")
       ]),
       _: 3
     }, 8, ["as-child", "as"]));
   }
 });
-var ff = function(e) {
+var Fs = function(e) {
   if (typeof document > "u")
     return null;
   var t = Array.isArray(e) ? e[0] : e;
   return t.ownerDocument.body;
-}, Qt = /* @__PURE__ */ new WeakMap(), Dn = /* @__PURE__ */ new WeakMap(), Fn = {}, go = 0, ai = function(e) {
-  return e && (e.host || ai(e.parentNode));
-}, pf = function(e, t) {
-  return t.map(function(n) {
-    if (e.contains(n))
-      return n;
-    var o = ai(n);
-    return o && e.contains(o) ? o : (console.error("aria-hidden", n, "in not contained inside", e, ". Doing nothing"), null);
-  }).filter(function(n) {
-    return !!n;
+}, q2 = /* @__PURE__ */ new WeakMap(), y0 = /* @__PURE__ */ new WeakMap(), x0 = {}, D0 = 0, Q3 = function(e) {
+  return e && (e.host || Q3(e.parentNode));
+}, Hs = function(e, t) {
+  return t.map(function(o) {
+    if (e.contains(o))
+      return o;
+    var i = Q3(o);
+    return i && e.contains(i) ? i : (console.error("aria-hidden", o, "in not contained inside", e, ". Doing nothing"), null);
+  }).filter(function(o) {
+    return !!o;
   });
-}, mf = function(e, t, n, o) {
-  var r = pf(t, Array.isArray(e) ? e : [e]);
-  Fn[n] || (Fn[n] = /* @__PURE__ */ new WeakMap());
-  var a = Fn[n], s = [], i = /* @__PURE__ */ new Set(), l = new Set(r), c = function(u) {
-    !u || i.has(u) || (i.add(u), c(u.parentNode));
+}, Ks = function(e, t, o, i) {
+  var n = Hs(t, Array.isArray(e) ? e : [e]);
+  x0[o] || (x0[o] = /* @__PURE__ */ new WeakMap());
+  var r = x0[o], l = [], c = /* @__PURE__ */ new Set(), s = new Set(n), a = function(d) {
+    !d || c.has(d) || (c.add(d), a(d.parentNode));
   };
-  r.forEach(c);
-  var d = function(u) {
-    !u || l.has(u) || Array.prototype.forEach.call(u.children, function(f) {
-      if (i.has(f))
-        d(f);
+  n.forEach(a);
+  var f = function(d) {
+    !d || s.has(d) || Array.prototype.forEach.call(d.children, function(h) {
+      if (c.has(h))
+        f(h);
       else
         try {
-          var m = f.getAttribute(o), _ = m !== null && m !== "false", y = (Qt.get(f) || 0) + 1, v = (a.get(f) || 0) + 1;
-          Qt.set(f, y), a.set(f, v), s.push(f), y === 1 && _ && Dn.set(f, !0), v === 1 && f.setAttribute(n, "true"), _ || f.setAttribute(o, "true");
-        } catch (S) {
-          console.error("aria-hidden: cannot operate on ", f, S);
+          var g = h.getAttribute(i), u = g !== null && g !== "false", w = (q2.get(h) || 0) + 1, k = (r.get(h) || 0) + 1;
+          q2.set(h, w), r.set(h, k), l.push(h), w === 1 && u && y0.set(h, !0), k === 1 && h.setAttribute(o, "true"), u || h.setAttribute(i, "true");
+        } catch (v) {
+          console.error("aria-hidden: cannot operate on ", h, v);
         }
     });
   };
-  return d(t), i.clear(), go++, function() {
-    s.forEach(function(u) {
-      var f = Qt.get(u) - 1, m = a.get(u) - 1;
-      Qt.set(u, f), a.set(u, m), f || (Dn.has(u) || u.removeAttribute(o), Dn.delete(u)), m || u.removeAttribute(n);
-    }), go--, go || (Qt = /* @__PURE__ */ new WeakMap(), Qt = /* @__PURE__ */ new WeakMap(), Dn = /* @__PURE__ */ new WeakMap(), Fn = {});
+  return f(t), c.clear(), D0++, function() {
+    l.forEach(function(d) {
+      var h = q2.get(d) - 1, g = r.get(d) - 1;
+      q2.set(d, h), r.set(d, g), h || (y0.has(d) || d.removeAttribute(i), y0.delete(d)), g || d.removeAttribute(o);
+    }), D0--, D0 || (q2 = /* @__PURE__ */ new WeakMap(), q2 = /* @__PURE__ */ new WeakMap(), y0 = /* @__PURE__ */ new WeakMap(), x0 = {});
   };
-}, _f = function(e, t, n) {
-  n === void 0 && (n = "data-aria-hidden");
-  var o = Array.from(Array.isArray(e) ? e : [e]), r = ff(e);
-  return r ? (o.push.apply(o, Array.from(r.querySelectorAll("[aria-live]"))), mf(o, r, n, "aria-hidden")) : function() {
+}, Ws = function(e, t, o) {
+  o === void 0 && (o = "data-aria-hidden");
+  var i = Array.from(Array.isArray(e) ? e : [e]), n = Fs(e);
+  return n ? (i.push.apply(i, Array.from(n.querySelectorAll("[aria-live]"))), Ks(i, n, o, "aria-hidden")) : function() {
     return null;
   };
 };
-function hf(e) {
+function Us(e) {
   let t;
-  he(() => it(e), (n) => {
-    n ? t = _f(n) : t && t();
-  }), Ko(() => {
+  W(() => y2(e), (o) => {
+    o ? t = Ws(o) : t && t();
+  }), n3(() => {
     t && t();
   });
 }
-function yo(e) {
+function $0(e) {
   if (e === null || typeof e != "object")
     return !1;
   const t = Object.getPrototypeOf(e);
   return t !== null && t !== Object.prototype && Object.getPrototypeOf(t) !== null || Symbol.iterator in e ? !1 : Symbol.toStringTag in e ? Object.prototype.toString.call(e) === "[object Module]" : !0;
 }
-function Vo(e, t, n = ".", o) {
-  if (!yo(t))
-    return Vo(e, {}, n, o);
-  const r = Object.assign({}, t);
-  for (const a in e) {
-    if (a === "__proto__" || a === "constructor")
+function X0(e, t, o = ".", i) {
+  if (!$0(t))
+    return X0(e, {}, o, i);
+  const n = Object.assign({}, t);
+  for (const r in e) {
+    if (r === "__proto__" || r === "constructor")
       continue;
-    const s = e[a];
-    s != null && (o && o(r, a, s, n) || (Array.isArray(s) && Array.isArray(r[a]) ? r[a] = [...s, ...r[a]] : yo(s) && yo(r[a]) ? r[a] = Vo(
-      s,
-      r[a],
-      (n ? `${n}.` : "") + a.toString(),
-      o
-    ) : r[a] = s));
+    const l = e[r];
+    l != null && (i && i(n, r, l, o) || (Array.isArray(l) && Array.isArray(n[r]) ? n[r] = [...l, ...n[r]] : $0(l) && $0(n[r]) ? n[r] = X0(
+      l,
+      n[r],
+      (o ? `${o}.` : "") + r.toString(),
+      i
+    ) : n[r] = l));
   }
-  return r;
+  return n;
 }
-function gf(e) {
+function Ys(e) {
   return (...t) => (
     // eslint-disable-next-line unicorn/no-array-reduce
-    t.reduce((n, o) => Vo(n, o, "", e), {})
+    t.reduce((o, i) => X0(o, i, "", e), {})
   );
 }
-const yf = gf(), vf = Cd(() => {
-  const e = R(/* @__PURE__ */ new Map()), t = R(), n = k(() => {
-    for (const s of e.value.values())
-      if (s)
+const qs = Ys(), Js = cs(() => {
+  const e = C(/* @__PURE__ */ new Map()), t = C(), o = S(() => {
+    for (const l of e.value.values())
+      if (l)
         return !0;
     return !1;
-  }), o = ao({
-    scrollBody: R(!0)
+  }), i = T0({
+    scrollBody: C(!0)
   });
-  let r = null;
-  const a = () => {
-    document.body.style.paddingRight = "", document.body.style.marginRight = "", document.body.style.pointerEvents = "", document.body.style.removeProperty("--scrollbar-width"), document.body.style.overflow = t.value ?? "", la && (r == null || r()), t.value = void 0;
+  let n = null;
+  const r = () => {
+    document.body.style.paddingRight = "", document.body.style.marginRight = "", document.body.style.pointerEvents = "", document.body.style.removeProperty("--scrollbar-width"), document.body.style.overflow = t.value ?? "", Re && (n == null || n()), t.value = void 0;
   };
-  return he(n, (s, i) => {
-    var u;
-    if (!Rt)
+  return W(o, (l, c) => {
+    var d;
+    if (!I2)
       return;
-    if (!s) {
-      i && a();
+    if (!l) {
+      c && r();
       return;
     }
     t.value === void 0 && (t.value = document.body.style.overflow);
-    const l = window.innerWidth - document.documentElement.clientWidth, c = { padding: l, margin: 0 }, d = (u = o.scrollBody) != null && u.value ? typeof o.scrollBody.value == "object" ? yf({
-      padding: o.scrollBody.value.padding === !0 ? l : o.scrollBody.value.padding,
-      margin: o.scrollBody.value.margin === !0 ? l : o.scrollBody.value.margin
-    }, c) : c : { padding: 0, margin: 0 };
-    l > 0 && (document.body.style.paddingRight = typeof d.padding == "number" ? `${d.padding}px` : String(d.padding), document.body.style.marginRight = typeof d.margin == "number" ? `${d.margin}px` : String(d.margin), document.body.style.setProperty("--scrollbar-width", `${l}px`), document.body.style.overflow = "hidden"), la && (r = ei(
+    const s = window.innerWidth - document.documentElement.clientWidth, a = { padding: s, margin: 0 }, f = (d = i.scrollBody) != null && d.value ? typeof i.scrollBody.value == "object" ? qs({
+      padding: i.scrollBody.value.padding === !0 ? s : i.scrollBody.value.padding,
+      margin: i.scrollBody.value.margin === !0 ? s : i.scrollBody.value.margin
+    }, a) : a : { padding: 0, margin: 0 };
+    s > 0 && (document.body.style.paddingRight = typeof f.padding == "number" ? `${f.padding}px` : String(f.padding), document.body.style.marginRight = typeof f.margin == "number" ? `${f.margin}px` : String(f.margin), document.body.style.setProperty("--scrollbar-width", `${s}px`), document.body.style.overflow = "hidden"), Re && (n = W3(
       document,
       "touchmove",
-      (f) => Ef(f),
+      (h) => Xs(h),
       { passive: !1 }
-    )), Ue(() => {
+    )), r2(() => {
       document.body.style.pointerEvents = "none", document.body.style.overflow = "hidden";
     });
   }, { immediate: !0, flush: "sync" }), e;
 });
-function bf(e) {
-  const t = Math.random().toString(36).substring(2, 7), n = vf();
-  n.value.set(t, e ?? !1);
-  const o = k({
-    get: () => n.value.get(t) ?? !1,
-    set: (r) => n.value.set(t, r)
+function Qs(e) {
+  const t = Math.random().toString(36).substring(2, 7), o = Js();
+  o.value.set(t, e ?? !1);
+  const i = S({
+    get: () => o.value.get(t) ?? !1,
+    set: (n) => o.value.set(t, n)
   });
-  return Dd(() => {
-    n.value.delete(t);
-  }), o;
+  return ps(() => {
+    o.value.delete(t);
+  }), i;
 }
-function si(e) {
+function X3(e) {
   const t = window.getComputedStyle(e);
   if (t.overflowX === "scroll" || t.overflowY === "scroll" || t.overflowX === "auto" && e.clientWidth < e.scrollWidth || t.overflowY === "auto" && e.clientHeight < e.scrollHeight)
     return !0;
   {
-    const n = e.parentNode;
-    return !(n instanceof Element) || n.tagName === "BODY" ? !1 : si(n);
+    const o = e.parentNode;
+    return !(o instanceof Element) || o.tagName === "BODY" ? !1 : X3(o);
   }
 }
-function Ef(e) {
-  const t = e || window.event, n = t.target;
-  return n instanceof Element && si(n) ? !1 : t.touches.length > 1 ? !0 : (t.preventDefault && t.cancelable && t.preventDefault(), !1);
+function Xs(e) {
+  const t = e || window.event, o = t.target;
+  return o instanceof Element && X3(o) ? !1 : t.touches.length > 1 ? !0 : (t.preventDefault && t.cancelable && t.preventDefault(), !1);
 }
-function ha() {
-  const e = R(), t = k(() => {
-    var n, o;
-    return ["#text", "#comment"].includes((n = e.value) == null ? void 0 : n.$el.nodeName) ? (o = e.value) == null ? void 0 : o.$el.nextElementSibling : it(e);
+function He() {
+  const e = C(), t = S(() => {
+    var o, i;
+    return ["#text", "#comment"].includes((o = e.value) == null ? void 0 : o.$el.nodeName) ? (i = e.value) == null ? void 0 : i.$el.nextElementSibling : y2(e);
   });
   return {
     primitiveElement: e,
     currentElement: t
   };
 }
-function Tf(e) {
-  return k(() => {
+function e1(e) {
+  return S(() => {
     var t;
-    return Rd(e) ? !!((t = it(e)) != null && t.closest("form")) : !0;
+    return us(e) ? !!((t = y2(e)) != null && t.closest("form")) : !0;
   });
 }
-const ga = "data-reka-collection-item";
-function pn(e = {}) {
-  const { key: t = "", isProvider: n = !1 } = e, o = `${t}CollectionProvider`;
-  let r;
-  if (n) {
-    const d = R(/* @__PURE__ */ new Map());
-    r = {
-      collectionRef: R(),
-      itemMap: d
-    }, Aa(o, r);
+const Ke = "data-reka-collection-item";
+function r0(e = {}) {
+  const { key: t = "", isProvider: o = !1 } = e, i = `${t}CollectionProvider`;
+  let n;
+  if (o) {
+    const f = C(/* @__PURE__ */ new Map());
+    n = {
+      collectionRef: C(),
+      itemMap: f
+    }, i3(i, n);
   } else
-    r = Wo(o);
-  const a = (d = !1) => {
-    const u = r.collectionRef.value;
-    if (!u)
+    n = o3(i);
+  const r = (f = !1) => {
+    const d = n.collectionRef.value;
+    if (!d)
       return [];
-    const f = Array.from(u.querySelectorAll(`[${ga}]`)), _ = Array.from(r.itemMap.value.values()).sort(
-      (y, v) => f.indexOf(y.ref) - f.indexOf(v.ref)
+    const h = Array.from(d.querySelectorAll(`[${Ke}]`)), u = Array.from(n.itemMap.value.values()).sort(
+      (w, k) => h.indexOf(w.ref) - h.indexOf(k.ref)
     );
-    return d ? _ : _.filter((y) => y.ref.dataset.disabled !== "");
-  }, s = Y({
+    return f ? u : u.filter((w) => w.ref.dataset.disabled !== "");
+  }, l = V({
     name: "CollectionSlot",
-    setup(d, { slots: u }) {
-      const { primitiveElement: f, currentElement: m } = ha();
-      return he(m, () => {
-        r.collectionRef.value = m.value;
-      }), () => Ze(Bo, { ref: f }, u);
+    setup(f, { slots: d }) {
+      const { primitiveElement: h, currentElement: g } = He();
+      return W(g, () => {
+        n.collectionRef.value = g.value;
+      }), () => j2(Q0, { ref: h }, d);
     }
-  }), i = Y({
+  }), c = V({
     name: "CollectionItem",
     inheritAttrs: !1,
     props: {
@@ -10343,44 +7277,44 @@ function pn(e = {}) {
         validator: () => !0
       }
     },
-    setup(d, { slots: u, attrs: f }) {
-      const { primitiveElement: m, currentElement: _ } = ha();
-      return Fe((y) => {
-        if (_.value) {
-          const v = Ai(_.value);
-          r.itemMap.value.set(v, { ref: _.value, value: d.value }), y(() => r.itemMap.value.delete(v));
+    setup(f, { slots: d, attrs: h }) {
+      const { primitiveElement: g, currentElement: u } = He();
+      return t2((w) => {
+        if (u.value) {
+          const k = wt(u.value);
+          n.itemMap.value.set(k, { ref: u.value, value: f.value }), w(() => n.itemMap.value.delete(k));
         }
-      }), () => Ze(Bo, { ...f, [ga]: "", ref: m }, u);
+      }), () => j2(Q0, { ...h, [Ke]: "", ref: g }, d);
     }
-  }), l = k(() => Array.from(r.itemMap.value.values())), c = k(() => r.itemMap.value.size);
-  return { getItems: a, reactiveItems: l, itemMapSize: c, CollectionSlot: s, CollectionItem: i };
+  }), s = S(() => Array.from(n.itemMap.value.values())), a = S(() => n.itemMap.value.size);
+  return { getItems: r, reactiveItems: s, itemMapSize: a, CollectionSlot: l, CollectionItem: c };
 }
-const [ii, wf] = Yt("PopperRoot"), Sf = /* @__PURE__ */ Y({
+const [et, t1] = z2("PopperRoot"), o1 = /* @__PURE__ */ V({
   inheritAttrs: !1,
   __name: "PopperRoot",
   setup(e) {
-    const t = R();
-    return wf({
+    const t = C();
+    return t1({
       anchor: t,
-      onAnchorChange: (n) => t.value = n
-    }), (n, o) => q(n.$slots, "default");
+      onAnchorChange: (o) => t.value = o
+    }), (o, i) => Z(o.$slots, "default");
   }
 });
-function li(e) {
-  const t = xd("", 1e3);
+function tt(e) {
+  const t = hs("", 1e3);
   return {
     search: t,
-    handleTypeaheadSearch: (r, a) => {
-      t.value = t.value + r;
+    handleTypeaheadSearch: (n, r) => {
+      t.value = t.value + n;
       {
-        const s = Qe(), i = a.map((f) => {
-          var m, _;
+        const l = h2(), c = r.map((h) => {
+          var g, u;
           return {
-            ...f,
-            textValue: ((m = f.value) == null ? void 0 : m.textValue) ?? ((_ = f.ref.textContent) == null ? void 0 : _.trim()) ?? ""
+            ...h,
+            textValue: ((g = h.value) == null ? void 0 : g.textValue) ?? ((u = h.ref.textContent) == null ? void 0 : u.trim()) ?? ""
           };
-        }), l = i.find((f) => f.ref === s), c = i.map((f) => f.textValue), d = Af(c, t.value, l == null ? void 0 : l.textValue), u = i.find((f) => f.textValue === d);
-        return u && u.ref.focus(), u == null ? void 0 : u.ref;
+        }), s = c.find((h) => h.ref === l), a = c.map((h) => h.textValue), f = n1(a, t.value, s == null ? void 0 : s.textValue), d = c.find((h) => h.textValue === f);
+        return d && d.ref.focus(), d == null ? void 0 : d.ref;
       }
     },
     resetTypeahead: () => {
@@ -10388,19 +7322,19 @@ function li(e) {
     }
   };
 }
-function Of(e, t) {
-  return e.map((n, o) => e[(t + o) % e.length]);
+function i1(e, t) {
+  return e.map((o, i) => e[(t + i) % e.length]);
 }
-function Af(e, t, n) {
-  const r = t.length > 1 && Array.from(t).every((c) => c === t[0]) ? t[0] : t, a = n ? e.indexOf(n) : -1;
-  let s = Of(e, Math.max(a, 0));
-  r.length === 1 && (s = s.filter((c) => c !== n));
-  const l = s.find(
-    (c) => c.toLowerCase().startsWith(r.toLowerCase())
+function n1(e, t, o) {
+  const n = t.length > 1 && Array.from(t).every((a) => a === t[0]) ? t[0] : t, r = o ? e.indexOf(o) : -1;
+  let l = i1(e, Math.max(r, 0));
+  n.length === 1 && (l = l.filter((a) => a !== o));
+  const s = l.find(
+    (a) => a.toLowerCase().startsWith(n.toLowerCase())
   );
-  return l !== n ? l : void 0;
+  return s !== o ? s : void 0;
 }
-const Nf = /* @__PURE__ */ Y({
+const r1 = /* @__PURE__ */ V({
   __name: "PopperAnchor",
   props: {
     reference: {},
@@ -10408,73 +7342,73 @@ const Nf = /* @__PURE__ */ Y({
     as: {}
   },
   setup(e) {
-    const t = e, { forwardRef: n, currentElement: o } = Ye(), r = ii();
-    return La(() => {
-      r.onAnchorChange(t.reference ?? o.value);
-    }), (a, s) => (H(), ne(N(Ie), {
-      ref: N(n),
-      as: a.as,
-      "as-child": a.asChild
+    const t = e, { forwardRef: o, currentElement: i } = a2(), n = et();
+    return c3(() => {
+      n.onAnchorChange(t.reference ?? i.value);
+    }), (r, l) => (P(), N(p(e2), {
+      ref: p(o),
+      as: r.as,
+      "as-child": r.asChild
     }, {
-      default: W(() => [
-        q(a.$slots, "default")
+      default: T(() => [
+        Z(r.$slots, "default")
       ]),
       _: 3
     }, 8, ["as", "as-child"]));
   }
 });
-function Cf(e) {
+function l1(e) {
   return e !== null;
 }
-function Lf(e) {
+function c1(e) {
   return {
     name: "transformOrigin",
     options: e,
     fn(t) {
-      var v, S, w;
-      const { placement: n, rects: o, middlewareData: r } = t, s = ((v = r.arrow) == null ? void 0 : v.centerOffset) !== 0, i = s ? 0 : e.arrowWidth, l = s ? 0 : e.arrowHeight, [c, d] = $o(n), u = { start: "0%", center: "50%", end: "100%" }[d], f = (((S = r.arrow) == null ? void 0 : S.x) ?? 0) + i / 2, m = (((w = r.arrow) == null ? void 0 : w.y) ?? 0) + l / 2;
-      let _ = "", y = "";
-      return c === "bottom" ? (_ = s ? u : `${f}px`, y = `${-l}px`) : c === "top" ? (_ = s ? u : `${f}px`, y = `${o.floating.height + l}px`) : c === "right" ? (_ = `${-l}px`, y = s ? u : `${m}px`) : c === "left" && (_ = `${o.floating.width + l}px`, y = s ? u : `${m}px`), { data: { x: _, y } };
+      var k, v, x;
+      const { placement: o, rects: i, middlewareData: n } = t, l = ((k = n.arrow) == null ? void 0 : k.centerOffset) !== 0, c = l ? 0 : e.arrowWidth, s = l ? 0 : e.arrowHeight, [a, f] = ee(o), d = { start: "0%", center: "50%", end: "100%" }[f], h = (((v = n.arrow) == null ? void 0 : v.x) ?? 0) + c / 2, g = (((x = n.arrow) == null ? void 0 : x.y) ?? 0) + s / 2;
+      let u = "", w = "";
+      return a === "bottom" ? (u = l ? d : `${h}px`, w = `${-s}px`) : a === "top" ? (u = l ? d : `${h}px`, w = `${i.floating.height + s}px`) : a === "right" ? (u = `${-s}px`, w = l ? d : `${g}px`) : a === "left" && (u = `${i.floating.width + s}px`, w = l ? d : `${g}px`), { data: { x: u, y: w } };
     }
   };
 }
-function $o(e) {
-  const [t, n = "center"] = e.split("-");
-  return [t, n];
+function ee(e) {
+  const [t, o = "center"] = e.split("-");
+  return [t, o];
 }
-function If(e) {
-  const t = R(), n = k(() => {
-    var r;
-    return ((r = t.value) == null ? void 0 : r.width) ?? 0;
-  }), o = k(() => {
-    var r;
-    return ((r = t.value) == null ? void 0 : r.height) ?? 0;
+function s1(e) {
+  const t = C(), o = S(() => {
+    var n;
+    return ((n = t.value) == null ? void 0 : n.width) ?? 0;
+  }), i = S(() => {
+    var n;
+    return ((n = t.value) == null ? void 0 : n.height) ?? 0;
   });
-  return lt(() => {
-    const r = it(e);
-    if (r) {
-      t.value = { width: r.offsetWidth, height: r.offsetHeight };
-      const a = new ResizeObserver((s) => {
-        if (!Array.isArray(s) || !s.length)
+  return x2(() => {
+    const n = y2(e);
+    if (n) {
+      t.value = { width: n.offsetWidth, height: n.offsetHeight };
+      const r = new ResizeObserver((l) => {
+        if (!Array.isArray(l) || !l.length)
           return;
-        const i = s[0];
-        let l, c;
-        if ("borderBoxSize" in i) {
-          const d = i.borderBoxSize, u = Array.isArray(d) ? d[0] : d;
-          l = u.inlineSize, c = u.blockSize;
+        const c = l[0];
+        let s, a;
+        if ("borderBoxSize" in c) {
+          const f = c.borderBoxSize, d = Array.isArray(f) ? f[0] : f;
+          s = d.inlineSize, a = d.blockSize;
         } else
-          l = r.offsetWidth, c = r.offsetHeight;
-        t.value = { width: l, height: c };
+          s = n.offsetWidth, a = n.offsetHeight;
+        t.value = { width: s, height: a };
       });
-      return a.observe(r, { box: "border-box" }), () => a.unobserve(r);
+      return r.observe(n, { box: "border-box" }), () => r.unobserve(n);
     } else
       t.value = void 0;
   }), {
-    width: n,
-    height: o
+    width: o,
+    height: i
   };
 }
-const Pf = {
+const a1 = {
   side: "bottom",
   sideOffset: 0,
   align: "center",
@@ -10488,10 +7422,10 @@ const Pf = {
   positionStrategy: "fixed",
   updatePositionStrategy: "optimized",
   prioritizePosition: !1
-}, [Up, Mf] = Yt("PopperContent"), kf = /* @__PURE__ */ Y({
+}, [v6, d1] = z2("PopperContent"), f1 = /* @__PURE__ */ V({
   inheritAttrs: !1,
   __name: "PopperContent",
-  props: /* @__PURE__ */ Ni({
+  props: /* @__PURE__ */ yt({
     side: {},
     sideOffset: {},
     align: {},
@@ -10510,139 +7444,139 @@ const Pf = {
     asChild: { type: Boolean },
     as: {}
   }, {
-    ...Pf
+    ...a1
   }),
   emits: ["placed"],
   setup(e, { emit: t }) {
-    const n = e, o = t, r = ii(), { forwardRef: a, currentElement: s } = Ye(), i = R(), l = R(), { width: c, height: d } = If(l), u = k(
-      () => n.side + (n.align !== "center" ? `-${n.align}` : "")
-    ), f = k(() => typeof n.collisionPadding == "number" ? n.collisionPadding : { top: 0, right: 0, bottom: 0, left: 0, ...n.collisionPadding }), m = k(() => Array.isArray(n.collisionBoundary) ? n.collisionBoundary : [n.collisionBoundary]), _ = k(() => ({
-      padding: f.value,
-      boundary: m.value.filter(Cf),
+    const o = e, i = t, n = et(), { forwardRef: r, currentElement: l } = a2(), c = C(), s = C(), { width: a, height: f } = s1(s), d = S(
+      () => o.side + (o.align !== "center" ? `-${o.align}` : "")
+    ), h = S(() => typeof o.collisionPadding == "number" ? o.collisionPadding : { top: 0, right: 0, bottom: 0, left: 0, ...o.collisionPadding }), g = S(() => Array.isArray(o.collisionBoundary) ? o.collisionBoundary : [o.collisionBoundary]), u = S(() => ({
+      padding: h.value,
+      boundary: g.value.filter(l1),
       // with `strategy: 'fixed'`, this is the only way to get it to respect boundaries
-      altBoundary: m.value.length > 0
-    })), y = Ad(() => [
-      md({
-        mainAxis: n.sideOffset + d.value,
-        alignmentAxis: n.alignOffset
+      altBoundary: g.value.length > 0
+    })), w = rs(() => [
+      Wc({
+        mainAxis: o.sideOffset + f.value,
+        alignmentAxis: o.alignOffset
       }),
-      n.prioritizePosition && n.avoidCollisions && sa({
-        ..._.value
+      o.prioritizePosition && o.avoidCollisions && Ve({
+        ...u.value
       }),
-      n.avoidCollisions && _d({
+      o.avoidCollisions && Uc({
         mainAxis: !0,
-        crossAxis: !!n.prioritizePosition,
-        limiter: n.sticky === "partial" ? vd() : void 0,
-        ..._.value
+        crossAxis: !!o.prioritizePosition,
+        limiter: o.sticky === "partial" ? Qc() : void 0,
+        ...u.value
       }),
-      !n.prioritizePosition && n.avoidCollisions && sa({
-        ..._.value
+      !o.prioritizePosition && o.avoidCollisions && Ve({
+        ...u.value
       }),
-      hd({
-        ..._.value,
-        apply: ({ elements: U, rects: $, availableWidth: j, availableHeight: ee }) => {
-          const { width: le, height: Z } = $.reference, te = U.floating.style;
-          te.setProperty(
+      Yc({
+        ...u.value,
+        apply: ({ elements: L, rects: F, availableWidth: Y, availableHeight: G }) => {
+          const { width: K, height: H } = F.reference, z = L.floating.style;
+          z.setProperty(
             "--reka-popper-available-width",
-            `${j}px`
-          ), te.setProperty(
+            `${Y}px`
+          ), z.setProperty(
             "--reka-popper-available-height",
-            `${ee}px`
-          ), te.setProperty(
+            `${G}px`
+          ), z.setProperty(
             "--reka-popper-anchor-width",
-            `${le}px`
-          ), te.setProperty(
+            `${K}px`
+          ), z.setProperty(
             "--reka-popper-anchor-height",
-            `${Z}px`
+            `${H}px`
           );
         }
       }),
-      l.value && Td({ element: l.value, padding: n.arrowPadding }),
-      Lf({
-        arrowWidth: c.value,
-        arrowHeight: d.value
+      s.value && ts({ element: s.value, padding: o.arrowPadding }),
+      c1({
+        arrowWidth: a.value,
+        arrowHeight: f.value
       }),
-      n.hideWhenDetached && gd({ strategy: "referenceHidden", ..._.value })
-    ]), v = k(() => n.reference ?? r.anchor.value), { floatingStyles: S, placement: w, isPositioned: p, middlewareData: h } = wd(
-      v,
-      i,
+      o.hideWhenDetached && qc({ strategy: "referenceHidden", ...u.value })
+    ]), k = S(() => o.reference ?? n.anchor.value), { floatingStyles: v, placement: x, isPositioned: y, middlewareData: m } = os(
+      k,
+      c,
       {
-        strategy: n.positionStrategy,
-        placement: u,
-        whileElementsMounted: (...U) => pd(...U, {
-          layoutShift: !n.disableUpdateOnLayoutShift,
-          animationFrame: n.updatePositionStrategy === "always"
+        strategy: o.positionStrategy,
+        placement: d,
+        whileElementsMounted: (...L) => Kc(...L, {
+          layoutShift: !o.disableUpdateOnLayoutShift,
+          animationFrame: o.updatePositionStrategy === "always"
         }),
-        middleware: y
+        middleware: w
       }
-    ), T = k(
-      () => $o(w.value)[0]
-    ), E = k(
-      () => $o(w.value)[1]
+    ), b = S(
+      () => ee(x.value)[0]
+    ), j = S(
+      () => ee(x.value)[1]
     );
-    La(() => {
-      p.value && o("placed");
+    c3(() => {
+      y.value && i("placed");
     });
-    const A = k(
+    const M = S(
       () => {
-        var U;
-        return ((U = h.value.arrow) == null ? void 0 : U.centerOffset) !== 0;
+        var L;
+        return ((L = m.value.arrow) == null ? void 0 : L.centerOffset) !== 0;
       }
-    ), O = R("");
-    Fe(() => {
-      s.value && (O.value = window.getComputedStyle(s.value).zIndex);
+    ), _ = C("");
+    t2(() => {
+      l.value && (_.value = window.getComputedStyle(l.value).zIndex);
     });
-    const L = k(() => {
-      var U;
-      return ((U = h.value.arrow) == null ? void 0 : U.x) ?? 0;
-    }), V = k(() => {
-      var U;
-      return ((U = h.value.arrow) == null ? void 0 : U.y) ?? 0;
+    const O = S(() => {
+      var L;
+      return ((L = m.value.arrow) == null ? void 0 : L.x) ?? 0;
+    }), R = S(() => {
+      var L;
+      return ((L = m.value.arrow) == null ? void 0 : L.y) ?? 0;
     });
-    return Mf({
-      placedSide: T,
-      onArrowChange: (U) => l.value = U,
-      arrowX: L,
-      arrowY: V,
-      shouldHideArrow: A
-    }), (U, $) => {
-      var j, ee, le;
-      return H(), Ne("div", {
+    return d1({
+      placedSide: b,
+      onArrowChange: (L) => s.value = L,
+      arrowX: O,
+      arrowY: R,
+      shouldHideArrow: M
+    }), (L, F) => {
+      var Y, G, K;
+      return P(), X("div", {
         ref_key: "floatingRef",
-        ref: i,
+        ref: c,
         "data-reka-popper-content-wrapper": "",
-        style: Yo({
-          ...N(S),
-          transform: N(p) ? N(S).transform : "translate(0, -200%)",
+        style: re({
+          ...p(v),
+          transform: p(y) ? p(v).transform : "translate(0, -200%)",
           // keep off the page when measuring
           minWidth: "max-content",
-          zIndex: O.value,
+          zIndex: _.value,
           "--reka-popper-transform-origin": [
-            (j = N(h).transformOrigin) == null ? void 0 : j.x,
-            (ee = N(h).transformOrigin) == null ? void 0 : ee.y
+            (Y = p(m).transformOrigin) == null ? void 0 : Y.x,
+            (G = p(m).transformOrigin) == null ? void 0 : G.y
           ].join(" "),
           // hide the content if using the hide middleware and should be hidden
           // set visibility to hidden and disable pointer events so the UI behaves
           // as if the PopperContent isn't there at all
-          ...((le = N(h).hide) == null ? void 0 : le.referenceHidden) && {
+          ...((K = p(m).hide) == null ? void 0 : K.referenceHidden) && {
             visibility: "hidden",
             pointerEvents: "none"
           }
         })
       }, [
-        ae(N(Ie), be({ ref: N(a) }, U.$attrs, {
-          "as-child": n.asChild,
-          as: U.as,
-          "data-side": T.value,
-          "data-align": E.value,
+        D(p(e2), U({ ref: p(r) }, L.$attrs, {
+          "as-child": o.asChild,
+          as: L.as,
+          "data-side": b.value,
+          "data-align": j.value,
           style: {
             // if the PopperContent hasn't been placed yet (not all measurements done)
             // we prevent animations so that users's animation don't kick in too early referring wrong sides
-            animation: N(p) ? void 0 : "none"
+            animation: p(y) ? void 0 : "none"
           }
         }), {
-          default: W(() => [
-            q(U.$slots, "default")
+          default: T(() => [
+            Z(L.$slots, "default")
           ]),
           _: 3
         }, 16, ["as-child", "as", "data-side", "data-align", "style"])
@@ -10650,40 +7584,40 @@ const Pf = {
     };
   }
 });
-function xf(e) {
-  const t = ao({
-    nonce: R()
+function g1(e) {
+  const t = T0({
+    nonce: C()
   });
-  return k(() => {
-    var n;
-    return (e == null ? void 0 : e.value) || ((n = t.nonce) == null ? void 0 : n.value);
+  return S(() => {
+    var o;
+    return (e == null ? void 0 : e.value) || ((o = t.nonce) == null ? void 0 : o.value);
   });
 }
-let vo = 0;
-function Rf() {
-  Fe((e) => {
-    if (!Rt)
+let G0 = 0;
+function h1() {
+  t2((e) => {
+    if (!I2)
       return;
     const t = document.querySelectorAll("[data-reka-focus-guard]");
     document.body.insertAdjacentElement(
       "afterbegin",
-      t[0] ?? ya()
+      t[0] ?? We()
     ), document.body.insertAdjacentElement(
       "beforeend",
-      t[1] ?? ya()
-    ), vo++, e(() => {
-      vo === 1 && document.querySelectorAll("[data-reka-focus-guard]").forEach((n) => n.remove()), vo--;
+      t[1] ?? We()
+    ), G0++, e(() => {
+      G0 === 1 && document.querySelectorAll("[data-reka-focus-guard]").forEach((o) => o.remove()), G0--;
     });
   });
 }
-function ya() {
+function We() {
   const e = document.createElement("span");
   return e.setAttribute("data-reka-focus-guard", ""), e.tabIndex = 0, e.style.outline = "none", e.style.opacity = "0", e.style.position = "fixed", e.style.pointerEvents = "none", e;
 }
-function va(e, t = Number.NEGATIVE_INFINITY, n = Number.POSITIVE_INFINITY) {
-  return Math.min(n, Math.max(t, e));
+function Ue(e, t = Number.NEGATIVE_INFINITY, o = Number.POSITIVE_INFINITY) {
+  return Math.min(o, Math.max(t, e));
 }
-const Df = /* @__PURE__ */ Y({
+const u1 = /* @__PURE__ */ V({
   __name: "BubbleSelect",
   props: {
     autocomplete: {},
@@ -10697,39 +7631,39 @@ const Df = /* @__PURE__ */ Y({
     value: {}
   },
   setup(e) {
-    const t = e, n = R();
-    return he(() => t.value, (o, r) => {
-      const a = window.HTMLSelectElement.prototype, i = Object.getOwnPropertyDescriptor(
-        a,
+    const t = e, o = C();
+    return W(() => t.value, (i, n) => {
+      const r = window.HTMLSelectElement.prototype, c = Object.getOwnPropertyDescriptor(
+        r,
         "value"
       ).set;
-      if (o !== r && i && n.value) {
-        const l = new Event("change", { bubbles: !0 });
-        i.call(n.value, o), n.value.dispatchEvent(l);
+      if (i !== n && c && o.value) {
+        const s = new Event("change", { bubbles: !0 });
+        c.call(o.value, i), o.value.dispatchEvent(s);
       }
-    }), (o, r) => (H(), ne(N(Od), { "as-child": "" }, {
-      default: W(() => [
-        Ve("select", be({
+    }), (i, n) => (P(), N(p(ns), { "as-child": "" }, {
+      default: T(() => [
+        i2("select", U({
           ref_key: "selectElement",
-          ref: n
+          ref: o
         }, t), [
-          q(o.$slots, "default")
+          Z(i.$slots, "default")
         ], 16)
       ]),
       _: 3
     }));
   }
-}), Ff = [" ", "Enter", "ArrowUp", "ArrowDown"], Bf = [" ", "Enter"], je = 10;
-function Uo(e, t, n) {
-  return e === void 0 ? !1 : Array.isArray(e) ? e.some((o) => Go(o, t, n)) : Go(e, t, n);
+}), p1 = [" ", "Enter", "ArrowUp", "ArrowDown"], k1 = [" ", "Enter"], f2 = 10;
+function te(e, t, o) {
+  return e === void 0 ? !1 : Array.isArray(e) ? e.some((i) => oe(i, t, o)) : oe(e, t, o);
 }
-function Go(e, t, n) {
-  return e === void 0 || t === void 0 ? !1 : typeof e == "string" ? e === t : typeof n == "function" ? n(e, t) : typeof n == "string" ? (e == null ? void 0 : e[n]) === (t == null ? void 0 : t[n]) : Kd(e, t);
+function oe(e, t, o) {
+  return e === void 0 || t === void 0 ? !1 : typeof e == "string" ? e === t : typeof o == "function" ? o(e, t) : typeof o == "string" ? (e == null ? void 0 : e[o]) === (t == null ? void 0 : t[o]) : bs(e, t);
 }
-const Vf = {
+const w1 = {
   key: 0,
   value: ""
-}, [jt, ci] = Yt("SelectRoot"), $f = /* @__PURE__ */ Y({
+}, [H2, ot] = z2("SelectRoot"), y1 = /* @__PURE__ */ V({
   inheritAttrs: !1,
   __name: "SelectRoot",
   props: {
@@ -10747,87 +7681,87 @@ const Vf = {
   },
   emits: ["update:modelValue", "update:open"],
   setup(e, { emit: t }) {
-    const n = e, o = t, { required: r, disabled: a, multiple: s, dir: i } = rn(n), l = ca(n, "modelValue", o, {
-      defaultValue: n.defaultValue ?? (s.value ? [] : void 0),
-      passive: n.modelValue === void 0,
+    const o = e, i = t, { required: n, disabled: r, multiple: l, dir: c } = e0(o), s = Ze(o, "modelValue", i, {
+      defaultValue: o.defaultValue ?? (l.value ? [] : void 0),
+      passive: o.modelValue === void 0,
       deep: !0
-    }), c = ca(n, "open", o, {
-      defaultValue: n.defaultOpen,
-      passive: n.open === void 0
-    }), d = R(), u = R(), f = R({
+    }), a = Ze(o, "open", i, {
+      defaultValue: o.defaultOpen,
+      passive: o.open === void 0
+    }), f = C(), d = C(), h = C({
       x: 0,
       y: 0
-    }), m = k(() => {
-      var p;
-      return s.value && Array.isArray(l.value) ? ((p = l.value) == null ? void 0 : p.length) === 0 : da(l.value);
+    }), g = S(() => {
+      var y;
+      return l.value && Array.isArray(s.value) ? ((y = s.value) == null ? void 0 : y.length) === 0 : De(s.value);
     });
-    pn({ isProvider: !0 });
-    const _ = Hd(i), y = Tf(d), v = R(/* @__PURE__ */ new Set()), S = k(() => Array.from(v.value).map((p) => p.value).join(";"));
-    function w(p) {
-      if (s.value) {
-        const h = Array.isArray(l.value) ? [...l.value] : [], T = h.findIndex((E) => Go(E, p, n.by));
-        T === -1 ? h.push(p) : h.splice(T, 1), l.value = [...h];
+    r0({ isProvider: !0 });
+    const u = js(c), w = e1(f), k = C(/* @__PURE__ */ new Set()), v = S(() => Array.from(k.value).map((y) => y.value).join(";"));
+    function x(y) {
+      if (l.value) {
+        const m = Array.isArray(s.value) ? [...s.value] : [], b = m.findIndex((j) => oe(j, y, o.by));
+        b === -1 ? m.push(y) : m.splice(b, 1), s.value = [...m];
       } else
-        l.value = p;
+        s.value = y;
     }
-    return ci({
-      triggerElement: d,
-      onTriggerChange: (p) => {
-        d.value = p;
+    return ot({
+      triggerElement: f,
+      onTriggerChange: (y) => {
+        f.value = y;
       },
-      valueElement: u,
-      onValueElementChange: (p) => {
-        u.value = p;
+      valueElement: d,
+      onValueElementChange: (y) => {
+        d.value = y;
       },
       contentId: "",
-      modelValue: l,
+      modelValue: s,
       // @ts-expect-error Missing infer for AcceptableValue
-      onValueChange: w,
-      by: n.by,
-      open: c,
-      multiple: s,
-      required: r,
-      onOpenChange: (p) => {
-        c.value = p;
+      onValueChange: x,
+      by: o.by,
+      open: a,
+      multiple: l,
+      required: n,
+      onOpenChange: (y) => {
+        a.value = y;
       },
-      dir: _,
-      triggerPointerDownPosRef: f,
-      disabled: a,
-      isEmptyModelValue: m,
-      optionsSet: v,
-      onOptionAdd: (p) => v.value.add(p),
-      onOptionRemove: (p) => v.value.delete(p)
-    }), (p, h) => (H(), ne(N(Sf), null, {
-      default: W(() => [
-        q(p.$slots, "default", {
-          modelValue: N(l),
-          open: N(c)
+      dir: u,
+      triggerPointerDownPosRef: h,
+      disabled: r,
+      isEmptyModelValue: g,
+      optionsSet: k,
+      onOptionAdd: (y) => k.value.add(y),
+      onOptionRemove: (y) => k.value.delete(y)
+    }), (y, m) => (P(), N(p(o1), null, {
+      default: T(() => [
+        Z(y.$slots, "default", {
+          modelValue: p(s),
+          open: p(a)
         }),
-        N(y) ? (H(), ne(Df, {
-          key: S.value,
+        p(w) ? (P(), N(u1, {
+          key: v.value,
           "aria-hidden": "true",
           tabindex: "-1",
-          multiple: N(s),
-          required: N(r),
-          name: p.name,
-          autocomplete: p.autocomplete,
-          disabled: N(a),
-          value: N(l)
+          multiple: p(l),
+          required: p(n),
+          name: y.name,
+          autocomplete: y.autocomplete,
+          disabled: p(r),
+          value: p(s)
         }, {
-          default: W(() => [
-            N(da)(N(l)) ? (H(), Ne("option", Vf)) : gt("", !0),
-            (H(!0), Ne(Nt, null, bo(Array.from(v.value), (T) => (H(), Ne("option", be({
-              key: T.value ?? "",
+          default: T(() => [
+            p(De)(p(s)) ? (P(), X("option", w1)) : M2("", !0),
+            (P(!0), X(Q2, null, F0(Array.from(k.value), (b) => (P(), X("option", U({
+              key: b.value ?? "",
               ref_for: !0
-            }, T), null, 16))), 128))
+            }, b), null, 16))), 128))
           ]),
           _: 1
-        }, 8, ["multiple", "required", "name", "autocomplete", "disabled", "value"])) : gt("", !0)
+        }, 8, ["multiple", "required", "name", "autocomplete", "disabled", "value"])) : M2("", !0)
       ]),
       _: 3
     }));
   }
-}), Uf = /* @__PURE__ */ Y({
+}), x1 = /* @__PURE__ */ V({
   __name: "SelectTrigger",
   props: {
     disabled: { type: Boolean },
@@ -10836,68 +7770,68 @@ const Vf = {
     as: { default: "button" }
   },
   setup(e) {
-    const t = e, n = jt(), { forwardRef: o, currentElement: r } = Ye(), a = k(() => {
-      var f;
-      return ((f = n.disabled) == null ? void 0 : f.value) || t.disabled;
+    const t = e, o = H2(), { forwardRef: i, currentElement: n } = a2(), r = S(() => {
+      var h;
+      return ((h = o.disabled) == null ? void 0 : h.value) || t.disabled;
     });
-    n.contentId || (n.contentId = ni(void 0, "reka-select-content")), lt(() => {
-      n.onTriggerChange(r.value);
+    o.contentId || (o.contentId = Y3(void 0, "reka-select-content")), x2(() => {
+      o.onTriggerChange(n.value);
     });
-    const { getItems: s } = pn(), { search: i, handleTypeaheadSearch: l, resetTypeahead: c } = li();
-    function d() {
-      a.value || (n.onOpenChange(!0), c());
+    const { getItems: l } = r0(), { search: c, handleTypeaheadSearch: s, resetTypeahead: a } = tt();
+    function f() {
+      r.value || (o.onOpenChange(!0), a());
     }
-    function u(f) {
-      d(), n.triggerPointerDownPosRef.value = {
-        x: Math.round(f.pageX),
-        y: Math.round(f.pageY)
+    function d(h) {
+      f(), o.triggerPointerDownPosRef.value = {
+        x: Math.round(h.pageX),
+        y: Math.round(h.pageY)
       };
     }
-    return (f, m) => (H(), ne(N(Nf), {
+    return (h, g) => (P(), N(p(r1), {
       "as-child": "",
-      reference: f.reference
+      reference: h.reference
     }, {
-      default: W(() => {
-        var _, y, v, S;
+      default: T(() => {
+        var u, w, k, v;
         return [
-          ae(N(Ie), {
-            ref: N(o),
+          D(p(e2), {
+            ref: p(i),
             role: "combobox",
-            type: f.as === "button" ? "button" : void 0,
-            "aria-controls": N(n).contentId,
-            "aria-expanded": N(n).open.value || !1,
-            "aria-required": (_ = N(n).required) == null ? void 0 : _.value,
+            type: h.as === "button" ? "button" : void 0,
+            "aria-controls": p(o).contentId,
+            "aria-expanded": p(o).open.value || !1,
+            "aria-required": (u = p(o).required) == null ? void 0 : u.value,
             "aria-autocomplete": "none",
-            disabled: a.value,
-            dir: (y = N(n)) == null ? void 0 : y.dir.value,
-            "data-state": (v = N(n)) != null && v.open.value ? "open" : "closed",
-            "data-disabled": a.value ? "" : void 0,
-            "data-placeholder": (S = N(n).modelValue) != null && S.value ? void 0 : "",
-            "as-child": f.asChild,
-            as: f.as,
-            onClick: m[0] || (m[0] = (w) => {
-              var p;
-              (p = w == null ? void 0 : w.currentTarget) == null || p.focus();
+            disabled: r.value,
+            dir: (w = p(o)) == null ? void 0 : w.dir.value,
+            "data-state": (k = p(o)) != null && k.open.value ? "open" : "closed",
+            "data-disabled": r.value ? "" : void 0,
+            "data-placeholder": (v = p(o).modelValue) != null && v.value ? void 0 : "",
+            "as-child": h.asChild,
+            as: h.as,
+            onClick: g[0] || (g[0] = (x) => {
+              var y;
+              (y = x == null ? void 0 : x.currentTarget) == null || y.focus();
             }),
-            onPointerdown: m[1] || (m[1] = (w) => {
-              if (w.pointerType === "touch")
-                return w.preventDefault();
-              const p = w.target;
-              p.hasPointerCapture(w.pointerId) && p.releasePointerCapture(w.pointerId), w.button === 0 && w.ctrlKey === !1 && (u(w), w.preventDefault());
+            onPointerdown: g[1] || (g[1] = (x) => {
+              if (x.pointerType === "touch")
+                return x.preventDefault();
+              const y = x.target;
+              y.hasPointerCapture(x.pointerId) && y.releasePointerCapture(x.pointerId), x.button === 0 && x.ctrlKey === !1 && (d(x), x.preventDefault());
             }),
-            onPointerup: m[2] || (m[2] = vn(
-              (w) => {
-                w.pointerType === "touch" && u(w);
+            onPointerup: g[2] || (g[2] = s0(
+              (x) => {
+                x.pointerType === "touch" && d(x);
               },
               ["prevent"]
             )),
-            onKeydown: m[3] || (m[3] = (w) => {
-              const p = N(i) !== "";
-              !(w.ctrlKey || w.altKey || w.metaKey) && w.key.length === 1 && p && w.key === " " || (N(l)(w.key, N(s)()), N(Ff).includes(w.key) && (d(), w.preventDefault()));
+            onKeydown: g[3] || (g[3] = (x) => {
+              const y = p(c) !== "";
+              !(x.ctrlKey || x.altKey || x.metaKey) && x.key.length === 1 && y && x.key === " " || (p(s)(x.key, p(l)()), p(p1).includes(x.key) && (f(), x.preventDefault()));
             })
           }, {
-            default: W(() => [
-              q(f.$slots, "default")
+            default: T(() => [
+              Z(h.$slots, "default")
             ]),
             _: 3
           }, 8, ["type", "aria-controls", "aria-expanded", "aria-required", "disabled", "dir", "data-state", "data-disabled", "data-placeholder", "as-child", "as"])
@@ -10906,7 +7840,7 @@ const Vf = {
       _: 3
     }, 8, ["reference"]));
   }
-}), Gf = /* @__PURE__ */ Y({
+}), v1 = /* @__PURE__ */ V({
   __name: "SelectPortal",
   props: {
     to: {},
@@ -10916,14 +7850,14 @@ const Vf = {
   },
   setup(e) {
     const t = e;
-    return (n, o) => (H(), ne(N(Jd), Ia(Pa(t)), {
-      default: W(() => [
-        q(n.$slots, "default")
+    return (o, i) => (P(), N(p(Es), s3(a3(t)), {
+      default: T(() => [
+        Z(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), [pr, Wf] = Yt("SelectItemAlignedPosition"), Kf = /* @__PURE__ */ Y({
+}), [xe, m1] = z2("SelectItemAlignedPosition"), _1 = /* @__PURE__ */ V({
   inheritAttrs: !1,
   __name: "SelectItemAlignedPosition",
   props: {
@@ -10932,82 +7866,82 @@ const Vf = {
   },
   emits: ["placed"],
   setup(e, { emit: t }) {
-    const n = e, o = t, { getItems: r } = pn(), a = jt(), s = Xt(), i = R(!1), l = R(!0), c = R(), { forwardRef: d, currentElement: u } = Ye(), { viewport: f, selectedItem: m, selectedItemText: _, focusSelectedItem: y } = s;
-    function v() {
-      if (a.triggerElement.value && a.valueElement.value && c.value && u.value && (f != null && f.value) && (m != null && m.value) && (_ != null && _.value)) {
-        const p = a.triggerElement.value.getBoundingClientRect(), h = u.value.getBoundingClientRect(), T = a.valueElement.value.getBoundingClientRect(), E = _.value.getBoundingClientRect();
-        if (a.dir.value !== "rtl") {
-          const J = E.left - h.left, Ce = T.left - J, Se = p.left - Ce, Te = p.width + Se, Be = Math.max(Te, h.width), xe = window.innerWidth - je, dt = va(Ce, je, Math.max(je, xe - Be));
-          c.value.style.minWidth = `${Te}px`, c.value.style.left = `${dt}px`;
+    const o = e, i = t, { getItems: n } = r0(), r = H2(), l = K2(), c = C(!1), s = C(!0), a = C(), { forwardRef: f, currentElement: d } = a2(), { viewport: h, selectedItem: g, selectedItemText: u, focusSelectedItem: w } = l;
+    function k() {
+      if (r.triggerElement.value && r.valueElement.value && a.value && d.value && (h != null && h.value) && (g != null && g.value) && (u != null && u.value)) {
+        const y = r.triggerElement.value.getBoundingClientRect(), m = d.value.getBoundingClientRect(), b = r.valueElement.value.getBoundingClientRect(), j = u.value.getBoundingClientRect();
+        if (r.dir.value !== "rtl") {
+          const $ = j.left - m.left, d2 = b.left - $, c2 = y.left - d2, s2 = y.width + c2, Z2 = Math.max(s2, m.width), S2 = window.innerWidth - f2, O0 = Ue(d2, f2, Math.max(f2, S2 - Z2));
+          a.value.style.minWidth = `${s2}px`, a.value.style.left = `${O0}px`;
         } else {
-          const J = h.right - E.right, Ce = window.innerWidth - T.right - J, Se = window.innerWidth - p.right - Ce, Te = p.width + Se, Be = Math.max(Te, h.width), xe = window.innerWidth - je, dt = va(
-            Ce,
-            je,
-            Math.max(je, xe - Be)
+          const $ = m.right - j.right, d2 = window.innerWidth - b.right - $, c2 = window.innerWidth - y.right - d2, s2 = y.width + c2, Z2 = Math.max(s2, m.width), S2 = window.innerWidth - f2, O0 = Ue(
+            d2,
+            f2,
+            Math.max(f2, S2 - Z2)
           );
-          c.value.style.minWidth = `${Te}px`, c.value.style.right = `${dt}px`;
+          a.value.style.minWidth = `${s2}px`, a.value.style.right = `${O0}px`;
         }
-        const A = r().map((J) => J.ref), O = window.innerHeight - je * 2, L = f.value.scrollHeight, V = window.getComputedStyle(u.value), U = Number.parseInt(
-          V.borderTopWidth,
+        const M = n().map(($) => $.ref), _ = window.innerHeight - f2 * 2, O = h.value.scrollHeight, R = window.getComputedStyle(d.value), L = Number.parseInt(
+          R.borderTopWidth,
           10
-        ), $ = Number.parseInt(V.paddingTop, 10), j = Number.parseInt(
-          V.borderBottomWidth,
+        ), F = Number.parseInt(R.paddingTop, 10), Y = Number.parseInt(
+          R.borderBottomWidth,
           10
-        ), ee = Number.parseInt(
-          V.paddingBottom,
+        ), G = Number.parseInt(
+          R.paddingBottom,
           10
-        ), le = U + $ + L + ee + j, Z = Math.min(
-          m.value.offsetHeight * 5,
-          le
-        ), te = window.getComputedStyle(f.value), D = Number.parseInt(te.paddingTop, 10), Ee = Number.parseInt(
-          te.paddingBottom,
+        ), K = L + F + O + G + Y, H = Math.min(
+          g.value.offsetHeight * 5,
+          K
+        ), z = window.getComputedStyle(h.value), E = Number.parseInt(z.paddingTop, 10), o2 = Number.parseInt(
+          z.paddingBottom,
           10
-        ), Pe = p.top + p.height / 2 - je, ot = O - Pe, ye = m.value.offsetHeight / 2, pe = m.value.offsetTop + ye, de = U + $ + pe, Ke = le - de;
-        if (de <= Pe) {
-          const J = m.value === A[A.length - 1];
-          c.value.style.bottom = "0px";
-          const Ce = u.value.clientHeight - f.value.offsetTop - f.value.offsetHeight, Se = Math.max(
-            ot,
-            ye + (J ? Ee : 0) + Ce + j
-          ), Te = de + Se;
-          c.value.style.height = `${Te}px`;
+        ), m2 = y.top + y.height / 2 - f2, h0 = _ - m2, R2 = g.value.offsetHeight / 2, Q = g.value.offsetTop + R2, J = L + F + Q, W2 = K - J;
+        if (J <= m2) {
+          const $ = g.value === M[M.length - 1];
+          a.value.style.bottom = "0px";
+          const d2 = d.value.clientHeight - h.value.offsetTop - h.value.offsetHeight, c2 = Math.max(
+            h0,
+            R2 + ($ ? o2 : 0) + d2 + Y
+          ), s2 = J + c2;
+          a.value.style.height = `${s2}px`;
         } else {
-          const J = m.value === A[0];
-          c.value.style.top = "0px";
-          const Se = Math.max(
-            Pe,
-            U + f.value.offsetTop + (J ? D : 0) + ye
-          ) + Ke;
-          c.value.style.height = `${Se}px`, f.value.scrollTop = de - Pe + f.value.offsetTop;
+          const $ = g.value === M[0];
+          a.value.style.top = "0px";
+          const c2 = Math.max(
+            m2,
+            L + h.value.offsetTop + ($ ? E : 0) + R2
+          ) + W2;
+          a.value.style.height = `${c2}px`, h.value.scrollTop = J - m2 + h.value.offsetTop;
         }
-        c.value.style.margin = `${je}px 0`, c.value.style.minHeight = `${Z}px`, c.value.style.maxHeight = `${O}px`, o("placed"), requestAnimationFrame(() => i.value = !0);
+        a.value.style.margin = `${f2}px 0`, a.value.style.minHeight = `${H}px`, a.value.style.maxHeight = `${_}px`, i("placed"), requestAnimationFrame(() => c.value = !0);
       }
     }
-    const S = R("");
-    lt(async () => {
-      await Ue(), v(), u.value && (S.value = window.getComputedStyle(u.value).zIndex);
+    const v = C("");
+    x2(async () => {
+      await r2(), k(), d.value && (v.value = window.getComputedStyle(d.value).zIndex);
     });
-    function w(p) {
-      p && l.value === !0 && (v(), y == null || y(), l.value = !1);
+    function x(y) {
+      y && s.value === !0 && (k(), w == null || w(), s.value = !1);
     }
-    return Gd(a.triggerElement, () => {
-      v();
-    }), Wf({
-      contentWrapper: c,
-      shouldExpandOnScrollRef: i,
-      onScrollButtonChange: w
-    }), (p, h) => (H(), Ne("div", {
+    return ms(r.triggerElement, () => {
+      k();
+    }), m1({
+      contentWrapper: a,
+      shouldExpandOnScrollRef: c,
+      onScrollButtonChange: x
+    }), (y, m) => (P(), X("div", {
       ref_key: "contentWrapperElement",
-      ref: c,
-      style: Yo({
+      ref: a,
+      style: re({
         display: "flex",
         flexDirection: "column",
         position: "fixed",
-        zIndex: S.value
+        zIndex: v.value
       })
     }, [
-      ae(N(Ie), be({
-        ref: N(d),
+      D(p(e2), U({
+        ref: p(f),
         style: {
           // When we get the height of the content, it includes borders. If we were to set
           // the height without having `boxSizing: 'border-box'` it would be too big.
@@ -11015,15 +7949,15 @@ const Vf = {
           // We need to ensure the content doesn't get taller than the wrapper
           maxHeight: "100%"
         }
-      }, { ...p.$attrs, ...n }), {
-        default: W(() => [
-          q(p.$slots, "default")
+      }, { ...y.$attrs, ...o }), {
+        default: T(() => [
+          Z(y.$slots, "default")
         ]),
         _: 3
       }, 16)
     ], 4));
   }
-}), Hf = /* @__PURE__ */ Y({
+}), b1 = /* @__PURE__ */ V({
   __name: "SelectPopperPosition",
   props: {
     side: {},
@@ -11032,7 +7966,7 @@ const Vf = {
     alignOffset: {},
     avoidCollisions: { type: Boolean },
     collisionBoundary: {},
-    collisionPadding: { default: je },
+    collisionPadding: { default: f2 },
     arrowPadding: {},
     sticky: {},
     hideWhenDetached: { type: Boolean },
@@ -11045,8 +7979,8 @@ const Vf = {
     as: {}
   },
   setup(e) {
-    const n = zt(e);
-    return (o, r) => (H(), ne(N(kf), be(N(n), { style: {
+    const o = F2(e);
+    return (i, n) => (P(), N(p(f1), U(p(o), { style: {
       // Ensure border-box for floating-ui calculations
       boxSizing: "border-box",
       "--reka-select-content-transform-origin": "var(--reka-popper-transform-origin)",
@@ -11055,20 +7989,20 @@ const Vf = {
       "--reka-select-trigger-width": "var(--reka-popper-anchor-width)",
       "--reka-select-trigger-height": "var(--reka-popper-anchor-height)"
     } }), {
-      default: W(() => [
-        q(o.$slots, "default")
+      default: T(() => [
+        Z(i.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), Yf = {
+}), j1 = {
   onViewportChange: () => {
   },
   itemTextRefCallback: () => {
   },
   itemRefCallback: () => {
   }
-}, [Xt, ui] = Yt("SelectContent"), zf = /* @__PURE__ */ Y({
+}, [K2, it] = z2("SelectContent"), M1 = /* @__PURE__ */ V({
   __name: "SelectContentImpl",
   props: {
     position: { default: "item-aligned" },
@@ -11093,119 +8027,119 @@ const Vf = {
   },
   emits: ["closeAutoFocus", "escapeKeyDown", "pointerDownOutside"],
   setup(e, { emit: t }) {
-    const n = e, o = t, r = jt();
-    Rf(), bf(n.bodyLock);
-    const { CollectionSlot: a, getItems: s } = pn(), i = R();
-    hf(i);
-    const { search: l, handleTypeaheadSearch: c } = li(), d = R(), u = R(), f = R(), m = R(!1), _ = R(!1), y = R(!1);
-    function v() {
-      u.value && i.value && fa([u.value, i.value]);
+    const o = e, i = t, n = H2();
+    h1(), Qs(o.bodyLock);
+    const { CollectionSlot: r, getItems: l } = r0(), c = C();
+    Us(c);
+    const { search: s, handleTypeaheadSearch: a } = tt(), f = C(), d = C(), h = C(), g = C(!1), u = C(!1), w = C(!1);
+    function k() {
+      d.value && c.value && $e([d.value, c.value]);
     }
-    he(m, () => {
-      v();
+    W(g, () => {
+      k();
     });
-    const { onOpenChange: S, triggerPointerDownPosRef: w } = r;
-    Fe((E) => {
-      if (!i.value)
+    const { onOpenChange: v, triggerPointerDownPosRef: x } = n;
+    t2((j) => {
+      if (!c.value)
         return;
-      let A = { x: 0, y: 0 };
-      const O = (V) => {
-        var U, $;
-        A = {
+      let M = { x: 0, y: 0 };
+      const _ = (R) => {
+        var L, F;
+        M = {
           x: Math.abs(
-            Math.round(V.pageX) - (((U = w.value) == null ? void 0 : U.x) ?? 0)
+            Math.round(R.pageX) - (((L = x.value) == null ? void 0 : L.x) ?? 0)
           ),
           y: Math.abs(
-            Math.round(V.pageY) - ((($ = w.value) == null ? void 0 : $.y) ?? 0)
+            Math.round(R.pageY) - (((F = x.value) == null ? void 0 : F.y) ?? 0)
           )
         };
-      }, L = (V) => {
-        var U;
-        V.pointerType !== "touch" && (A.x <= 10 && A.y <= 10 ? V.preventDefault() : (U = i.value) != null && U.contains(V.target) || S(!1), document.removeEventListener("pointermove", O), w.value = null);
+      }, O = (R) => {
+        var L;
+        R.pointerType !== "touch" && (M.x <= 10 && M.y <= 10 ? R.preventDefault() : (L = c.value) != null && L.contains(R.target) || v(!1), document.removeEventListener("pointermove", _), x.value = null);
       };
-      w.value !== null && (document.addEventListener("pointermove", O), document.addEventListener("pointerup", L, {
+      x.value !== null && (document.addEventListener("pointermove", _), document.addEventListener("pointerup", O, {
         capture: !0,
         once: !0
-      })), E(() => {
-        document.removeEventListener("pointermove", O), document.removeEventListener("pointerup", L, {
+      })), j(() => {
+        document.removeEventListener("pointermove", _), document.removeEventListener("pointerup", O, {
           capture: !0
         });
       });
     });
-    function p(E) {
-      const A = E.ctrlKey || E.altKey || E.metaKey;
-      if (E.key === "Tab" && E.preventDefault(), !A && E.key.length === 1 && c(E.key, s()), ["ArrowUp", "ArrowDown", "Home", "End"].includes(E.key)) {
-        let L = [...s().map((V) => V.ref)];
-        if (["ArrowUp", "End"].includes(E.key) && (L = L.slice().reverse()), ["ArrowUp", "ArrowDown"].includes(E.key)) {
-          const V = E.target, U = L.indexOf(V);
-          L = L.slice(U + 1);
+    function y(j) {
+      const M = j.ctrlKey || j.altKey || j.metaKey;
+      if (j.key === "Tab" && j.preventDefault(), !M && j.key.length === 1 && a(j.key, l()), ["ArrowUp", "ArrowDown", "Home", "End"].includes(j.key)) {
+        let O = [...l().map((R) => R.ref)];
+        if (["ArrowUp", "End"].includes(j.key) && (O = O.slice().reverse()), ["ArrowUp", "ArrowDown"].includes(j.key)) {
+          const R = j.target, L = O.indexOf(R);
+          O = O.slice(L + 1);
         }
-        setTimeout(() => fa(L)), E.preventDefault();
+        setTimeout(() => $e(O)), j.preventDefault();
       }
     }
-    const h = k(() => n.position === "popper" ? n : {}), T = zt(h.value);
-    return ui({
-      content: i,
-      viewport: d,
-      onViewportChange: (E) => {
-        d.value = E;
+    const m = S(() => o.position === "popper" ? o : {}), b = F2(m.value);
+    return it({
+      content: c,
+      viewport: f,
+      onViewportChange: (j) => {
+        f.value = j;
       },
-      itemRefCallback: (E, A, O) => {
-        const L = !_.value && !O, V = Uo(r.modelValue.value, A, r.by);
-        if (r.multiple.value) {
-          if (y.value)
+      itemRefCallback: (j, M, _) => {
+        const O = !u.value && !_, R = te(n.modelValue.value, M, n.by);
+        if (n.multiple.value) {
+          if (w.value)
             return;
-          (V || L) && (u.value = E, V && (y.value = !0));
+          (R || O) && (d.value = j, R && (w.value = !0));
         } else
-          (V || L) && (u.value = E);
-        L && (_.value = !0);
+          (R || O) && (d.value = j);
+        O && (u.value = !0);
       },
-      selectedItem: u,
-      selectedItemText: f,
+      selectedItem: d,
+      selectedItemText: h,
       onItemLeave: () => {
-        var E;
-        (E = i.value) == null || E.focus();
+        var j;
+        (j = c.value) == null || j.focus();
       },
-      itemTextRefCallback: (E, A, O) => {
-        const L = !_.value && !O;
-        (Uo(r.modelValue.value, A, r.by) || L) && (f.value = E);
+      itemTextRefCallback: (j, M, _) => {
+        const O = !u.value && !_;
+        (te(n.modelValue.value, M, n.by) || O) && (h.value = j);
       },
-      focusSelectedItem: v,
-      position: n.position,
-      isPositioned: m,
-      searchRef: l
-    }), (E, A) => (H(), ne(N(a), null, {
-      default: W(() => [
-        ae(N(df), {
+      focusSelectedItem: k,
+      position: o.position,
+      isPositioned: g,
+      searchRef: s
+    }), (j, M) => (P(), N(p(r), null, {
+      default: T(() => [
+        D(p(zs), {
           "as-child": "",
-          onMountAutoFocus: A[6] || (A[6] = vn(() => {
+          onMountAutoFocus: M[6] || (M[6] = s0(() => {
           }, ["prevent"])),
-          onUnmountAutoFocus: A[7] || (A[7] = (O) => {
-            var L;
-            o("closeAutoFocus", O), !O.defaultPrevented && ((L = N(r).triggerElement.value) == null || L.focus({ preventScroll: !0 }), O.preventDefault());
+          onUnmountAutoFocus: M[7] || (M[7] = (_) => {
+            var O;
+            i("closeAutoFocus", _), !_.defaultPrevented && ((O = p(n).triggerElement.value) == null || O.focus({ preventScroll: !0 }), _.preventDefault());
           })
         }, {
-          default: W(() => [
-            ae(N(nf), {
+          default: T(() => [
+            D(p(Vs), {
               "as-child": "",
               "disable-outside-pointer-events": "",
-              onFocusOutside: A[2] || (A[2] = vn(() => {
+              onFocusOutside: M[2] || (M[2] = s0(() => {
               }, ["prevent"])),
-              onDismiss: A[3] || (A[3] = (O) => N(r).onOpenChange(!1)),
-              onEscapeKeyDown: A[4] || (A[4] = (O) => o("escapeKeyDown", O)),
-              onPointerDownOutside: A[5] || (A[5] = (O) => o("pointerDownOutside", O))
+              onDismiss: M[3] || (M[3] = (_) => p(n).onOpenChange(!1)),
+              onEscapeKeyDown: M[4] || (M[4] = (_) => i("escapeKeyDown", _)),
+              onPointerDownOutside: M[5] || (M[5] = (_) => i("pointerDownOutside", _))
             }, {
-              default: W(() => [
-                (H(), ne(Ci(
-                  E.position === "popper" ? Hf : Kf
-                ), be({ ...E.$attrs, ...N(T) }, {
-                  id: N(r).contentId,
-                  ref: (O) => {
-                    i.value = N(it)(O);
+              default: T(() => [
+                (P(), N(xt(
+                  j.position === "popper" ? b1 : _1
+                ), U({ ...j.$attrs, ...p(b) }, {
+                  id: p(n).contentId,
+                  ref: (_) => {
+                    c.value = p(y2)(_);
                   },
                   role: "listbox",
-                  "data-state": N(r).open.value ? "open" : "closed",
-                  dir: N(r).dir.value,
+                  "data-state": p(n).open.value ? "open" : "closed",
+                  dir: p(n).dir.value,
                   style: {
                     // flex layout so we can place the scroll buttons properly
                     display: "flex",
@@ -11213,13 +8147,13 @@ const Vf = {
                     // reset the outline by default as the content MAY get focused
                     outline: "none"
                   },
-                  onContextmenu: A[0] || (A[0] = vn(() => {
+                  onContextmenu: M[0] || (M[0] = s0(() => {
                   }, ["prevent"])),
-                  onPlaced: A[1] || (A[1] = (O) => m.value = !0),
-                  onKeydown: p
+                  onPlaced: M[1] || (M[1] = (_) => g.value = !0),
+                  onKeydown: y
                 }), {
-                  default: W(() => [
-                    q(E.$slots, "default")
+                  default: T(() => [
+                    Z(j.$slots, "default")
                   ]),
                   _: 3
                 }, 16, ["id", "data-state", "dir", "onKeydown"]))
@@ -11233,16 +8167,16 @@ const Vf = {
       _: 3
     }));
   }
-}), jf = /* @__PURE__ */ Y({
+}), A1 = /* @__PURE__ */ V({
   inheritAttrs: !1,
   __name: "SelectProvider",
   props: {
     context: {}
   },
   setup(e) {
-    return ci(e.context), ui(Yf), (n, o) => q(n.$slots, "default");
+    return ot(e.context), it(j1), (o, i) => Z(o.$slots, "default");
   }
-}), Xf = { key: 1 }, Zf = /* @__PURE__ */ Y({
+}), B1 = { key: 1 }, S1 = /* @__PURE__ */ V({
   inheritAttrs: !1,
   __name: "SelectContent",
   props: {
@@ -11269,41 +8203,41 @@ const Vf = {
   },
   emits: ["closeAutoFocus", "escapeKeyDown", "pointerDownOutside"],
   setup(e, { emit: t }) {
-    const n = e, r = dr(n, t), a = jt(), s = R();
-    lt(() => {
-      s.value = new DocumentFragment();
+    const o = e, n = we(o, t), r = H2(), l = C();
+    x2(() => {
+      l.value = new DocumentFragment();
     });
-    const i = R(), l = k(() => n.forceMount || a.open.value);
-    return (c, d) => {
-      var u;
-      return l.value ? (H(), ne(N(Xd), {
+    const c = C(), s = S(() => o.forceMount || r.open.value);
+    return (a, f) => {
+      var d;
+      return s.value ? (P(), N(p(Ss), {
         key: 0,
         ref_key: "presenceRef",
-        ref: i,
+        ref: c,
         present: !0
       }, {
-        default: W(() => [
-          ae(zf, Ia(Pa({ ...N(r), ...c.$attrs })), {
-            default: W(() => [
-              q(c.$slots, "default")
+        default: T(() => [
+          D(M1, s3(a3({ ...p(n), ...a.$attrs })), {
+            default: T(() => [
+              Z(a.$slots, "default")
             ]),
             _: 3
           }, 16)
         ]),
         _: 3
-      }, 512)) : !((u = i.value) != null && u.present) && s.value ? (H(), Ne("div", Xf, [
-        (H(), ne(Ca, { to: s.value }, [
-          ae(jf, { context: N(a) }, {
-            default: W(() => [
-              q(c.$slots, "default")
+      }, 512)) : !((d = c.value) != null && d.present) && l.value ? (P(), X("div", B1, [
+        (P(), N(l3, { to: l.value }, [
+          D(A1, { context: p(r) }, {
+            default: T(() => [
+              Z(a.$slots, "default")
             ]),
             _: 3
           }, 8, ["context"])
         ], 8, ["to"]))
-      ])) : gt("", !0);
+      ])) : M2("", !0);
     };
   }
-}), Jf = /* @__PURE__ */ Y({
+}), C1 = /* @__PURE__ */ V({
   __name: "SelectSeparator",
   props: {
     asChild: { type: Boolean },
@@ -11311,14 +8245,14 @@ const Vf = {
   },
   setup(e) {
     const t = e;
-    return (n, o) => (H(), ne(N(Ie), be({ "aria-hidden": "true" }, t), {
-      default: W(() => [
-        q(n.$slots, "default")
+    return (o, i) => (P(), N(p(e2), U({ "aria-hidden": "true" }, t), {
+      default: T(() => [
+        Z(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), [di, qf] = Yt("SelectItem"), Qf = /* @__PURE__ */ Y({
+}), [nt, E1] = z2("SelectItem"), T1 = /* @__PURE__ */ V({
   __name: "SelectItem",
   props: {
     value: {},
@@ -11329,79 +8263,79 @@ const Vf = {
   },
   emits: ["select"],
   setup(e, { emit: t }) {
-    const n = e, o = t, { disabled: r } = rn(n), a = jt(), s = Xt(), { forwardRef: i, currentElement: l } = Ye(), { CollectionItem: c } = pn(), d = k(() => {
-      var h;
-      return Uo((h = a.modelValue) == null ? void 0 : h.value, n.value, a.by);
-    }), u = R(!1), f = R(n.textValue ?? ""), m = ni(void 0, "reka-select-item-text"), _ = "select.select";
-    async function y(h) {
-      if (h.defaultPrevented)
+    const o = e, i = t, { disabled: n } = e0(o), r = H2(), l = K2(), { forwardRef: c, currentElement: s } = a2(), { CollectionItem: a } = r0(), f = S(() => {
+      var m;
+      return te((m = r.modelValue) == null ? void 0 : m.value, o.value, r.by);
+    }), d = C(!1), h = C(o.textValue ?? ""), g = Y3(void 0, "reka-select-item-text"), u = "select.select";
+    async function w(m) {
+      if (m.defaultPrevented)
         return;
-      const T = { originalEvent: h, value: n.value };
-      fr(_, v, T);
+      const b = { originalEvent: m, value: o.value };
+      ye(u, k, b);
     }
-    async function v(h) {
-      await Ue(), o("select", h), !h.defaultPrevented && (r.value || (a.onValueChange(n.value), a.multiple.value || a.onOpenChange(!1)));
+    async function k(m) {
+      await r2(), i("select", m), !m.defaultPrevented && (n.value || (r.onValueChange(o.value), r.multiple.value || r.onOpenChange(!1)));
     }
-    async function S(h) {
-      var T;
-      await Ue(), !h.defaultPrevented && (r.value ? (T = s.onItemLeave) == null || T.call(s) : h.currentTarget.focus({ preventScroll: !0 }));
+    async function v(m) {
+      var b;
+      await r2(), !m.defaultPrevented && (n.value ? (b = l.onItemLeave) == null || b.call(l) : m.currentTarget.focus({ preventScroll: !0 }));
     }
-    async function w(h) {
-      var T;
-      await Ue(), !h.defaultPrevented && h.currentTarget === Qe() && ((T = s.onItemLeave) == null || T.call(s));
+    async function x(m) {
+      var b;
+      await r2(), !m.defaultPrevented && m.currentTarget === h2() && ((b = l.onItemLeave) == null || b.call(l));
     }
-    async function p(h) {
-      var E;
-      await Ue(), !(h.defaultPrevented || ((E = s.searchRef) == null ? void 0 : E.value) !== "" && h.key === " ") && (Bf.includes(h.key) && y(h), h.key === " " && h.preventDefault());
+    async function y(m) {
+      var j;
+      await r2(), !(m.defaultPrevented || ((j = l.searchRef) == null ? void 0 : j.value) !== "" && m.key === " ") && (k1.includes(m.key) && w(m), m.key === " " && m.preventDefault());
     }
-    if (n.value === "")
+    if (o.value === "")
       throw new Error(
         "A <SelectItem /> must have a value prop that is not an empty string. This is because the Select value can be set to an empty string to clear the selection and show the placeholder."
       );
-    return lt(() => {
-      l.value && s.itemRefCallback(
-        l.value,
-        n.value,
-        n.disabled
+    return x2(() => {
+      s.value && l.itemRefCallback(
+        s.value,
+        o.value,
+        o.disabled
       );
-    }), qf({
-      value: n.value,
-      disabled: r,
-      textId: m,
-      isSelected: d,
-      onItemTextChange: (h) => {
-        f.value = ((f.value || (h == null ? void 0 : h.textContent)) ?? "").trim();
+    }), E1({
+      value: o.value,
+      disabled: n,
+      textId: g,
+      isSelected: f,
+      onItemTextChange: (m) => {
+        h.value = ((h.value || (m == null ? void 0 : m.textContent)) ?? "").trim();
       }
-    }), (h, T) => (H(), ne(N(c), {
-      value: { textValue: f.value }
+    }), (m, b) => (P(), N(p(a), {
+      value: { textValue: h.value }
     }, {
-      default: W(() => [
-        ae(N(Ie), {
-          ref: N(i),
+      default: T(() => [
+        D(p(e2), {
+          ref: p(c),
           role: "option",
-          "aria-labelledby": N(m),
-          "data-highlighted": u.value ? "" : void 0,
-          "aria-selected": d.value,
-          "data-state": d.value ? "checked" : "unchecked",
-          "aria-disabled": N(r) || void 0,
-          "data-disabled": N(r) ? "" : void 0,
-          tabindex: N(r) ? void 0 : -1,
-          as: h.as,
-          "as-child": h.asChild,
-          onFocus: T[0] || (T[0] = (E) => u.value = !0),
-          onBlur: T[1] || (T[1] = (E) => u.value = !1),
-          onPointerup: y,
-          onPointerdown: T[2] || (T[2] = (E) => {
-            E.currentTarget.focus({ preventScroll: !0 });
+          "aria-labelledby": p(g),
+          "data-highlighted": d.value ? "" : void 0,
+          "aria-selected": f.value,
+          "data-state": f.value ? "checked" : "unchecked",
+          "aria-disabled": p(n) || void 0,
+          "data-disabled": p(n) ? "" : void 0,
+          tabindex: p(n) ? void 0 : -1,
+          as: m.as,
+          "as-child": m.asChild,
+          onFocus: b[0] || (b[0] = (j) => d.value = !0),
+          onBlur: b[1] || (b[1] = (j) => d.value = !1),
+          onPointerup: w,
+          onPointerdown: b[2] || (b[2] = (j) => {
+            j.currentTarget.focus({ preventScroll: !0 });
           }),
-          onTouchend: T[3] || (T[3] = vn(() => {
+          onTouchend: b[3] || (b[3] = s0(() => {
           }, ["prevent", "stop"])),
-          onPointermove: S,
-          onPointerleave: w,
-          onKeydown: p
+          onPointermove: v,
+          onPointerleave: x,
+          onKeydown: y
         }, {
-          default: W(() => [
-            q(h.$slots, "default")
+          default: T(() => [
+            Z(m.$slots, "default")
           ]),
           _: 3
         }, 8, ["aria-labelledby", "data-highlighted", "aria-selected", "data-state", "aria-disabled", "data-disabled", "tabindex", "as", "as-child"])
@@ -11409,25 +8343,25 @@ const Vf = {
       _: 3
     }, 8, ["value"]));
   }
-}), ep = /* @__PURE__ */ Y({
+}), P1 = /* @__PURE__ */ V({
   __name: "SelectItemIndicator",
   props: {
     asChild: { type: Boolean },
     as: { default: "span" }
   },
   setup(e) {
-    const t = e, n = di();
-    return (o, r) => N(n).isSelected.value ? (H(), ne(N(Ie), be({
+    const t = e, o = nt();
+    return (i, n) => p(o).isSelected.value ? (P(), N(p(e2), U({
       key: 0,
       "aria-hidden": "true"
     }, t), {
-      default: W(() => [
-        q(o.$slots, "default")
+      default: T(() => [
+        Z(i.$slots, "default")
       ]),
       _: 3
-    }, 16)) : gt("", !0);
+    }, 16)) : M2("", !0);
   }
-}), tp = /* @__PURE__ */ Y({
+}), O1 = /* @__PURE__ */ V({
   inheritAttrs: !1,
   __name: "SelectItemText",
   props: {
@@ -11435,33 +8369,33 @@ const Vf = {
     as: { default: "span" }
   },
   setup(e) {
-    const t = e, n = jt(), o = Xt(), r = di(), { forwardRef: a, currentElement: s } = Ye(), i = k(() => {
-      var l, c;
+    const t = e, o = H2(), i = K2(), n = nt(), { forwardRef: r, currentElement: l } = a2(), c = S(() => {
+      var s, a;
       return {
-        value: r.value,
-        disabled: r.disabled.value,
-        textContent: ((l = s.value) == null ? void 0 : l.textContent) ?? ((c = r.value) == null ? void 0 : c.toString()) ?? ""
+        value: n.value,
+        disabled: n.disabled.value,
+        textContent: ((s = l.value) == null ? void 0 : s.textContent) ?? ((a = n.value) == null ? void 0 : a.toString()) ?? ""
       };
     });
-    return lt(() => {
-      s.value && (r.onItemTextChange(s.value), o.itemTextRefCallback(
-        s.value,
-        r.value,
-        r.disabled.value
-      ), n.onOptionAdd(i.value));
-    }), Ho(() => {
-      n.onOptionRemove(i.value);
-    }), (l, c) => (H(), ne(N(Ie), be({
-      id: N(r).textId,
-      ref: N(a)
-    }, { ...t, ...l.$attrs }), {
-      default: W(() => [
-        q(l.$slots, "default")
+    return x2(() => {
+      l.value && (n.onItemTextChange(l.value), i.itemTextRefCallback(
+        l.value,
+        n.value,
+        n.disabled.value
+      ), o.onOptionAdd(c.value));
+    }), ne(() => {
+      o.onOptionRemove(c.value);
+    }), (s, a) => (P(), N(p(e2), U({
+      id: p(n).textId,
+      ref: p(r)
+    }, { ...t, ...s.$attrs }), {
+      default: T(() => [
+        Z(s.$slots, "default")
       ]),
       _: 3
     }, 16, ["id"]));
   }
-}), np = /* @__PURE__ */ Y({
+}), L1 = /* @__PURE__ */ V({
   __name: "SelectViewport",
   props: {
     nonce: {},
@@ -11469,33 +8403,33 @@ const Vf = {
     as: {}
   },
   setup(e) {
-    const t = e, { nonce: n } = rn(t), o = xf(n), r = Xt(), a = r.position === "item-aligned" ? pr() : void 0, { forwardRef: s, currentElement: i } = Ye();
-    lt(() => {
-      r == null || r.onViewportChange(i.value);
+    const t = e, { nonce: o } = e0(t), i = g1(o), n = K2(), r = n.position === "item-aligned" ? xe() : void 0, { forwardRef: l, currentElement: c } = a2();
+    x2(() => {
+      n == null || n.onViewportChange(c.value);
     });
-    const l = R(0);
-    function c(d) {
-      const u = d.currentTarget, { shouldExpandOnScrollRef: f, contentWrapper: m } = a ?? {};
-      if (f != null && f.value && (m != null && m.value)) {
-        const _ = Math.abs(l.value - u.scrollTop);
-        if (_ > 0) {
-          const y = window.innerHeight - je * 2, v = Number.parseFloat(
-            m.value.style.minHeight
-          ), S = Number.parseFloat(m.value.style.height), w = Math.max(v, S);
-          if (w < y) {
-            const p = w + _, h = Math.min(y, p), T = p - h;
-            m.value.style.height = `${h}px`, m.value.style.bottom === "0px" && (u.scrollTop = T > 0 ? T : 0, m.value.style.justifyContent = "flex-end");
+    const s = C(0);
+    function a(f) {
+      const d = f.currentTarget, { shouldExpandOnScrollRef: h, contentWrapper: g } = r ?? {};
+      if (h != null && h.value && (g != null && g.value)) {
+        const u = Math.abs(s.value - d.scrollTop);
+        if (u > 0) {
+          const w = window.innerHeight - f2 * 2, k = Number.parseFloat(
+            g.value.style.minHeight
+          ), v = Number.parseFloat(g.value.style.height), x = Math.max(k, v);
+          if (x < w) {
+            const y = x + u, m = Math.min(w, y), b = y - m;
+            g.value.style.height = `${m}px`, g.value.style.bottom === "0px" && (d.scrollTop = b > 0 ? b : 0, g.value.style.justifyContent = "flex-end");
           }
         }
       }
-      l.value = u.scrollTop;
+      s.value = d.scrollTop;
     }
-    return (d, u) => (H(), Ne(Nt, null, [
-      ae(N(Ie), be({
-        ref: N(s),
+    return (f, d) => (P(), X(Q2, null, [
+      D(p(e2), U({
+        ref: p(l),
         "data-reka-select-viewport": "",
         role: "presentation"
-      }, { ...d.$attrs, ...t }, {
+      }, { ...f.$attrs, ...t }, {
         style: {
           // we use position: 'relative' here on the `viewport` so that when we call
           // `selectedItem.offsetTop` in calculations, the offset is relative to the viewport
@@ -11504,138 +8438,138 @@ const Vf = {
           flex: 1,
           overflow: "hidden auto"
         },
-        onScroll: c
+        onScroll: a
       }), {
-        default: W(() => [
-          q(d.$slots, "default")
+        default: T(() => [
+          Z(f.$slots, "default")
         ]),
         _: 3
       }, 16),
-      ae(N(Ie), {
+      D(p(e2), {
         as: "style",
-        nonce: N(o)
+        nonce: p(i)
       }, {
-        default: W(() => u[0] || (u[0] = [
-          zo(" /* Hide scrollbars cross-browser and enable momentum scroll for touch devices */ [data-reka-select-viewport] { scrollbar-width:none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; } [data-reka-select-viewport]::-webkit-scrollbar { display: none; } ")
+        default: T(() => d[0] || (d[0] = [
+          le(" /* Hide scrollbars cross-browser and enable momentum scroll for touch devices */ [data-reka-select-viewport] { scrollbar-width:none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; } [data-reka-select-viewport]::-webkit-scrollbar { display: none; } ")
         ])),
         _: 1
       }, 8, ["nonce"])
     ], 64));
   }
-}), fi = /* @__PURE__ */ Y({
+}), rt = /* @__PURE__ */ V({
   __name: "SelectScrollButtonImpl",
   emits: ["autoScroll"],
   setup(e, { emit: t }) {
-    const n = t, { getItems: o } = pn(), r = Xt(), a = R(null);
-    function s() {
-      a.value !== null && (window.clearInterval(a.value), a.value = null);
-    }
-    Fe(() => {
-      const c = o().map((d) => d.ref).find(
-        (d) => d === Qe()
-      );
-      c == null || c.scrollIntoView({ block: "nearest" });
-    });
-    function i() {
-      a.value === null && (a.value = window.setInterval(() => {
-        n("autoScroll");
-      }, 50));
-    }
+    const o = t, { getItems: i } = r0(), n = K2(), r = C(null);
     function l() {
-      var c;
-      (c = r.onItemLeave) == null || c.call(r), a.value === null && (a.value = window.setInterval(() => {
-        n("autoScroll");
+      r.value !== null && (window.clearInterval(r.value), r.value = null);
+    }
+    t2(() => {
+      const a = i().map((f) => f.ref).find(
+        (f) => f === h2()
+      );
+      a == null || a.scrollIntoView({ block: "nearest" });
+    });
+    function c() {
+      r.value === null && (r.value = window.setInterval(() => {
+        o("autoScroll");
       }, 50));
     }
-    return Ho(() => s()), (c, d) => {
-      var u;
-      return H(), ne(N(Ie), be({
+    function s() {
+      var a;
+      (a = n.onItemLeave) == null || a.call(n), r.value === null && (r.value = window.setInterval(() => {
+        o("autoScroll");
+      }, 50));
+    }
+    return ne(() => l()), (a, f) => {
+      var d;
+      return P(), N(p(e2), U({
         "aria-hidden": "true",
         style: {
           flexShrink: 0
         }
-      }, (u = c.$parent) == null ? void 0 : u.$props, {
-        onPointerdown: i,
-        onPointermove: l,
-        onPointerleave: d[0] || (d[0] = () => {
-          s();
+      }, (d = a.$parent) == null ? void 0 : d.$props, {
+        onPointerdown: c,
+        onPointermove: s,
+        onPointerleave: f[0] || (f[0] = () => {
+          l();
         })
       }), {
-        default: W(() => [
-          q(c.$slots, "default")
+        default: T(() => [
+          Z(a.$slots, "default")
         ]),
         _: 3
       }, 16);
     };
   }
-}), op = /* @__PURE__ */ Y({
+}), V1 = /* @__PURE__ */ V({
   __name: "SelectScrollUpButton",
   props: {
     asChild: { type: Boolean },
     as: {}
   },
   setup(e) {
-    const t = Xt(), n = t.position === "item-aligned" ? pr() : void 0, { forwardRef: o, currentElement: r } = Ye(), a = R(!1);
-    return Fe((s) => {
-      var i, l;
-      if ((i = t.viewport) != null && i.value && ((l = t.isPositioned) != null && l.value)) {
-        let c = function() {
-          a.value = d.scrollTop > 0;
+    const t = K2(), o = t.position === "item-aligned" ? xe() : void 0, { forwardRef: i, currentElement: n } = a2(), r = C(!1);
+    return t2((l) => {
+      var c, s;
+      if ((c = t.viewport) != null && c.value && ((s = t.isPositioned) != null && s.value)) {
+        let a = function() {
+          r.value = f.scrollTop > 0;
         };
-        const d = t.viewport.value;
-        c(), d.addEventListener("scroll", c), s(() => d.removeEventListener("scroll", c));
+        const f = t.viewport.value;
+        a(), f.addEventListener("scroll", a), l(() => f.removeEventListener("scroll", a));
       }
-    }), he(r, () => {
-      r.value && (n == null || n.onScrollButtonChange(r.value));
-    }), (s, i) => a.value ? (H(), ne(fi, {
+    }), W(n, () => {
+      n.value && (o == null || o.onScrollButtonChange(n.value));
+    }), (l, c) => r.value ? (P(), N(rt, {
       key: 0,
-      ref: N(o),
-      onAutoScroll: i[0] || (i[0] = () => {
-        const { viewport: l, selectedItem: c } = N(t);
-        l != null && l.value && (c != null && c.value) && (l.value.scrollTop = l.value.scrollTop - c.value.offsetHeight);
+      ref: p(i),
+      onAutoScroll: c[0] || (c[0] = () => {
+        const { viewport: s, selectedItem: a } = p(t);
+        s != null && s.value && (a != null && a.value) && (s.value.scrollTop = s.value.scrollTop - a.value.offsetHeight);
       })
     }, {
-      default: W(() => [
-        q(s.$slots, "default")
+      default: T(() => [
+        Z(l.$slots, "default")
       ]),
       _: 3
-    }, 512)) : gt("", !0);
+    }, 512)) : M2("", !0);
   }
-}), rp = /* @__PURE__ */ Y({
+}), I1 = /* @__PURE__ */ V({
   __name: "SelectScrollDownButton",
   props: {
     asChild: { type: Boolean },
     as: {}
   },
   setup(e) {
-    const t = Xt(), n = t.position === "item-aligned" ? pr() : void 0, { forwardRef: o, currentElement: r } = Ye(), a = R(!1);
-    return Fe((s) => {
-      var i, l;
-      if ((i = t.viewport) != null && i.value && ((l = t.isPositioned) != null && l.value)) {
-        let c = function() {
-          const u = d.scrollHeight - d.clientHeight;
-          a.value = Math.ceil(d.scrollTop) < u;
+    const t = K2(), o = t.position === "item-aligned" ? xe() : void 0, { forwardRef: i, currentElement: n } = a2(), r = C(!1);
+    return t2((l) => {
+      var c, s;
+      if ((c = t.viewport) != null && c.value && ((s = t.isPositioned) != null && s.value)) {
+        let a = function() {
+          const d = f.scrollHeight - f.clientHeight;
+          r.value = Math.ceil(f.scrollTop) < d;
         };
-        const d = t.viewport.value;
-        c(), d.addEventListener("scroll", c), s(() => d.removeEventListener("scroll", c));
+        const f = t.viewport.value;
+        a(), f.addEventListener("scroll", a), l(() => f.removeEventListener("scroll", a));
       }
-    }), he(r, () => {
-      r.value && (n == null || n.onScrollButtonChange(r.value));
-    }), (s, i) => a.value ? (H(), ne(fi, {
+    }), W(n, () => {
+      n.value && (o == null || o.onScrollButtonChange(n.value));
+    }), (l, c) => r.value ? (P(), N(rt, {
       key: 0,
-      ref: N(o),
-      onAutoScroll: i[0] || (i[0] = () => {
-        const { viewport: l, selectedItem: c } = N(t);
-        l != null && l.value && (c != null && c.value) && (l.value.scrollTop = l.value.scrollTop + c.value.offsetHeight);
+      ref: p(i),
+      onAutoScroll: c[0] || (c[0] = () => {
+        const { viewport: s, selectedItem: a } = p(t);
+        s != null && s.value && (a != null && a.value) && (s.value.scrollTop = s.value.scrollTop + a.value.offsetHeight);
       })
     }, {
-      default: W(() => [
-        q(s.$slots, "default")
+      default: T(() => [
+        Z(l.$slots, "default")
       ]),
       _: 3
-    }, 512)) : gt("", !0);
+    }, 512)) : M2("", !0);
   }
-}), ap = /* @__PURE__ */ Y({
+}), R1 = /* @__PURE__ */ V({
   __name: "SelectValue",
   props: {
     placeholder: { default: "" },
@@ -11643,58 +8577,58 @@ const Vf = {
     as: { default: "span" }
   },
   setup(e) {
-    const t = e, { forwardRef: n, currentElement: o } = Ye(), r = jt();
-    lt(() => {
-      r.valueElement = o;
+    const t = e, { forwardRef: o, currentElement: i } = a2(), n = H2();
+    x2(() => {
+      n.valueElement = i;
     });
-    const a = k(() => {
-      var d;
-      let i = [];
-      const l = Array.from(r.optionsSet.value), c = (u) => l.find((f) => f.value === u);
-      return Array.isArray(r.modelValue.value) ? i = r.modelValue.value.map((u) => {
-        var f;
-        return ((f = c(u)) == null ? void 0 : f.textContent) ?? "";
-      }) : i = [((d = c(r.modelValue.value)) == null ? void 0 : d.textContent) ?? ""], i.filter(Boolean);
-    }), s = k(() => a.value.length ? a.value.join(", ") : t.placeholder);
-    return (i, l) => (H(), ne(N(Ie), {
-      ref: N(n),
-      as: i.as,
-      "as-child": i.asChild,
+    const r = S(() => {
+      var f;
+      let c = [];
+      const s = Array.from(n.optionsSet.value), a = (d) => s.find((h) => h.value === d);
+      return Array.isArray(n.modelValue.value) ? c = n.modelValue.value.map((d) => {
+        var h;
+        return ((h = a(d)) == null ? void 0 : h.textContent) ?? "";
+      }) : c = [((f = a(n.modelValue.value)) == null ? void 0 : f.textContent) ?? ""], c.filter(Boolean);
+    }), l = S(() => r.value.length ? r.value.join(", ") : t.placeholder);
+    return (c, s) => (P(), N(p(e2), {
+      ref: p(o),
+      as: c.as,
+      "as-child": c.asChild,
       style: { pointerEvents: "none" },
-      "data-placeholder": a.value.length ? void 0 : t.placeholder
+      "data-placeholder": r.value.length ? void 0 : t.placeholder
     }, {
-      default: W(() => [
-        q(i.$slots, "default", {
-          selectedLabel: a.value,
-          modelValue: N(r).modelValue.value
+      default: T(() => [
+        Z(c.$slots, "default", {
+          selectedLabel: r.value,
+          modelValue: p(n).modelValue.value
         }, () => [
-          zo(Ut(s.value), 1)
+          le(D2(l.value), 1)
         ])
       ]),
       _: 3
     }, 8, ["as", "as-child", "data-placeholder"]));
   }
-}), sp = /* @__PURE__ */ Y({
+}), Z1 = /* @__PURE__ */ V({
   __name: "SelectIcon",
   props: {
     asChild: { type: Boolean },
     as: { default: "span" }
   },
   setup(e) {
-    return (t, n) => (H(), ne(N(Ie), {
+    return (t, o) => (P(), N(p(e2), {
       "aria-hidden": "true",
       as: t.as,
       "as-child": t.asChild
     }, {
-      default: W(() => [
-        q(t.$slots, "default", {}, () => [
-          n[0] || (n[0] = zo("▼"))
+      default: T(() => [
+        Z(t.$slots, "default", {}, () => [
+          o[0] || (o[0] = le("▼"))
         ])
       ]),
       _: 3
     }, 8, ["as", "as-child"]));
   }
-}), ip = /* @__PURE__ */ Y({
+}), N1 = /* @__PURE__ */ V({
   __name: "Select",
   props: {
     open: { type: Boolean },
@@ -11711,15 +8645,15 @@ const Vf = {
   },
   emits: ["update:modelValue", "update:open"],
   setup(e, { emit: t }) {
-    const r = dr(e, t);
-    return (a, s) => (H(), ne(N($f), be({ "data-slot": "select" }, N(r)), {
-      default: W(() => [
-        q(a.$slots, "default")
+    const n = we(e, t);
+    return (r, l) => (P(), N(p(y1), U({ "data-slot": "select" }, p(n)), {
+      default: T(() => [
+        Z(r.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), lp = /* @__PURE__ */ Y({
+}), D1 = /* @__PURE__ */ V({
   inheritAttrs: !1,
   __name: "SelectContent",
   props: {
@@ -11747,30 +8681,30 @@ const Vf = {
   },
   emits: ["closeAutoFocus", "escapeKeyDown", "pointerDownOutside"],
   setup(e, { emit: t }) {
-    const n = e, o = t, r = k(() => {
-      const { class: s, ...i } = n;
-      return i;
-    }), a = dr(r, o);
-    return (s, i) => (H(), ne(N(Gf), null, {
-      default: W(() => [
-        ae(N(Zf), be({ "data-slot": "select-content" }, { ...N(a), ...s.$attrs }, {
-          class: N(Lt)(
+    const o = e, i = t, n = S(() => {
+      const { class: l, ...c } = o;
+      return c;
+    }), r = we(n, i);
+    return (l, c) => (P(), N(p(v1), null, {
+      default: T(() => [
+        D(p(S1), U({ "data-slot": "select-content" }, { ...p(r), ...l.$attrs }, {
+          class: p(T2)(
             "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-(--reka-select-content-available-height) min-w-[8rem] overflow-x-hidden overflow-y-auto rounded-md border shadow-md",
-            s.position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
-            n.class
+            l.position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+            o.class
           )
         }), {
-          default: W(() => [
-            ae(N(gp)),
-            ae(N(np), {
-              class: Ta(N(Lt)("p-1", s.position === "popper" && "h-[var(--reka-select-trigger-height)] w-full min-w-[var(--reka-select-trigger-width)] scroll-my-1"))
+          default: T(() => [
+            D(p(Y1)),
+            D(p(L1), {
+              class: Qe(p(T2)("p-1", l.position === "popper" && "h-[var(--reka-select-trigger-height)] w-full min-w-[var(--reka-select-trigger-width)] scroll-my-1"))
             }, {
-              default: W(() => [
-                q(s.$slots, "default")
+              default: T(() => [
+                Z(l.$slots, "default")
               ]),
               _: 3
             }, 8, ["class"]),
-            ae(N(hp))
+            D(p(U1))
           ]),
           _: 3
         }, 16, ["class"])
@@ -11785,20 +8719,20 @@ const Vf = {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const ba = (e) => e.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(), cp = (e) => e.replace(
+const Ye = (e) => e.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(), $1 = (e) => e.replace(
   /^([A-Z])|[\s-_]+(\w)/g,
-  (t, n, o) => o ? o.toUpperCase() : n.toLowerCase()
-), up = (e) => {
-  const t = cp(e);
+  (t, o, i) => i ? i.toUpperCase() : o.toLowerCase()
+), G1 = (e) => {
+  const t = $1(e);
   return t.charAt(0).toUpperCase() + t.slice(1);
-}, dp = (...e) => e.filter((t, n, o) => !!t && t.trim() !== "" && o.indexOf(t) === n).join(" ").trim();
+}, z1 = (...e) => e.filter((t, o, i) => !!t && t.trim() !== "" && i.indexOf(t) === o).join(" ").trim();
 /**
  * @license lucide-vue-next v0.487.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-var Bn = {
+var v0 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: 24,
   height: 24,
@@ -11815,21 +8749,21 @@ var Bn = {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const fp = ({ size: e, strokeWidth: t = 2, absoluteStrokeWidth: n, color: o, iconNode: r, name: a, class: s, ...i }, { slots: l }) => Ze(
+const F1 = ({ size: e, strokeWidth: t = 2, absoluteStrokeWidth: o, color: i, iconNode: n, name: r, class: l, ...c }, { slots: s }) => j2(
   "svg",
   {
-    ...Bn,
-    width: e || Bn.width,
-    height: e || Bn.height,
-    stroke: o || Bn.stroke,
-    "stroke-width": n ? Number(t) * 24 / Number(e) : t,
-    class: dp(
+    ...v0,
+    width: e || v0.width,
+    height: e || v0.height,
+    stroke: i || v0.stroke,
+    "stroke-width": o ? Number(t) * 24 / Number(e) : t,
+    class: z1(
       "lucide",
-      ...a ? [`lucide-${ba(up(a))}-icon`, `lucide-${ba(a)}`] : ["lucide-icon"]
+      ...r ? [`lucide-${Ye(G1(r))}-icon`, `lucide-${Ye(r)}`] : ["lucide-icon"]
     ),
-    ...i
+    ...c
   },
-  [...r.map((c) => Ze(...c)), ...l.default ? [l.default()] : []]
+  [...n.map((a) => j2(...a)), ...s.default ? [s.default()] : []]
 );
 /**
  * @license lucide-vue-next v0.487.0 - ISC
@@ -11837,14 +8771,14 @@ const fp = ({ size: e, strokeWidth: t = 2, absoluteStrokeWidth: n, color: o, ico
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const mr = (e, t) => (n, { slots: o }) => Ze(
-  fp,
+const ve = (e, t) => (o, { slots: i }) => j2(
+  F1,
   {
-    ...n,
+    ...o,
     iconNode: t,
     name: e
   },
-  o
+  i
 );
 /**
  * @license lucide-vue-next v0.487.0 - ISC
@@ -11852,14 +8786,14 @@ const mr = (e, t) => (n, { slots: o }) => Ze(
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const pp = mr("check", [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]]);
+const H1 = ve("check", [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]]);
 /**
  * @license lucide-vue-next v0.487.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const pi = mr("chevron-down", [
+const lt = ve("chevron-down", [
   ["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]
 ]);
 /**
@@ -11868,9 +8802,9 @@ const pi = mr("chevron-down", [
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const mp = mr("chevron-up", [
+const K1 = ve("chevron-up", [
   ["path", { d: "m18 15-6-6-6 6", key: "153udz" }]
-]), _p = { class: "absolute right-2 flex size-3.5 items-center justify-center" }, Ea = /* @__PURE__ */ Y({
+]), W1 = { class: "absolute right-2 flex size-3.5 items-center justify-center" }, qe = /* @__PURE__ */ V({
   __name: "SelectItem",
   props: {
     value: {},
@@ -11881,28 +8815,28 @@ const mp = mr("chevron-up", [
     class: {}
   },
   setup(e) {
-    const t = e, n = k(() => {
-      const { class: r, ...a } = t;
-      return a;
-    }), o = zt(n);
-    return (r, a) => (H(), ne(N(Qf), be({ "data-slot": "select-item" }, N(o), {
-      class: N(Lt)(
+    const t = e, o = S(() => {
+      const { class: n, ...r } = t;
+      return r;
+    }), i = F2(o);
+    return (n, r) => (P(), N(p(T1), U({ "data-slot": "select-item" }, p(i), {
+      class: p(T2)(
         "focus:bg-accent focus:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground relative flex w-full cursor-default items-center gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         t.class
       )
     }), {
-      default: W(() => [
-        Ve("span", _p, [
-          ae(N(ep), null, {
-            default: W(() => [
-              ae(N(pp), { class: "size-4" })
+      default: T(() => [
+        i2("span", W1, [
+          D(p(P1), null, {
+            default: T(() => [
+              D(p(H1), { class: "size-4" })
             ]),
             _: 1
           })
         ]),
-        ae(N(tp), null, {
-          default: W(() => [
-            q(r.$slots, "default")
+        D(p(O1), null, {
+          default: T(() => [
+            Z(n.$slots, "default")
           ]),
           _: 3
         })
@@ -11910,7 +8844,7 @@ const mp = mr("chevron-up", [
       _: 3
     }, 16, ["class"]));
   }
-}), hp = /* @__PURE__ */ Y({
+}), U1 = /* @__PURE__ */ V({
   __name: "SelectScrollDownButton",
   props: {
     asChild: { type: Boolean },
@@ -11918,22 +8852,22 @@ const mp = mr("chevron-up", [
     class: {}
   },
   setup(e) {
-    const t = e, n = k(() => {
-      const { class: r, ...a } = t;
-      return a;
-    }), o = zt(n);
-    return (r, a) => (H(), ne(N(rp), be({ "data-slot": "select-scroll-down-button" }, N(o), {
-      class: N(Lt)("flex cursor-default items-center justify-center py-1", t.class)
+    const t = e, o = S(() => {
+      const { class: n, ...r } = t;
+      return r;
+    }), i = F2(o);
+    return (n, r) => (P(), N(p(I1), U({ "data-slot": "select-scroll-down-button" }, p(i), {
+      class: p(T2)("flex cursor-default items-center justify-center py-1", t.class)
     }), {
-      default: W(() => [
-        q(r.$slots, "default", {}, () => [
-          ae(N(pi), { class: "size-4" })
+      default: T(() => [
+        Z(n.$slots, "default", {}, () => [
+          D(p(lt), { class: "size-4" })
         ])
       ]),
       _: 3
     }, 16, ["class"]));
   }
-}), gp = /* @__PURE__ */ Y({
+}), Y1 = /* @__PURE__ */ V({
   __name: "SelectScrollUpButton",
   props: {
     asChild: { type: Boolean },
@@ -11941,22 +8875,22 @@ const mp = mr("chevron-up", [
     class: {}
   },
   setup(e) {
-    const t = e, n = k(() => {
-      const { class: r, ...a } = t;
-      return a;
-    }), o = zt(n);
-    return (r, a) => (H(), ne(N(op), be({ "data-slot": "select-scroll-up-button" }, N(o), {
-      class: N(Lt)("flex cursor-default items-center justify-center py-1", t.class)
+    const t = e, o = S(() => {
+      const { class: n, ...r } = t;
+      return r;
+    }), i = F2(o);
+    return (n, r) => (P(), N(p(V1), U({ "data-slot": "select-scroll-up-button" }, p(i), {
+      class: p(T2)("flex cursor-default items-center justify-center py-1", t.class)
     }), {
-      default: W(() => [
-        q(r.$slots, "default", {}, () => [
-          ae(N(mp), { class: "size-4" })
+      default: T(() => [
+        Z(n.$slots, "default", {}, () => [
+          D(p(K1), { class: "size-4" })
         ])
       ]),
       _: 3
     }, 16, ["class"]));
   }
-}), yp = /* @__PURE__ */ Y({
+}), q1 = /* @__PURE__ */ V({
   __name: "SelectSeparator",
   props: {
     asChild: { type: Boolean },
@@ -11964,15 +8898,15 @@ const mp = mr("chevron-up", [
     class: {}
   },
   setup(e) {
-    const t = e, n = k(() => {
-      const { class: o, ...r } = t;
-      return r;
+    const t = e, o = S(() => {
+      const { class: i, ...n } = t;
+      return n;
     });
-    return (o, r) => (H(), ne(N(Jf), be({ "data-slot": "select-separator" }, n.value, {
-      class: N(Lt)("bg-border pointer-events-none -mx-1 my-1 h-px", t.class)
+    return (i, n) => (P(), N(p(C1), U({ "data-slot": "select-separator" }, o.value, {
+      class: p(T2)("bg-border pointer-events-none -mx-1 my-1 h-px", t.class)
     }), null, 16, ["class"]));
   }
-}), vp = /* @__PURE__ */ Y({
+}), J1 = /* @__PURE__ */ V({
   __name: "SelectTrigger",
   props: {
     disabled: { type: Boolean },
@@ -11983,21 +8917,21 @@ const mp = mr("chevron-up", [
     size: { default: "default" }
   },
   setup(e) {
-    const t = e, n = Lu(t, "class", "size"), o = zt(n);
-    return (r, a) => (H(), ne(N(Uf), be({
+    const t = e, o = sc(t, "class", "size"), i = F2(o);
+    return (n, r) => (P(), N(p(x1), U({
       "data-slot": "select-trigger",
-      "data-size": r.size
-    }, N(o), {
-      class: N(Lt)(
+      "data-size": n.size
+    }, p(i), {
+      class: p(T2)(
         "border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         t.class
       )
     }), {
-      default: W(() => [
-        q(r.$slots, "default"),
-        ae(N(sp), { "as-child": "" }, {
-          default: W(() => [
-            ae(N(pi), { class: "size-4 opacity-50" })
+      default: T(() => [
+        Z(n.$slots, "default"),
+        D(p(Z1), { "as-child": "" }, {
+          default: T(() => [
+            D(p(lt), { class: "size-4 opacity-50" })
           ]),
           _: 1
         })
@@ -12005,7 +8939,7 @@ const mp = mr("chevron-up", [
       _: 3
     }, 16, ["data-size", "class"]));
   }
-}), bp = /* @__PURE__ */ Y({
+}), Q1 = /* @__PURE__ */ V({
   __name: "SelectValue",
   props: {
     placeholder: {},
@@ -12014,17 +8948,30 @@ const mp = mr("chevron-up", [
   },
   setup(e) {
     const t = e;
-    return (n, o) => (H(), ne(N(ap), be({ "data-slot": "select-value" }, t), {
-      default: W(() => [
-        q(n.$slots, "default")
+    return (o, i) => (P(), N(p(R1), U({ "data-slot": "select-value" }, t), {
+      default: T(() => [
+        Z(o.$slots, "default")
       ]),
       _: 3
     }, 16));
   }
-}), Ep = { class: "relative flex items-center gap-2" }, Tp = { class: "flex items-center gap-2" }, wp = ["src", "alt"], Sp = { key: 1 }, Op = {
+});
+let ct = "ru", X1 = A3();
+const Je = (e) => {
+  e && ["ru", "en", "az", "be"].includes(e) && (ct = e);
+}, z0 = (e) => {
+  const t = e.split(".");
+  let o = X1[ct];
+  for (const i of t)
+    if (o && typeof o == "object")
+      o = o[i];
+    else
+      return e;
+  return o || e;
+}, e6 = { class: "relative flex items-center gap-2" }, t6 = { class: "flex items-center gap-2" }, o6 = ["src", "alt"], i6 = { key: 1 }, n6 = {
   key: 2,
   class: "text-gray-400"
-}, Ap = { class: "p-2 border-b" }, Np = { class: "max-h-60 overflow-y-auto" }, Cp = { class: "flex items-center gap-2" }, Lp = ["src", "alt"], Ip = { class: "text-gray-500" }, Pp = { class: "flex items-center gap-2" }, Mp = ["src", "alt"], kp = { class: "text-gray-500" }, Gp = /* @__PURE__ */ Y({
+}, r6 = { class: "p-2 border-b" }, l6 = { class: "max-h-60 overflow-y-auto" }, c6 = { class: "flex items-center gap-2" }, s6 = ["src", "alt"], a6 = { class: "text-gray-500" }, d6 = { class: "flex items-center gap-2" }, f6 = ["src", "alt"], g6 = { class: "text-gray-500" }, m6 = /* @__PURE__ */ V({
   __name: "PhoneSelect",
   props: {
     modelValue: {},
@@ -12033,52 +8980,58 @@ const mp = mr("chevron-up", [
   },
   emits: ["update:modelValue"],
   setup(e, { emit: t }) {
-    const { t: n } = Qn(), o = e, r = t, a = R(!1), s = R(""), i = R(null), l = R(""), c = k(() => {
-      var m;
-      return (m = o.favoritesCountries) == null ? void 0 : m.map((_) => $i(_, o.lang));
-    }), d = k(() => {
-      var y;
-      const _ = bn(o.lang).filter(
-        (v) => v.name.toLowerCase().includes(s.value.toLowerCase()) || v.phone_code.toString().includes(s.value)
+    const o = e, i = t;
+    x2(() => {
+      Je(o.lang);
+    });
+    const n = C(!1), r = C(""), l = C(null), c = C(""), s = (g) => new URL((/* @__PURE__ */ Object.assign({ "../assets/flags/AC.svg": Pt, "../assets/flags/AD.svg": Ot, "../assets/flags/AE.svg": Lt, "../assets/flags/AF.svg": Vt, "../assets/flags/AG.svg": It, "../assets/flags/AI.svg": Rt, "../assets/flags/AL.svg": Zt, "../assets/flags/AM.svg": Nt, "../assets/flags/AO.svg": Dt, "../assets/flags/AQ.svg": $t, "../assets/flags/AR.svg": Gt, "../assets/flags/AS.svg": zt, "../assets/flags/AT.svg": Ft, "../assets/flags/AU.svg": Ht, "../assets/flags/AW.svg": Kt, "../assets/flags/AX.svg": Wt, "../assets/flags/AZ.svg": Ut, "../assets/flags/BA.svg": Yt, "../assets/flags/BB.svg": qt, "../assets/flags/BD.svg": Jt, "../assets/flags/BE.svg": Qt, "../assets/flags/BF.svg": Xt, "../assets/flags/BG.svg": eo, "../assets/flags/BH.svg": to, "../assets/flags/BI.svg": oo, "../assets/flags/BJ.svg": io, "../assets/flags/BL.svg": no, "../assets/flags/BM.svg": ro, "../assets/flags/BN.svg": lo, "../assets/flags/BO.svg": co, "../assets/flags/BQ.svg": so, "../assets/flags/BR.svg": ao, "../assets/flags/BS.svg": fo, "../assets/flags/BT.svg": go, "../assets/flags/BV.svg": ho, "../assets/flags/BW.svg": uo, "../assets/flags/BY.svg": po, "../assets/flags/BZ.svg": ko, "../assets/flags/CA.svg": wo, "../assets/flags/CC.svg": yo, "../assets/flags/CD.svg": xo, "../assets/flags/CF.svg": vo, "../assets/flags/CG.svg": mo, "../assets/flags/CH.svg": _o, "../assets/flags/CI.svg": bo, "../assets/flags/CK.svg": jo, "../assets/flags/CL.svg": Mo, "../assets/flags/CM.svg": Ao, "../assets/flags/CN.svg": Bo, "../assets/flags/CO.svg": So, "../assets/flags/CP.svg": Co, "../assets/flags/CR.svg": Eo, "../assets/flags/CU.svg": To, "../assets/flags/CV.svg": Po, "../assets/flags/CW.svg": Oo, "../assets/flags/CX.svg": Lo, "../assets/flags/CY.svg": Vo, "../assets/flags/CZ.svg": Io, "../assets/flags/DE.svg": Ro, "../assets/flags/DG.svg": Zo, "../assets/flags/DJ.svg": No, "../assets/flags/DK.svg": Do, "../assets/flags/DM.svg": $o, "../assets/flags/DO.svg": Go, "../assets/flags/DZ.svg": zo, "../assets/flags/EA.svg": Fo, "../assets/flags/EC.svg": Ho, "../assets/flags/EE.svg": Ko, "../assets/flags/EG.svg": Wo, "../assets/flags/EH.svg": Uo, "../assets/flags/ENGLAND.svg": Yo, "../assets/flags/ER.svg": qo, "../assets/flags/ES.svg": Jo, "../assets/flags/ET.svg": Qo, "../assets/flags/EU.svg": Xo, "../assets/flags/FI.svg": ei, "../assets/flags/FJ.svg": ti, "../assets/flags/FK.svg": oi, "../assets/flags/FM.svg": ii, "../assets/flags/FO.svg": ni, "../assets/flags/FR.svg": ri, "../assets/flags/GA.svg": li, "../assets/flags/GB.svg": ci, "../assets/flags/GD.svg": si, "../assets/flags/GE.svg": ai, "../assets/flags/GF.svg": di, "../assets/flags/GG.svg": fi, "../assets/flags/GH.svg": gi, "../assets/flags/GI.svg": hi, "../assets/flags/GL.svg": ui, "../assets/flags/GM.svg": pi, "../assets/flags/GN.svg": ki, "../assets/flags/GP.svg": wi, "../assets/flags/GQ.svg": yi, "../assets/flags/GR.svg": xi, "../assets/flags/GS.svg": vi, "../assets/flags/GT.svg": mi, "../assets/flags/GU.svg": _i, "../assets/flags/GW.svg": bi, "../assets/flags/GY.svg": ji, "../assets/flags/HK.svg": Mi, "../assets/flags/HM.svg": Ai, "../assets/flags/HN.svg": Bi, "../assets/flags/HR.svg": Si, "../assets/flags/HT.svg": Ci, "../assets/flags/HU.svg": Ei, "../assets/flags/IC.svg": Ti, "../assets/flags/ID.svg": Pi, "../assets/flags/IE.svg": Oi, "../assets/flags/IL.svg": Li, "../assets/flags/IM.svg": Vi, "../assets/flags/IN.svg": Ii, "../assets/flags/IO.svg": Ri, "../assets/flags/IQ.svg": Zi, "../assets/flags/IR.svg": Ni, "../assets/flags/IS.svg": Di, "../assets/flags/IT.svg": $i, "../assets/flags/JE.svg": Gi, "../assets/flags/JM.svg": zi, "../assets/flags/JO.svg": Fi, "../assets/flags/JP.svg": Hi, "../assets/flags/KE.svg": Ki, "../assets/flags/KG.svg": Wi, "../assets/flags/KH.svg": Ui, "../assets/flags/KI.svg": Yi, "../assets/flags/KM.svg": qi, "../assets/flags/KN.svg": Ji, "../assets/flags/KP.svg": Qi, "../assets/flags/KR.svg": Xi, "../assets/flags/KW.svg": en, "../assets/flags/KY.svg": tn, "../assets/flags/KZ.svg": on, "../assets/flags/LA.svg": nn, "../assets/flags/LB.svg": rn, "../assets/flags/LC.svg": ln, "../assets/flags/LI.svg": cn, "../assets/flags/LK.svg": sn, "../assets/flags/LR.svg": an, "../assets/flags/LS.svg": dn, "../assets/flags/LT.svg": fn, "../assets/flags/LU.svg": gn, "../assets/flags/LV.svg": hn, "../assets/flags/LY.svg": un, "../assets/flags/MA.svg": pn, "../assets/flags/MC.svg": kn, "../assets/flags/MD.svg": wn, "../assets/flags/ME.svg": yn, "../assets/flags/MF.svg": xn, "../assets/flags/MG.svg": vn, "../assets/flags/MH.svg": mn, "../assets/flags/MK.svg": _n, "../assets/flags/ML.svg": bn, "../assets/flags/MM.svg": jn, "../assets/flags/MN.svg": Mn, "../assets/flags/MO.svg": An, "../assets/flags/MP.svg": Bn, "../assets/flags/MQ.svg": Sn, "../assets/flags/MR.svg": Cn, "../assets/flags/MS.svg": En, "../assets/flags/MT.svg": Tn, "../assets/flags/MU.svg": Pn, "../assets/flags/MV.svg": On, "../assets/flags/MW.svg": Ln, "../assets/flags/MX.svg": Vn, "../assets/flags/MY.svg": In, "../assets/flags/MZ.svg": Rn, "../assets/flags/NA.svg": Zn, "../assets/flags/NC.svg": Nn, "../assets/flags/NE.svg": Dn, "../assets/flags/NF.svg": $n, "../assets/flags/NG.svg": Gn, "../assets/flags/NI.svg": zn, "../assets/flags/NL.svg": Fn, "../assets/flags/NO.svg": Hn, "../assets/flags/NP.svg": Kn, "../assets/flags/NR.svg": Wn, "../assets/flags/NU.svg": Un, "../assets/flags/NZ.svg": Yn, "../assets/flags/OM.svg": qn, "../assets/flags/PA.svg": Jn, "../assets/flags/PE.svg": Qn, "../assets/flags/PF.svg": Xn, "../assets/flags/PG.svg": er, "../assets/flags/PH.svg": tr, "../assets/flags/PK.svg": or, "../assets/flags/PL.svg": ir, "../assets/flags/PM.svg": nr, "../assets/flags/PN.svg": rr, "../assets/flags/PR.svg": lr, "../assets/flags/PS.svg": cr, "../assets/flags/PT.svg": sr, "../assets/flags/PW.svg": ar, "../assets/flags/PY.svg": dr, "../assets/flags/QA.svg": fr, "../assets/flags/RE.svg": gr, "../assets/flags/RO.svg": hr, "../assets/flags/RS.svg": ur, "../assets/flags/RU.svg": pr, "../assets/flags/RW.svg": kr, "../assets/flags/SA.svg": wr, "../assets/flags/SB.svg": yr, "../assets/flags/SC.svg": xr, "../assets/flags/SCOTLAND.svg": vr, "../assets/flags/SD.svg": mr, "../assets/flags/SE.svg": _r, "../assets/flags/SG.svg": br, "../assets/flags/SH.svg": jr, "../assets/flags/SI.svg": Mr, "../assets/flags/SJ.svg": Ar, "../assets/flags/SK.svg": Br, "../assets/flags/SL.svg": Sr, "../assets/flags/SM.svg": Cr, "../assets/flags/SN.svg": Er, "../assets/flags/SO.svg": Tr, "../assets/flags/SR.svg": Pr, "../assets/flags/SS.svg": Or, "../assets/flags/ST.svg": Lr, "../assets/flags/SV.svg": Vr, "../assets/flags/SX.svg": Ir, "../assets/flags/SY.svg": Rr, "../assets/flags/SZ.svg": Zr, "../assets/flags/TA.svg": Nr, "../assets/flags/TC.svg": Dr, "../assets/flags/TD.svg": $r, "../assets/flags/TF.svg": Gr, "../assets/flags/TG.svg": zr, "../assets/flags/TH.svg": Fr, "../assets/flags/TJ.svg": Hr, "../assets/flags/TK.svg": Kr, "../assets/flags/TL.svg": Wr, "../assets/flags/TM.svg": Ur, "../assets/flags/TN.svg": Yr, "../assets/flags/TO.svg": qr, "../assets/flags/TR.svg": Jr, "../assets/flags/TT.svg": Qr, "../assets/flags/TV.svg": Xr, "../assets/flags/TW.svg": el, "../assets/flags/TZ.svg": tl, "../assets/flags/UA.svg": ol, "../assets/flags/UG.svg": il, "../assets/flags/UM.svg": nl, "../assets/flags/UN.svg": rl, "../assets/flags/US.svg": ll, "../assets/flags/UY.svg": cl, "../assets/flags/UZ.svg": sl, "../assets/flags/VA.svg": al, "../assets/flags/VC.svg": dl, "../assets/flags/VE.svg": fl, "../assets/flags/VG.svg": gl, "../assets/flags/VI.svg": hl, "../assets/flags/VN.svg": ul, "../assets/flags/VU.svg": pl, "../assets/flags/WALES.svg": kl, "../assets/flags/WF.svg": wl, "../assets/flags/WS.svg": yl, "../assets/flags/XK.svg": xl, "../assets/flags/YE.svg": vl, "../assets/flags/YT.svg": ml, "../assets/flags/ZA.svg": _l, "../assets/flags/ZM.svg": bl, "../assets/flags/ZW.svg": jl }))[`../assets/flags/${g}.svg`], import.meta.url).href, a = S(() => {
+      var g;
+      return (g = o.favoritesCountries) != null && g.length ? o.favoritesCountries.map((u) => Et(u, o.lang)) : [];
+    }), f = S(() => {
+      var w;
+      const u = a0(o.lang).filter(
+        (k) => k.name.toLowerCase().includes(r.value.toLowerCase()) || k.phone_code.toString().includes(r.value)
       );
-      return (y = o.favoritesCountries) != null && y.length && c.value.length ? _.filter((v) => {
-        var S;
-        return !((S = o.favoritesCountries) != null && S.includes(v.country_code.toLowerCase()));
-      }) : _;
-    }), u = (m) => {
-      i.value = m, a.value = !1, s.value = "", r("update:modelValue", `+${m.phone_code}${l.value}`);
-    }, f = (m) => {
-      l.value = m, i.value ? r("update:modelValue", `+${i.value.phone_code}${m}`) : r("update:modelValue", m);
+      return (w = o.favoritesCountries) != null && w.length && a.value.length ? u.filter((k) => {
+        var v;
+        return !((v = o.favoritesCountries) != null && v.includes(k.country_code));
+      }) : u;
+    }), d = (g) => {
+      l.value = g, n.value = !1, r.value = "", i("update:modelValue", `+${g.phone_code}${c.value}`);
+    }, h = (g) => {
+      c.value = g, l.value ? i("update:modelValue", `+${l.value.phone_code}${g}`) : i("update:modelValue", g);
     };
-    return he(() => o.modelValue, (m) => {
-      const { code: _, number: y } = Ui(m);
-      if (_) {
-        const v = bn(o.lang).find(
-          (S) => `+${S.phone_code}` === _
+    return W(() => o.modelValue, (g) => {
+      const { code: u, number: w } = Tt(g);
+      if (u) {
+        const k = a0(o.lang).find(
+          (v) => `+${v.phone_code}` === u
         );
-        v && (i.value = v, l.value = y);
+        k && (l.value = k, c.value = w);
       }
-    }, { immediate: !0 }), (m, _) => (H(), Ne("div", Ep, [
-      ae(N(ip), {
-        modelValue: i.value,
+    }, { immediate: !0 }), W(() => o.lang, (g) => {
+      Je(g);
+    }), (g, u) => (P(), X("div", e6, [
+      D(p(N1), {
+        modelValue: l.value,
         "onUpdate:modelValue": [
-          _[1] || (_[1] = (y) => i.value = y),
-          u
+          u[1] || (u[1] = (w) => l.value = w),
+          d
         ]
       }, {
-        default: W(() => [
-          ae(N(vp), { class: "w-[180px]" }, {
-            default: W(() => [
-              ae(N(bp), null, {
-                default: W(() => [
-                  Ve("div", Tp, [
-                    i.value ? (H(), Ne("img", {
+        default: T(() => [
+          D(p(J1), { class: "w-[180px]" }, {
+            default: T(() => [
+              D(p(Q1), null, {
+                default: T(() => [
+                  i2("div", t6, [
+                    l.value ? (P(), X("img", {
                       key: 0,
-                      src: `/src/assets/flags/${i.value.country_code}.svg`,
-                      alt: i.value.country_code,
+                      src: s(l.value.country_code),
+                      alt: l.value.country_code,
                       class: "w-6 h-4"
-                    }, null, 8, wp)) : gt("", !0),
-                    i.value ? (H(), Ne("span", Sp, "+" + Ut(i.value.phone_code), 1)) : (H(), Ne("span", Op, Ut(N(n)("phone-select.select-country")), 1))
+                    }, null, 8, o6)) : M2("", !0),
+                    l.value ? (P(), X("span", i6, "+" + D2(l.value.phone_code), 1)) : (P(), X("span", n6, D2(p(z0)("phone-select.select-country")), 1))
                   ])
                 ]),
                 _: 1
@@ -12086,60 +9039,55 @@ const mp = mr("chevron-up", [
             ]),
             _: 1
           }),
-          ae(N(lp), null, {
-            default: W(() => {
-              var y;
+          D(p(D1), null, {
+            default: T(() => {
+              var w;
               return [
-                Ve("div", Ap, [
-                  ae(N(Qr), {
-                    modelValue: s.value,
-                    "onUpdate:modelValue": _[0] || (_[0] = (v) => s.value = v),
+                i2("div", r6, [
+                  D(p(Se), {
+                    modelValue: r.value,
+                    "onUpdate:modelValue": u[0] || (u[0] = (k) => r.value = k),
                     type: "text",
-                    placeholder: N(n)("phone-select.search"),
+                    placeholder: p(z0)("phone-select.search"),
                     class: "w-full"
                   }, null, 8, ["modelValue", "placeholder"])
                 ]),
-                Ve("div", Np, [
-                  (y = o.favoritesCountries) != null && y.length && c.value.length ? (H(), Ne(Nt, { key: 0 }, [
-                    (H(!0), Ne(Nt, null, bo(c.value, (v) => (H(), Ne("div", null, [
-                      ae(N(Ea), { value: v }, {
-                        default: W(() => [
-                          Ve("div", Cp, [
-                            Ve("img", {
-                              src: `/src/assets/flags/${v.country_code}.svg`,
-                              alt: v.country_code,
+                i2("div", l6, [
+                  (w = o.favoritesCountries) != null && w.length && a.value.length ? (P(), X(Q2, { key: 0 }, [
+                    (P(!0), X(Q2, null, F0(a.value, (k) => (P(), X("div", null, [
+                      D(p(qe), { value: k }, {
+                        default: T(() => [
+                          i2("div", c6, [
+                            i2("img", {
+                              src: s(k.country_code),
+                              alt: k.country_code,
                               class: "w-6 h-4"
-                            }, null, 8, Lp),
-                            Ve("span", null, Ut(v.name), 1),
-                            Ve("span", Ip, "+" + Ut(v.phone_code), 1)
+                            }, null, 8, s6),
+                            i2("span", null, D2(k.name), 1),
+                            i2("span", a6, "+" + D2(k.phone_code), 1)
                           ])
                         ]),
                         _: 2
                       }, 1032, ["value"])
                     ]))), 256)),
-                    ae(N(yp))
-                  ], 64)) : gt("", !0),
-                  (H(!0), Ne(Nt, null, bo(d.value.filter((v) => {
-                    var S;
-                    return !((S = o.favoritesCountries) != null && S.includes(v.country_code));
-                  }), (v) => (H(), Ne("div", {
-                    key: v.country_code
-                  }, [
-                    ae(N(Ea), { value: v }, {
-                      default: W(() => [
-                        Ve("div", Pp, [
-                          Ve("img", {
-                            src: `/src/assets/flags/${v.country_code}.svg`,
-                            alt: v.country_code,
+                    D(p(q1))
+                  ], 64)) : M2("", !0),
+                  (P(!0), X(Q2, null, F0(f.value, (k) => (P(), X("div", null, [
+                    D(p(qe), { value: k }, {
+                      default: T(() => [
+                        i2("div", d6, [
+                          i2("img", {
+                            src: s(k.country_code),
+                            alt: k.country_code,
                             class: "w-6 h-4"
-                          }, null, 8, Mp),
-                          Ve("span", null, Ut(v.name), 1),
-                          Ve("span", kp, "+" + Ut(v.phone_code), 1)
+                          }, null, 8, f6),
+                          i2("span", null, D2(k.name), 1),
+                          i2("span", g6, "+" + D2(k.phone_code), 1)
                         ])
                       ]),
                       _: 2
                     }, 1032, ["value"])
-                  ]))), 128))
+                  ]))), 256))
                 ])
               ];
             }),
@@ -12148,26 +9096,27 @@ const mp = mr("chevron-up", [
         ]),
         _: 1
       }, 8, ["modelValue"]),
-      ae(N(Qr), {
-        modelValue: l.value,
+      D(p(Se), {
+        modelValue: c.value,
         "onUpdate:modelValue": [
-          _[2] || (_[2] = (y) => l.value = y),
-          f
+          u[2] || (u[2] = (w) => c.value = w),
+          h
         ],
         type: "tel",
-        placeholder: N(n)("phone-select.placeholder")
+        placeholder: p(z0)("phone-select.placeholder")
       }, null, 8, ["modelValue", "placeholder"])
     ]));
   }
 });
 export {
-  Gp as PhoneSelect,
-  Ui as extractPhoneCode,
-  Vp as findCountryByCode,
-  bn as getCountries,
-  $i as getCountryByCode,
-  Dp as getCountryByName,
-  Fp as getCountryByPhoneCode,
-  Bp as getFlagPath,
-  Bi as loadTranslations
+  m6 as PhoneSelect,
+  m6 as default,
+  Tt as extractPhoneCode,
+  y6 as findCountryByCode,
+  a0 as getCountries,
+  Et as getCountryByCode,
+  p6 as getCountryByName,
+  k6 as getCountryByPhoneCode,
+  w6 as getFlagPath,
+  A3 as loadTranslations
 };
