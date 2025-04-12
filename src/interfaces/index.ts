@@ -13,3 +13,5 @@ export interface Translations {
     }
   }
 }
+
+export type { Country as CountryType }

@@ -1,5 +1,11 @@
 {
     "name": "alexbednov-phone-select",
+    "demo": {
+        "author": {
+            "name": "Alex Bednov",
+            "authored_by": "Müəllif"
+        }
+    },
     "phone-select": {
         "placeholder": "Telefon nömrəsini daxil edin",
         "search": "Axtarış...",
