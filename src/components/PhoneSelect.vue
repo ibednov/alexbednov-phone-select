@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { getCountries, type Country, type Language } from '../utils/countries'
+import { extractPhoneCode } from '../utils/phone'
 import { useI18n } from 'vue-i18n'
 import { Input } from '@/components/ui/input'
 import {
@@ -24,7 +25,7 @@ const emit = defineEmits<{
 
 const isOpen = ref(false)
 const searchQuery = ref('')
-const selectedCountry = ref(getCountries(props.lang)[0])
+const selectedCountry = ref<Country | null>(null)
 const inputValue = ref('')
 
 const filteredCountries = computed(() => {
@@ -43,22 +44,45 @@ const handleCountrySelect = (country: Country) => {
 
 const handleInput = (value: string) => {
   inputValue.value = value
-  emit('update:modelValue', `+${selectedCountry.value.phone_code}${value}`)
+  if (selectedCountry.value) {
+    emit('update:modelValue', `+${selectedCountry.value.phone_code}${value}`)
+  } else {
+    emit('update:modelValue', value)
+  }
 }
+
+// При изменении modelValue извне
+watch(() => props.modelValue, (newValue) => {
+  const { code, number } = extractPhoneCode(newValue)
+  if (code) {
+    const country = getCountries(props.lang).find(c =>
+      `+${c.phone_code}` === code
+    )
+    if (country) {
+      selectedCountry.value = country
+      inputValue.value = number
+    }
+  }
+}, { immediate: true })
 </script>
 
 <template>
   <div class="relative flex items-center gap-2">
-    <Select v-model="selectedCountry" @update:model-value="handleCountrySelect">
+    <Select
+      v-model="selectedCountry"
+      @update:model-value="handleCountrySelect"
+    >
       <SelectTrigger class="w-[180px]">
         <SelectValue>
           <div class="flex items-center gap-2">
             <img
+              v-if="selectedCountry"
               :src="`/src/assets/flags/${selectedCountry.country_code}.svg`"
               :alt="selectedCountry.country_code"
               class="w-6 h-4"
             >
-            <span>+{{ selectedCountry.phone_code }}</span>
+            <span v-if="selectedCountry">+{{ selectedCountry.phone_code }}</span>
+            <span v-else class="text-gray-400">{{ t('phone-select.select-country') }}</span>
           </div>
         </SelectValue>
       </SelectTrigger>

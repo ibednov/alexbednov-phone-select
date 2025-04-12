@@ -6,7 +6,8 @@
       "select": "Choose country",
       "no_results": "No results",
       "loading": "Loading...",
-      "selected_phone_number": "Selected phone number"
+      "selected_phone_number": "Selected phone number",
+      "select-country": "Select country"
   },
   "lang": {
       "lang": "Language"

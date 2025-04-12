@@ -6,7 +6,8 @@
         "select": "Выберите страну",
         "no_results": "Ничего не найдено",
         "loading": "Загрузка...",
-        "selected_phone_number": "Выбранный номер телефона"
+        "selected_phone_number": "Выбранный номер телефона",
+        "select-country": "Выберите страну"
     },
     "lang": {
         "lang": "Язык"

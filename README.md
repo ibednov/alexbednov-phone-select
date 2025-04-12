@@ -1,6 +1,6 @@
 # Phone Select
 
-Vue компонент для выбора телефонного номера с поддержкой кодов стран.
+Vue компонент для выбора телефонного номера с поддержкой кодов 239 стран.
 
 ## Установка
 
@@ -29,10 +29,10 @@ import { PhoneSelect } from 'phone-select'
 ### Утилиты
 
 ```typescript
-import { countries, getCountryByCode, getCountryByName } from 'phone-select'
+import { getCountries, getCountryByCode, getCountryByName } from 'phone-select'
 
 // Получить список всех стран
-const allCountries = countries
+const allCountries = getCountries()
 
 // Найти страну по коду
 const country = getCountryByCode('7') // Россия
