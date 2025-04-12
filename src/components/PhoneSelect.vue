@@ -25,6 +25,7 @@ const emit = defineEmits<{
 const isOpen = ref(false)
 const searchQuery = ref('')
 const selectedCountry = ref(getCountries(props.lang)[0])
+const inputValue = ref('')
 
 const filteredCountries = computed(() => {
   return getCountries(props.lang).filter(country =>
@@ -37,12 +38,12 @@ const handleCountrySelect = (country: Country) => {
   selectedCountry.value = country
   isOpen.value = false
   searchQuery.value = ''
-  emit('update:modelValue', `+${country.phone_code}`)
+  emit('update:modelValue', `+${country.phone_code}${inputValue.value}`)
 }
 
-const handleInput = (e: Event) => {
-  const target = e.target as HTMLInputElement
-  emit('update:modelValue', `+${selectedCountry.value.phone_code}${target.value}`)
+const handleInput = (value: string) => {
+  inputValue.value = value
+  emit('update:modelValue', `+${selectedCountry.value.phone_code}${value}`)
 }
 </script>
 
@@ -91,8 +92,8 @@ const handleInput = (e: Event) => {
     </Select>
 
     <Input
-      :value="modelValue.replace(`+${selectedCountry.phone_code}`, '')"
-      @input="handleInput"
+      v-model="inputValue"
+      @update:model-value="handleInput"
       type="tel"
       :placeholder="t('phone-select.placeholder')"
     />

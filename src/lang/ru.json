@@ -1,7 +1,7 @@
 {
     "name": "alexbednov-phone-select",
     "phone-select":{
-        "placeholder": "Выберите страну",
+        "placeholder": "Введите номер телефона",
         "search": "Поиск...",
         "select": "Выберите страну",
         "no_results": "Ничего не найдено",
