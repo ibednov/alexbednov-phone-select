@@ -22,42 +22,6 @@ const phoneNumber = ref("");
           <p class="font-mono">{{ phoneNumber }}</p>
         </div>
       </div>
-      <!--
-      <div class="p-4 bg-gray-100 rounded-lg">
-        <PhoneSelect
-          v-model="phoneNumber"
-          lang="en"
-          :favorites-countries="['by', 'ru']"
-        />
-        <div class="mt-4">
-          <p class="text-sm text-gray-600">Выбранный номер:</p>
-          <p class="font-mono">{{ phoneNumber }}</p>
-        </div>
-      </div>
-
-      <div class="p-4 bg-gray-100 rounded-lg">
-        <PhoneSelect
-          v-model="phoneNumber"
-          lang="az"
-          :favorites-countries="['by', 'ru']"
-        />
-        <div class="mt-4">
-          <p class="text-sm text-gray-600">Выбранный номер:</p>
-          <p class="font-mono">{{ phoneNumber }}</p>
-        </div>
-      </div>
-
-      <div class="p-4 bg-gray-100 rounded-lg">
-        <PhoneSelect
-          v-model="phoneNumber"
-          lang="be"
-          :favorites-countries="['by', 'ru']"
-        />
-        <div class="mt-4">
-          <p class="text-sm text-gray-600">Выбранный номер:</p>
-          <p class="font-mono">{{ phoneNumber }}</p>
-        </div>
-      </div> -->
     </div>
 
     <Author />
