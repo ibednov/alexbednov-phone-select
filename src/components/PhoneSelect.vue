@@ -11,17 +11,19 @@ import {
   SelectValue,
   SelectSeparator,
 } from '@/components/ui/select'
-import { extractPhoneCode } from '@/utils/phone'
 import { t, setLanguage } from '@/utils/i18n'
 
 const props = defineProps<{
   modelValue: string
   lang?: Language
   favoritesCountries?: string[]
+  hideFavorites?: boolean
+  enableSearch?: boolean
 }>()
 
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void
+  (e: 'update:country', value: Country): void
 }>()
 
 // Устанавливаем язык
@@ -50,8 +52,8 @@ const filteredCountries = computed(() => {
     country.phone_code.toString().includes(searchQuery.value)
   )
 
-  if (props.favoritesCountries?.length && favoritesCountries.value.length) {
-    return filtered.filter(country => !props.favoritesCountries?.includes(country.country_code))
+  if (props.hideFavorites && props.favoritesCountries?.length && favoritesCountries.value.length) {
+    return filtered.filter(country => !props.favoritesCountries?.includes(country.country_code.toLowerCase()))
   }
 
   return filtered
@@ -61,6 +63,7 @@ const handleCountrySelect = (country: Country) => {
   selectedCountry.value = country
   isOpen.value = false
   searchQuery.value = ''
+  emit('update:country', country)
   emit('update:modelValue', `+${country.phone_code}${inputValue.value}`)
 }
 
@@ -75,14 +78,43 @@ const handleInput = (value: string) => {
 
 // При изменении modelValue извне
 watch(() => props.modelValue, (newValue) => {
-  const { code, number } = extractPhoneCode(newValue)
-  if (code) {
-    const country = getCountries(props.lang).find(c =>
-      `+${c.phone_code}` === code
-    )
-    if (country) {
-      selectedCountry.value = country
-      inputValue.value = number
+  const match = newValue.match(/^(\+\d+)(.*)$/)
+  if (match) {
+    const code = match[1]
+    const number = match[2]
+    const cleanCode = code.slice(1) // Убираем +
+
+    // Для кода 7 проверяем диапазоны
+    if (cleanCode.startsWith('7')) {
+      const firstDigit = cleanCode[1]
+      if (firstDigit) {
+        const digit = parseInt(firstDigit)
+        // Для России
+        if ([2, 3, 4, 5, 9].includes(digit)) {
+          const country = getCountries(props.lang).find(c => c.country_code === 'RU')
+          if (country) {
+            selectedCountry.value = country
+            inputValue.value = number
+          }
+        }
+        // Для Казахстана
+        if ([0, 6, 7].includes(digit)) {
+          const country = getCountries(props.lang).find(c => c.country_code === 'KZ')
+          if (country) {
+            selectedCountry.value = country
+            inputValue.value = number
+          }
+        }
+      }
+    } else {
+      // Для остальных кодов ищем по совпадению
+      const country = getCountries(props.lang).find(c =>
+        c.phone_code.toString().startsWith(cleanCode)
+      )
+      if (country) {
+        selectedCountry.value = country
+        inputValue.value = number
+      }
     }
   }
 }, { immediate: true })
@@ -114,7 +146,7 @@ watch(() => props.lang, (newLang) => {
         </SelectValue>
       </SelectTrigger>
       <SelectContent>
-        <div class="p-2 border-b">
+        <div class="p-2 border-b" v-if="props.enableSearch">
           <Input
             v-model="searchQuery"
             type="text"

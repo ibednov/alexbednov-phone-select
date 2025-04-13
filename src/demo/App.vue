@@ -4,6 +4,8 @@ import PhoneSelect from "@/components/PhoneSelect.vue";
 import Author from "@/demo/author.vue";
 
 const phoneNumber = ref("");
+
+const country = ref(null)
 </script>
 
 <template>
@@ -16,6 +18,8 @@ const phoneNumber = ref("");
           v-model="phoneNumber"
           lang="en"
           :favorites-countries="['by', 'ru']"
+          @update:country="country = $event"
+          hide-favorites
         />
         <div class="mt-4">
           <p class="text-sm text-gray-600">Selected number:</p>

@@ -421,7 +421,8 @@
   },
   {
     "country_code": "KZ",
-    "phone_code": 7
+    "phone_code": 7,
+    "phone_ranges": [0, 6, 7]
   },
   {
     "country_code": "KE",
@@ -689,7 +690,8 @@
   },
   {
     "country_code": "RU",
-    "phone_code": 7
+    "phone_code": 7,
+    "phone_ranges": [2, 3, 4, 5, 9]
   },
   {
     "country_code": "RW",

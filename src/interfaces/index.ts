@@ -4,6 +4,7 @@ export interface Country {
   country_code: string
   phone_code: number
   name?: string
+  phone_ranges?: number[]
 }
 
 export interface Translations {
