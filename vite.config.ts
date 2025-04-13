@@ -16,7 +16,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'PhoneSelect',
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format) => `alexbednov-phone-select.${format}.js`,
       formats: ['es', 'umd']
     },
     rollupOptions: {

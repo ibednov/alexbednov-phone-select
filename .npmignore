@@ -1,0 +1,11 @@
+src/demo
+src/**/__tests__/*
+*.log
+.git
+.gitignore
+README.md
+vite.config.ts
+tsconfig.json
+tsconfig.build.json
+.eslintrc.cjs
+.prettierrc.json
