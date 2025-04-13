@@ -25,6 +25,11 @@
     "prepare": "bun run build"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.487.0",
+    "reka-ui": "^2.2.0",
+    "tailwind-merge": "^3.2.0",
+    "tw-animate-css": "^1.2.5",
     "vue": "^3.4.21"
   },
   "devDependencies": {
