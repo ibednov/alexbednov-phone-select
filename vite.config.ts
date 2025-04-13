@@ -4,15 +4,29 @@ import { resolve } from 'path'
 import { fileURLToPath } from 'url'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 export default defineConfig({
   plugins: [
     vue(),
-    tailwindcss()
+    tailwindcss(),
+    // visualizer({
+    //   open: true,
+    //   gzipSize: true,
+    //   brotliSize: true,
+    //   filename: 'dist/stats.html'
+    // })
   ],
   build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'PhoneSelect',
