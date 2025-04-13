@@ -21,9 +21,14 @@ const country = ref(null)
           @update:country="country = $event"
           hide-favorites
         />
+
         <div class="mt-4">
           <p class="text-sm text-gray-600">Selected number:</p>
           <p class="font-mono">{{ phoneNumber }}</p>
+        </div>
+        <div class="mt-4">
+          <p class="text-sm text-gray-600">Selected country:</p>
+          <p class="font-mono">{{ country }}</p>
         </div>
       </div>
     </div>

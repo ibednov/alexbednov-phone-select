@@ -13,13 +13,20 @@ import {
 } from '@/components/ui/select'
 import { t, setLanguage } from '@/utils/i18n'
 
-const props = defineProps<{
+const props = withDefaults(
+  defineProps<{
   modelValue: string
   lang?: Language
   favoritesCountries?: string[]
-  hideFavorites?: boolean
-  enableSearch?: boolean
-}>()
+    hideFavorites?: boolean
+    enableSearch?: boolean
+  }>(),
+  {
+    lang: 'en',
+    hideFavorites: true,
+    enableSearch: false,
+  }
+)
 
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void
