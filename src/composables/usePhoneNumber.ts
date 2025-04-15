@@ -4,7 +4,7 @@ import { useCountries } from './useCountries'
 import { useI18n } from './useI18n'
 
 export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) => {
-  const { getCountries, getCountryByCode } = useCountries(lang)
+  const { getCountries, getCountryByCode, getAllCountryNames } = useCountries(lang)
   const { t } = useI18n()
 
   const searchQuery = ref('')
@@ -26,9 +26,15 @@ export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) =>
 
     const query = searchQuery.value.toLowerCase()
     const filtered = countries.filter(country => {
-      const name = country.name?.toLowerCase() || ''
+      const countryCode = country.country_code.toLowerCase()
       const phoneCode = country.phone_code?.toString() || ''
-      return name.includes(query) || phoneCode.includes(query)
+      const allNames = getAllCountryNames(country.country_code)
+
+      return (
+        countryCode.includes(query) ||
+        phoneCode.includes(query) ||
+        allNames.some(name => name.toLowerCase().includes(query))
+      )
     })
 
     if (favoritesCountries?.length && favorites.value.length) {

@@ -31,11 +31,18 @@ export const useCountries = (lang: Language = 'ru') => {
     return `/src/assets/flags/${countryCode}.svg`
   }
 
+  const getAllCountryNames = (countryCode: string) => {
+    const allTranslations = translations.value
+    const names = Object.values(allTranslations).map(lang => lang.countries[countryCode])
+    return [...new Set(names.filter(Boolean))]
+  }
+
   return {
     getCountries,
     getCountryByCode,
     getCountryByName,
     getCountryByPhoneCode,
-    getFlagPath
+    getFlagPath,
+    getAllCountryNames
   }
 }
