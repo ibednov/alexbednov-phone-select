@@ -13,7 +13,7 @@
     "components": "@/components",
     "composables": "@/composables",
     "utils": "@/lib/utils",
-    "ui": "@/components/ui",
+    "ui": "@/components/shad-cn-ui",
     "lib": "@/lib"
   },
   "iconLibrary": "lucide"

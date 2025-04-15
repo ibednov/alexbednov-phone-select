@@ -2,7 +2,7 @@
 import { ref, computed, watch, onMounted } from 'vue'
 import { getCountries, getCountryByCode, type Country } from '@/utils/countries'
 import type { Language } from '@/interfaces'
-import { Input } from '@/components/ui/input'
+import { Input } from '@/components/shad-cn-ui/input'
 import {
   Select,
   SelectContent,
@@ -10,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
   SelectSeparator,
-} from '@/components/ui/select'
+} from '@/components/shad-cn-ui/select'
 import { t, setLanguage } from '@/utils/i18n'
 
 const props = withDefaults(

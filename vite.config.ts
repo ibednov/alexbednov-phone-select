@@ -33,17 +33,22 @@ export default defineConfig({
       fileName: (format) => `alexbednov-phone-select.${format}.js`,
       formats: ['es', 'umd']
     },
+    cssCodeSplit: true,
     rollupOptions: {
-      external: ['vue', 'vue-i18n'],
+      external: ['vue', 'vue-i18n', 'reka-ui'],
       output: {
         globals: {
           vue: 'Vue',
-          'vue-i18n': 'VueI18n'
+          'vue-i18n': 'VueI18n',
+          'reka-ui': 'RekaUI'
         },
         exports: 'named',
         assetFileNames: (assetInfo) => {
           if (assetInfo.name?.endsWith('.svg')) {
             return 'assets/flags/[name][extname]'
+          }
+          if (assetInfo.name === 'style.css') {
+            return 'style.css'
           }
           return 'assets/[name][extname]'
         }

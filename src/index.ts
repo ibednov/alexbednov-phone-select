@@ -1,3 +1,6 @@
+// Styles
+import './assets/style.css'
+
 // API
 export * from './utils/countries'
 export * from './utils/translations'
