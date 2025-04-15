@@ -33,7 +33,7 @@ export default defineConfig({
       fileName: (format) => `alexbednov-phone-select.${format}.js`,
       formats: ['es', 'umd']
     },
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     rollupOptions: {
       external: ['vue', 'vue-i18n', 'reka-ui'],
       output: {
@@ -46,9 +46,6 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           if (assetInfo.name?.endsWith('.svg')) {
             return 'assets/flags/[name][extname]'
-          }
-          if (assetInfo.name === 'style.css') {
-            return 'style.css'
           }
           return 'assets/[name][extname]'
         }
