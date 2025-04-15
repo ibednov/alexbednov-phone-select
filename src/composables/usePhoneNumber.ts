@@ -25,6 +25,15 @@ export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) =>
     if (!searchQuery.value) return countries
 
     const query = searchQuery.value.toLowerCase()
+
+    // Если начинается с +, ищем только по телефонному коду
+    if (query.startsWith('+')) {
+      const phoneCode = query.slice(1)
+      return countries.filter(country =>
+        country.phone_code.toString().startsWith(phoneCode)
+      )
+    }
+
     const filtered = countries.filter(country => {
       const countryCode = country.country_code.toLowerCase()
       const phoneCode = country.phone_code?.toString() || ''
