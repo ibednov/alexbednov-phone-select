@@ -147,7 +147,7 @@ watch(() => props.lang, (newLang) => {
     <Select
       v-model="selectedCountry"
       @update:model-value="handleCountrySelect"
-      :class="[props.selectClass, 'w-[180px]']"
+      :class="[props.selectClass || 'w-[180px]']"
     >
       <SelectTrigger>
         <SelectValue>
@@ -159,9 +159,9 @@ watch(() => props.lang, (newLang) => {
               class="w-6 h-4"
             />
             <span v-if="selectedCountry">+{{ selectedCountry.phone_code }}</span>
-            <span v-else class="text-gray-400">{{
-              props.selectPlaceholder || t("phone-select.select-country")
-            }}</span>
+            <span v-else class="text-gray-400">
+              {{ props.selectPlaceholder || t("phone-select.select-country") }}
+            </span>
           </div>
         </SelectValue>
       </SelectTrigger>
@@ -217,9 +217,3 @@ watch(() => props.lang, (newLang) => {
     />
   </div>
 </template>
-
-<style scoped>
-.relative {
-  width: 100%;
-}
-</style>
