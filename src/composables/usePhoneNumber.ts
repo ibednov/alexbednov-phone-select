@@ -35,47 +35,51 @@ export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) =>
   })
 
   const parsePhoneNumber = (value: string) => {
+    console.log('parsePhoneNumber', value)
     if (!value) {
       selectedCountry.value = null
       inputValue.value = ''
       return
     }
 
-    const match = value.match(/^(\+\d+)(.*)$/)
-    if (match) {
-      const code = match[1]
-      const number = match[2]
-      const cleanCode = code.slice(1)
+    // Убираем + из начала строки
+    const cleanValue = value.replace(/^\+/, '')
 
-      if (cleanCode.startsWith('7')) {
-        const firstDigit = cleanCode[1]
-        if (firstDigit) {
-          const digit = parseInt(firstDigit)
-          if ([2, 3, 4, 5, 9].includes(digit)) {
-            const country = getCountries(lang).find(c => c.country_code === 'RU')
-            if (country) {
-              selectedCountry.value = country
-              inputValue.value = number
-            }
-          }
-          if ([0, 6, 7].includes(digit)) {
-            const country = getCountries(lang).find(c => c.country_code === 'KZ')
-            if (country) {
-              selectedCountry.value = country
-              inputValue.value = number
-            }
-          }
-        }
-      } else {
-        const country = getCountries(lang).find(c =>
-          c.phone_code.toString().startsWith(cleanCode)
-        )
-        if (country) {
-          selectedCountry.value = country
-          inputValue.value = number
-        }
-      }
+    // Ищем код страны в списке стран
+    const countries = getCountries(lang)
+
+    // Сначала проверяем страны с phone_ranges
+    const countryWithRanges = countries.find(c => {
+      if (!c.phone_ranges?.length) return false
+      const code = c.phone_code.toString()
+      if (!cleanValue.startsWith(code)) return false
+
+      const nextDigit = cleanValue[code.length]
+      if (!nextDigit) return false
+
+      return c.phone_ranges.includes(parseInt(nextDigit))
+    })
+
+    if (countryWithRanges) {
+      console.log('found country with ranges', countryWithRanges)
+      selectedCountry.value = countryWithRanges
+      inputValue.value = cleanValue.slice(countryWithRanges.phone_code.toString().length)
+      return
     }
+
+    // Если не нашли по ranges, ищем обычным способом
+    const country = countries.find(c => cleanValue.startsWith(c.phone_code.toString()))
+
+    if (country) {
+      console.log('found country', country)
+      selectedCountry.value = country
+      inputValue.value = cleanValue.slice(country.phone_code.toString().length)
+      return
+    }
+
+    // Если страна не найдена, сбрасываем значения
+    selectedCountry.value = null
+    inputValue.value = ''
   }
 
   return {

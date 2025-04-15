@@ -16,7 +16,7 @@ import CountryItem from './PhoneSelect/CountryItem.vue'
 
 const props = withDefaults(
   defineProps<{
-    modelValue: string
+    modelValue: string | null
     lang?: Language
     favoritesCountries?: string[]
     hideFavorites?: boolean
@@ -34,12 +34,15 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
-  (e: 'update:modelValue', value: string): void
+  (e: 'update:modelValue', value: string | null): void
   (e: 'update:country', value: Country): void
 }>()
 
 onMounted(() => {
   setLanguage(props.lang)
+  if (props.modelValue) {
+    parsePhoneNumber(props.modelValue)
+  }
 })
 
 const isOpen = ref(false)
@@ -70,7 +73,16 @@ const handleInput = (value: string) => {
   }
 }
 
-watch(() => props.modelValue, parsePhoneNumber, { immediate: true })
+watch(() => props.modelValue, (newValue) => {
+  if (newValue) {
+    console.log('newValue', newValue)
+    parsePhoneNumber(newValue)
+  } else {
+    selectedCountry.value = null
+    inputValue.value = ''
+  }
+}, { immediate: true })
+
 watch(() => props.lang, setLanguage)
 </script>
 

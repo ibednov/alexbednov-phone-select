@@ -3,7 +3,7 @@ import { ref } from "vue";
 import PhoneSelect from "@/components/PhoneSelect.vue";
 import Author from "@/demo/author.vue";
 
-const phoneNumber = ref<string | null>('+375121231232')
+const phoneNumber = ref<string | null>('+79999999999')
 
 const country = ref(null)
 </script>
