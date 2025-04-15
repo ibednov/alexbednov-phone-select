@@ -38,14 +38,11 @@ const emit = defineEmits<{
   (e: 'update:country', value: Country): void
 }>()
 
-const { setLanguage, t } = useI18n()
+const emitCountry = () => {
+  emit('update:country', selectedCountry.value)
+}
 
-onMounted(() => {
-  setLanguage(props.lang)
-  if (props.modelValue) {
-    parsePhoneNumber(props.modelValue)
-  }
-})
+const { setLanguage, t } = useI18n()
 
 const isOpen = ref(false)
 const {
@@ -77,7 +74,6 @@ const handleInput = (value: string) => {
 
 watch(() => props.modelValue, (newValue) => {
   if (newValue) {
-    console.log('newValue', newValue)
     parsePhoneNumber(newValue)
   } else {
     selectedCountry.value = null
@@ -86,6 +82,17 @@ watch(() => props.modelValue, (newValue) => {
 }, { immediate: true })
 
 watch(() => props.lang, setLanguage)
+
+watch(()=>selectedCountry.value, emitCountry())
+
+
+onMounted(() => {
+  setLanguage(props.lang)
+  if (props.modelValue) {
+    parsePhoneNumber(props.modelValue)
+  }
+})
+
 </script>
 
 <template>

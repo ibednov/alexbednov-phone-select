@@ -20,21 +20,14 @@ export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) =>
     return favoritesCountries.map(code => getCountryByCode(code))
   })
 
-  const filteredCountries = computed(() => {
-    const countries = getCountries.value
-    if (!searchQuery.value) return countries
+  const searchByPhoneCode = (countries: Country[], phoneCode: string) => {
+    return countries.filter(country =>
+      country.phone_code.toString().startsWith(phoneCode)
+    )
+  }
 
-    const query = searchQuery.value.toLowerCase()
-
-    // Если начинается с +, ищем только по телефонному коду
-    if (query.startsWith('+')) {
-      const phoneCode = query.slice(1)
-      return countries.filter(country =>
-        country.phone_code.toString().startsWith(phoneCode)
-      )
-    }
-
-    const filtered = countries.filter(country => {
+  const searchByAllFields = (countries: Country[], query: string) => {
+    return countries.filter(country => {
       const countryCode = country.country_code.toLowerCase()
       const phoneCode = country.phone_code?.toString() || ''
       const allNames = getAllCountryNames(country.country_code)
@@ -45,25 +38,32 @@ export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) =>
         allNames.some(name => name.toLowerCase().includes(query))
       )
     })
+  }
 
-    if (favoritesCountries?.length && favorites.value.length) {
-      return filtered.filter(country => !favoritesCountries.includes(country.country_code.toLowerCase()))
+  const excludeFavorites = (countries: Country[]) => {
+    if (!favoritesCountries?.length || !favorites.value.length) return countries
+    return countries.filter(country =>
+      !favoritesCountries.includes(country.country_code.toLowerCase())
+    )
+  }
+
+  const filteredCountries = computed(() => {
+    const countries = getCountries.value
+    if (!searchQuery.value) return countries
+
+    const query = searchQuery.value.toLowerCase()
+
+    if (query.startsWith('+')) {
+      const phoneCode = query.slice(1)
+      return searchByPhoneCode(countries, phoneCode)
     }
 
-    return filtered
+    const filtered = searchByAllFields(countries, query)
+    return excludeFavorites(filtered)
   })
 
-  const parsePhoneNumber = (value: string) => {
-    if (!value) {
-      selectedCountry.value = null
-      inputValue.value = ''
-      return
-    }
-
-    const cleanValue = value.replace(/^\+/, '')
-    const countries = getCountries.value
-
-    const countryWithRanges = countries.find(c => {
+  const findCountryByRanges = (countries: Country[], cleanValue: string) => {
+    return countries.find(c => {
       if (!c.phone_ranges?.length) return false
       const code = c.phone_code.toString()
       if (!cleanValue.startsWith(code)) return false
@@ -73,23 +73,44 @@ export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) =>
 
       return c.phone_ranges.includes(parseInt(nextDigit))
     })
+  }
 
-    if (countryWithRanges) {
-      selectedCountry.value = countryWithRanges
-      inputValue.value = cleanValue.slice(countryWithRanges.phone_code.toString().length)
-      return
-    }
+  const findCountryByPhoneCode = (countries: Country[], cleanValue: string) => {
+    return countries.find(c => cleanValue.startsWith(c.phone_code.toString()))
+  }
 
-    const country = countries.find(c => cleanValue.startsWith(c.phone_code.toString()))
-
-    if (country) {
-      selectedCountry.value = country
-      inputValue.value = cleanValue.slice(country.phone_code.toString().length)
-      return
-    }
-
+  const resetValues = () => {
     selectedCountry.value = null
     inputValue.value = ''
+  }
+
+  const setCountryAndInput = (country: Country, cleanValue: string) => {
+    selectedCountry.value = country
+    inputValue.value = cleanValue.slice(country.phone_code.toString().length)
+  }
+
+  const parsePhoneNumber = (value: string) => {
+    if (!value) {
+      resetValues()
+      return
+    }
+
+    const cleanValue = value.replace(/^\+/, '')
+    const countries = getCountries.value
+
+    const countryWithRanges = findCountryByRanges(countries, cleanValue)
+    if (countryWithRanges) {
+      setCountryAndInput(countryWithRanges, cleanValue)
+      return
+    }
+
+    const country = findCountryByPhoneCode(countries, cleanValue)
+    if (country) {
+      setCountryAndInput(country, cleanValue)
+      return
+    }
+
+    resetValues()
   }
 
   return {
