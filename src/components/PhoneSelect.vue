@@ -10,7 +10,7 @@ import {
   SelectValue,
   SelectSeparator,
 } from '@/components/shad-cn-ui/select'
-import { t, setLanguage } from '@/utils/i18n'
+import { useI18n } from '@/composables/useI18n'
 import { usePhoneNumber } from '@/composables/usePhoneNumber'
 import CountryItem from './PhoneSelect/CountryItem.vue'
 
@@ -37,6 +37,8 @@ const emit = defineEmits<{
   (e: 'update:modelValue', value: string | null): void
   (e: 'update:country', value: Country): void
 }>()
+
+const { setLanguage, t } = useI18n()
 
 onMounted(() => {
   setLanguage(props.lang)

@@ -37,7 +37,7 @@ const country = ref(null)
   <div class="p-4 bg-gray-100 rounded-lg">
     <PhoneSelect
       v-model="phoneNumber"
-      lang="en"
+      lang="ru"
       @update:country="country = $event"
       enableSearch
     />

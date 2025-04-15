@@ -1,8 +1,12 @@
 import { ref, computed } from 'vue'
-import { getCountries, getCountryByCode, type Country } from '@/utils/countries'
-import type { Language } from '@/interfaces'
+import type { Language, Country } from '@/interfaces'
+import { useCountries } from './useCountries'
+import { useI18n } from './useI18n'
 
 export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) => {
+  const { getCountries, getCountryByCode } = useCountries(lang)
+  const { t } = useI18n()
+
   const searchQuery = ref('')
   const selectedCountry = ref<Country | null>(null)
   const inputValue = ref('')
@@ -13,11 +17,11 @@ export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) =>
 
   const favorites = computed(() => {
     if (!favoritesCountries?.length) return []
-    return favoritesCountries.map(code => getCountryByCode(code, lang))
+    return favoritesCountries.map(code => getCountryByCode(code))
   })
 
   const filteredCountries = computed(() => {
-    const countries = getCountries(lang)
+    const countries = getCountries.value
     if (!searchQuery.value) return countries
 
     const query = searchQuery.value.toLowerCase()
@@ -35,20 +39,15 @@ export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) =>
   })
 
   const parsePhoneNumber = (value: string) => {
-    console.log('parsePhoneNumber', value)
     if (!value) {
       selectedCountry.value = null
       inputValue.value = ''
       return
     }
 
-    // Убираем + из начала строки
     const cleanValue = value.replace(/^\+/, '')
+    const countries = getCountries.value
 
-    // Ищем код страны в списке стран
-    const countries = getCountries(lang)
-
-    // Сначала проверяем страны с phone_ranges
     const countryWithRanges = countries.find(c => {
       if (!c.phone_ranges?.length) return false
       const code = c.phone_code.toString()
@@ -61,23 +60,19 @@ export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) =>
     })
 
     if (countryWithRanges) {
-      console.log('found country with ranges', countryWithRanges)
       selectedCountry.value = countryWithRanges
       inputValue.value = cleanValue.slice(countryWithRanges.phone_code.toString().length)
       return
     }
 
-    // Если не нашли по ranges, ищем обычным способом
     const country = countries.find(c => cleanValue.startsWith(c.phone_code.toString()))
 
     if (country) {
-      console.log('found country', country)
       selectedCountry.value = country
       inputValue.value = cleanValue.slice(country.phone_code.toString().length)
       return
     }
 
-    // Если страна не найдена, сбрасываем значения
     selectedCountry.value = null
     inputValue.value = ''
   }
