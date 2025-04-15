@@ -3,7 +3,7 @@ import { ref } from "vue";
 import PhoneSelect from "@/components/PhoneSelect.vue";
 import Author from "@/demo/author.vue";
 
-const phoneNumber = ref("");
+const phoneNumber = ref<string | null>('+375121231232')
 
 const country = ref(null)
 </script>
@@ -32,6 +32,26 @@ const country = ref(null)
         </div>
       </div>
     </div>
+
+<div class="flex flex-col gap-8">
+  <div class="p-4 bg-gray-100 rounded-lg">
+    <PhoneSelect
+      v-model="phoneNumber"
+      lang="en"
+      @update:country="country = $event"
+      enableSearch
+    />
+
+    <div class="mt-4">
+      <p class="text-sm text-gray-600">Selected number:</p>
+      <p class="font-mono">{{ phoneNumber }}</p>
+    </div>
+    <div class="mt-4">
+      <p class="text-sm text-gray-600">Selected country:</p>
+      <p class="font-mono">{{ country }}</p>
+    </div>
+  </div>
+</div>
 
     <Author />
   </div>

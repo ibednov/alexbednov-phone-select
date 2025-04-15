@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from 'vue'
-import { getCountries, getCountryByCode, type Country } from '@/utils/countries'
+import { ref, watch, onMounted } from 'vue'
 import type { Language } from '@/interfaces'
 import { Input } from '@/components/shad-cn-ui/input'
 import {
@@ -12,6 +11,8 @@ import {
   SelectSeparator,
 } from '@/components/shad-cn-ui/select'
 import { t, setLanguage } from '@/utils/i18n'
+import { usePhoneNumber } from '@/composables/usePhoneNumber'
+import CountryItem from './PhoneSelect/CountryItem.vue'
 
 const props = withDefaults(
   defineProps<{
@@ -37,38 +38,20 @@ const emit = defineEmits<{
   (e: 'update:country', value: Country): void
 }>()
 
-// Устанавливаем язык
 onMounted(() => {
   setLanguage(props.lang)
 })
 
 const isOpen = ref(false)
-const searchQuery = ref('')
-const selectedCountry = ref<Country | null>(null)
-const inputValue = ref('')
-
-const getFlagUrl = (code: string) => {
-  return new URL(`../assets/flags/${code}.svg`, import.meta.url).href
-}
-
-const favoritesCountries = computed(() => {
-  if (!props.favoritesCountries?.length) return []
-  return props.favoritesCountries.map(code => getCountryByCode(code, props.lang))
-})
-
-const filteredCountries = computed(() => {
-  const countries = getCountries(props.lang)
-  const filtered = countries.filter(country =>
-    country.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-    country.phone_code.toString().includes(searchQuery.value)
-  )
-
-  if (props.hideFavorites && props.favoritesCountries?.length && favoritesCountries.value.length) {
-    return filtered.filter(country => !props.favoritesCountries?.includes(country.country_code.toLowerCase()))
-  }
-
-  return filtered
-})
+const {
+  searchQuery,
+  selectedCountry,
+  inputValue,
+  favorites,
+  filteredCountries,
+  parsePhoneNumber,
+  handleSearch
+} = usePhoneNumber(props.lang, props.favoritesCountries)
 
 const handleCountrySelect = (country: Country) => {
   selectedCountry.value = country
@@ -87,59 +70,8 @@ const handleInput = (value: string) => {
   }
 }
 
-// При изменении modelValue извне
-watch(() => props.modelValue, (newValue) => {
-  if (!newValue) {
-    selectedCountry.value = null
-    inputValue.value = ''
-    return
-  }
-
-  const match = newValue.match(/^(\+\d+)(.*)$/)
-  if (match) {
-    const code = match[1]
-    const number = match[2]
-    const cleanCode = code.slice(1) // Убираем +
-
-    // Для кода 7 проверяем диапазоны
-    if (cleanCode.startsWith('7')) {
-      const firstDigit = cleanCode[1]
-      if (firstDigit) {
-        const digit = parseInt(firstDigit)
-        // Для России
-        if ([2, 3, 4, 5, 9].includes(digit)) {
-          const country = getCountries(props.lang).find(c => c.country_code === 'RU')
-          if (country) {
-            selectedCountry.value = country
-            inputValue.value = number
-          }
-        }
-        // Для Казахстана
-        if ([0, 6, 7].includes(digit)) {
-          const country = getCountries(props.lang).find(c => c.country_code === 'KZ')
-          if (country) {
-            selectedCountry.value = country
-            inputValue.value = number
-          }
-        }
-      }
-    } else {
-      // Для остальных кодов ищем по совпадению
-      const country = getCountries(props.lang).find(c =>
-        c.phone_code.toString().startsWith(cleanCode)
-      )
-      if (country) {
-        selectedCountry.value = country
-        inputValue.value = number
-      }
-    }
-  }
-}, { immediate: true })
-
-// При изменении языка
-watch(() => props.lang, (newLang) => {
-  setLanguage(newLang)
-})
+watch(() => props.modelValue, parsePhoneNumber, { immediate: true })
+watch(() => props.lang, setLanguage)
 </script>
 
 <template>
@@ -152,13 +84,7 @@ watch(() => props.lang, (newLang) => {
       <SelectTrigger>
         <SelectValue>
           <div class="flex items-center gap-2">
-            <img
-              v-if="selectedCountry"
-              :src="getFlagUrl(selectedCountry.country_code)"
-              :alt="selectedCountry.country_code"
-              class="w-6 h-4"
-            />
-            <span v-if="selectedCountry">+{{ selectedCountry.phone_code }}</span>
+            <CountryItem v-if="selectedCountry" :country="selectedCountry" />
             <span v-else class="text-gray-400">
               {{ props.selectPlaceholder || t("phone-select.select-country") }}
             </span>
@@ -169,39 +95,25 @@ watch(() => props.lang, (newLang) => {
         <div class="p-2 border-b" v-if="props.enableSearch">
           <Input
             v-model="searchQuery"
+            @update:model-value="handleSearch"
+            @keydown.stop
             type="text"
             :placeholder="t('phone-select.search')"
             class="w-full"
           />
         </div>
         <div class="max-h-60 overflow-y-auto">
-          <template v-if="props.favoritesCountries?.length && favoritesCountries.length">
-            <div v-for="country in favoritesCountries">
+          <template v-if="props.favoritesCountries?.length && favorites.length">
+            <div v-for="country in favorites" :key="country.country_code">
               <SelectItem :value="country">
-                <div class="flex items-center gap-2">
-                  <img
-                    :src="getFlagUrl(country.country_code)"
-                    :alt="country.country_code"
-                    class="w-6 h-4"
-                  />
-                  <span>{{ country.name }}</span>
-                  <span class="text-gray-500">+{{ country.phone_code }}</span>
-                </div>
+                <CountryItem :country="country" />
               </SelectItem>
             </div>
             <SelectSeparator />
           </template>
-          <div v-for="country in filteredCountries">
+          <div v-for="country in filteredCountries" :key="country.country_code">
             <SelectItem :value="country">
-              <div class="flex items-center gap-2">
-                <img
-                  :src="getFlagUrl(country.country_code)"
-                  :alt="country.country_code"
-                  class="w-6 h-4"
-                />
-                <span>{{ country.name }}</span>
-                <span class="text-gray-500">+{{ country.phone_code }}</span>
-              </div>
+              <CountryItem :country="country" />
             </SelectItem>
           </div>
         </div>
