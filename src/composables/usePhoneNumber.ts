@@ -1,11 +1,9 @@
 import { ref, computed } from 'vue'
 import type { Language, Country } from '@/interfaces'
 import { useCountries } from './useCountries'
-import { useI18n } from './useI18n'
 
-export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) => {
+export const usePhoneNumber = (lang: Language, favoritesCountries?: string[], hideFavorites: boolean = true) => {
   const { getCountries, getCountryByCode, getAllCountryNames } = useCountries(lang)
-  const { t } = useI18n()
 
   const searchQuery = ref('')
   const selectedCountry = ref<Country | null>(null)
@@ -49,17 +47,20 @@ export const usePhoneNumber = (lang: Language, favoritesCountries?: string[]) =>
 
   const filteredCountries = computed(() => {
     const countries = getCountries.value
-    if (!searchQuery.value) return countries
+    if (!searchQuery.value) {
+      return hideFavorites ? excludeFavorites(countries) : countries
+    }
 
     const query = searchQuery.value.toLowerCase()
 
     if (query.startsWith('+')) {
       const phoneCode = query.slice(1)
-      return searchByPhoneCode(countries, phoneCode)
+      const filtered = searchByPhoneCode(countries, phoneCode)
+      return hideFavorites ? excludeFavorites(filtered) : filtered
     }
 
     const filtered = searchByAllFields(countries, query)
-    return excludeFavorites(filtered)
+    return hideFavorites ? excludeFavorites(filtered) : filtered
   })
 
   const findCountryByRanges = (countries: Country[], cleanValue: string) => {

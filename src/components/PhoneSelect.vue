@@ -60,7 +60,7 @@ const {
   filteredCountries,
   parsePhoneNumber,
   handleSearch
-} = usePhoneNumber(props.lang, props.favoritesCountries)
+} = usePhoneNumber(props.lang, props.favoritesCountries, props.hideFavorites)
 
 const { maskedPhone } = usePhoneMask()
 
