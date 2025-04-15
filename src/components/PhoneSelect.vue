@@ -91,6 +91,43 @@ const applyMask = (value: string) => {
   })
 }
 
+const handleInput = (value: string) => {
+  console.log('handleInput called with value:', value)
+  if (props.enableMask) {
+    // Получаем текущее значение без маски
+    const currentValue = inputValue.value.replace(/\D/g, '')
+
+    // Определяем, было ли это удаление
+    const isDeletion = value.length < maskedPhone.value.length
+
+    // Если это удаление, убираем последнюю цифру
+    if (isDeletion) {
+      const newValue = currentValue.slice(0, -1)
+      inputValue.value = newValue
+      maskedPhone.value = newValue ? applyMask(newValue) : ''
+    } else {
+      // Иначе добавляем новую цифру
+      const cleanValue = value.replace(/\D/g, '')
+      inputValue.value = cleanValue
+      maskedPhone.value = cleanValue ? applyMask(cleanValue) : ''
+    }
+  } else {
+    inputValue.value = value
+    maskedPhone.value = value
+  }
+
+  if (selectedCountry.value) {
+    const phoneValue = props.enableMask
+      ? `+${selectedCountry.value.phone_code} ${maskedPhone.value}`
+      : `+${selectedCountry.value.phone_code} ${value}`
+    console.log('Emitting phone value:', phoneValue)
+    emit('update:modelValue', phoneValue)
+  } else {
+    console.log('Emitting raw value:', value)
+    emit('update:modelValue', value)
+  }
+}
+
 // Обновляем maskedPhone при изменении inputValue или selectedCountry
 watch([inputValue, selectedCountry], ([newInputValue, newSelectedCountry]) => {
   console.log('Updating maskedPhone with:', { newInputValue, newSelectedCountry })
@@ -99,55 +136,38 @@ watch([inputValue, selectedCountry], ([newInputValue, newSelectedCountry]) => {
       newInputValue,
       newSelectedCountry.phone_code
     )
-    maskedPhone.value = applyMask(phoneWithoutCode)
+    maskedPhone.value = phoneWithoutCode ? applyMask(phoneWithoutCode) : ''
   } else {
-    maskedPhone.value = applyMask(newInputValue)
+    maskedPhone.value = newInputValue ? applyMask(newInputValue) : ''
   }
 }, { immediate: true })
 
 const initializePhone = () => {
   console.log('initializePhone called with modelValue:', props.modelValue)
   if (props.modelValue) {
-    console.log('Parsing phone number:', props.modelValue)
-    parsePhoneNumber(props.modelValue)
+    // Убираем пробелы перед парсингом
+    const cleanValue = props.modelValue.replace(/\s/g, '')
+    console.log('Parsing phone number:', cleanValue)
+    parsePhoneNumber(cleanValue)
     // Ждем следующего тика для установки selectedCountry
     setTimeout(() => {
       console.log('After timeout - selectedCountry:', selectedCountry.value)
       console.log('Current inputValue:', inputValue.value)
       if (selectedCountry.value) {
-        const phoneWithoutCode = getPhoneWithoutCode(props.modelValue, selectedCountry.value.phone_code)
+        const phoneWithoutCode = getPhoneWithoutCode(cleanValue, selectedCountry.value.phone_code)
         console.log('Setting inputValue to:', phoneWithoutCode)
         inputValue.value = phoneWithoutCode
         // Если маска отключена, обновляем maskedPhone напрямую
         if (!props.enableMask) {
           maskedPhone.value = phoneWithoutCode
         }
+        // Обновляем modelValue с пробелом после кода страны
+        const value = props.enableMask
+          ? `+${selectedCountry.value.phone_code} ${maskedPhone.value}`
+          : `+${selectedCountry.value.phone_code} ${inputValue.value}`
+        emit('update:modelValue', value)
       }
     }, 0)
-  }
-}
-
-const handleInput = (value: string) => {
-  console.log('handleInput called with value:', value)
-  if (props.enableMask) {
-    // Сохраняем только цифры
-    const cleanValue = value.replace(/\D/g, '')
-    inputValue.value = cleanValue
-    maskedPhone.value = applyMask(cleanValue)
-  } else {
-    inputValue.value = value
-    maskedPhone.value = value
-  }
-
-  if (selectedCountry.value) {
-    const phoneValue = props.enableMask
-      ? `+${selectedCountry.value.phone_code}${maskedPhone.value}`
-      : `+${selectedCountry.value.phone_code}${value}`
-    console.log('Emitting phone value:', phoneValue)
-    emit('update:modelValue', phoneValue)
-  } else {
-    console.log('Emitting raw value:', value)
-    emit('update:modelValue', value)
   }
 }
 
@@ -158,8 +178,8 @@ const handleCountrySelect = (country: Country) => {
   searchQuery.value = ''
   emit('update:country', country)
   const value = props.enableMask
-    ? `+${country.phone_code}${maskedPhone.value}`
-    : `+${country.phone_code}${inputValue.value}`
+    ? `+${country.phone_code} ${maskedPhone.value}`
+    : `+${country.phone_code} ${inputValue.value}`
   console.log('Emitting phone value after country select:', value)
   emit('update:modelValue', value)
 }
