@@ -20,6 +20,7 @@ const country = ref(null)
           :favorites-countries="['by', 'ru']"
           @update:country="country = $event"
           hide-favorites
+          enableMask
         />
 
         <div class="mt-4">
@@ -33,7 +34,7 @@ const country = ref(null)
       </div>
     </div>
 
-<div class="flex flex-col gap-8">
+<!-- <div class="flex flex-col gap-8">
   <div class="p-4 bg-gray-100 rounded-lg">
     <PhoneSelect
       v-model="phoneNumber"
@@ -51,7 +52,7 @@ const country = ref(null)
       <p class="font-mono">{{ country }}</p>
     </div>
   </div>
-</div>
+</div> -->
 
     <Author />
   </div>

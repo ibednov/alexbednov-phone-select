@@ -12,7 +12,12 @@ import {
 } from '@/components/shad-cn-ui/select'
 import { useI18n } from '@/composables/useI18n'
 import { usePhoneNumber } from '@/composables/usePhoneNumber'
+import { usePhoneMask } from '@/composables/usePhoneMask'
 import CountryItem from './PhoneSelect/CountryItem.vue'
+import type { CountryMask } from '@/types'
+import countriesMaskData from '@/json/countries_mask.json'
+
+const countriesMask: CountryMask[] = countriesMaskData
 
 const props = withDefaults(
   defineProps<{
@@ -21,6 +26,7 @@ const props = withDefaults(
     favoritesCountries?: string[]
     hideFavorites?: boolean
     enableSearch?: boolean
+    enableMask?: boolean
     selectClass?: string
     inputClass?: string
     selectPlaceholder?: string
@@ -30,6 +36,7 @@ const props = withDefaults(
     lang: 'en',
     hideFavorites: true,
     enableSearch: false,
+    enableMask: false,
   }
 )
 
@@ -55,42 +62,112 @@ const {
   handleSearch
 } = usePhoneNumber(props.lang, props.favoritesCountries)
 
-const handleCountrySelect = (country: Country) => {
-  selectedCountry.value = country
-  isOpen.value = false
-  searchQuery.value = ''
-  emit('update:country', country)
-  emit('update:modelValue', `+${country.phone_code}${inputValue.value}`)
+const { maskedPhone } = usePhoneMask()
+
+const getPhoneWithoutCode = (phone: string, code: string) => {
+  if (!phone || !code) return phone
+  return phone.startsWith(`+${code}`) ? phone.slice(`+${code}`.length) : phone
 }
 
-const handleInput = (value: string) => {
-  inputValue.value = value
+const applyMask = (value: string) => {
+  if (!value) return ''
+  const cleanValue = value.replace(/\D/g, '')
+  let matrix = '###############'
+
   if (selectedCountry.value) {
-    emit('update:modelValue', `+${selectedCountry.value.phone_code}${value}`)
+    const mask = countriesMask.find(item => {
+      const code = item.code.replace(/[\s#]/g, '')
+      return code.startsWith(`+${selectedCountry.value.phone_code}`)
+    })
+
+    if (mask) {
+      matrix = mask.code.replace(/^\+[\d\s]+/, '').trim()
+    }
+  }
+
+  let i = 0
+  return matrix.replace(/[#\d]/g, function(a) {
+    return i < cleanValue.length ? cleanValue.charAt(i++) : ''
+  })
+}
+
+// Обновляем maskedPhone при изменении inputValue или selectedCountry
+watch([inputValue, selectedCountry], ([newInputValue, newSelectedCountry]) => {
+  console.log('Updating maskedPhone with:', { newInputValue, newSelectedCountry })
+  if (newSelectedCountry) {
+    const phoneWithoutCode = getPhoneWithoutCode(
+      newInputValue,
+      newSelectedCountry.phone_code
+    )
+    maskedPhone.value = applyMask(phoneWithoutCode)
   } else {
+    maskedPhone.value = applyMask(newInputValue)
+  }
+}, { immediate: true })
+
+const handleInput = (value: string) => {
+  console.log('handleInput called with value:', value)
+  if (props.enableMask) {
+    // Сохраняем только цифры
+    const cleanValue = value.replace(/\D/g, '')
+    inputValue.value = cleanValue
+    maskedPhone.value = applyMask(cleanValue)
+  } else {
+    inputValue.value = value
+  }
+
+  if (selectedCountry.value) {
+    const phoneValue = props.enableMask
+      ? `+${selectedCountry.value.phone_code}${maskedPhone.value}`
+      : `+${selectedCountry.value.phone_code}${value}`
+    console.log('Emitting phone value:', phoneValue)
+    emit('update:modelValue', phoneValue)
+  } else {
+    console.log('Emitting raw value:', value)
     emit('update:modelValue', value)
   }
 }
 
-watch(() => props.modelValue, (newValue) => {
-  if (newValue) {
-    parsePhoneNumber(newValue)
-  } else {
-    selectedCountry.value = null
-    inputValue.value = ''
+const handleCountrySelect = (country: Country) => {
+  console.log('handleCountrySelect called with country:', country)
+  selectedCountry.value = country
+  isOpen.value = false
+  searchQuery.value = ''
+  emit('update:country', country)
+  const value = props.enableMask
+    ? `+${country.phone_code}${maskedPhone.value}`
+    : `+${country.phone_code}${inputValue.value}`
+  console.log('Emitting phone value after country select:', value)
+  emit('update:modelValue', value)
+}
+
+const initializePhone = () => {
+  console.log('initializePhone called with modelValue:', props.modelValue)
+  if (props.modelValue) {
+    console.log('Parsing phone number:', props.modelValue)
+    parsePhoneNumber(props.modelValue)
+    // Ждем следующего тика для установки selectedCountry
+    setTimeout(() => {
+      console.log('After timeout - selectedCountry:', selectedCountry.value)
+      console.log('Current inputValue:', inputValue.value)
+      if (selectedCountry.value) {
+        const phoneWithoutCode = getPhoneWithoutCode(props.modelValue, selectedCountry.value.phone_code)
+        console.log('Setting inputValue to:', phoneWithoutCode)
+        inputValue.value = phoneWithoutCode
+      }
+    }, 0)
   }
-}, { immediate: true })
+}
+
+watch(() => props.modelValue, initializePhone, { immediate: true })
 
 watch(() => props.lang, setLanguage)
 
 watch(()=>selectedCountry.value, emitCountry())
 
-
 onMounted(() => {
   setLanguage(props.lang)
-  if (props.modelValue) {
-    parsePhoneNumber(props.modelValue)
-  }
+  initializePhone()
 })
 
 </script>
@@ -143,7 +220,7 @@ onMounted(() => {
 
     <Input
       :class="[props.inputClass, 'flex-1']"
-      v-model="inputValue"
+      :value="props.enableMask ? maskedPhone : inputValue"
       @update:model-value="handleInput"
       type="tel"
       :placeholder="props.inputPlaceholder || t('phone-select.placeholder')"
