@@ -18,8 +18,10 @@ const props = withDefaults(
   modelValue: string
   lang?: Language
   favoritesCountries?: string[]
-    hideFavorites?: boolean
-    enableSearch?: boolean
+  hideFavorites?: boolean
+  enableSearch?: boolean
+  selectClass?: string
+  inputClass?: string
   }>(),
   {
     lang: 'en',
@@ -134,9 +136,8 @@ watch(() => props.lang, (newLang) => {
 
 <template>
   <div class="relative flex items-center gap-2">
-    <Select
-      v-model="selectedCountry"
-      @update:model-value="handleCountrySelect"
+    <Select v-model="selectedCountry" @update:model-value="handleCountrySelect"
+    :class="[props.selectClass]"
     >
       <SelectTrigger class="w-[180px]">
         <SelectValue>
@@ -146,9 +147,11 @@ watch(() => props.lang, (newLang) => {
               :src="getFlagUrl(selectedCountry.country_code)"
               :alt="selectedCountry.country_code"
               class="w-6 h-4"
-            >
+            />
             <span v-if="selectedCountry">+{{ selectedCountry.phone_code }}</span>
-            <span v-else class="text-gray-400">{{ t('phone-select.select-country') }}</span>
+            <span v-else class="text-gray-400">{{
+              t("phone-select.select-country")
+            }}</span>
           </div>
         </SelectValue>
       </SelectTrigger>
@@ -170,7 +173,7 @@ watch(() => props.lang, (newLang) => {
                     :src="getFlagUrl(country.country_code)"
                     :alt="country.country_code"
                     class="w-6 h-4"
-                  >
+                  />
                   <span>{{ country.name }}</span>
                   <span class="text-gray-500">+{{ country.phone_code }}</span>
                 </div>
@@ -185,7 +188,7 @@ watch(() => props.lang, (newLang) => {
                   :src="getFlagUrl(country.country_code)"
                   :alt="country.country_code"
                   class="w-6 h-4"
-                >
+                />
                 <span>{{ country.name }}</span>
                 <span class="text-gray-500">+{{ country.phone_code }}</span>
               </div>
@@ -196,6 +199,7 @@ watch(() => props.lang, (newLang) => {
     </Select>
 
     <Input
+      :class="[props.inputClass]"
       v-model="inputValue"
       @update:model-value="handleInput"
       type="tel"
