@@ -119,7 +119,7 @@ const handleInput = (value: string) => {
   if (selectedCountry.value) {
     const phoneValue = props.enableMask
       ? `+${selectedCountry.value.phone_code} ${maskedPhone.value}`
-      : `+${selectedCountry.value.phone_code} ${value}`
+      : `+${selectedCountry.value.phone_code}${value}`
     console.log('Emitting phone value:', phoneValue)
     emit('update:modelValue', phoneValue)
   } else {
@@ -161,10 +161,10 @@ const initializePhone = () => {
         if (!props.enableMask) {
           maskedPhone.value = phoneWithoutCode
         }
-        // Обновляем modelValue с пробелом после кода страны
+        // Обновляем modelValue с пробелом после кода страны только если включена маска
         const value = props.enableMask
           ? `+${selectedCountry.value.phone_code} ${maskedPhone.value}`
-          : `+${selectedCountry.value.phone_code} ${inputValue.value}`
+          : `+${selectedCountry.value.phone_code}${inputValue.value}`
         emit('update:modelValue', value)
       }
     }, 0)
@@ -179,7 +179,7 @@ const handleCountrySelect = (country: Country) => {
   emit('update:country', country)
   const value = props.enableMask
     ? `+${country.phone_code} ${maskedPhone.value}`
-    : `+${country.phone_code} ${inputValue.value}`
+    : `+${country.phone_code}${inputValue.value}`
   console.log('Emitting phone value after country select:', value)
   emit('update:modelValue', value)
 }

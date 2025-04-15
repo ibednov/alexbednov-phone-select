@@ -7,6 +7,7 @@ const phoneNumber = ref<string | null>("+79999999911");
 const phoneNumber2 = ref<string | null>("+79999999912");
 
 const country = ref(null);
+const country2 = ref(null);
 </script>
 
 <template>
@@ -51,7 +52,7 @@ enableMask
         <PhoneSelect
           v-model="phoneNumber2"
           lang="ru"
-          @update:country="country = $event"
+          @update:country="country2 = $event"
           enableSearch
         />
 
@@ -67,11 +68,11 @@ enableSearch
 
         <div class="">
           <p class="text-sm text-gray-600">Selected number:</p>
-          <p class="font-mono">{{ phoneNumber }}</p>
+          <p class="font-mono">{{ phoneNumber2 }}</p>
         </div>
         <div class="">
           <p class="text-sm text-gray-600">Selected country:</p>
-          <p class="font-mono">{{ country }}</p>
+          <p class="font-mono">{{ country2 }}</p>
         </div>
       </div>
 
