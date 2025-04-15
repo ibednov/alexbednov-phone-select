@@ -15,13 +15,15 @@ import { t, setLanguage } from '@/utils/i18n'
 
 const props = withDefaults(
   defineProps<{
-  modelValue: string
-  lang?: Language
-  favoritesCountries?: string[]
-  hideFavorites?: boolean
-  enableSearch?: boolean
-  selectClass?: string
-  inputClass?: string
+    modelValue: string
+    lang?: Language
+    favoritesCountries?: string[]
+    hideFavorites?: boolean
+    enableSearch?: boolean
+    selectClass?: string
+    inputClass?: string
+    selectPlaceholder?: string
+    inputPlaceholder?: string
   }>(),
   {
     lang: 'en',
@@ -87,6 +89,12 @@ const handleInput = (value: string) => {
 
 // При изменении modelValue извне
 watch(() => props.modelValue, (newValue) => {
+  if (!newValue) {
+    selectedCountry.value = null
+    inputValue.value = ''
+    return
+  }
+
   const match = newValue.match(/^(\+\d+)(.*)$/)
   if (match) {
     const code = match[1]
@@ -135,11 +143,13 @@ watch(() => props.lang, (newLang) => {
 </script>
 
 <template>
-  <div class="relative flex items-center gap-2">
-    <Select v-model="selectedCountry" @update:model-value="handleCountrySelect"
-    :class="[props.selectClass]"
+  <div class="relative flex items-center gap-2 w-full">
+    <Select
+      v-model="selectedCountry"
+      @update:model-value="handleCountrySelect"
+      :class="[props.selectClass, 'w-[180px]']"
     >
-      <SelectTrigger class="w-[180px]">
+      <SelectTrigger>
         <SelectValue>
           <div class="flex items-center gap-2">
             <img
@@ -150,7 +160,7 @@ watch(() => props.lang, (newLang) => {
             />
             <span v-if="selectedCountry">+{{ selectedCountry.phone_code }}</span>
             <span v-else class="text-gray-400">{{
-              t("phone-select.select-country")
+              props.selectPlaceholder || t("phone-select.select-country")
             }}</span>
           </div>
         </SelectValue>
@@ -199,11 +209,17 @@ watch(() => props.lang, (newLang) => {
     </Select>
 
     <Input
-      :class="[props.inputClass]"
+      :class="[props.inputClass, 'flex-1']"
       v-model="inputValue"
       @update:model-value="handleInput"
       type="tel"
-      :placeholder="t('phone-select.placeholder')"
+      :placeholder="props.inputPlaceholder || t('phone-select.placeholder')"
     />
   </div>
 </template>
+
+<style scoped>
+.relative {
+  width: 100%;
+}
+</style>
