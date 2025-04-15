@@ -105,6 +105,28 @@ watch([inputValue, selectedCountry], ([newInputValue, newSelectedCountry]) => {
   }
 }, { immediate: true })
 
+const initializePhone = () => {
+  console.log('initializePhone called with modelValue:', props.modelValue)
+  if (props.modelValue) {
+    console.log('Parsing phone number:', props.modelValue)
+    parsePhoneNumber(props.modelValue)
+    // Ждем следующего тика для установки selectedCountry
+    setTimeout(() => {
+      console.log('After timeout - selectedCountry:', selectedCountry.value)
+      console.log('Current inputValue:', inputValue.value)
+      if (selectedCountry.value) {
+        const phoneWithoutCode = getPhoneWithoutCode(props.modelValue, selectedCountry.value.phone_code)
+        console.log('Setting inputValue to:', phoneWithoutCode)
+        inputValue.value = phoneWithoutCode
+        // Если маска отключена, обновляем maskedPhone напрямую
+        if (!props.enableMask) {
+          maskedPhone.value = phoneWithoutCode
+        }
+      }
+    }, 0)
+  }
+}
+
 const handleInput = (value: string) => {
   console.log('handleInput called with value:', value)
   if (props.enableMask) {
@@ -114,6 +136,7 @@ const handleInput = (value: string) => {
     maskedPhone.value = applyMask(cleanValue)
   } else {
     inputValue.value = value
+    maskedPhone.value = value
   }
 
   if (selectedCountry.value) {
@@ -139,24 +162,6 @@ const handleCountrySelect = (country: Country) => {
     : `+${country.phone_code}${inputValue.value}`
   console.log('Emitting phone value after country select:', value)
   emit('update:modelValue', value)
-}
-
-const initializePhone = () => {
-  console.log('initializePhone called with modelValue:', props.modelValue)
-  if (props.modelValue) {
-    console.log('Parsing phone number:', props.modelValue)
-    parsePhoneNumber(props.modelValue)
-    // Ждем следующего тика для установки selectedCountry
-    setTimeout(() => {
-      console.log('After timeout - selectedCountry:', selectedCountry.value)
-      console.log('Current inputValue:', inputValue.value)
-      if (selectedCountry.value) {
-        const phoneWithoutCode = getPhoneWithoutCode(props.modelValue, selectedCountry.value.phone_code)
-        console.log('Setting inputValue to:', phoneWithoutCode)
-        inputValue.value = phoneWithoutCode
-      }
-    }, 0)
-  }
 }
 
 watch(() => props.modelValue, initializePhone, { immediate: true })

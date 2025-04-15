@@ -3,7 +3,8 @@ import { ref } from "vue";
 import PhoneSelect from "@/components/PhoneSelect.vue";
 import Author from "@/demo/author.vue";
 
-const phoneNumber = ref<string | null>("+79999999999");
+const phoneNumber = ref<string | null>("+79999999911");
+const phoneNumber2 = ref<string | null>("+79999999912");
 
 const country = ref(null);
 </script>
@@ -48,7 +49,7 @@ enableMask
 
       <div class="p-4 bg-gray-100 rounded-lg flex flex-col gap-4">
         <PhoneSelect
-          v-model="phoneNumber"
+          v-model="phoneNumber2"
           lang="ru"
           @update:country="country = $event"
           enableSearch
@@ -57,7 +58,7 @@ enableMask
 
         <div class="bg-gray-400/30 p-3 rounded-lg text-sm">
           <pre>
-v-model="phoneNumber"
+v-model="phoneNumber2"
 lang="ru"
 @update:country="country = $event"
 enableSearch
