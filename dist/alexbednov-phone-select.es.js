@@ -6935,7 +6935,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     selectPlaceholder: {},
     inputPlaceholder: {},
     disableCountryNameSelect: { type: Boolean, default: false },
-    disableAutoParseNumber: { type: Boolean, default: false }
+    disableAutoParseNumber: { type: Boolean, default: false },
+    selectContentClass: {}
   },
   emits: ["update:modelValue", "update:country"],
   setup(__props, { emit: __emit }) {
@@ -7081,7 +7082,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               ]),
               _: 1
             }),
-            createVNode(unref(_sfc_main$8), null, {
+            createVNode(unref(_sfc_main$8), {
+              class: normalizeClass([_ctx.selectContentClass])
+            }, {
               default: withCtx(() => {
                 var _a;
                 return [
@@ -7131,7 +7134,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 ];
               }),
               _: 1
-            })
+            }, 8, ["class"])
           ]),
           _: 1
         }, 8, ["modelValue", "class"]),
