@@ -31,12 +31,16 @@ const props = withDefaults(
     inputClass?: string
     selectPlaceholder?: string
     inputPlaceholder?: string
+    disableCountryNameSelect?: boolean
+    disableAutoParseNumber?: boolean
   }>(),
   {
     lang: 'en',
     hideFavorites: true,
     enableSearch: false,
     enableMask: false,
+    disableCountryNameSelect: false,
+    disableAutoParseNumber: false,
   }
 )
 
@@ -196,7 +200,9 @@ onMounted(() => {
       <SelectTrigger>
         <SelectValue>
           <div class="flex items-center gap-2">
-            <CountryItem v-if="selectedCountry" :country="selectedCountry" />
+            <CountryItem v-if="selectedCountry" :country="selectedCountry"
+            :disable-country-name-select="props.disableCountryNameSelect"
+             />
             <span v-else class="text-gray-400">
               {{ props.selectPlaceholder || t("phone-select.select-country") }}
             </span>

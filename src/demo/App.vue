@@ -23,6 +23,9 @@ const country2 = ref(null);
           @update:country="country = $event"
           hide-favorites
           enableMask
+          disable-country-name-select
+          disable-auto-parse-number
+
         />
 
 

@@ -3,6 +3,7 @@ import { type Country } from '@/interfaces'
 
 defineProps<{
   country: Country
+  disableCountryNameSelect?: boolean
 }>()
 
 const getFlagUrl = (code: string) => {
@@ -17,7 +18,7 @@ const getFlagUrl = (code: string) => {
       :alt="country.country_code"
       class="w-6 h-4"
     />
-    <span>{{ country.name }}</span>
+    <span v-if="!disableCountryNameSelect">{{ country.name }}</span>
     <span class="text-gray-500">+{{ country.phone_code }}</span>
   </div>
 </template>
