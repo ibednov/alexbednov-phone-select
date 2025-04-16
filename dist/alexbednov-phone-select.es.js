@@ -1,4 +1,4 @@
-import { computed, isRef, reactive, unref, toRefs, toValue as toValue$1, getCurrentInstance, ref, watch, nextTick, defineComponent, withDirectives, createElementBlock, openBlock, normalizeClass, vModelText, createBlock, mergeProps, withCtx, renderSlot, createVNode, h, createElementVNode, toDisplayString, onMounted, createCommentVNode, withModifiers, Fragment, renderList } from "vue";
+import { computed, isRef, reactive, unref, toRefs, toValue as toValue$1, getCurrentInstance, ref, watch, nextTick, defineComponent, withDirectives, createElementBlock, openBlock, normalizeClass, vModelText, createBlock, mergeProps, withCtx, renderSlot, createVNode, h, createElementVNode, createCommentVNode, toDisplayString, onMounted, withModifiers, Fragment, renderList } from "vue";
 import { useForwardPropsEmits, SelectRoot, SelectPortal, SelectContent, SelectViewport, useForwardProps, SelectItem, SelectItemIndicator, SelectItemText, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectIcon, SelectValue } from "reka-ui";
 const countriesData = [
   {
@@ -6001,11 +6001,13 @@ const __vite_glob_0_259 = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%2
 const __vite_glob_0_260 = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'/%3e%3crect%20x='5'%20y='49'%20width='62'%20height='6'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='44'%20width='62'%20height='5'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='39'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='6'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='23'%20width='62'%20height='5'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='28'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cg%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.5399'%20d='M15.2661,35.6693,19,32.7964l-4.5363.1121-1.2981-4.4669L11.66,32.9777l-4.5369.112,3.6062,2.6918-.974,2.9344a2.2833,2.2833,0,0,1,1.0806.362l2.1222-1.6328,3.6063,2.6918Z'/%3e%3cpath%20fill='%23fcea2b'%20d='M10.7012,30.9391A.8847.8847,0,0,0,9.277,31.64v8.7433a.8848.8848,0,0,0,.8848.8848h6.0475a.8847.8847,0,0,0,.8847-.8848V36.2923a.8847.8847,0,0,0-.3453-.7013Z'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e";
 const _hoisted_1$1 = { class: "flex items-center gap-2" };
 const _hoisted_2$1 = ["src", "alt"];
-const _hoisted_3$1 = { class: "text-gray-500" };
+const _hoisted_3$1 = { key: 0 };
+const _hoisted_4$1 = { class: "text-gray-500" };
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "CountryItem",
   props: {
-    country: {}
+    country: {},
+    disableCountryNameSelect: { type: Boolean }
   },
   setup(__props) {
     const getFlagUrl = (code) => {
@@ -6018,8 +6020,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
           alt: _ctx.country.country_code,
           class: "w-6 h-4"
         }, null, 8, _hoisted_2$1),
-        createElementVNode("span", null, toDisplayString(_ctx.country.name), 1),
-        createElementVNode("span", _hoisted_3$1, "+" + toDisplayString(_ctx.country.phone_code), 1)
+        !_ctx.disableCountryNameSelect ? (openBlock(), createElementBlock("span", _hoisted_3$1, toDisplayString(_ctx.country.name), 1)) : createCommentVNode("", true),
+        createElementVNode("span", _hoisted_4$1, "+" + toDisplayString(_ctx.country.phone_code), 1)
       ]);
     };
   }
@@ -6931,7 +6933,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     selectClass: {},
     inputClass: {},
     selectPlaceholder: {},
-    inputPlaceholder: {}
+    inputPlaceholder: {},
+    disableCountryNameSelect: { type: Boolean, default: false },
+    disableAutoParseNumber: { type: Boolean, default: false }
   },
   emits: ["update:modelValue", "update:country"],
   setup(__props, { emit: __emit }) {
@@ -7011,6 +7015,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
     }, { immediate: true });
     const initializePhone = () => {
+      if (props.disableAutoParseNumber) return;
       if (props.modelValue) {
         const cleanValue = props.modelValue.replace(/\s/g, "");
         parsePhoneNumber(cleanValue);
@@ -7035,12 +7040,18 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const value = props.enableMask ? `+${country.phone_code} ${maskedPhone.value}` : `+${country.phone_code}${inputValue.value}`;
       emit("update:modelValue", value);
     };
-    watch(() => props.modelValue, initializePhone, { immediate: true });
+    watch(() => props.modelValue, (newValue) => {
+      if (!props.disableAutoParseNumber) {
+        initializePhone();
+      }
+    }, { immediate: true });
     watch(() => props.lang, setLanguage);
     watch(() => selectedCountry.value, emitCountry());
     onMounted(() => {
       setLanguage(props.lang);
-      initializePhone();
+      if (!props.disableAutoParseNumber) {
+        initializePhone();
+      }
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1, [
@@ -7060,8 +7071,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     createElementVNode("div", _hoisted_2, [
                       unref(selectedCountry) ? (openBlock(), createBlock(_sfc_main$1, {
                         key: 0,
-                        country: unref(selectedCountry)
-                      }, null, 8, ["country"])) : (openBlock(), createElementBlock("span", _hoisted_3, toDisplayString(props.selectPlaceholder || unref(t)("phone-select.select-country")), 1))
+                        country: unref(selectedCountry),
+                        "disable-country-name-select": props.disableCountryNameSelect
+                      }, null, 8, ["country", "disable-country-name-select"])) : (openBlock(), createElementBlock("span", _hoisted_3, toDisplayString(props.selectPlaceholder || unref(t)("phone-select.select-country")), 1))
                     ])
                   ]),
                   _: 1

@@ -143,6 +143,8 @@ watch([inputValue, selectedCountry], ([newInputValue, newSelectedCountry]) => {
 }, { immediate: true })
 
 const initializePhone = () => {
+  if (props.disableAutoParseNumber) return;
+
   if (props.modelValue) {
     // Убираем пробелы перед парсингом
     const cleanValue = props.modelValue.replace(/\s/g, '')
@@ -177,7 +179,11 @@ const handleCountrySelect = (country: Country) => {
   emit('update:modelValue', value)
 }
 
-watch(() => props.modelValue, initializePhone, { immediate: true })
+watch(() => props.modelValue, (newValue) => {
+  if (!props.disableAutoParseNumber) {
+    initializePhone()
+  }
+}, { immediate: true })
 
 watch(() => props.lang, setLanguage)
 
@@ -185,7 +191,9 @@ watch(()=>selectedCountry.value, emitCountry())
 
 onMounted(() => {
   setLanguage(props.lang)
-  initializePhone()
+  if (!props.disableAutoParseNumber) {
+    initializePhone()
+  }
 })
 
 </script>
