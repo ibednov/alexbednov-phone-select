@@ -33,6 +33,7 @@ const props = withDefaults(
     inputPlaceholder?: string
     disableCountryNameSelect?: boolean
     disableAutoParseNumber?: boolean
+    selectContentClass?: string
   }>(),
   {
     lang: 'en',
@@ -217,7 +218,7 @@ onMounted(() => {
           </div>
         </SelectValue>
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent :class="[selectContentClass]">
         <div class="p-2 border-b" v-if="props.enableSearch">
           <Input
             v-model="searchQuery"
