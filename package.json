@@ -1,7 +1,7 @@
 {
   "name": "alexbednov-phone-select",
   "private": false,
-  "version": "0.2.8",
+  "version": "0.2.9",
   "type": "module",
   "files": [
     "dist"
@@ -9,7 +9,7 @@
   "main": "./dist/alexbednov-phone-select.umd.js",
   "module": "./dist/alexbednov-phone-select.es.js",
   "types": "./dist/index.d.ts",
-  "style": "./dist/assets/index.css",
+  "style": "./dist/assets/style.css",
   "exports": {
     ".": {
       "import": "./dist/alexbednov-phone-select.es.js",
