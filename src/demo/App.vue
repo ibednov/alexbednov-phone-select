@@ -26,6 +26,8 @@ const country2 = ref(null);
           disable-country-name-select
           disable-auto-parse-number
           select-content-class="max-h-[500px] overflow-y-auto"
+          select-item-class="h-20"
+
         />
 
 

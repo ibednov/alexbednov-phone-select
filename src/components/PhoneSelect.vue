@@ -47,6 +47,8 @@ const props = withDefaults(
   }
 )
 
+console.log('PhoneSelect props:', props)
+
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string | null): void
   (e: 'update:country', value: Country): void

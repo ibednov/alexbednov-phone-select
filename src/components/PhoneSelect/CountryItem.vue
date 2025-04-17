@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { type Country } from '@/interfaces'
 
-defineProps<{
+const props = defineProps<{
   country: Country
   disableCountryNameSelect?: boolean
   selectItemCountryClass?: string
 }>()
+
+console.log('CountryItem props:', props)
 
 const getFlagUrl = (code: string) => {
   return new URL(`../../assets/flags/${code}.svg`, import.meta.url).href
