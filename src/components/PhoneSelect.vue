@@ -1,15 +1,13 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue'
 import type { Language } from '@/interfaces'
-import { Input } from '@/components/shad-cn-ui/input'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-  SelectSeparator,
-} from '@/components/shad-cn-ui/select'
+import Input from '@/components/ui/input/Input.vue'
+import Select from '@/components/ui/select/Select.vue'
+import SelectContent from '@/components/ui/select/SelectContent.vue'
+import SelectItem from '@/components/ui/select/SelectItem.vue'
+import SelectTrigger from '@/components/ui/select/SelectTrigger.vue'
+import SelectValue from '@/components/ui/select/SelectValue.vue'
+import SelectSeparator from '@/components/ui/select/SelectSeparator.vue'
 import { useTranslate } from '@/composables/useTranslate'
 import { usePhoneNumber } from '@/composables/usePhoneNumber'
 import { usePhoneMask } from '@/composables/usePhoneMask'

@@ -1,5 +1,5 @@
-import { computed, isRef, reactive, unref, toRefs, toValue as toValue$1, getCurrentInstance, ref, watch, nextTick, defineComponent, withDirectives, createElementBlock, openBlock, normalizeClass, vModelText, createBlock, mergeProps, withCtx, renderSlot, createVNode, h, createElementVNode, createCommentVNode, toDisplayString, onMounted, withModifiers, Fragment, renderList } from "vue";
-import { useForwardPropsEmits, SelectRoot, SelectPortal, SelectContent, SelectViewport, useForwardProps, SelectItem, SelectItemIndicator, SelectItemText, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectIcon, SelectValue } from "reka-ui";
+import { computed, isRef, reactive, unref, toRefs, toValue as toValue$1, getCurrentInstance, ref, watch, nextTick, defineComponent, withDirectives, createElementBlock, openBlock, normalizeClass, vModelText, createBlock, mergeProps, withCtx, renderSlot, h, createElementVNode, createVNode, createCommentVNode, toDisplayString, onMounted, withModifiers, Fragment, renderList } from "vue";
+import { useForwardPropsEmits, SelectRoot, useForwardProps, SelectItem, SelectItemIndicator, SelectItemText, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectIcon, SelectValue, SelectPortal, SelectContent, SelectViewport } from "reka-ui";
 const countriesData = [
   {
     country_code: "AF",
@@ -5264,73 +5264,6 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_main$8 = /* @__PURE__ */ defineComponent({
-  ...{
-    inheritAttrs: false
-  },
-  __name: "SelectContent",
-  props: {
-    forceMount: { type: Boolean },
-    position: { default: "popper" },
-    bodyLock: { type: Boolean },
-    side: {},
-    sideOffset: {},
-    align: {},
-    alignOffset: {},
-    avoidCollisions: { type: Boolean },
-    collisionBoundary: {},
-    collisionPadding: {},
-    arrowPadding: {},
-    sticky: {},
-    hideWhenDetached: { type: Boolean },
-    positionStrategy: {},
-    updatePositionStrategy: {},
-    disableUpdateOnLayoutShift: { type: Boolean },
-    prioritizePosition: { type: Boolean },
-    reference: {},
-    asChild: { type: Boolean },
-    as: {},
-    class: {}
-  },
-  emits: ["closeAutoFocus", "escapeKeyDown", "pointerDownOutside"],
-  setup(__props, { emit: __emit }) {
-    const props = __props;
-    const emits = __emit;
-    const delegatedProps = computed(() => {
-      const { class: _, ...delegated } = props;
-      return delegated;
-    });
-    const forwarded = useForwardPropsEmits(delegatedProps, emits);
-    return (_ctx, _cache) => {
-      return openBlock(), createBlock(unref(SelectPortal), null, {
-        default: withCtx(() => [
-          createVNode(unref(SelectContent), mergeProps({ "data-slot": "select-content" }, { ...unref(forwarded), ..._ctx.$attrs }, {
-            class: unref(cn)(
-              "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-(--reka-select-content-available-height) min-w-[8rem] overflow-x-hidden overflow-y-auto rounded-md border shadow-md",
-              _ctx.position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
-              props.class
-            )
-          }), {
-            default: withCtx(() => [
-              createVNode(unref(_sfc_main$5)),
-              createVNode(unref(SelectViewport), {
-                class: normalizeClass(unref(cn)("p-1", _ctx.position === "popper" && "h-[var(--reka-select-trigger-height)] w-full min-w-[var(--reka-select-trigger-width)] scroll-my-1"))
-              }, {
-                default: withCtx(() => [
-                  renderSlot(_ctx.$slots, "default")
-                ]),
-                _: 3
-              }, 8, ["class"]),
-              createVNode(unref(_sfc_main$6))
-            ]),
-            _: 3
-          }, 16, ["class"])
-        ]),
-        _: 3
-      });
-    };
-  }
-});
 /**
  * @license lucide-vue-next v0.487.0 - ISC
  *
@@ -5431,7 +5364,7 @@ const ChevronUp = createLucideIcon("chevron-up", [
   ["path", { d: "m18 15-6-6-6 6", key: "153udz" }]
 ]);
 const _hoisted_1$2 = { class: "absolute right-2 flex size-3.5 items-center justify-center" };
-const _sfc_main$7 = /* @__PURE__ */ defineComponent({
+const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "SelectItem",
   props: {
     value: {},
@@ -5476,7 +5409,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_main$6 = /* @__PURE__ */ defineComponent({
+const _sfc_main$7 = /* @__PURE__ */ defineComponent({
   __name: "SelectScrollDownButton",
   props: {
     asChild: { type: Boolean },
@@ -5504,7 +5437,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "SelectScrollUpButton",
   props: {
     asChild: { type: Boolean },
@@ -5532,7 +5465,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_main$4 = /* @__PURE__ */ defineComponent({
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   __name: "SelectSeparator",
   props: {
     asChild: { type: Boolean },
@@ -5552,7 +5485,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "SelectTrigger",
   props: {
     disabled: { type: Boolean },
@@ -5590,7 +5523,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   __name: "SelectValue",
   props: {
     placeholder: {},
@@ -5606,6 +5539,73 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
         ]),
         _: 3
       }, 16);
+    };
+  }
+});
+const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+  ...{
+    inheritAttrs: false
+  },
+  __name: "SelectContent",
+  props: {
+    forceMount: { type: Boolean },
+    position: { default: "popper" },
+    bodyLock: { type: Boolean },
+    side: {},
+    sideOffset: {},
+    align: {},
+    alignOffset: {},
+    avoidCollisions: { type: Boolean },
+    collisionBoundary: {},
+    collisionPadding: {},
+    arrowPadding: {},
+    sticky: {},
+    hideWhenDetached: { type: Boolean },
+    positionStrategy: {},
+    updatePositionStrategy: {},
+    disableUpdateOnLayoutShift: { type: Boolean },
+    prioritizePosition: { type: Boolean },
+    reference: {},
+    asChild: { type: Boolean },
+    as: {},
+    class: {}
+  },
+  emits: ["closeAutoFocus", "escapeKeyDown", "pointerDownOutside"],
+  setup(__props, { emit: __emit }) {
+    const props = __props;
+    const emits = __emit;
+    const delegatedProps = computed(() => {
+      const { class: _, ...delegated } = props;
+      return delegated;
+    });
+    const forwarded = useForwardPropsEmits(delegatedProps, emits);
+    return (_ctx, _cache) => {
+      return openBlock(), createBlock(unref(SelectPortal), null, {
+        default: withCtx(() => [
+          createVNode(unref(SelectContent), mergeProps({ "data-slot": "select-content" }, { ...unref(forwarded), ..._ctx.$attrs }, {
+            class: unref(cn)(
+              "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-(--reka-select-content-available-height) min-w-[8rem] overflow-x-hidden overflow-y-auto rounded-md border shadow-md",
+              _ctx.position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+              props.class
+            )
+          }), {
+            default: withCtx(() => [
+              createVNode(unref(_sfc_main$6)),
+              createVNode(unref(SelectViewport), {
+                class: normalizeClass(unref(cn)("p-1", _ctx.position === "popper" && "h-[var(--reka-select-trigger-height)] w-full min-w-[var(--reka-select-trigger-width)] scroll-my-1"))
+              }, {
+                default: withCtx(() => [
+                  renderSlot(_ctx.$slots, "default")
+                ]),
+                _: 3
+              }, 8, ["class"]),
+              createVNode(unref(_sfc_main$7))
+            ]),
+            _: 3
+          }, 16, ["class"])
+        ]),
+        _: 3
+      });
     };
   }
 });
@@ -7056,7 +7056,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1, [
-        createVNode(unref(_sfc_main$9), {
+        createVNode(_sfc_main$9, {
           modelValue: unref(selectedCountry),
           "onUpdate:modelValue": [
             _cache[2] || (_cache[2] = ($event) => isRef(selectedCountry) ? selectedCountry.value = $event : null),
@@ -7065,9 +7065,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           class: normalizeClass([props.selectClass || "w-[180px]"])
         }, {
           default: withCtx(() => [
-            createVNode(unref(_sfc_main$3), null, {
+            createVNode(_sfc_main$4, null, {
               default: withCtx(() => [
-                createVNode(unref(_sfc_main$2), null, {
+                createVNode(_sfc_main$3, null, {
                   default: withCtx(() => [
                     createElementVNode("div", _hoisted_2, [
                       unref(selectedCountry) ? (openBlock(), createBlock(_sfc_main$1, {
@@ -7082,14 +7082,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               ]),
               _: 1
             }),
-            createVNode(unref(_sfc_main$8), {
+            createVNode(_sfc_main$2, {
               class: normalizeClass([_ctx.selectContentClass])
             }, {
               default: withCtx(() => {
                 var _a;
                 return [
                   props.enableSearch ? (openBlock(), createElementBlock("div", _hoisted_4, [
-                    createVNode(unref(_sfc_main$a), {
+                    createVNode(_sfc_main$a, {
                       modelValue: unref(searchQuery),
                       "onUpdate:modelValue": [
                         _cache[0] || (_cache[0] = ($event) => isRef(searchQuery) ? searchQuery.value = $event : null),
@@ -7108,7 +7108,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         return openBlock(), createElementBlock("div", {
                           key: country.country_code
                         }, [
-                          createVNode(unref(_sfc_main$7), { value: country }, {
+                          createVNode(_sfc_main$8, { value: country }, {
                             default: withCtx(() => [
                               createVNode(_sfc_main$1, { country }, null, 8, ["country"])
                             ]),
@@ -7116,13 +7116,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                           }, 1032, ["value"])
                         ]);
                       }), 128)),
-                      createVNode(unref(_sfc_main$4))
+                      createVNode(_sfc_main$5)
                     ], 64)) : createCommentVNode("", true),
                     (openBlock(true), createElementBlock(Fragment, null, renderList(unref(filteredCountries), (country) => {
                       return openBlock(), createElementBlock("div", {
                         key: country.country_code
                       }, [
-                        createVNode(unref(_sfc_main$7), { value: country }, {
+                        createVNode(_sfc_main$8, { value: country }, {
                           default: withCtx(() => [
                             createVNode(_sfc_main$1, { country }, null, 8, ["country"])
                           ]),
@@ -7138,7 +7138,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           ]),
           _: 1
         }, 8, ["modelValue", "class"]),
-        createVNode(unref(_sfc_main$a), {
+        createVNode(_sfc_main$a, {
           class: normalizeClass([props.inputClass, "flex-1"]),
           value: props.enableMask ? unref(maskedPhone) : unref(inputValue),
           "onUpdate:modelValue": handleInput,
