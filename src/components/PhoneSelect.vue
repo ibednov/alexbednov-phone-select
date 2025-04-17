@@ -32,6 +32,9 @@ const props = withDefaults(
     disableCountryNameSelect?: boolean
     disableAutoParseNumber?: boolean
     selectContentClass?: string
+    selectTriggerClass?: string
+    selectValueClass?: string
+    selectItemClass?: string
   }>(),
   {
     lang: 'en',
@@ -205,8 +208,8 @@ onMounted(() => {
       @update:model-value="handleCountrySelect"
       :class="[props.selectClass || 'w-[180px]']"
     >
-      <SelectTrigger>
-        <SelectValue>
+      <SelectTrigger :class="[props.selectTriggerClass]">
+        <SelectValue :class="[props.selectValueClass]">
           <div class="flex items-center gap-2">
             <CountryItem v-if="selectedCountry" :country="selectedCountry"
             :disable-country-name-select="props.disableCountryNameSelect"
@@ -231,14 +234,14 @@ onMounted(() => {
         <div class="max-h-60 overflow-y-auto">
           <template v-if="props.favoritesCountries?.length && favorites.length">
             <div v-for="country in favorites" :key="country.country_code">
-              <SelectItem :value="country">
+              <SelectItem :value="country" :class="[props.selectItemClass]">
                 <CountryItem :country="country" />
               </SelectItem>
             </div>
             <SelectSeparator />
           </template>
           <div v-for="country in filteredCountries" :key="country.country_code">
-            <SelectItem :value="country">
+            <SelectItem :value="country" :class="[props.selectItemClass]">
               <CountryItem :country="country" />
             </SelectItem>
           </div>
