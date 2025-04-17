@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import '@/demo/style.css'
-import { useI18n } from '@/composables/useI18n'
+import { useTranslate } from '@/composables/useTranslate'
 
-const { setLanguage } = useI18n()
+const { setLanguage } = useTranslate()
 setLanguage('en')
 
 const app = createApp(App)

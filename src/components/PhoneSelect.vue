@@ -10,7 +10,7 @@ import {
   SelectValue,
   SelectSeparator,
 } from '@/components/shad-cn-ui/select'
-import { useI18n } from '@/composables/useI18n'
+import { useTranslate } from '@/composables/useTranslate'
 import { usePhoneNumber } from '@/composables/usePhoneNumber'
 import { usePhoneMask } from '@/composables/usePhoneMask'
 import CountryItem from './PhoneSelect/CountryItem.vue'
@@ -54,7 +54,7 @@ const emitCountry = () => {
   emit('update:country', selectedCountry.value)
 }
 
-const { setLanguage, t } = useI18n()
+const { setLanguage, t } = useTranslate()
 
 const isOpen = ref(false)
 const {

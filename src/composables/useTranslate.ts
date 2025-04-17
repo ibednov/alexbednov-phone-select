@@ -5,7 +5,7 @@ import { loadTranslations } from '@/utils/translations'
 const currentLang = ref<Language>('ru')
 const translations = ref(loadTranslations())
 
-export const useI18n = () => {
+export const useTranslate = () => {
   const setLanguage = (lang: Language | undefined) => {
     if (lang && ['ru', 'en', 'az', 'be'].includes(lang)) {
       currentLang.value = lang
