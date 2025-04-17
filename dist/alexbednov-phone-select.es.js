@@ -1,4 +1,4 @@
-import { computed, isRef, reactive, unref, toRefs, toValue as toValue$1, getCurrentInstance, ref, watch, nextTick, defineComponent, withDirectives, createElementBlock, openBlock, normalizeClass, vModelText, createBlock, mergeProps, withCtx, renderSlot, h, createElementVNode, createVNode, createCommentVNode, toDisplayString, onMounted, withModifiers, Fragment, renderList } from "vue";
+import { computed, isRef, reactive, unref, toRefs, toValue as toValue$1, getCurrentInstance, ref, watch, nextTick, defineComponent, withDirectives, createElementBlock, openBlock, normalizeClass, vModelText, createBlock, mergeProps, withCtx, renderSlot, h, createVNode, createElementVNode, createCommentVNode, toDisplayString, onMounted, withModifiers, Fragment, renderList } from "vue";
 import { useForwardPropsEmits, SelectRoot, useForwardProps, SelectItem, SelectItemIndicator, SelectItemText, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectIcon, SelectValue, SelectPortal, SelectContent, SelectViewport } from "reka-ui";
 const countriesData = [
   {
@@ -5363,7 +5363,6 @@ const ChevronDown = createLucideIcon("chevron-down", [
 const ChevronUp = createLucideIcon("chevron-up", [
   ["path", { d: "m18 15-6-6-6 6", key: "153udz" }]
 ]);
-const _hoisted_1$2 = { class: "absolute right-2 flex size-3.5 items-center justify-center" };
 const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "SelectItem",
   props: {
@@ -5389,14 +5388,12 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
         )
       }), {
         default: withCtx(() => [
-          createElementVNode("span", _hoisted_1$2, [
-            createVNode(unref(SelectItemIndicator), null, {
-              default: withCtx(() => [
-                createVNode(unref(Check), { class: "size-4" })
-              ]),
-              _: 1
-            })
-          ]),
+          createVNode(unref(SelectItemIndicator), { class: "absolute right-2 flex size-3.5 items-center justify-center" }, {
+            default: withCtx(() => [
+              createVNode(unref(Check), { class: "size-4" })
+            ]),
+            _: 1
+          }),
           createVNode(unref(SelectItemText), null, {
             default: withCtx(() => [
               renderSlot(_ctx.$slots, "default")
