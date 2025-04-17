@@ -19,14 +19,14 @@ const country2 = ref(null);
         <PhoneSelect
           v-model="phoneNumber"
           lang="en"
-          :favorites-countries="['by', 'ru']"
+          :favorites-countries="['by', 'ru', 'it', 'ae']"
           @update:country="country = $event"
           hide-favorites
           enableMask
           disable-country-name-select
           disable-auto-parse-number
           select-content-class="max-h-[500px] overflow-y-auto"
-          select-item-class="h-20"
+          select-item-class="h-6"
 
         />
 
