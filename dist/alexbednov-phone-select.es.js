@@ -7151,6 +7151,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
 });
 export {
   _sfc_main as PhoneSelect,
+  _sfc_main$9 as Select,
+  _sfc_main$2 as SelectContent,
+  _sfc_main$8 as SelectItem,
+  _sfc_main$5 as SelectSeparator,
+  _sfc_main$4 as SelectTrigger,
+  _sfc_main$3 as SelectValue,
   _sfc_main as default,
   loadTranslations,
   useCountries
