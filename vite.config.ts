@@ -35,12 +35,12 @@ export default defineConfig({
     },
     cssCodeSplit: false,
     rollupOptions: {
-      external: ['vue', 'vue-i18n', 'reka-ui'],
+      external: ['vue', 'reka-ui', 'shadcn-vue'],
       output: {
         globals: {
           vue: 'Vue',
-          'vue-i18n': 'VueI18n',
-          'reka-ui': 'RekaUI'
+          'reka-ui': 'RekaUI',
+          'shadcn-vue': 'ShadcnVue'
         },
         exports: 'named',
         assetFileNames: (assetInfo) => {
