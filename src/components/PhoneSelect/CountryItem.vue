@@ -4,6 +4,7 @@ import { type Country } from '@/interfaces'
 defineProps<{
   country: Country
   disableCountryNameSelect?: boolean
+  selectItemCountryClass?: string
 }>()
 
 const getFlagUrl = (code: string) => {
@@ -12,7 +13,9 @@ const getFlagUrl = (code: string) => {
 </script>
 
 <template>
-  <div class="flex items-center gap-2">
+  <div class="flex items-center gap-2 relative"
+  :class="[selectItemCountryClass]"
+  >
     <img
       :src="getFlagUrl(country.country_code)"
       :alt="country.country_code"

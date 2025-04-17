@@ -35,6 +35,7 @@ const props = withDefaults(
     selectTriggerClass?: string
     selectValueClass?: string
     selectItemClass?: string
+    selectItemCountryClass?: string
   }>(),
   {
     lang: 'en',
@@ -213,6 +214,7 @@ onMounted(() => {
           <div class="flex items-center gap-2">
             <CountryItem v-if="selectedCountry" :country="selectedCountry"
             :disable-country-name-select="props.disableCountryNameSelect"
+            :select-item-country-class="props.selectItemCountryClass"
              />
             <span v-else class="text-gray-400">
               {{ props.selectPlaceholder || t("phone-select.select-country") }}
@@ -235,14 +237,14 @@ onMounted(() => {
           <template v-if="props.favoritesCountries?.length && favorites.length">
             <div v-for="country in favorites" :key="country.country_code">
               <SelectItem :value="country" :class="[props.selectItemClass]">
-                <CountryItem :country="country" />
+                <CountryItem :country="country" :select-item-country-class="props.selectItemCountryClass" />
               </SelectItem>
             </div>
             <SelectSeparator />
           </template>
           <div v-for="country in filteredCountries" :key="country.country_code">
             <SelectItem :value="country" :class="[props.selectItemClass]">
-              <CountryItem :country="country" />
+              <CountryItem :country="country" :select-item-country-class="props.selectItemCountryClass" />
             </SelectItem>
           </div>
         </div>

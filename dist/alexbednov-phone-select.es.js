@@ -1,4 +1,4 @@
-import { computed, isRef, reactive, unref, toRefs, toValue as toValue$1, getCurrentInstance, ref, watch, nextTick, defineComponent, withDirectives, createElementBlock, openBlock, normalizeClass, vModelText, createBlock, mergeProps, withCtx, renderSlot, h, createVNode, createElementVNode, createCommentVNode, toDisplayString, onMounted, withModifiers, Fragment, renderList } from "vue";
+import { computed, isRef, reactive, unref, toRefs, toValue as toValue$1, getCurrentInstance, ref, watch, nextTick, defineComponent, withDirectives, createElementBlock, openBlock, normalizeClass, vModelText, createBlock, mergeProps, withCtx, renderSlot, h, createElementVNode, createVNode, createCommentVNode, toDisplayString, onMounted, withModifiers, Fragment, renderList } from "vue";
 import { useForwardPropsEmits, SelectRoot, useForwardProps, SelectItem, SelectItemIndicator, SelectItemText, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectIcon, SelectValue, SelectPortal, SelectContent, SelectViewport } from "reka-ui";
 const countriesData = [
   {
@@ -5363,6 +5363,7 @@ const ChevronDown = createLucideIcon("chevron-down", [
 const ChevronUp = createLucideIcon("chevron-up", [
   ["path", { d: "m18 15-6-6-6 6", key: "153udz" }]
 ]);
+const _hoisted_1$2 = { class: "absolute right-2 flex size-3.5 items-center justify-center" };
 const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "SelectItem",
   props: {
@@ -5388,12 +5389,14 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
         )
       }), {
         default: withCtx(() => [
-          createVNode(unref(SelectItemIndicator), { class: "absolute right-2 flex size-3.5 items-center justify-center" }, {
-            default: withCtx(() => [
-              createVNode(unref(Check), { class: "size-4" })
-            ]),
-            _: 1
-          }),
+          createElementVNode("span", _hoisted_1$2, [
+            createVNode(unref(SelectItemIndicator), null, {
+              default: withCtx(() => [
+                createVNode(unref(Check), { class: "size-4" })
+              ]),
+              _: 1
+            })
+          ]),
           createVNode(unref(SelectItemText), null, {
             default: withCtx(() => [
               renderSlot(_ctx.$slots, "default")
@@ -5581,7 +5584,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
         default: withCtx(() => [
           createVNode(unref(SelectContent), mergeProps({ "data-slot": "select-content" }, { ...unref(forwarded), ..._ctx.$attrs }, {
             class: unref(cn)(
-              "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-[9999] max-h-(--reka-select-content-available-height) min-w-[8rem] overflow-x-hidden overflow-y-auto rounded-md border shadow-md",
+              "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-(--reka-select-content-available-height) min-w-[8rem] overflow-x-hidden overflow-y-auto rounded-md border shadow-md",
               _ctx.position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
               props.class
             )
@@ -5996,30 +5999,32 @@ const __vite_glob_0_257 = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%2
 const __vite_glob_0_258 = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='36'%20width='62'%20height='19'%20fill='%231e50a0'/%3e%3cpolygon%20fill='%235c9e31'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='5%2055%2026%2042%2067%2042%2067%2030%2026%2030%205%2017%205%2055'/%3e%3cpolygon%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='20%2036%205%2046%205%2026%2020%2036'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e";
 const __vite_glob_0_259 = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='%235c9e31'/%3e%3crect%20x='61.0006'%20y='36.0001'%20width='6'%20height='18.9997'%20fill='%23f1b31c'/%3e%3crect%20x='51.0006'%20y='36.0001'%20width='5'%20height='18.9997'%20fill='%23d22f27'/%3e%3crect%20x='56.0006'%20y='36.0001'%20width='5'%20height='18.9997'/%3e%3cpolyline%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%20points='53%2031%2058.75%2032%2064%2031'/%3e%3cg%3e%3cline%20x1='58'%20x2='58'%20y1='32'%20y2='34'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='59'%20x2='59'%20y1='32'%20y2='34'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cline%20x1='58.5'%20x2='58.5'%20y1='30.5'%20y2='32.5'%20fill='none'%20stroke='%23f1b31c'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e";
 const __vite_glob_0_260 = "data:image/svg+xml,%3csvg%20id='emoji'%20viewBox='0%200%2072%2072'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='color'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'/%3e%3crect%20x='5'%20y='49'%20width='62'%20height='6'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='44'%20width='62'%20height='5'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='39'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3crect%20x='5'%20y='17'%20width='62'%20height='6'%20fill='%235c9e31'/%3e%3crect%20x='5'%20y='23'%20width='62'%20height='5'%20fill='%23f1b31c'/%3e%3crect%20x='5'%20y='28'%20width='62'%20height='5'%20fill='%23d22f27'/%3e%3cpolygon%20fill='%23fff'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20points='26%2036%205%2055%205%2017%2026%2036'/%3e%3cg%3e%3cpath%20fill='%23d22f27'%20stroke='%23d22f27'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='0.5399'%20d='M15.2661,35.6693,19,32.7964l-4.5363.1121-1.2981-4.4669L11.66,32.9777l-4.5369.112,3.6062,2.6918-.974,2.9344a2.2833,2.2833,0,0,1,1.0806.362l2.1222-1.6328,3.6063,2.6918Z'/%3e%3cpath%20fill='%23fcea2b'%20d='M10.7012,30.9391A.8847.8847,0,0,0,9.277,31.64v8.7433a.8848.8848,0,0,0,.8848.8848h6.0475a.8847.8847,0,0,0,.8847-.8848V36.2923a.8847.8847,0,0,0-.3453-.7013Z'/%3e%3c/g%3e%3c/g%3e%3cg%20id='line'%3e%3crect%20x='5'%20y='17'%20width='62'%20height='38'%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e";
-const _hoisted_1$1 = { class: "flex items-center gap-2" };
-const _hoisted_2$1 = ["src", "alt"];
-const _hoisted_3$1 = { key: 0 };
-const _hoisted_4$1 = { class: "text-gray-500" };
+const _hoisted_1$1 = ["src", "alt"];
+const _hoisted_2$1 = { key: 0 };
+const _hoisted_3$1 = { class: "text-gray-500" };
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "CountryItem",
   props: {
     country: {},
-    disableCountryNameSelect: { type: Boolean }
+    disableCountryNameSelect: { type: Boolean },
+    selectItemCountryClass: {}
   },
   setup(__props) {
     const getFlagUrl = (code) => {
       return new URL((/* @__PURE__ */ Object.assign({ "../../assets/flags/AC.svg": __vite_glob_0_0, "../../assets/flags/AD.svg": __vite_glob_0_1, "../../assets/flags/AE.svg": __vite_glob_0_2, "../../assets/flags/AF.svg": __vite_glob_0_3, "../../assets/flags/AG.svg": __vite_glob_0_4, "../../assets/flags/AI.svg": __vite_glob_0_5, "../../assets/flags/AL.svg": __vite_glob_0_6, "../../assets/flags/AM.svg": __vite_glob_0_7, "../../assets/flags/AO.svg": __vite_glob_0_8, "../../assets/flags/AQ.svg": __vite_glob_0_9, "../../assets/flags/AR.svg": __vite_glob_0_10, "../../assets/flags/AS.svg": __vite_glob_0_11, "../../assets/flags/AT.svg": __vite_glob_0_12, "../../assets/flags/AU.svg": __vite_glob_0_13, "../../assets/flags/AW.svg": __vite_glob_0_14, "../../assets/flags/AX.svg": __vite_glob_0_15, "../../assets/flags/AZ.svg": __vite_glob_0_16, "../../assets/flags/BA.svg": __vite_glob_0_17, "../../assets/flags/BB.svg": __vite_glob_0_18, "../../assets/flags/BD.svg": __vite_glob_0_19, "../../assets/flags/BE.svg": __vite_glob_0_20, "../../assets/flags/BF.svg": __vite_glob_0_21, "../../assets/flags/BG.svg": __vite_glob_0_22, "../../assets/flags/BH.svg": __vite_glob_0_23, "../../assets/flags/BI.svg": __vite_glob_0_24, "../../assets/flags/BJ.svg": __vite_glob_0_25, "../../assets/flags/BL.svg": __vite_glob_0_26, "../../assets/flags/BM.svg": __vite_glob_0_27, "../../assets/flags/BN.svg": __vite_glob_0_28, "../../assets/flags/BO.svg": __vite_glob_0_29, "../../assets/flags/BQ.svg": __vite_glob_0_30, "../../assets/flags/BR.svg": __vite_glob_0_31, "../../assets/flags/BS.svg": __vite_glob_0_32, "../../assets/flags/BT.svg": __vite_glob_0_33, "../../assets/flags/BV.svg": __vite_glob_0_34, "../../assets/flags/BW.svg": __vite_glob_0_35, "../../assets/flags/BY.svg": __vite_glob_0_36, "../../assets/flags/BZ.svg": __vite_glob_0_37, "../../assets/flags/CA.svg": __vite_glob_0_38, "../../assets/flags/CC.svg": __vite_glob_0_39, "../../assets/flags/CD.svg": __vite_glob_0_40, "../../assets/flags/CF.svg": __vite_glob_0_41, "../../assets/flags/CG.svg": __vite_glob_0_42, "../../assets/flags/CH.svg": __vite_glob_0_43, "../../assets/flags/CI.svg": __vite_glob_0_44, "../../assets/flags/CK.svg": __vite_glob_0_45, "../../assets/flags/CL.svg": __vite_glob_0_46, "../../assets/flags/CM.svg": __vite_glob_0_47, "../../assets/flags/CN.svg": __vite_glob_0_48, "../../assets/flags/CO.svg": __vite_glob_0_49, "../../assets/flags/CP.svg": __vite_glob_0_50, "../../assets/flags/CR.svg": __vite_glob_0_51, "../../assets/flags/CU.svg": __vite_glob_0_52, "../../assets/flags/CV.svg": __vite_glob_0_53, "../../assets/flags/CW.svg": __vite_glob_0_54, "../../assets/flags/CX.svg": __vite_glob_0_55, "../../assets/flags/CY.svg": __vite_glob_0_56, "../../assets/flags/CZ.svg": __vite_glob_0_57, "../../assets/flags/DE.svg": __vite_glob_0_58, "../../assets/flags/DG.svg": __vite_glob_0_59, "../../assets/flags/DJ.svg": __vite_glob_0_60, "../../assets/flags/DK.svg": __vite_glob_0_61, "../../assets/flags/DM.svg": __vite_glob_0_62, "../../assets/flags/DO.svg": __vite_glob_0_63, "../../assets/flags/DZ.svg": __vite_glob_0_64, "../../assets/flags/EA.svg": __vite_glob_0_65, "../../assets/flags/EC.svg": __vite_glob_0_66, "../../assets/flags/EE.svg": __vite_glob_0_67, "../../assets/flags/EG.svg": __vite_glob_0_68, "../../assets/flags/EH.svg": __vite_glob_0_69, "../../assets/flags/ENGLAND.svg": __vite_glob_0_70, "../../assets/flags/ER.svg": __vite_glob_0_71, "../../assets/flags/ES.svg": __vite_glob_0_72, "../../assets/flags/ET.svg": __vite_glob_0_73, "../../assets/flags/EU.svg": __vite_glob_0_74, "../../assets/flags/FI.svg": __vite_glob_0_75, "../../assets/flags/FJ.svg": __vite_glob_0_76, "../../assets/flags/FK.svg": __vite_glob_0_77, "../../assets/flags/FM.svg": __vite_glob_0_78, "../../assets/flags/FO.svg": __vite_glob_0_79, "../../assets/flags/FR.svg": __vite_glob_0_80, "../../assets/flags/GA.svg": __vite_glob_0_81, "../../assets/flags/GB.svg": __vite_glob_0_82, "../../assets/flags/GD.svg": __vite_glob_0_83, "../../assets/flags/GE.svg": __vite_glob_0_84, "../../assets/flags/GF.svg": __vite_glob_0_85, "../../assets/flags/GG.svg": __vite_glob_0_86, "../../assets/flags/GH.svg": __vite_glob_0_87, "../../assets/flags/GI.svg": __vite_glob_0_88, "../../assets/flags/GL.svg": __vite_glob_0_89, "../../assets/flags/GM.svg": __vite_glob_0_90, "../../assets/flags/GN.svg": __vite_glob_0_91, "../../assets/flags/GP.svg": __vite_glob_0_92, "../../assets/flags/GQ.svg": __vite_glob_0_93, "../../assets/flags/GR.svg": __vite_glob_0_94, "../../assets/flags/GS.svg": __vite_glob_0_95, "../../assets/flags/GT.svg": __vite_glob_0_96, "../../assets/flags/GU.svg": __vite_glob_0_97, "../../assets/flags/GW.svg": __vite_glob_0_98, "../../assets/flags/GY.svg": __vite_glob_0_99, "../../assets/flags/HK.svg": __vite_glob_0_100, "../../assets/flags/HM.svg": __vite_glob_0_101, "../../assets/flags/HN.svg": __vite_glob_0_102, "../../assets/flags/HR.svg": __vite_glob_0_103, "../../assets/flags/HT.svg": __vite_glob_0_104, "../../assets/flags/HU.svg": __vite_glob_0_105, "../../assets/flags/IC.svg": __vite_glob_0_106, "../../assets/flags/ID.svg": __vite_glob_0_107, "../../assets/flags/IE.svg": __vite_glob_0_108, "../../assets/flags/IL.svg": __vite_glob_0_109, "../../assets/flags/IM.svg": __vite_glob_0_110, "../../assets/flags/IN.svg": __vite_glob_0_111, "../../assets/flags/IO.svg": __vite_glob_0_112, "../../assets/flags/IQ.svg": __vite_glob_0_113, "../../assets/flags/IR.svg": __vite_glob_0_114, "../../assets/flags/IS.svg": __vite_glob_0_115, "../../assets/flags/IT.svg": __vite_glob_0_116, "../../assets/flags/JE.svg": __vite_glob_0_117, "../../assets/flags/JM.svg": __vite_glob_0_118, "../../assets/flags/JO.svg": __vite_glob_0_119, "../../assets/flags/JP.svg": __vite_glob_0_120, "../../assets/flags/KE.svg": __vite_glob_0_121, "../../assets/flags/KG.svg": __vite_glob_0_122, "../../assets/flags/KH.svg": __vite_glob_0_123, "../../assets/flags/KI.svg": __vite_glob_0_124, "../../assets/flags/KM.svg": __vite_glob_0_125, "../../assets/flags/KN.svg": __vite_glob_0_126, "../../assets/flags/KP.svg": __vite_glob_0_127, "../../assets/flags/KR.svg": __vite_glob_0_128, "../../assets/flags/KW.svg": __vite_glob_0_129, "../../assets/flags/KY.svg": __vite_glob_0_130, "../../assets/flags/KZ.svg": __vite_glob_0_131, "../../assets/flags/LA.svg": __vite_glob_0_132, "../../assets/flags/LB.svg": __vite_glob_0_133, "../../assets/flags/LC.svg": __vite_glob_0_134, "../../assets/flags/LI.svg": __vite_glob_0_135, "../../assets/flags/LK.svg": __vite_glob_0_136, "../../assets/flags/LR.svg": __vite_glob_0_137, "../../assets/flags/LS.svg": __vite_glob_0_138, "../../assets/flags/LT.svg": __vite_glob_0_139, "../../assets/flags/LU.svg": __vite_glob_0_140, "../../assets/flags/LV.svg": __vite_glob_0_141, "../../assets/flags/LY.svg": __vite_glob_0_142, "../../assets/flags/MA.svg": __vite_glob_0_143, "../../assets/flags/MC.svg": __vite_glob_0_144, "../../assets/flags/MD.svg": __vite_glob_0_145, "../../assets/flags/ME.svg": __vite_glob_0_146, "../../assets/flags/MF.svg": __vite_glob_0_147, "../../assets/flags/MG.svg": __vite_glob_0_148, "../../assets/flags/MH.svg": __vite_glob_0_149, "../../assets/flags/MK.svg": __vite_glob_0_150, "../../assets/flags/ML.svg": __vite_glob_0_151, "../../assets/flags/MM.svg": __vite_glob_0_152, "../../assets/flags/MN.svg": __vite_glob_0_153, "../../assets/flags/MO.svg": __vite_glob_0_154, "../../assets/flags/MP.svg": __vite_glob_0_155, "../../assets/flags/MQ.svg": __vite_glob_0_156, "../../assets/flags/MR.svg": __vite_glob_0_157, "../../assets/flags/MS.svg": __vite_glob_0_158, "../../assets/flags/MT.svg": __vite_glob_0_159, "../../assets/flags/MU.svg": __vite_glob_0_160, "../../assets/flags/MV.svg": __vite_glob_0_161, "../../assets/flags/MW.svg": __vite_glob_0_162, "../../assets/flags/MX.svg": __vite_glob_0_163, "../../assets/flags/MY.svg": __vite_glob_0_164, "../../assets/flags/MZ.svg": __vite_glob_0_165, "../../assets/flags/NA.svg": __vite_glob_0_166, "../../assets/flags/NC.svg": __vite_glob_0_167, "../../assets/flags/NE.svg": __vite_glob_0_168, "../../assets/flags/NF.svg": __vite_glob_0_169, "../../assets/flags/NG.svg": __vite_glob_0_170, "../../assets/flags/NI.svg": __vite_glob_0_171, "../../assets/flags/NL.svg": __vite_glob_0_172, "../../assets/flags/NO.svg": __vite_glob_0_173, "../../assets/flags/NP.svg": __vite_glob_0_174, "../../assets/flags/NR.svg": __vite_glob_0_175, "../../assets/flags/NU.svg": __vite_glob_0_176, "../../assets/flags/NZ.svg": __vite_glob_0_177, "../../assets/flags/OM.svg": __vite_glob_0_178, "../../assets/flags/PA.svg": __vite_glob_0_179, "../../assets/flags/PE.svg": __vite_glob_0_180, "../../assets/flags/PF.svg": __vite_glob_0_181, "../../assets/flags/PG.svg": __vite_glob_0_182, "../../assets/flags/PH.svg": __vite_glob_0_183, "../../assets/flags/PK.svg": __vite_glob_0_184, "../../assets/flags/PL.svg": __vite_glob_0_185, "../../assets/flags/PM.svg": __vite_glob_0_186, "../../assets/flags/PN.svg": __vite_glob_0_187, "../../assets/flags/PR.svg": __vite_glob_0_188, "../../assets/flags/PS.svg": __vite_glob_0_189, "../../assets/flags/PT.svg": __vite_glob_0_190, "../../assets/flags/PW.svg": __vite_glob_0_191, "../../assets/flags/PY.svg": __vite_glob_0_192, "../../assets/flags/QA.svg": __vite_glob_0_193, "../../assets/flags/RE.svg": __vite_glob_0_194, "../../assets/flags/RO.svg": __vite_glob_0_195, "../../assets/flags/RS.svg": __vite_glob_0_196, "../../assets/flags/RU.svg": __vite_glob_0_197, "../../assets/flags/RW.svg": __vite_glob_0_198, "../../assets/flags/SA.svg": __vite_glob_0_199, "../../assets/flags/SB.svg": __vite_glob_0_200, "../../assets/flags/SC.svg": __vite_glob_0_201, "../../assets/flags/SCOTLAND.svg": __vite_glob_0_202, "../../assets/flags/SD.svg": __vite_glob_0_203, "../../assets/flags/SE.svg": __vite_glob_0_204, "../../assets/flags/SG.svg": __vite_glob_0_205, "../../assets/flags/SH.svg": __vite_glob_0_206, "../../assets/flags/SI.svg": __vite_glob_0_207, "../../assets/flags/SJ.svg": __vite_glob_0_208, "../../assets/flags/SK.svg": __vite_glob_0_209, "../../assets/flags/SL.svg": __vite_glob_0_210, "../../assets/flags/SM.svg": __vite_glob_0_211, "../../assets/flags/SN.svg": __vite_glob_0_212, "../../assets/flags/SO.svg": __vite_glob_0_213, "../../assets/flags/SR.svg": __vite_glob_0_214, "../../assets/flags/SS.svg": __vite_glob_0_215, "../../assets/flags/ST.svg": __vite_glob_0_216, "../../assets/flags/SV.svg": __vite_glob_0_217, "../../assets/flags/SX.svg": __vite_glob_0_218, "../../assets/flags/SY.svg": __vite_glob_0_219, "../../assets/flags/SZ.svg": __vite_glob_0_220, "../../assets/flags/TA.svg": __vite_glob_0_221, "../../assets/flags/TC.svg": __vite_glob_0_222, "../../assets/flags/TD.svg": __vite_glob_0_223, "../../assets/flags/TF.svg": __vite_glob_0_224, "../../assets/flags/TG.svg": __vite_glob_0_225, "../../assets/flags/TH.svg": __vite_glob_0_226, "../../assets/flags/TJ.svg": __vite_glob_0_227, "../../assets/flags/TK.svg": __vite_glob_0_228, "../../assets/flags/TL.svg": __vite_glob_0_229, "../../assets/flags/TM.svg": __vite_glob_0_230, "../../assets/flags/TN.svg": __vite_glob_0_231, "../../assets/flags/TO.svg": __vite_glob_0_232, "../../assets/flags/TR.svg": __vite_glob_0_233, "../../assets/flags/TT.svg": __vite_glob_0_234, "../../assets/flags/TV.svg": __vite_glob_0_235, "../../assets/flags/TW.svg": __vite_glob_0_236, "../../assets/flags/TZ.svg": __vite_glob_0_237, "../../assets/flags/UA.svg": __vite_glob_0_238, "../../assets/flags/UG.svg": __vite_glob_0_239, "../../assets/flags/UM.svg": __vite_glob_0_240, "../../assets/flags/UN.svg": __vite_glob_0_241, "../../assets/flags/US.svg": __vite_glob_0_242, "../../assets/flags/UY.svg": __vite_glob_0_243, "../../assets/flags/UZ.svg": __vite_glob_0_244, "../../assets/flags/VA.svg": __vite_glob_0_245, "../../assets/flags/VC.svg": __vite_glob_0_246, "../../assets/flags/VE.svg": __vite_glob_0_247, "../../assets/flags/VG.svg": __vite_glob_0_248, "../../assets/flags/VI.svg": __vite_glob_0_249, "../../assets/flags/VN.svg": __vite_glob_0_250, "../../assets/flags/VU.svg": __vite_glob_0_251, "../../assets/flags/WALES.svg": __vite_glob_0_252, "../../assets/flags/WF.svg": __vite_glob_0_253, "../../assets/flags/WS.svg": __vite_glob_0_254, "../../assets/flags/XK.svg": __vite_glob_0_255, "../../assets/flags/YE.svg": __vite_glob_0_256, "../../assets/flags/YT.svg": __vite_glob_0_257, "../../assets/flags/ZA.svg": __vite_glob_0_258, "../../assets/flags/ZM.svg": __vite_glob_0_259, "../../assets/flags/ZW.svg": __vite_glob_0_260 }))[`../../assets/flags/${code}.svg`], import.meta.url).href;
     };
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$1, [
+      return openBlock(), createElementBlock("div", {
+        class: normalizeClass(["flex items-center gap-2 relative", [_ctx.selectItemCountryClass]])
+      }, [
         createElementVNode("img", {
           src: getFlagUrl(_ctx.country.country_code),
           alt: _ctx.country.country_code,
           class: "w-6 h-4"
-        }, null, 8, _hoisted_2$1),
-        !_ctx.disableCountryNameSelect ? (openBlock(), createElementBlock("span", _hoisted_3$1, toDisplayString(_ctx.country.name), 1)) : createCommentVNode("", true),
-        createElementVNode("span", _hoisted_4$1, "+" + toDisplayString(_ctx.country.phone_code), 1)
-      ]);
+        }, null, 8, _hoisted_1$1),
+        !_ctx.disableCountryNameSelect ? (openBlock(), createElementBlock("span", _hoisted_2$1, toDisplayString(_ctx.country.name), 1)) : createCommentVNode("", true),
+        createElementVNode("span", _hoisted_3$1, "+" + toDisplayString(_ctx.country.phone_code), 1)
+      ], 2);
     };
   }
 });
@@ -6936,7 +6941,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     selectContentClass: {},
     selectTriggerClass: {},
     selectValueClass: {},
-    selectItemClass: {}
+    selectItemClass: {},
+    selectItemCountryClass: {}
   },
   emits: ["update:modelValue", "update:country"],
   setup(__props, { emit: __emit }) {
@@ -7079,8 +7085,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       unref(selectedCountry) ? (openBlock(), createBlock(_sfc_main$1, {
                         key: 0,
                         country: unref(selectedCountry),
-                        "disable-country-name-select": props.disableCountryNameSelect
-                      }, null, 8, ["country", "disable-country-name-select"])) : (openBlock(), createElementBlock("span", _hoisted_3, toDisplayString(props.selectPlaceholder || unref(t)("phone-select.select-country")), 1))
+                        "disable-country-name-select": props.disableCountryNameSelect,
+                        "select-item-country-class": props.selectItemCountryClass
+                      }, null, 8, ["country", "disable-country-name-select", "select-item-country-class"])) : (openBlock(), createElementBlock("span", _hoisted_3, toDisplayString(props.selectPlaceholder || unref(t)("phone-select.select-country")), 1))
                     ])
                   ]),
                   _: 1
@@ -7119,7 +7126,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                             class: normalizeClass([props.selectItemClass])
                           }, {
                             default: withCtx(() => [
-                              createVNode(_sfc_main$1, { country }, null, 8, ["country"])
+                              createVNode(_sfc_main$1, {
+                                country,
+                                "select-item-country-class": props.selectItemCountryClass
+                              }, null, 8, ["country", "select-item-country-class"])
                             ]),
                             _: 2
                           }, 1032, ["value", "class"])
@@ -7136,7 +7146,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                           class: normalizeClass([props.selectItemClass])
                         }, {
                           default: withCtx(() => [
-                            createVNode(_sfc_main$1, { country }, null, 8, ["country"])
+                            createVNode(_sfc_main$1, {
+                              country,
+                              "select-item-country-class": props.selectItemCountryClass
+                            }, null, 8, ["country", "select-item-country-class"])
                           ]),
                           _: 2
                         }, 1032, ["value", "class"])
