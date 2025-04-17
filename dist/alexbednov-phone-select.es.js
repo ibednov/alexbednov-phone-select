@@ -6933,7 +6933,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     inputPlaceholder: {},
     disableCountryNameSelect: { type: Boolean, default: false },
     disableAutoParseNumber: { type: Boolean, default: false },
-    selectContentClass: {}
+    selectContentClass: {},
+    selectTriggerClass: {},
+    selectValueClass: {},
+    selectItemClass: {}
   },
   emits: ["update:modelValue", "update:country"],
   setup(__props, { emit: __emit }) {
@@ -7064,9 +7067,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           class: normalizeClass([props.selectClass || "w-[180px]"])
         }, {
           default: withCtx(() => [
-            createVNode(_sfc_main$4, null, {
+            createVNode(_sfc_main$4, {
+              class: normalizeClass([props.selectTriggerClass])
+            }, {
               default: withCtx(() => [
-                createVNode(_sfc_main$3, null, {
+                createVNode(_sfc_main$3, {
+                  class: normalizeClass([props.selectValueClass])
+                }, {
                   default: withCtx(() => [
                     createElementVNode("div", _hoisted_2, [
                       unref(selectedCountry) ? (openBlock(), createBlock(_sfc_main$1, {
@@ -7077,10 +7084,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     ])
                   ]),
                   _: 1
-                })
+                }, 8, ["class"])
               ]),
               _: 1
-            }),
+            }, 8, ["class"]),
             createVNode(_sfc_main$2, {
               class: normalizeClass([_ctx.selectContentClass])
             }, {
@@ -7107,12 +7114,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         return openBlock(), createElementBlock("div", {
                           key: country.country_code
                         }, [
-                          createVNode(_sfc_main$8, { value: country }, {
+                          createVNode(_sfc_main$8, {
+                            value: country,
+                            class: normalizeClass([props.selectItemClass])
+                          }, {
                             default: withCtx(() => [
                               createVNode(_sfc_main$1, { country }, null, 8, ["country"])
                             ]),
                             _: 2
-                          }, 1032, ["value"])
+                          }, 1032, ["value", "class"])
                         ]);
                       }), 128)),
                       createVNode(_sfc_main$5)
@@ -7121,12 +7131,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       return openBlock(), createElementBlock("div", {
                         key: country.country_code
                       }, [
-                        createVNode(_sfc_main$8, { value: country }, {
+                        createVNode(_sfc_main$8, {
+                          value: country,
+                          class: normalizeClass([props.selectItemClass])
+                        }, {
                           default: withCtx(() => [
                             createVNode(_sfc_main$1, { country }, null, 8, ["country"])
                           ]),
                           _: 2
-                        }, 1032, ["value"])
+                        }, 1032, ["value", "class"])
                       ]);
                     }), 128))
                   ])
