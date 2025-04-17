@@ -23,7 +23,7 @@ import {
 } from './components/ui/select'
 
 export { PhoneSelect }
-export {
+export const SelectComponents = {
   Select,
   SelectContent,
   SelectItem,

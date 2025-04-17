@@ -201,6 +201,7 @@ onMounted(() => {
   <div class="relative flex items-center gap-2 w-full">
     <Select
       v-model="selectedCountry"
+      v-model:open="isOpen"
       @update:model-value="handleCountrySelect"
       :class="[props.selectClass || 'w-[180px]']"
     >

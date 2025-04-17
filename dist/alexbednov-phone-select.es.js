@@ -7121,6 +7121,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _cache[2] || (_cache[2] = ($event) => isRef(selectedCountry) ? selectedCountry.value = $event : null),
             handleCountrySelect
           ],
+          open: isOpen.value,
+          "onUpdate:open": _cache[3] || (_cache[3] = ($event) => isOpen.value = $event),
           class: normalizeClass([props.selectClass || "w-[180px]"])
         }, {
           default: withCtx(() => [
@@ -7196,7 +7198,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             }, 8, ["class"])
           ]),
           _: 1
-        }, 8, ["modelValue", "class"]),
+        }, 8, ["modelValue", "open", "class"]),
         createVNode(_sfc_main$d, {
           class: normalizeClass([props.inputClass, "flex-1"]),
           value: props.enableMask ? unref(maskedPhone) : unref(inputValue),
@@ -7208,19 +7210,22 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
+const SelectComponents = {
+  Select: _sfc_main$c,
+  SelectContent: _sfc_main$2,
+  SelectItem: _sfc_main$a,
+  SelectTrigger: _sfc_main$4,
+  SelectValue: _sfc_main$3,
+  SelectSeparator: _sfc_main$5,
+  SelectGroup: _sfc_main$b,
+  SelectItemText: _sfc_main$9,
+  SelectLabel: _sfc_main$8,
+  SelectScrollDownButton: _sfc_main$7,
+  SelectScrollUpButton: _sfc_main$6
+};
 export {
   _sfc_main as PhoneSelect,
-  _sfc_main$c as Select,
-  _sfc_main$2 as SelectContent,
-  _sfc_main$b as SelectGroup,
-  _sfc_main$a as SelectItem,
-  _sfc_main$9 as SelectItemText,
-  _sfc_main$8 as SelectLabel,
-  _sfc_main$7 as SelectScrollDownButton,
-  _sfc_main$6 as SelectScrollUpButton,
-  _sfc_main$5 as SelectSeparator,
-  _sfc_main$4 as SelectTrigger,
-  _sfc_main$3 as SelectValue,
+  SelectComponents,
   _sfc_main as default,
   loadTranslations,
   useCountries
