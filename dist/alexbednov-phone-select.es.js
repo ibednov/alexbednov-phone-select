@@ -1,5 +1,5 @@
 import { computed, isRef, reactive, unref, toRefs, toValue as toValue$1, getCurrentInstance, ref, watch, nextTick, defineComponent, withDirectives, createElementBlock, openBlock, normalizeClass, vModelText, createBlock, mergeProps, withCtx, renderSlot, h, createElementVNode, createVNode, createCommentVNode, toDisplayString, onMounted, withModifiers, Fragment, renderList } from "vue";
-import { useForwardPropsEmits, SelectRoot, useForwardProps, SelectItem, SelectItemIndicator, SelectItemText, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectIcon, SelectValue, SelectPortal, SelectContent, SelectViewport } from "reka-ui";
+import { useForwardPropsEmits, SelectRoot, SelectGroup, useForwardProps, SelectItem, SelectItemIndicator, SelectItemText, SelectLabel, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectIcon, SelectValue, SelectPortal, SelectContent, SelectViewport } from "reka-ui";
 const countriesData = [
   {
     country_code: "AF",
@@ -5203,7 +5203,7 @@ function useVModel(props, key, emit, options = {}) {
     });
   }
 }
-const _sfc_main$a = /* @__PURE__ */ defineComponent({
+const _sfc_main$d = /* @__PURE__ */ defineComponent({
   __name: "Input",
   props: {
     defaultValue: {},
@@ -5234,7 +5234,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_main$9 = /* @__PURE__ */ defineComponent({
+const _sfc_main$c = /* @__PURE__ */ defineComponent({
   __name: "Select",
   props: {
     open: { type: Boolean },
@@ -5256,6 +5256,24 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     const forwarded = useForwardPropsEmits(props, emits);
     return (_ctx, _cache) => {
       return openBlock(), createBlock(unref(SelectRoot), mergeProps({ "data-slot": "select" }, unref(forwarded)), {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 16);
+    };
+  }
+});
+const _sfc_main$b = /* @__PURE__ */ defineComponent({
+  __name: "SelectGroup",
+  props: {
+    asChild: { type: Boolean },
+    as: {}
+  },
+  setup(__props) {
+    const props = __props;
+    return (_ctx, _cache) => {
+      return openBlock(), createBlock(unref(SelectGroup), mergeProps({ "data-slot": "select-group" }, props), {
         default: withCtx(() => [
           renderSlot(_ctx.$slots, "default")
         ]),
@@ -5364,7 +5382,7 @@ const ChevronUp = createLucideIcon("chevron-up", [
   ["path", { d: "m18 15-6-6-6 6", key: "153udz" }]
 ]);
 const _hoisted_1$2 = { class: "absolute right-2 flex size-3.5 items-center justify-center" };
-const _sfc_main$8 = /* @__PURE__ */ defineComponent({
+const _sfc_main$a = /* @__PURE__ */ defineComponent({
   __name: "SelectItem",
   props: {
     value: {},
@@ -5406,6 +5424,47 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
         ]),
         _: 3
       }, 16, ["class"]);
+    };
+  }
+});
+const _sfc_main$9 = /* @__PURE__ */ defineComponent({
+  __name: "SelectItemText",
+  props: {
+    asChild: { type: Boolean },
+    as: {}
+  },
+  setup(__props) {
+    const props = __props;
+    return (_ctx, _cache) => {
+      return openBlock(), createBlock(unref(SelectItemText), mergeProps({ "data-slot": "select-item-text" }, props), {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 16);
+    };
+  }
+});
+const _sfc_main$8 = /* @__PURE__ */ defineComponent({
+  __name: "SelectLabel",
+  props: {
+    for: {},
+    asChild: { type: Boolean },
+    as: {},
+    class: {}
+  },
+  setup(__props) {
+    const props = __props;
+    return (_ctx, _cache) => {
+      return openBlock(), createBlock(unref(SelectLabel), {
+        "data-slot": "select-label",
+        class: normalizeClass(unref(cn)("px-2 py-1.5 text-sm font-medium", props.class))
+      }, {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 8, ["class"]);
     };
   }
 });
@@ -7056,7 +7115,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1, [
-        createVNode(_sfc_main$9, {
+        createVNode(_sfc_main$c, {
           modelValue: unref(selectedCountry),
           "onUpdate:modelValue": [
             _cache[2] || (_cache[2] = ($event) => isRef(selectedCountry) ? selectedCountry.value = $event : null),
@@ -7089,7 +7148,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 var _a;
                 return [
                   props.enableSearch ? (openBlock(), createElementBlock("div", _hoisted_4, [
-                    createVNode(_sfc_main$a, {
+                    createVNode(_sfc_main$d, {
                       modelValue: unref(searchQuery),
                       "onUpdate:modelValue": [
                         _cache[0] || (_cache[0] = ($event) => isRef(searchQuery) ? searchQuery.value = $event : null),
@@ -7108,7 +7167,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         return openBlock(), createElementBlock("div", {
                           key: country.country_code
                         }, [
-                          createVNode(_sfc_main$8, { value: country }, {
+                          createVNode(_sfc_main$a, { value: country }, {
                             default: withCtx(() => [
                               createVNode(_sfc_main$1, { country }, null, 8, ["country"])
                             ]),
@@ -7122,7 +7181,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       return openBlock(), createElementBlock("div", {
                         key: country.country_code
                       }, [
-                        createVNode(_sfc_main$8, { value: country }, {
+                        createVNode(_sfc_main$a, { value: country }, {
                           default: withCtx(() => [
                             createVNode(_sfc_main$1, { country }, null, 8, ["country"])
                           ]),
@@ -7138,7 +7197,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           ]),
           _: 1
         }, 8, ["modelValue", "class"]),
-        createVNode(_sfc_main$a, {
+        createVNode(_sfc_main$d, {
           class: normalizeClass([props.inputClass, "flex-1"]),
           value: props.enableMask ? unref(maskedPhone) : unref(inputValue),
           "onUpdate:modelValue": handleInput,
@@ -7151,9 +7210,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
 });
 export {
   _sfc_main as PhoneSelect,
-  _sfc_main$9 as Select,
+  _sfc_main$c as Select,
   _sfc_main$2 as SelectContent,
-  _sfc_main$8 as SelectItem,
+  _sfc_main$b as SelectGroup,
+  _sfc_main$a as SelectItem,
+  _sfc_main$9 as SelectItemText,
+  _sfc_main$8 as SelectLabel,
+  _sfc_main$7 as SelectScrollDownButton,
+  _sfc_main$6 as SelectScrollUpButton,
   _sfc_main$5 as SelectSeparator,
   _sfc_main$4 as SelectTrigger,
   _sfc_main$3 as SelectValue,
