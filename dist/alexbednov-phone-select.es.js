@@ -5611,7 +5611,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
 });
 const currentLang = ref("ru");
 const translations = ref(loadTranslations());
-const useI18n = () => {
+const useTranslate = () => {
   const setLanguage = (lang2) => {
     if (lang2 && ["ru", "en", "az", "be"].includes(lang2)) {
       currentLang.value = lang2;
@@ -6946,7 +6946,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const emitCountry = () => {
       emit("update:country", selectedCountry.value);
     };
-    const { setLanguage, t } = useI18n();
+    const { setLanguage, t } = useTranslate();
     const isOpen = ref(false);
     const {
       searchQuery,
