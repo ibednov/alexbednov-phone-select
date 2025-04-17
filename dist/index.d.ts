@@ -4,17 +4,4 @@ export * from './utils/translations';
 export type { Language } from './interfaces';
 import PhoneSelect from './components/PhoneSelect.vue';
 export { PhoneSelect };
-export declare const SelectComponents: {
-    Select: import("vue").DefineComponent<{}, {}, any>;
-    SelectContent: import("vue").DefineComponent<{}, {}, any>;
-    SelectItem: import("vue").DefineComponent<{}, {}, any>;
-    SelectTrigger: import("vue").DefineComponent<{}, {}, any>;
-    SelectValue: import("vue").DefineComponent<{}, {}, any>;
-    SelectSeparator: import("vue").DefineComponent<{}, {}, any>;
-    SelectGroup: import("vue").DefineComponent<{}, {}, any>;
-    SelectItemText: import("vue").DefineComponent<{}, {}, any>;
-    SelectLabel: import("vue").DefineComponent<{}, {}, any>;
-    SelectScrollDownButton: import("vue").DefineComponent<{}, {}, any>;
-    SelectScrollUpButton: import("vue").DefineComponent<{}, {}, any>;
-};
 export default PhoneSelect;
