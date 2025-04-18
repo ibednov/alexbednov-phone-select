@@ -5609,9 +5609,9 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const currentLang = ref("ru");
 const translations = ref(loadTranslations());
 const useTranslate = () => {
+  const currentLang = ref("ru");
   const setLanguage = (lang2) => {
     if (lang2 && ["ru", "en", "az", "be"].includes(lang2)) {
       currentLang.value = lang2;
