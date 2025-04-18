@@ -1,7 +1,7 @@
 {
   "name": "alexbednov-phone-select",
   "private": false,
-  "version": "0.3.1",
+  "version": "0.3.2",
   "type": "module",
   "files": [
     "dist"
@@ -63,16 +63,16 @@
     "select",
     "input",
     "international",
-    "i18n"
+    "multi-language"
   ],
-  "author": "alepsios",
+  "author": "alex bednov (ibednov)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alepsios/phone-select.git"
+    "url": "git+https://github.com/ibednov/alexbednov-phone-select.git"
   },
   "bugs": {
-    "url": "https://github.com/alepsios/phone-select/issues"
+    "url": "https://github.com/ibednov/alexbednov-phone-select/issues"
   },
-  "homepage": "https://github.com/alepsios/phone-select#readme"
+  "homepage": "https://github.com/ibednov/alexbednov-phone-select#readme"
 }
