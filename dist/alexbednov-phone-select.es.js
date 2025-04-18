@@ -1789,7 +1789,7 @@ const en = {
   name: name$1,
   demo: demo$1,
   "phone-select": {
-    placeholder: "Choose country",
+    placeholder: "Enter phone number",
     search: "Search...",
     select: "Choose country",
     no_results: "No results",
