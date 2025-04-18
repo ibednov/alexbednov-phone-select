@@ -2,10 +2,11 @@ import { ref } from 'vue'
 import type { Language } from '@/interfaces'
 import { loadTranslations } from '@/utils/translations'
 
-const currentLang = ref<Language>('ru')
 const translations = ref(loadTranslations())
 
 export const useTranslate = () => {
+  const currentLang = ref<Language>('ru')
+
   const setLanguage = (lang: Language | undefined) => {
     if (lang && ['ru', 'en', 'az', 'be'].includes(lang)) {
       currentLang.value = lang
