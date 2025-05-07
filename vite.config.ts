@@ -46,6 +46,9 @@ export default defineConfig({
           if (assetInfo.name?.endsWith('.svg')) {
             return 'assets/flags/[name][extname]'
           }
+          if (assetInfo.name?.endsWith('.css')) {
+            return 'assets/style.css'
+          }
           return 'assets/[name][extname]'
         }
       }
