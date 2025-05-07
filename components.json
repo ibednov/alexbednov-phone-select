@@ -4,7 +4,7 @@
   "typescript": true,
   "tailwind": {
     "config": "tailwind.config.js",
-    "css": "src/demo/style.css",
+    "css": "src/assets/style.css",
     "baseColor": "neutral",
     "cssVariables": true,
     "prefix": ""
