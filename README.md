@@ -5,11 +5,13 @@ Vue 3 component for phone number selection with international support and maskin
 ## Installation
 
 ### NPM
+
 ```bash
 npm install alexbednov-phone-select
 ```
 
 ### Bun
+
 ```bash
 bun add alexbednov-phone-select
 ```
@@ -146,6 +148,7 @@ const translations = loadTranslations()
 ```vue
 <script setup lang="ts">
 import { PhoneSelect } from 'alexbednov-phone-select'
+import 'alexbednov-phone-select/style.css' // if you need to example styles
 </script>
 
 <template>
@@ -296,11 +299,13 @@ Vue 3 компонент для выбора телефонных номеров
 ## Установка
 
 ### NPM
+
 ```bash
 npm install alexbednov-phone-select
 ```
 
 ### Bun
+
 ```bash
 bun add alexbednov-phone-select
 ```
@@ -365,6 +370,7 @@ const translations = loadTranslations()
 ```vue
 <script setup lang="ts">
 import { PhoneSelect } from 'alexbednov-phone-select'
+import 'alexbednov-phone-select/style.css' // при необходимости стилей из примера
 </script>
 
 <template>
