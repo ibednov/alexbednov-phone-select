@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue'
-import type { Language } from '@/interfaces'
+import type { Country, Language } from '@/interfaces'
 import Input from '@/components/ui/input/Input.vue'
 import Select from '@/components/ui/select/Select.vue'
 import SelectContent from '@/components/ui/select/SelectContent.vue'
@@ -53,7 +53,9 @@ const emit = defineEmits<{
 }>()
 
 const emitCountry = () => {
-  emit('update:country', selectedCountry.value)
+  if (selectedCountry.value) {
+    emit('update:country', selectedCountry.value)
+  }
 }
 
 const { setLanguage, t } = useTranslate()
@@ -76,15 +78,13 @@ const getPhoneWithoutCode = (phone: string, code: string) => {
   return phone.startsWith(`+${code}`) ? phone.slice(`+${code}`.length) : phone
 }
 
-const applyMask = (value: string) => {
-  if (!value) return ''
-  const cleanValue = value.replace(/\D/g, '')
+const getMaskMatrix = () => {
   let matrix = '###############'
 
   if (selectedCountry.value) {
     const mask = countriesMask.find(item => {
       const code = item.code.replace(/[\s#]/g, '')
-      return code.startsWith(`+${selectedCountry.value.phone_code}`)
+      return code.startsWith(`+${selectedCountry.value!.phone_code}`)
     })
 
     if (mask) {
@@ -92,31 +92,28 @@ const applyMask = (value: string) => {
     }
   }
 
+  return matrix
+}
+
+const applyMask = (value: string) => {
+  if (!value) return ''
+  const matrix = getMaskMatrix()
+  const maxDigits = (matrix.match(/[#\d]/g) || []).length
+  const cleanValue = value.replace(/\D/g, '').slice(0, maxDigits)
+
   let i = 0
-  return matrix.replace(/[#\d]/g, function(a) {
+  return matrix.replace(/[#\d]/g, () => {
     return i < cleanValue.length ? cleanValue.charAt(i++) : ''
   })
 }
 
 const handleInput = (value: string) => {
   if (props.enableMask) {
-    // Получаем текущее значение без маски
-    const currentValue = inputValue.value.replace(/\D/g, '')
-
-    // Определяем, было ли это удаление
-    const isDeletion = value.length < maskedPhone.value.length
-
-    // Если это удаление, убираем последнюю цифру
-    if (isDeletion) {
-      const newValue = currentValue.slice(0, -1)
-      inputValue.value = newValue
-      maskedPhone.value = newValue ? applyMask(newValue) : ''
-    } else {
-      // Иначе добавляем новую цифру
-      const cleanValue = value.replace(/\D/g, '')
-      inputValue.value = cleanValue
-      maskedPhone.value = cleanValue ? applyMask(cleanValue) : ''
-    }
+    const matrix = getMaskMatrix()
+    const maxDigits = (matrix.match(/[#\d]/g) || []).length
+    const cleanValue = value.replace(/\D/g, '').slice(0, maxDigits)
+    inputValue.value = cleanValue
+    maskedPhone.value = cleanValue ? applyMask(cleanValue) : ''
   } else {
     inputValue.value = value
     maskedPhone.value = value
@@ -125,14 +122,13 @@ const handleInput = (value: string) => {
   if (selectedCountry.value) {
     const phoneValue = props.enableMask
       ? `+${selectedCountry.value.phone_code} ${maskedPhone.value}`
-      : `+${selectedCountry.value.phone_code}${value}`
+      : `+${selectedCountry.value.phone_code}${inputValue.value}`
     emit('update:modelValue', phoneValue)
   } else {
     emit('update:modelValue', value)
   }
 }
 
-// Обновляем maskedPhone при изменении inputValue или selectedCountry
 watch([inputValue, selectedCountry], ([newInputValue, newSelectedCountry]) => {
   if (newSelectedCountry) {
     const phoneWithoutCode = getPhoneWithoutCode(
@@ -145,29 +141,27 @@ watch([inputValue, selectedCountry], ([newInputValue, newSelectedCountry]) => {
   }
 }, { immediate: true })
 
-const initializePhone = () => {
-  if (props.disableAutoParseNumber) return;
+const formatModelValue = () => {
+  if (!selectedCountry.value) return props.modelValue
 
-  if (props.modelValue) {
-    // Убираем пробелы перед парсингом
-    const cleanValue = props.modelValue.replace(/\s/g, '')
-    parsePhoneNumber(cleanValue)
-    // Ждем следующего тика для установки selectedCountry
-    setTimeout(() => {
-      if (selectedCountry.value) {
-        const phoneWithoutCode = getPhoneWithoutCode(cleanValue, selectedCountry.value.phone_code)
-        inputValue.value = phoneWithoutCode
-        // Если маска отключена, обновляем maskedPhone напрямую
-        if (!props.enableMask) {
-          maskedPhone.value = phoneWithoutCode
-        }
-        // Обновляем modelValue с пробелом после кода страны только если включена маска
-        const value = props.enableMask
-          ? `+${selectedCountry.value.phone_code} ${maskedPhone.value}`
-          : `+${selectedCountry.value.phone_code}${inputValue.value}`
-        emit('update:modelValue', value)
-      }
-    }, 0)
+  return props.enableMask
+    ? `+${selectedCountry.value.phone_code} ${maskedPhone.value}`
+    : `+${selectedCountry.value.phone_code}${inputValue.value}`
+}
+
+const initializePhone = () => {
+  if (props.disableAutoParseNumber) return
+
+  if (!props.modelValue) return
+
+  const cleanValue = props.modelValue.replace(/\s/g, '')
+  parsePhoneNumber(cleanValue)
+
+  if (!selectedCountry.value) return
+
+  const normalized = formatModelValue()
+  if (normalized && normalized !== props.modelValue) {
+    emit('update:modelValue', normalized)
   }
 }
 
@@ -175,14 +169,13 @@ const handleCountrySelect = (country: Country) => {
   selectedCountry.value = country
   isOpen.value = false
   searchQuery.value = ''
-  emit('update:country', country)
   const value = props.enableMask
     ? `+${country.phone_code} ${maskedPhone.value}`
     : `+${country.phone_code}${inputValue.value}`
   emit('update:modelValue', value)
 }
 
-watch(() => props.modelValue, (newValue) => {
+watch(() => props.modelValue, () => {
   if (!props.disableAutoParseNumber) {
     initializePhone()
   }
@@ -190,13 +183,10 @@ watch(() => props.modelValue, (newValue) => {
 
 watch(() => props.lang, setLanguage)
 
-watch(()=>selectedCountry.value, emitCountry())
+watch(() => selectedCountry.value, emitCountry)
 
 onMounted(() => {
   setLanguage(props.lang)
-  if (!props.disableAutoParseNumber) {
-    initializePhone()
-  }
 })
 
 </script>
@@ -233,7 +223,7 @@ onMounted(() => {
             class="w-full"
           />
         </div>
-        <div class="max-h-60 overflow-y-auto">
+        <div class="max-h-60 overflow-y-auto overflow-x-hidden">
           <template v-if="props.favoritesCountries?.length && favorites.length">
             <div v-for="country in favorites" :key="country.country_code">
               <SelectItem :value="country" :class="[props.selectItemClass]">
