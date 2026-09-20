@@ -1,41 +1,34 @@
-import { computed } from 'vue'
-import countriesData from '@/json/countries.json'
-import { loadTranslations } from '@/utils/translations'
-import type { Language, CountryType } from '@/interfaces'
+import { computed, toValue, type MaybeRef } from 'vue'
+import {
+  getCountries as getCountriesCore,
+  getCountryByCode as getCountryByCodeCore,
+  getCountryByName as getCountryByNameCore,
+  getCountryByPhoneCode as getCountryByPhoneCodeCore,
+  getFlagPath as getFlagPathCore,
+  getAllCountryNames as getAllCountryNamesCore
+} from '@/core/countries'
+import type { Language } from '@/interfaces'
 
-export type Country = CountryType
+export const useCountries = (
+  lang: Language = 'ru',
+  onlyCountries?: MaybeRef<string[] | undefined>
+) => {
+  const resolveOnlyCountries = () => toValue(onlyCountries)
 
-export const useCountries = (lang: Language = 'ru') => {
-  const translations = computed(() => loadTranslations())
+  const getCountries = computed(() => getCountriesCore(lang, resolveOnlyCountries()))
 
-  const getCountries = computed(() => {
-    return countriesData.map(country => ({
-      ...country,
-      name: translations.value[lang].countries[country.country_code] || country.country_code
-    }))
-  })
+  const getCountryByCode = (code: string) =>
+    getCountryByCodeCore(code, lang, resolveOnlyCountries())
 
-  const getCountryByCode = (code: string) => {
-    return getCountries.value.find(country => country.country_code.toLowerCase() === code.toLowerCase())
-  }
+  const getCountryByName = (name: string) =>
+    getCountryByNameCore(name, lang, resolveOnlyCountries())
 
-  const getCountryByName = (name: string) => {
-    return getCountries.value.find(country => country.country_code.toLowerCase() === name.toLowerCase())
-  }
+  const getCountryByPhoneCode = (phoneCode: number) =>
+    getCountryByPhoneCodeCore(phoneCode, lang, resolveOnlyCountries())
 
-  const getCountryByPhoneCode = (phoneCode: number) => {
-    return getCountries.value.find(country => country.phone_code === phoneCode)
-  }
+  const getFlagPath = (countryCode: string) => getFlagPathCore(countryCode)
 
-  const getFlagPath = (countryCode: string) => {
-    return `/src/assets/flags/${countryCode}.svg`
-  }
-
-  const getAllCountryNames = (countryCode: string) => {
-    const allTranslations = translations.value
-    const names = Object.values(allTranslations).map(lang => lang.countries[countryCode])
-    return [...new Set(names.filter(Boolean))]
-  }
+  const getAllCountryNames = (countryCode: string) => getAllCountryNamesCore(countryCode)
 
   return {
     getCountries,

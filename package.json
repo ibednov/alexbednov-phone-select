@@ -1,27 +1,42 @@
 {
   "name": "alexbednov-phone-select",
   "private": false,
-  "version": "0.3.25",
+  "version": "0.4.0",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/alexbednov-phone-select.umd.js",
-  "module": "./dist/alexbednov-phone-select.es.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/core.umd.js",
+  "module": "./dist/core.es.js",
+  "types": "./dist/core/index.d.ts",
   "style": "./dist/assets/style.css",
   "exports": {
     ".": {
-      "import": "./dist/alexbednov-phone-select.es.js",
-      "require": "./dist/alexbednov-phone-select.umd.js",
-      "types": "./dist/index.d.ts",
+      "import": "./dist/core.es.js",
+      "require": "./dist/core.umd.js",
+      "types": "./dist/core/index.d.ts"
+    },
+    "./core": {
+      "import": "./dist/core.es.js",
+      "require": "./dist/core.umd.js",
+      "types": "./dist/core/index.d.ts"
+    },
+    "./vue-api": {
+      "import": "./dist/vue-api.es.js",
+      "require": "./dist/vue-api.umd.js",
+      "types": "./dist/vue-api/index.d.ts"
+    },
+    "./vue": {
+      "import": "./dist/vue.es.js",
+      "require": "./dist/vue.umd.js",
+      "types": "./dist/vue/index.d.ts",
       "style": "./dist/assets/style.css"
     },
     "./style.css": "./dist/assets/style.css"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc -p tsconfig.build.json",
+    "build": "vite build --config vite.config.core.ts && vite build --config vite.config.vue-api.ts && vite build --config vite.config.vue.ts && tsc -p tsconfig.build.json && node scripts/copy-files.js",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",

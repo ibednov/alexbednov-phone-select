@@ -25,7 +25,7 @@ const country2 = ref(null);
           enableMask
           disable-country-name-select
           disable-auto-parse-number
-          select-content-class="max-h-[500px] overflow-y-auto"
+          select-content-class="max-h-[500px] overflow-y-auto w-screen bg-red-300 "
           select-item-class="h-6"
 
         />

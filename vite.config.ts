@@ -27,31 +27,44 @@ export default defineConfig({
         drop_debugger: true
       }
     },
-    lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'PhoneSelect',
-      fileName: (format) => `alexbednov-phone-select.${format}.js`,
-      formats: ['es', 'umd']
-    },
     cssCodeSplit: false,
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'src/index.ts'),
+        core: resolve(__dirname, 'src/core/index.ts')
+      },
       external: ['vue', 'reka-ui'],
-      output: {
-        globals: {
-          vue: 'Vue',
-          'reka-ui': 'RekaUI'
+      output: [
+        // ES модули
+        {
+          entryFileNames: (chunkInfo) => {
+            return chunkInfo.name === 'core' ? 'core.es.js' : 'alexbednov-phone-select.es.js'
+          },
+          format: 'es',
+          exports: 'named',
+          globals: {
+            vue: 'Vue',
+            'reka-ui': 'RekaUI'
+          },
+          assetFileNames: 'assets/[name][extname]'
         },
-        exports: 'named',
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name?.endsWith('.svg')) {
-            return 'assets/flags/[name][extname]'
-          }
-          if (assetInfo.name?.endsWith('.css')) {
-            return 'assets/style.css'
-          }
-          return 'assets/[name][extname]'
+        // UMD модули
+        {
+          entryFileNames: (chunkInfo) => {
+            return chunkInfo.name === 'core' ? 'core.umd.js' : 'alexbednov-phone-select.umd.js'
+          },
+          format: 'umd',
+          name: (chunkInfo) => {
+            return chunkInfo.name === 'core' ? 'PhoneSelectCore' : 'PhoneSelect'
+          },
+          exports: 'named',
+          globals: {
+            vue: 'Vue',
+            'reka-ui': 'RekaUI'
+          },
+          assetFileNames: 'assets/[name][extname]'
         }
-      }
+      ]
     },
     copyPublicDir: false,
     assetsDir: 'assets',

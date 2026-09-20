@@ -90,6 +90,28 @@ bun add alexbednov-phone-select
 
 ## API
 
+### Entry points
+
+Three tiers (default import is the lightest):
+
+| Entry | What you get | Runtime deps |
+| --- | --- | --- |
+| `alexbednov-phone-select` / `./core` | Pure helpers: countries, masks, parsing, translations, types | **None** (vanilla TS; React/Svelte/Solid/vanilla) |
+| `alexbednov-phone-select/vue-api` | Headless Vue composables + re-export of core | **Vue** peer (no CSS, no component) |
+| `alexbednov-phone-select/vue` | `PhoneSelect` UI + styles + composables + core | **Vue** peer (+ bundled component CSS via entry) |
+
+```typescript
+// Pure core (default)
+import { getCountries, applyMask } from 'alexbednov-phone-select'
+
+// Headless Vue
+import { usePhoneNumber } from 'alexbednov-phone-select/vue-api'
+
+// Full UI
+import { PhoneSelect } from 'alexbednov-phone-select/vue'
+import 'alexbednov-phone-select/style.css'
+```
+
 ### Core Functions
 
 ```typescript
@@ -99,7 +121,10 @@ import {
   getCountryByName,
   getCountryByPhoneCode,
   getFlagPath,
-  getAllCountryNames
+  getAllCountryNames,
+  getMaskForCountry,
+  applyMask,
+  parsePhoneNumberValue
 } from 'alexbednov-phone-select'
 
 // Get list of all countries
@@ -147,14 +172,16 @@ const translations = loadTranslations()
 
 ```vue
 <script setup lang="ts">
-import { PhoneSelect } from 'alexbednov-phone-select'
-import 'alexbednov-phone-select/style.css' // if you need to example styles
+import { PhoneSelect } from 'alexbednov-phone-select/vue'
+import 'alexbednov-phone-select/style.css'
 </script>
 
 <template>
   <PhoneSelect
     v-model="phoneNumber"
     :lang="lang"
+    default-country="us"
+    :only-countries="['us', 'gb', 'by']"
     :favorites-countries="['us', 'gb']"
     :enable-mask="true"
     :enable-search="true"
@@ -177,13 +204,15 @@ import 'alexbednov-phone-select/style.css' // if you need to example styles
 ### Component Props
 
 - `v-model` - full phone number with country code
-- `lang` - interface language (ru, en, az, be)
+- `lang` - UI language override for country names and built-in strings (`ru`, `en`, `az`, `be`; prop only, no external i18n coupling)
+- `default-country` - preselect a country by ISO code (case-insensitive, e.g. `by`) when `v-model` is empty and nothing is selected yet
+- `only-countries` - whitelist of country codes; when non-empty, dropdown, search, favorites, and auto-parse only see these countries
 - `favorites-countries` - array of favorite country codes
 - `hide-favorites` - hide favorite countries (default: true)
 - `enable-search` - enable country search (default: false)
 - `enable-mask` - enable number masking (default: false)
 - `disable-country-name-select` - disable country name display in select (default: false)
-- `disable-auto-parse-number` - disable automatic number parsing (default: false)
+- `disable-auto-parse-number` - disable automatic parsing from `v-model` (default: **true**; set to `false` to opt in — partial input never clears an existing selection)
 - `select-class` - select element classes
 - `input-class` - input element classes
 - `select-placeholder` - select placeholder text
@@ -312,6 +341,28 @@ bun add alexbednov-phone-select
 
 ## API
 
+### Точки входа
+
+Три уровня (импорт по умолчанию — самый лёгкий):
+
+| Entry | Содержимое | Runtime-зависимости |
+| --- | --- | --- |
+| `alexbednov-phone-select` / `./core` | Чистые функции: страны, маски, парсинг, переводы, типы | **Нет** (vanilla TS; React/Svelte/Solid/vanilla) |
+| `alexbednov-phone-select/vue-api` | Headless Vue-composables + re-export core | **Vue** peer (без CSS и компонента) |
+| `alexbednov-phone-select/vue` | UI `PhoneSelect` + стили + composables + core | **Vue** peer (+ CSS через entry) |
+
+```typescript
+// Pure core (default)
+import { getCountries, applyMask } from 'alexbednov-phone-select'
+
+// Headless Vue
+import { usePhoneNumber } from 'alexbednov-phone-select/vue-api'
+
+// Полный UI
+import { PhoneSelect } from 'alexbednov-phone-select/vue'
+import 'alexbednov-phone-select/style.css'
+```
+
 ### Основные функции
 
 ```typescript
@@ -321,7 +372,10 @@ import {
   getCountryByName,
   getCountryByPhoneCode,
   getFlagPath,
-  getAllCountryNames
+  getAllCountryNames,
+  getMaskForCountry,
+  applyMask,
+  parsePhoneNumberValue
 } from 'alexbednov-phone-select'
 
 // Получить список всех стран
@@ -369,14 +423,16 @@ const translations = loadTranslations()
 
 ```vue
 <script setup lang="ts">
-import { PhoneSelect } from 'alexbednov-phone-select'
-import 'alexbednov-phone-select/style.css' // при необходимости стилей из примера
+import { PhoneSelect } from 'alexbednov-phone-select/vue'
+import 'alexbednov-phone-select/style.css'
 </script>
 
 <template>
   <PhoneSelect
     v-model="phoneNumber"
     :lang="lang"
+    default-country="by"
+    :only-countries="['by', 'ru']"
     :favorites-countries="['by', 'ru']"
     :enable-mask="true"
     :enable-search="true"
@@ -399,13 +455,15 @@ import 'alexbednov-phone-select/style.css' // при необходимости 
 ### Пропсы компонента
 
 - `v-model` - полный номер телефона с кодом страны
-- `lang` - язык интерфейса (ru, en, az, be)
+- `lang` - явное переопределение языка UI для названий стран и строк пакета (`ru`, `en`, `az`, `be`; только prop, без внешнего i18n)
+- `default-country` - предвыбор страны по ISO-коду (без учёта регистра, напр. `by`), если `v-model` пуст и страна ещё не выбрана
+- `only-countries` - whitelist кодов стран; если массив не пуст, в списке, поиске, избранном и auto-parse участвуют только эти страны
 - `favorites-countries` - массив кодов избранных стран
 - `hide-favorites` - скрыть избранные страны (по умолчанию true)
 - `enable-search` - включить поиск по странам (по умолчанию false)
 - `enable-mask` - включить маскирование номера (по умолчанию false)
 - `disable-country-name-select` - отключить отображение названия страны в селекте (по умолчанию false)
-- `disable-auto-parse-number` - отключить автоматический парсинг номера (по умолчанию false)
+- `disable-auto-parse-number` - отключить автопарсинг из `v-model` (по умолчанию **true**; `false` — явное включение; частичный ввод не сбрасывает уже выбранную страну)
 - `select-class` - классы для селекта
 - `input-class` - классы для инпута
 - `select-placeholder` - плейсхолдер для селекта

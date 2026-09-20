@@ -1,50 +1,10 @@
-import type { Language, CountryType } from '@/interfaces';
-export type Country = CountryType;
-export declare const useCountries: (lang?: Language) => {
-    getCountries: import("vue").ComputedRef<({
-        name: string;
-        country_code: string;
-        phone_code: number;
-        phone_ranges?: undefined;
-    } | {
-        name: string;
-        country_code: string;
-        phone_code: number;
-        phone_ranges: number[];
-    })[]>;
-    getCountryByCode: (code: string) => {
-        name: string;
-        country_code: string;
-        phone_code: number;
-        phone_ranges?: undefined;
-    } | {
-        name: string;
-        country_code: string;
-        phone_code: number;
-        phone_ranges: number[];
-    } | undefined;
-    getCountryByName: (name: string) => {
-        name: string;
-        country_code: string;
-        phone_code: number;
-        phone_ranges?: undefined;
-    } | {
-        name: string;
-        country_code: string;
-        phone_code: number;
-        phone_ranges: number[];
-    } | undefined;
-    getCountryByPhoneCode: (phoneCode: number) => {
-        name: string;
-        country_code: string;
-        phone_code: number;
-        phone_ranges?: undefined;
-    } | {
-        name: string;
-        country_code: string;
-        phone_code: number;
-        phone_ranges: number[];
-    } | undefined;
+import { type MaybeRef } from 'vue';
+import type { Language } from '@/interfaces';
+export declare const useCountries: (lang?: Language, onlyCountries?: MaybeRef<string[] | undefined>) => {
+    getCountries: import("vue").ComputedRef<import("@/interfaces").Country[]>;
+    getCountryByCode: (code: string) => import("@/interfaces").Country | undefined;
+    getCountryByName: (name: string) => import("@/interfaces").Country | undefined;
+    getCountryByPhoneCode: (phoneCode: number) => import("@/interfaces").Country | undefined;
     getFlagPath: (countryCode: string) => string;
     getAllCountryNames: (countryCode: string) => string[];
 };

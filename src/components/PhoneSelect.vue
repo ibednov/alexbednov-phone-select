@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, onMounted } from 'vue'
+import { ref, watch, onMounted, computed, toRef } from 'vue'
 import type { Country, Language } from '@/interfaces'
 import Input from '@/components/ui/input/Input.vue'
 import Select from '@/components/ui/select/Select.vue'
@@ -11,17 +11,16 @@ import SelectSeparator from '@/components/ui/select/SelectSeparator.vue'
 import { useTranslate } from '@/composables/useTranslate'
 import { usePhoneNumber } from '@/composables/usePhoneNumber'
 import { usePhoneMask } from '@/composables/usePhoneMask'
+import { applyMask, getMaskForCountry } from '@/core/phoneMask'
 import CountryItem from './PhoneSelect/CountryItem.vue'
-import type { CountryMask } from '@/types'
-import countriesMaskData from '@/json/countries_mask.json'
-
-const countriesMask: CountryMask[] = countriesMaskData
 
 const props = withDefaults(
   defineProps<{
     modelValue: string | null
     lang?: Language
     favoritesCountries?: string[]
+    onlyCountries?: string[]
+    defaultCountry?: string
     hideFavorites?: boolean
     enableSearch?: boolean
     enableMask?: boolean
@@ -43,7 +42,7 @@ const props = withDefaults(
     enableSearch: false,
     enableMask: false,
     disableCountryNameSelect: false,
-    disableAutoParseNumber: false,
+    disableAutoParseNumber: true,
   }
 )
 
@@ -61,6 +60,7 @@ const emitCountry = () => {
 const { setLanguage, t } = useTranslate()
 
 const isOpen = ref(false)
+const onlyCountriesRef = toRef(props, 'onlyCountries')
 const {
   searchQuery,
   selectedCountry,
@@ -68,52 +68,35 @@ const {
   favorites,
   filteredCountries,
   parsePhoneNumber,
-  handleSearch
-} = usePhoneNumber(props.lang, props.favoritesCountries, props.hideFavorites)
+  handleSearch,
+  selectCountryByCode
+} = usePhoneNumber(
+  props.lang,
+  props.favoritesCountries,
+  props.hideFavorites,
+  onlyCountriesRef
+)
 
 const { maskedPhone } = usePhoneMask()
 
-const getPhoneWithoutCode = (phone: string, code: string) => {
-  if (!phone || !code) return phone
-  return phone.startsWith(`+${code}`) ? phone.slice(`+${code}`.length) : phone
-}
+const hasModelValue = computed(() => {
+  const value = props.modelValue
+  return value !== null && value !== undefined && String(value).trim() !== ''
+})
 
-const getMaskMatrix = () => {
-  let matrix = '###############'
-
-  if (selectedCountry.value) {
-    const mask = countriesMask.find(item => {
-      const code = item.code.replace(/[\s#]/g, '')
-      return code.startsWith(`+${selectedCountry.value!.phone_code}`)
-    })
-
-    if (mask) {
-      matrix = mask.code.replace(/^\+[\d\s]+/, '').trim()
-    }
-  }
-
-  return matrix
-}
-
-const applyMask = (value: string) => {
-  if (!value) return ''
-  const matrix = getMaskMatrix()
-  const maxDigits = (matrix.match(/[#\d]/g) || []).length
-  const cleanValue = value.replace(/\D/g, '').slice(0, maxDigits)
-
-  let i = 0
-  return matrix.replace(/[#\d]/g, () => {
-    return i < cleanValue.length ? cleanValue.charAt(i++) : ''
-  })
+const getPhoneWithoutCode = (phone: string, code: string | number) => {
+  if (!phone || code === undefined || code === null) return phone
+  const codeStr = String(code)
+  return phone.startsWith(`+${codeStr}`) ? phone.slice(`+${codeStr}`.length) : phone
 }
 
 const handleInput = (value: string) => {
   if (props.enableMask) {
-    const matrix = getMaskMatrix()
+    const matrix = getMaskForCountry(selectedCountry.value)
     const maxDigits = (matrix.match(/[#\d]/g) || []).length
     const cleanValue = value.replace(/\D/g, '').slice(0, maxDigits)
     inputValue.value = cleanValue
-    maskedPhone.value = cleanValue ? applyMask(cleanValue) : ''
+    maskedPhone.value = cleanValue ? applyMask(cleanValue, matrix) : ''
   } else {
     inputValue.value = value
     maskedPhone.value = value
@@ -135,9 +118,11 @@ watch([inputValue, selectedCountry], ([newInputValue, newSelectedCountry]) => {
       newInputValue,
       newSelectedCountry.phone_code
     )
-    maskedPhone.value = phoneWithoutCode ? applyMask(phoneWithoutCode) : ''
+    const matrix = getMaskForCountry(newSelectedCountry)
+    maskedPhone.value = phoneWithoutCode ? applyMask(phoneWithoutCode, matrix) : ''
   } else {
-    maskedPhone.value = newInputValue ? applyMask(newInputValue) : ''
+    const matrix = getMaskForCountry(selectedCountry.value)
+    maskedPhone.value = newInputValue ? applyMask(newInputValue, matrix) : ''
   }
 }, { immediate: true })
 
@@ -151,10 +136,9 @@ const formatModelValue = () => {
 
 const initializePhone = () => {
   if (props.disableAutoParseNumber) return
+  if (!hasModelValue.value) return
 
-  if (!props.modelValue) return
-
-  const cleanValue = props.modelValue.replace(/\s/g, '')
+  const cleanValue = props.modelValue!.replace(/\s/g, '')
   parsePhoneNumber(cleanValue)
 
   if (!selectedCountry.value) return
@@ -163,6 +147,11 @@ const initializePhone = () => {
   if (normalized && normalized !== props.modelValue) {
     emit('update:modelValue', normalized)
   }
+}
+
+const applyDefaultCountry = () => {
+  if (!props.defaultCountry || hasModelValue.value || selectedCountry.value) return
+  selectCountryByCode(props.defaultCountry)
 }
 
 const handleCountrySelect = (country: Country) => {
@@ -181,12 +170,18 @@ watch(() => props.modelValue, () => {
   }
 }, { immediate: true })
 
-watch(() => props.lang, setLanguage)
+watch(() => props.lang, (lang) => {
+  setLanguage(lang)
+})
 
 watch(() => selectedCountry.value, emitCountry)
 
 onMounted(() => {
   setLanguage(props.lang)
+  if (!props.disableAutoParseNumber && hasModelValue.value) {
+    initializePhone()
+  }
+  applyDefaultCountry()
 })
 
 </script>

@@ -1,0 +1,65 @@
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
+import { fileURLToPath } from 'url'
+import tailwindcss from '@tailwindcss/vite'
+import path from 'node:path'
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    tailwindcss(),
+  ],
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
+    lib: {
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'PhoneSelect',
+      fileName: (format) => `alexbednov-phone-select.${format}.js`,
+      formats: ['es', 'umd']
+    },
+    cssCodeSplit: false,
+    rollupOptions: {
+      external: ['vue', 'reka-ui'],
+      output: {
+        globals: {
+          vue: 'Vue',
+          'reka-ui': 'RekaUI'
+        },
+        exports: 'named',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name?.endsWith('.svg')) {
+            return 'assets/flags/[name][extname]'
+          }
+          if (assetInfo.name?.endsWith('.css')) {
+            return 'assets/style.css'
+          }
+          return 'assets/[name][extname]'
+        }
+      }
+    },
+    copyPublicDir: false,
+    assetsDir: 'assets',
+    outDir: 'dist',
+    emptyOutDir: false,
+    assetsInlineLimit: 0
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    }
+  },
+  assetsInclude: ['**/*.svg'],
+  optimizeDeps: {
+    exclude: ['fs']
+  }
+})
+

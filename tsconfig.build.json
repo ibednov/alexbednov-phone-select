@@ -10,14 +10,20 @@
     "moduleResolution": "bundler"
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/core/**/*.ts",
+    "src/vue-api/**/*.ts",
+    "src/vue/**/*.ts",
+    "src/composables/**/*.ts",
+    "src/utils/**/*.ts",
+    "src/interfaces/**/*.ts",
+    "src/types/**/*.ts",
+    "src/json/**/*.d.ts",
+    "src/**/*.d.ts"
   ],
   "exclude": [
     "src/**/__tests__/*",
     "src/demo/**/*",
+    "src/index.ts",
     "src/json/filter.ts",
     "src/json/sort.ts"
   ]
