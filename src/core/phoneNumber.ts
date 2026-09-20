@@ -26,8 +26,11 @@ export const excludeFavorites = (
   favoritesCountries?: string[]
 ): Country[] => {
   if (!favoritesCountries?.length) return countries
+  const favorites = new Set(
+    favoritesCountries.map(code => code.toLowerCase())
+  )
   return countries.filter(
-    country => !favoritesCountries.includes(country.country_code.toLowerCase())
+    country => !favorites.has(country.country_code.toLowerCase())
   )
 }
 

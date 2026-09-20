@@ -185,7 +185,7 @@ import 'alexbednov-phone-select/style.css'
     :favorites-countries="['us', 'gb']"
     :enable-mask="true"
     :enable-search="true"
-    :hide-favorites="false"
+    :dedupe-favorites="true"
     :disable-country-name-select="false"
     :disable-auto-parse-number="false"
     select-class="w-[180px]"
@@ -208,7 +208,7 @@ import 'alexbednov-phone-select/style.css'
 - `default-country` - preselect a country by ISO code (case-insensitive, e.g. `by`) when `v-model` is empty and nothing is selected yet
 - `only-countries` - whitelist of country codes; when non-empty, dropdown, search, favorites, and auto-parse only see these countries
 - `favorites-countries` - array of favorite country codes
-- `hide-favorites` - hide favorite countries (default: true)
+- `dedupe-favorites` / `hide-favorites` - exclude favorites from the main list so they are not duplicated (default: true). Prefer `dedupe-favorites`.
 - `enable-search` - enable country search (default: false)
 - `enable-mask` - enable number masking (default: false)
 - `disable-country-name-select` - disable country name display in select (default: false)
@@ -436,7 +436,7 @@ import 'alexbednov-phone-select/style.css'
     :favorites-countries="['by', 'ru']"
     :enable-mask="true"
     :enable-search="true"
-    :hide-favorites="false"
+    :dedupe-favorites="true"
     :disable-country-name-select="false"
     :disable-auto-parse-number="false"
     select-class="w-[180px]"
@@ -459,7 +459,7 @@ import 'alexbednov-phone-select/style.css'
 - `default-country` - предвыбор страны по ISO-коду (без учёта регистра, напр. `by`), если `v-model` пуст и страна ещё не выбрана
 - `only-countries` - whitelist кодов стран; если массив не пуст, в списке, поиске, избранном и auto-parse участвуют только эти страны
 - `favorites-countries` - массив кодов избранных стран
-- `hide-favorites` - скрыть избранные страны (по умолчанию true)
+- `dedupe-favorites` / `hide-favorites` - не дублировать избранные в общем списке (по умолчанию true). Предпочтительно `dedupe-favorites`.
 - `enable-search` - включить поиск по странам (по умолчанию false)
 - `enable-mask` - включить маскирование номера (по умолчанию false)
 - `disable-country-name-select` - отключить отображение названия страны в селекте (по умолчанию false)

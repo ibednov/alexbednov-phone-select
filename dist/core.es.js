@@ -3065,8 +3065,11 @@ const searchByAllFields = (countries2, query) => {
 };
 const excludeFavorites = (countries2, favoritesCountries) => {
   if (!(favoritesCountries == null ? void 0 : favoritesCountries.length)) return countries2;
+  const favorites = new Set(
+    favoritesCountries.map((code) => code.toLowerCase())
+  );
   return countries2.filter(
-    (country) => !favoritesCountries.includes(country.country_code.toLowerCase())
+    (country) => !favorites.has(country.country_code.toLowerCase())
   );
 };
 const filterCountries = (countries2, searchQuery, options = {}) => {

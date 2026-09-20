@@ -22,6 +22,8 @@ const props = withDefaults(
     onlyCountries?: string[]
     defaultCountry?: string
     hideFavorites?: boolean
+    /** Exclude favorites from the main list (no duplicates). Alias of hideFavorites; prefer this name. */
+    dedupeFavorites?: boolean
     enableSearch?: boolean
     enableMask?: boolean
     selectClass?: string
@@ -39,6 +41,7 @@ const props = withDefaults(
   {
     lang: 'en',
     hideFavorites: true,
+    dedupeFavorites: true,
     enableSearch: false,
     enableMask: false,
     disableCountryNameSelect: false,
@@ -61,6 +64,9 @@ const { setLanguage, t } = useTranslate()
 
 const isOpen = ref(false)
 const onlyCountriesRef = toRef(props, 'onlyCountries')
+const excludeFavoritesFromList = computed(
+  () => props.dedupeFavorites ?? props.hideFavorites
+)
 const {
   searchQuery,
   selectedCountry,
@@ -73,7 +79,7 @@ const {
 } = usePhoneNumber(
   props.lang,
   props.favoritesCountries,
-  props.hideFavorites,
+  excludeFavoritesFromList.value,
   onlyCountriesRef
 )
 
