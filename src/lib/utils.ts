@@ -1,6 +1,5 @@
-import { type ClassValue, clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { normalizeClass } from 'vue'
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+export function cn(...inputs: unknown[]) {
+  return normalizeClass(inputs)
 }
