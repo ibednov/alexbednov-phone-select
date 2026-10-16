@@ -251,15 +251,19 @@ onMounted(() => {
       :class="[props.selectClass || 'w-[180px]']"
     >
       <SelectTrigger :class="[props.selectTriggerClass]">
-        <SelectValue :class="[props.selectValueClass]">
-          <div class="flex items-center gap-2">
-            <CountryItem v-if="selectedCountry" :country="selectedCountry"
-            :disable-country-name-select="props.disableCountryNameSelect"
-            :select-item-country-class="props.selectItemCountryClass"
-             />
-            <span v-else class="text-gray-400">
-              {{ props.selectPlaceholder || t("phone-select.select-country") }}
-            </span>
+        <SelectValue
+          :class="[props.selectValueClass]"
+          :placeholder="props.selectPlaceholder ?? t('phone-select.select-country')"
+        >
+          <div
+            v-if="selectedCountry"
+            class="flex items-center gap-2"
+          >
+            <CountryItem
+              :country="selectedCountry"
+              :disable-country-name-select="props.disableCountryNameSelect"
+              :select-item-country-class="props.selectItemCountryClass"
+            />
           </div>
         </SelectValue>
       </SelectTrigger>
