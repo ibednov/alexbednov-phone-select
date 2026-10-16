@@ -253,7 +253,9 @@ onMounted(() => {
       <SelectTrigger :class="[props.selectTriggerClass]">
         <SelectValue
           :class="[props.selectValueClass]"
-          :placeholder="props.selectPlaceholder ?? t('phone-select.select-country')"
+          :placeholder="selectedCountry
+            ? undefined
+            : (props.selectPlaceholder ?? t('phone-select.select-country'))"
         >
           <div
             v-if="selectedCountry"
@@ -265,6 +267,12 @@ onMounted(() => {
               :select-item-country-class="props.selectItemCountryClass"
             />
           </div>
+          <span
+            v-else
+            class="text-muted-foreground"
+          >
+            {{ props.selectPlaceholder ?? t('phone-select.select-country') }}
+          </span>
         </SelectValue>
       </SelectTrigger>
       <SelectContent :class="[selectContentClass]">
