@@ -19,8 +19,9 @@ const getFlagUrl = (code: string) => {
   >
     <img
       :src="getFlagUrl(country.country_code)"
-      :alt="country.country_code"
+      alt=""
       class="w-6 h-4"
+      aria-hidden="true"
     />
     <span v-if="!disableCountryNameSelect">{{ country.name }}</span>
     <span class="text-gray-500">+{{ country.phone_code }}</span>
