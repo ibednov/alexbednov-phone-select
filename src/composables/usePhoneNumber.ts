@@ -4,7 +4,7 @@ import { filterCountries, parsePhoneNumberValue } from '@/core/phoneNumber'
 import { useCountries } from './useCountries'
 
 export const usePhoneNumber = (
-  lang: Language,
+  lang: MaybeRef<Language>,
   favoritesCountries?: string[],
   hideFavorites: boolean = true,
   onlyCountries?: MaybeRef<string[] | undefined>

@@ -74,7 +74,7 @@ const {
   parsePhoneNumber,
   selectCountryByCode
 } = usePhoneNumber(
-  props.lang,
+  toRef(props, 'lang'),
   props.favoritesCountries,
   excludeFavoritesFromList.value,
   onlyCountriesRef
@@ -229,6 +229,9 @@ watch(() => props.modelValue, () => {
 
 watch(() => props.lang, (lang) => {
   setLanguage(lang)
+  if (selectedCountry.value) {
+    selectCountryByCode(selectedCountry.value.country_code)
+  }
 }, { immediate: true })
 
 watch(() => selectedCountry.value, emitCountry)
@@ -279,6 +282,7 @@ onMounted(() => {
           :filtered-countries="filteredCountries"
           :has-favorites="Boolean(props.favoritesCountries?.length)"
           :enable-search="props.enableSearch"
+          :search-placeholder="t('phone-select.search')"
           :disable-country-name-select="props.disableCountryNameSelect"
           :select-item-class="props.selectItemClass"
           :select-item-country-class="props.selectItemCountryClass"

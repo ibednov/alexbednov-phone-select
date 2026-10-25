@@ -10,21 +10,22 @@ import {
 import type { Language } from '@/interfaces'
 
 export const useCountries = (
-  lang: Language = 'ru',
+  lang: MaybeRef<Language> = 'ru',
   onlyCountries?: MaybeRef<string[] | undefined>
 ) => {
   const resolveOnlyCountries = () => toValue(onlyCountries)
 
-  const getCountries = computed(() => getCountriesCore(lang, resolveOnlyCountries()))
+  const resolveLanguage = () => toValue(lang)
+  const getCountries = computed(() => getCountriesCore(resolveLanguage(), resolveOnlyCountries()))
 
   const getCountryByCode = (code: string) =>
-    getCountryByCodeCore(code, lang, resolveOnlyCountries())
+    getCountryByCodeCore(code, resolveLanguage(), resolveOnlyCountries())
 
   const getCountryByName = (name: string) =>
-    getCountryByNameCore(name, lang, resolveOnlyCountries())
+    getCountryByNameCore(name, resolveLanguage(), resolveOnlyCountries())
 
   const getCountryByPhoneCode = (phoneCode: number) =>
-    getCountryByPhoneCodeCore(phoneCode, lang, resolveOnlyCountries())
+    getCountryByPhoneCodeCore(phoneCode, resolveLanguage(), resolveOnlyCountries())
 
   const getFlagPath = (countryCode: string) => getFlagPathCore(countryCode)
 

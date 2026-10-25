@@ -4,20 +4,19 @@ import Input from '@/components/ui/input/Input.vue'
 import SelectItem from '@/components/ui/select/SelectItem.vue'
 import SelectSeparator from '@/components/ui/select/SelectSeparator.vue'
 import CountryItem from './CountryItem.vue'
-import { useTranslate } from '@/composables/useTranslate'
 
 defineProps<{
   favorites: Country[]
   filteredCountries: Country[]
   hasFavorites: boolean
   enableSearch: boolean
+  searchPlaceholder: string
   disableCountryNameSelect: boolean
   selectItemClass?: string
   selectItemCountryClass?: string
 }>()
 
 const searchQuery = defineModel<string>('searchQuery', { default: '' })
-const { t } = useTranslate()
 </script>
 
 <template>
@@ -26,7 +25,7 @@ const { t } = useTranslate()
       v-model="searchQuery"
       @keydown.stop
       type="text"
-      :placeholder="t('phone-select.search')"
+      :placeholder="searchPlaceholder"
       class="w-full"
     />
   </div>
