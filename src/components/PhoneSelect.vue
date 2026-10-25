@@ -1,18 +1,16 @@
 <script setup lang="ts">
 import { ref, watch, onMounted, computed, toRef, nextTick } from 'vue'
 import type { Country, Language } from '@/interfaces'
-import Input from '@/components/ui/input/Input.vue'
 import Select from '@/components/ui/select/Select.vue'
 import SelectContent from '@/components/ui/select/SelectContent.vue'
-import SelectItem from '@/components/ui/select/SelectItem.vue'
 import SelectTrigger from '@/components/ui/select/SelectTrigger.vue'
 import SelectValue from '@/components/ui/select/SelectValue.vue'
-import SelectSeparator from '@/components/ui/select/SelectSeparator.vue'
 import { useTranslate } from '@/composables/useTranslate'
 import { usePhoneNumber } from '@/composables/usePhoneNumber'
 import { applyMask, getMaskForCountry } from '@/core/phoneMask'
 import { cn } from '@/lib/utils'
 import CountryItem from './PhoneSelect/CountryItem.vue'
+import CountryList from './PhoneSelect/CountryList.vue'
 
 const props = withDefaults(
   defineProps<{
@@ -74,7 +72,6 @@ const {
   favorites,
   filteredCountries,
   parsePhoneNumber,
-  handleSearch,
   selectCountryByCode
 } = usePhoneNumber(
   props.lang,
@@ -276,39 +273,16 @@ onMounted(() => {
         </SelectValue>
       </SelectTrigger>
       <SelectContent :class="[selectContentClass]">
-        <div class="p-2 border-b" v-if="props.enableSearch">
-          <Input
-            v-model="searchQuery"
-            @update:model-value="handleSearch"
-            @keydown.stop
-            type="text"
-            :placeholder="t('phone-select.search')"
-            class="w-full"
-          />
-        </div>
-        <div class="max-h-60 overflow-y-auto overflow-x-hidden">
-          <template v-if="props.favoritesCountries?.length && favorites.length">
-            <div v-for="country in favorites" :key="country.country_code">
-              <SelectItem :value="country" :class="[props.selectItemClass]">
-                <CountryItem
-                  :country="country"
-                  :disable-country-name-select="props.disableCountryNameSelect"
-                  :select-item-country-class="props.selectItemCountryClass"
-                />
-              </SelectItem>
-            </div>
-            <SelectSeparator />
-          </template>
-          <div v-for="country in filteredCountries" :key="country.country_code">
-            <SelectItem :value="country" :class="[props.selectItemClass]">
-              <CountryItem
-                :country="country"
-                :disable-country-name-select="props.disableCountryNameSelect"
-                :select-item-country-class="props.selectItemCountryClass"
-              />
-            </SelectItem>
-          </div>
-        </div>
+        <CountryList
+          v-model:search-query="searchQuery"
+          :favorites="favorites"
+          :filtered-countries="filteredCountries"
+          :has-favorites="Boolean(props.favoritesCountries?.length)"
+          :enable-search="props.enableSearch"
+          :disable-country-name-select="props.disableCountryNameSelect"
+          :select-item-class="props.selectItemClass"
+          :select-item-country-class="props.selectItemCountryClass"
+        />
       </SelectContent>
     </Select>
 
