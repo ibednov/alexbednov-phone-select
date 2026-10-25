@@ -50,6 +50,7 @@ const props = withDefaults(
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string | null): void
   (e: 'update:country', value: Country): void
+  (e: 'input-overflow', value: { receivedDigits: number, maxDigits: number }): void
 }>()
 
 const emitCountry = () => {
@@ -83,10 +84,6 @@ const {
 const phoneInput = ref<HTMLInputElement | null>(null)
 const lastEmittedModelValue = ref<string | null>(null)
 const pendingCaretDigits = ref<number | null>(null)
-const inputMaxLength = computed(() => {
-  if (!props.enableMask) return undefined
-  return getMaskForCountry(selectedCountry.value).length
-})
 
 const hasModelValue = computed(() => {
   const value = props.modelValue
@@ -113,7 +110,11 @@ const handleInput = (value: string) => {
   if (props.enableMask) {
     const matrix = getMaskForCountry(selectedCountry.value)
     const maxDigits = (matrix.match(/[#\d]/g) || []).length
-    const cleanValue = value.replace(/\D/g, '').slice(0, maxDigits)
+    const digits = value.replace(/\D/g, '')
+    if (digits.length > maxDigits) {
+      emit('input-overflow', { receivedDigits: digits.length, maxDigits })
+    }
+    const cleanValue = digits.slice(0, maxDigits)
     inputValue.value = cleanValue
   } else {
     inputValue.value = value
@@ -306,7 +307,6 @@ onMounted(() => {
       type="tel"
       inputmode="numeric"
       autocomplete="tel"
-      :maxlength="inputMaxLength"
       :placeholder="props.inputPlaceholder || t('phone-select.placeholder')"
     />
   </div>

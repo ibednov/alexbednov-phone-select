@@ -227,6 +227,7 @@ import 'alexbednov-phone-select/style.css'
 
 - `update:modelValue` - phone number update
 - `update:country` - selected country update
+- `input-overflow` - emitted when masked input contains more digits than the selected country's mask; payload: `{ receivedDigits, maxDigits }`. The displayed/model value remains masked to the supported length.
 
 ## Features
 
@@ -478,6 +479,7 @@ import 'alexbednov-phone-select/style.css'
 
 - `update:modelValue` - обновление номера телефона
 - `update:country` - обновление выбранной страны
+- `input-overflow` - событие, если в поле с маской введено больше цифр, чем допускает маска выбранной страны; payload: `{ receivedDigits, maxDigits }`. В отображаемом/model значении остаётся только допустимая длина.
 
 ## Особенности
 
