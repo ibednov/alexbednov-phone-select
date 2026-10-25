@@ -107,12 +107,13 @@ const maskedPhone = computed(() => {
 })
 
 const handleInput = (value: string) => {
+  let overflow: { receivedDigits: number, maxDigits: number } | undefined
   if (props.enableMask) {
     const matrix = getMaskForCountry(selectedCountry.value)
     const maxDigits = (matrix.match(/[#\d]/g) || []).length
     const digits = value.replace(/\D/g, '')
     if (digits.length > maxDigits) {
-      emit('input-overflow', { receivedDigits: digits.length, maxDigits })
+      overflow = { receivedDigits: digits.length, maxDigits }
     }
     const cleanValue = digits.slice(0, maxDigits)
     inputValue.value = cleanValue
@@ -132,6 +133,7 @@ const handleInput = (value: string) => {
 
   lastEmittedModelValue.value = phoneValue
   emit('update:modelValue', phoneValue)
+  if (overflow) emit('input-overflow', overflow)
 
   const caretDigits = pendingCaretDigits.value
   pendingCaretDigits.value = null
