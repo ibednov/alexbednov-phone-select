@@ -1,6 +1,6 @@
 import { type MaybeRef } from 'vue';
 import type { Language, Country } from '@/interfaces';
-export declare const usePhoneNumber: (lang: Language, favoritesCountries?: string[], hideFavorites?: boolean, onlyCountries?: MaybeRef<string[] | undefined>) => {
+export declare const usePhoneNumber: (lang: MaybeRef<Language>, favoritesCountries?: string[], hideFavorites?: boolean, onlyCountries?: MaybeRef<string[] | undefined>) => {
     searchQuery: import("vue").Ref<string, string>;
     selectedCountry: import("vue").Ref<{
         country_code: string;
