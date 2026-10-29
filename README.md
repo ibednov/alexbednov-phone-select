@@ -246,7 +246,7 @@ Country list and flags from [react-phone-country-code-flag](https://github.com/m
 
 ## License
 
-MIT
+[PolyForm Noncommercial License 1.0.0](LICENSE). Free for noncommercial use; commercial use requires the author's written permission — contact via [alexbednov.dev](https://alexbednov.dev). See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
@@ -498,4 +498,4 @@ import 'alexbednov-phone-select/style.css'
 
 ## Лицензия
 
-MIT
+[PolyForm Noncommercial License 1.0.0](LICENSE). Некоммерческое использование свободно; коммерческое — только с письменного разрешения автора, связь через [alexbednov.dev](https://alexbednov.dev). См. [CONTRIBUTING.md](CONTRIBUTING.md).
