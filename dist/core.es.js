@@ -3098,13 +3098,32 @@ const findCountryByRanges = (countries2, cleanValue) => {
   });
 };
 const findCountryByPhoneCode = (countries2, cleanValue) => {
-  return countries2.find((c) => cleanValue.startsWith(c.phone_code.toString()));
+  let best;
+  let bestLen = 0;
+  for (const country of countries2) {
+    const code = country.phone_code.toString();
+    if (cleanValue.startsWith(code) && code.length > bestLen) {
+      best = country;
+      bestLen = code.length;
+    }
+  }
+  return best;
+};
+const normalizePhoneDigits = (value) => {
+  let digits = value.replace(/\D/g, "");
+  if (digits.startsWith("00")) {
+    digits = digits.slice(2);
+  }
+  return digits;
 };
 const parsePhoneNumberValue = (value, countries2) => {
   if (!value) {
     return { country: null, nationalNumber: "" };
   }
-  const cleanValue = value.replace(/^\+/, "");
+  const cleanValue = normalizePhoneDigits(value);
+  if (!cleanValue) {
+    return { country: null, nationalNumber: "" };
+  }
   const countryWithRanges = findCountryByRanges(countries2, cleanValue);
   if (countryWithRanges) {
     return {
@@ -3121,6 +3140,89 @@ const parsePhoneNumberValue = (value, countries2) => {
   }
   return { country: null, nationalNumber: "" };
 };
+const isExplicitInternational = (raw) => {
+  const trimmed = raw.trim();
+  return trimmed.startsWith("+") || trimmed.startsWith("00");
+};
+const stripLeadingCallingCode = (raw, options = {}) => {
+  const { selectedCountry = null, countries: countries2 = [], maxNationalDigits } = options;
+  if (!raw) {
+    return { value: raw, nationalDigits: "", country: null, stripped: false };
+  }
+  const explicitIntl = isExplicitInternational(raw);
+  const digits = normalizePhoneDigits(raw);
+  if (!digits) {
+    return { value: raw, nationalDigits: "", country: null, stripped: false };
+  }
+  const overlong = maxNationalDigits != null && digits.length > maxNationalDigits;
+  const sameCountry = (a, b) => a.country_code.toLowerCase() === b.country_code.toLowerCase() || a.phone_code === b.phone_code;
+  if (countries2.length > 0 && (explicitIntl || overlong)) {
+    const parsed = parsePhoneNumberValue(digits, countries2);
+    if (parsed.country) {
+      const nationalDigits = normalizePhoneDigits(parsed.nationalNumber);
+      const matchesSelected = !selectedCountry || sameCountry(parsed.country, selectedCountry);
+      if (explicitIntl || matchesSelected) {
+        return {
+          value: nationalDigits,
+          nationalDigits,
+          country: parsed.country,
+          stripped: true
+        };
+      }
+    }
+  }
+  if (selectedCountry) {
+    const code = String(selectedCountry.phone_code);
+    if (digits.startsWith(code) && digits.length > code.length) {
+      const rest = digits.slice(code.length);
+      const restFits = maxNationalDigits == null || rest.length <= maxNationalDigits;
+      const restExact = maxNationalDigits != null && rest.length === maxNationalDigits;
+      if (explicitIntl || overlong && restFits && rest.length > 0 || restExact) {
+        return {
+          value: rest,
+          nationalDigits: rest,
+          country: selectedCountry,
+          stripped: true
+        };
+      }
+    }
+  }
+  return { value: raw, nationalDigits: digits, country: null, stripped: false };
+};
+const formatPhoneNumber = (value, opts = {}) => {
+  if (value == null || value === "") return value;
+  let country = null;
+  let nationalDigits = "";
+  if (opts.countryCode) {
+    const explicit = getCountryByCode(opts.countryCode, "en");
+    if (explicit) {
+      country = explicit;
+      const digits = normalizePhoneDigits(value);
+      const code = String(explicit.phone_code);
+      if (digits.startsWith(code) && digits.length > code.length) {
+        nationalDigits = digits.slice(code.length);
+      } else {
+        nationalDigits = digits;
+      }
+    }
+  }
+  if (!country) {
+    const parsed = parsePhoneNumberValue(value, getCountries("en"));
+    country = parsed.country;
+    nationalDigits = normalizePhoneDigits(parsed.nationalNumber);
+  }
+  if (!country) {
+    const digits = normalizePhoneDigits(value);
+    if (!digits) return value;
+    const trimmed = value.trim();
+    if (trimmed.startsWith("+") || trimmed.startsWith("00")) {
+      return `+${digits}`;
+    }
+    return value;
+  }
+  const masked = applyMask(nationalDigits, getMaskForCountry(country));
+  return `+${country.phone_code} ${masked}`.replace(/\s+/g, " ").trim();
+};
 export {
   applyCountryWhitelist,
   applyMask,
@@ -3129,6 +3231,7 @@ export {
   findCountryByPhoneCode,
   findCountryByRanges,
   formatPhoneInput,
+  formatPhoneNumber,
   getAllCountryNames,
   getCountries,
   getCountryByCode,
@@ -3137,7 +3240,9 @@ export {
   getFlagPath,
   getMaskForCountry,
   loadTranslations,
+  normalizePhoneDigits,
   parsePhoneNumberValue,
   searchByAllFields,
-  searchByPhoneCode
+  searchByPhoneCode,
+  stripLeadingCallingCode
 };

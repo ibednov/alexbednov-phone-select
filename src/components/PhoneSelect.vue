@@ -8,6 +8,8 @@ import SelectValue from '@/components/ui/select/SelectValue.vue'
 import { useTranslate } from '@/composables/useTranslate'
 import { usePhoneNumber } from '@/composables/usePhoneNumber'
 import { applyMask, getMaskForCountry } from '@/core/phoneMask'
+import { stripLeadingCallingCode } from '@/core/phoneNumber'
+import { getCountries } from '@/core/countries'
 import { cn } from '@/lib/utils'
 import CountryItem from './PhoneSelect/CountryItem.vue'
 import CountryList from './PhoneSelect/CountryList.vue'
@@ -30,6 +32,12 @@ const props = withDefaults(
     inputPlaceholder?: string
     disableCountryNameSelect?: boolean
     disableAutoParseNumber?: boolean
+    /**
+     * When true, paste/input of a full international number into the national field strips the
+     * leading calling code if it matches the selected country (or a detected country on explicit `+`/`00`).
+     * Default false for backward compatibility.
+     */
+    stripCountryCode?: boolean
     selectContentClass?: string
     selectTriggerClass?: string
     selectValueClass?: string
@@ -44,6 +52,7 @@ const props = withDefaults(
     enableMask: false,
     disableCountryNameSelect: false,
     disableAutoParseNumber: true,
+    stripCountryCode: false,
   }
 )
 
@@ -93,7 +102,16 @@ const hasModelValue = computed(() => {
 const getPhoneWithoutCode = (phone: string, code: string | number) => {
   if (!phone || code === undefined || code === null) return phone
   const codeStr = String(code)
+  // Only strip explicit +callingCode form; bare-digit calling codes are handled by
+  // stripCountryCode / stripLeadingCallingCode (safe against NANP area codes starting with 1).
   return phone.startsWith(`+${codeStr}`) ? phone.slice(`+${codeStr}`.length) : phone
+}
+
+/** National length from mask metadata (used for strip heuristics even when enableMask is false). */
+const nationalMaxDigits = (): number | undefined => {
+  const matrix = getMaskForCountry(selectedCountry.value)
+  const n = (matrix.match(/[#\d]/g) || []).length
+  return n > 0 ? n : undefined
 }
 
 const maskedPhone = computed(() => {
@@ -107,21 +125,41 @@ const maskedPhone = computed(() => {
 })
 
 const handleInput = (value: string) => {
+  let working = value
+  let strippedCallingCode = false
+
+  if (props.stripCountryCode) {
+    const result = stripLeadingCallingCode(working, {
+      selectedCountry: selectedCountry.value,
+      countries: getCountries(props.lang, props.onlyCountries),
+      maxNationalDigits: nationalMaxDigits(),
+    })
+    if (result.stripped) {
+      working = result.nationalDigits
+      strippedCallingCode = true
+      if (result.country) {
+        selectedCountry.value = result.country
+      }
+      // After stripping a full intl paste, place caret at end of national digits.
+      pendingCaretDigits.value = result.nationalDigits.length
+    }
+  }
+
   let overflow: { receivedDigits: number, maxDigits: number } | undefined
   if (props.enableMask) {
     const matrix = getMaskForCountry(selectedCountry.value)
     const maxDigits = (matrix.match(/[#\d]/g) || []).length
-    const digits = value.replace(/\D/g, '')
+    const digits = working.replace(/\D/g, '')
     if (digits.length > maxDigits) {
       overflow = { receivedDigits: digits.length, maxDigits }
     }
     const cleanValue = digits.slice(0, maxDigits)
     inputValue.value = cleanValue
   } else {
-    inputValue.value = value
+    inputValue.value = strippedCallingCode ? working.replace(/\D/g, '') : working
   }
 
-  let phoneValue = value
+  let phoneValue = working
   if (selectedCountry.value) {
     const nationalValue = props.enableMask ? maskedPhone.value : inputValue.value
     phoneValue = nationalValue

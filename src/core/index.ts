@@ -23,8 +23,14 @@ export {
   filterCountries,
   findCountryByRanges,
   findCountryByPhoneCode,
+  normalizePhoneDigits,
   parsePhoneNumberValue,
-  type ParsedPhoneNumber
+  stripLeadingCallingCode,
+  formatPhoneNumber,
+  type ParsedPhoneNumber,
+  type StripLeadingCallingCodeOptions,
+  type StripLeadingCallingCodeResult,
+  type FormatPhoneNumberOptions,
 } from './phoneNumber'
 
 export { loadTranslations } from '../utils/translations'

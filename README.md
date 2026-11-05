@@ -124,7 +124,10 @@ import {
   getAllCountryNames,
   getMaskForCountry,
   applyMask,
-  parsePhoneNumberValue
+  parsePhoneNumberValue,
+  stripLeadingCallingCode,
+  formatPhoneNumber,
+  normalizePhoneDigits
 } from 'alexbednov-phone-select'
 
 // Get list of all countries
@@ -144,6 +147,10 @@ const flagPath = getFlagPath('us') // /src/assets/flags/us.svg
 
 // Get all country names in different languages
 const names = getAllCountryNames('us') // ['United States', 'США', ...]
+
+// Format E.164 / raw digits for display (country mask + calling code)
+formatPhoneNumber('+375291111111') // '+375 29 111 11 11'
+formatPhoneNumber('9001234567', { countryCode: 'ru' }) // '+7 900 123 45 67'
 ```
 
 ### Types
@@ -213,6 +220,7 @@ import 'alexbednov-phone-select/style.css'
 - `enable-mask` - enable number masking (default: false)
 - `disable-country-name-select` - disable country name display in select (default: false)
 - `disable-auto-parse-number` - disable automatic parsing from `v-model` (default: **true**; set to `false` to opt in — partial input never clears an existing selection)
+- `strip-country-code` - when pasting/typing a full international number into the national field, strip the leading calling code if it matches the selected country (or a country detected from explicit `+` / `00`). Default: **false** (opt-in). Core helper: `stripLeadingCallingCode`.
 - `select-class` - select element classes
 - `input-class` - input element classes
 - `select-placeholder` - select placeholder text
@@ -376,7 +384,10 @@ import {
   getAllCountryNames,
   getMaskForCountry,
   applyMask,
-  parsePhoneNumberValue
+  parsePhoneNumberValue,
+  stripLeadingCallingCode,
+  formatPhoneNumber,
+  normalizePhoneDigits
 } from 'alexbednov-phone-select'
 
 // Получить список всех стран
@@ -396,6 +407,10 @@ const flagPath = getFlagPath('ru') // /src/assets/flags/ru.svg
 
 // Получить все названия страны на разных языках
 const names = getAllCountryNames('ru') // ['Россия', 'Russia', ...]
+
+// Формат для отображения (маска страны + код)
+formatPhoneNumber('+375291111111') // '+375 29 111 11 11'
+formatPhoneNumber('9001234567', { countryCode: 'ru' }) // '+7 900 123 45 67'
 ```
 
 ### Типы
@@ -465,6 +480,7 @@ import 'alexbednov-phone-select/style.css'
 - `enable-mask` - включить маскирование номера (по умолчанию false)
 - `disable-country-name-select` - отключить отображение названия страны в селекте (по умолчанию false)
 - `disable-auto-parse-number` - отключить автопарсинг из `v-model` (по умолчанию **true**; `false` — явное включение; частичный ввод не сбрасывает уже выбранную страну)
+- `strip-country-code` - при вставке/вводе полного международного номера в национальное поле срезать ведущий calling code, если он совпадает с выбранной страной (или со страной, распознанной по явному `+` / `00`). По умолчанию: **false** (opt-in). Core: `stripLeadingCallingCode`.
 - `select-class` - классы для селекта
 - `input-class` - классы для инпута
 - `select-placeholder` - плейсхолдер для селекта
