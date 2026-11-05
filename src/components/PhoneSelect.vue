@@ -35,9 +35,14 @@ const props = withDefaults(
     /**
      * When true, paste/input of a full international number into the national field strips the
      * leading calling code if it matches the selected country (or a detected country on explicit `+`/`00`).
-     * Default false for backward compatibility.
+     * Default true — national field is digits-only and expects a local number; set false to keep legacy paste.
      */
     stripCountryCode?: boolean
+    /**
+     * Keep only phone digits in the national field (letters/symbols dropped). Leading + / 00 still
+     * participate in stripCountryCode detection before digit filtering. Default true.
+     */
+    digitsOnly?: boolean
     selectContentClass?: string
     selectTriggerClass?: string
     selectValueClass?: string
@@ -52,7 +57,8 @@ const props = withDefaults(
     enableMask: false,
     disableCountryNameSelect: false,
     disableAutoParseNumber: true,
-    stripCountryCode: false,
+    stripCountryCode: true,
+    digitsOnly: true,
   }
 )
 
@@ -145,6 +151,11 @@ const handleInput = (value: string) => {
     }
   }
 
+  // National field: drop letters/symbols. Strip already saw original +/00 form above.
+  if (props.digitsOnly || props.enableMask || strippedCallingCode) {
+    working = working.replace(/\D/g, '')
+  }
+
   let overflow: { receivedDigits: number, maxDigits: number } | undefined
   if (props.enableMask) {
     const matrix = getMaskForCountry(selectedCountry.value)
@@ -156,7 +167,9 @@ const handleInput = (value: string) => {
     const cleanValue = digits.slice(0, maxDigits)
     inputValue.value = cleanValue
   } else {
-    inputValue.value = strippedCallingCode ? working.replace(/\D/g, '') : working
+    inputValue.value = props.digitsOnly || strippedCallingCode
+      ? working.replace(/\D/g, '')
+      : working
   }
 
   let phoneValue = working
