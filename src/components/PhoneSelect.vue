@@ -54,7 +54,8 @@ const props = withDefaults(
     hideFavorites: true,
     dedupeFavorites: true,
     enableSearch: false,
-    enableMask: false,
+    // Default on: national length is always country-bounded; formatting spaces follow mask.
+    enableMask: true,
     disableCountryNameSelect: false,
     disableAutoParseNumber: true,
     stripCountryCode: true,
@@ -156,23 +157,24 @@ const handleInput = (value: string) => {
     working = working.replace(/\D/g, '')
   }
 
+  // Always hard-cap national length from country mask (even if enableMask is off —
+  // otherwise paste/type can leave unlimited digits in the DOM).
+  const matrix = getMaskForCountry(selectedCountry.value)
+  const maxDigits = (matrix.match(/[#\d]/g) || []).length
   let overflow: { receivedDigits: number, maxDigits: number } | undefined
-  if (props.enableMask) {
-    const matrix = getMaskForCountry(selectedCountry.value)
-    const maxDigits = (matrix.match(/[#\d]/g) || []).length
-    const digits = working.replace(/\D/g, '')
-    if (digits.length > maxDigits) {
-      overflow = { receivedDigits: digits.length, maxDigits }
-    }
-    const cleanValue = digits.slice(0, maxDigits)
-    inputValue.value = cleanValue
+  const digitsOnlyWorking = working.replace(/\D/g, '')
+  if (maxDigits > 0 && digitsOnlyWorking.length > maxDigits) {
+    overflow = { receivedDigits: digitsOnlyWorking.length, maxDigits }
+  }
+  if (maxDigits > 0) {
+    inputValue.value = digitsOnlyWorking.slice(0, maxDigits)
+  } else if (props.digitsOnly || strippedCallingCode || props.enableMask) {
+    inputValue.value = digitsOnlyWorking
   } else {
-    inputValue.value = props.digitsOnly || strippedCallingCode
-      ? working.replace(/\D/g, '')
-      : working
+    inputValue.value = working
   }
 
-  let phoneValue = working
+  let phoneValue = ''
   if (selectedCountry.value) {
     const nationalValue = props.enableMask ? maskedPhone.value : inputValue.value
     phoneValue = nationalValue
@@ -186,24 +188,49 @@ const handleInput = (value: string) => {
   emit('update:modelValue', phoneValue)
   if (overflow) emit('input-overflow', overflow)
 
+  // Native <input> already painted the keystroke. If the clipped/masked value is
+  // unchanged vs previous render, Vue skips :value update and the extra digit sticks
+  // in the DOM (e.g. BY 10th digit while mask max is 9). Always write the display value.
+  const displayValue = props.enableMask ? maskedPhone.value : inputValue.value
+  const syncDomValue = () => {
+    const input = phoneInput.value
+    if (!input) return
+    if (input.value !== displayValue) {
+      input.value = displayValue
+    }
+  }
+  syncDomValue()
+
   const caretDigits = pendingCaretDigits.value
   pendingCaretDigits.value = null
-  if (props.enableMask && caretDigits !== null) {
+  if (caretDigits !== null) {
     nextTick(() => {
       const input = phoneInput.value
       if (!input || document.activeElement !== input) return
+      syncDomValue()
 
+      const display = props.enableMask ? maskedPhone.value : inputValue.value
+      const cappedCaret = Math.min(
+        caretDigits,
+        (inputValue.value || '').replace(/\D/g, '').length,
+      )
+      if (!props.enableMask) {
+        input.setSelectionRange(cappedCaret, cappedCaret)
+        return
+      }
       let digits = 0
-      let position = maskedPhone.value.length
-      for (let index = 0; index < maskedPhone.value.length; index++) {
-        if (/\d/.test(maskedPhone.value[index])) digits++
-        if (digits >= caretDigits) {
+      let position = display.length
+      for (let index = 0; index < display.length; index++) {
+        if (/\d/.test(display[index])) digits++
+        if (digits >= cappedCaret) {
           position = index + 1
           break
         }
       }
       input.setSelectionRange(position, position)
     })
+  } else {
+    nextTick(syncDomValue)
   }
 }
 
@@ -212,6 +239,35 @@ const handleNativeInput = (event: Event) => {
   const caret = input.selectionStart ?? input.value.length
   pendingCaretDigits.value = input.value.slice(0, caret).replace(/\D/g, '').length
   handleInput(input.value)
+}
+
+/** Block insert before the browser paints past national max (mask hard-cut). */
+const handleBeforeInput = (event: InputEvent) => {
+  if (event.isComposing) return
+  if (event.inputType && !event.inputType.startsWith('insert')) return
+  const input = event.target as HTMLInputElement
+  if (!input) return
+  const maxDigits = nationalMaxDigits()
+  if (!maxDigits) return
+  const selectionLen = Math.abs((input.selectionEnd ?? 0) - (input.selectionStart ?? 0))
+  const currentDigits = input.value.replace(/\D/g, '').length - selectionLen
+  if (currentDigits >= maxDigits) {
+    // Allow only if replacing selected text that frees slots — selection already subtracted.
+    const incoming = (event.data ?? '').replace(/\D/g, '').length
+    if (incoming > 0 && currentDigits + incoming > maxDigits && selectionLen === 0) {
+      event.preventDefault()
+    } else if (selectionLen === 0 && currentDigits >= maxDigits) {
+      event.preventDefault()
+    }
+  }
+}
+
+const handlePaste = (event: ClipboardEvent) => {
+  const text = event.clipboardData?.getData('text') ?? ''
+  if (!text) return
+  event.preventDefault()
+  pendingCaretDigits.value = null
+  handleInput(text)
 }
 
 const handleKeydown = (event: KeyboardEvent) => {
@@ -226,6 +282,20 @@ const handleKeydown = (event: KeyboardEvent) => {
   if (event.key === 'Delete' && input.selectionStart !== null && /\D/.test(input.value[input.selectionStart] || '')) {
     event.preventDefault()
     input.setSelectionRange(input.selectionStart + 1, input.selectionStart + 1)
+  }
+
+  // Block digit keys past national max (backup if beforeinput is skipped).
+  const maxDigits = nationalMaxDigits()
+  if (
+    maxDigits
+    && event.key.length === 1
+    && /\d/.test(event.key)
+    && input.selectionStart === input.selectionEnd
+  ) {
+    const currentDigits = input.value.replace(/\D/g, '').length
+    if (currentDigits >= maxDigits) {
+      event.preventDefault()
+    }
   }
 }
 
@@ -248,6 +318,17 @@ const initializePhone = () => {
 
   if (!selectedCountry.value) return
 
+  // Clip national digits to mask after external parse (long stored numbers).
+  const maxDigits = nationalMaxDigits()
+  if (maxDigits && inputValue.value) {
+    const digits = String(inputValue.value).replace(/\D/g, '')
+    if (digits.length > maxDigits) {
+      inputValue.value = digits.slice(0, maxDigits)
+    } else {
+      inputValue.value = digits
+    }
+  }
+
   const normalized = formatModelValue()
   if (normalized && normalized !== props.modelValue) {
     lastEmittedModelValue.value = normalized
@@ -256,29 +337,48 @@ const initializePhone = () => {
 }
 
 const applyDefaultCountry = () => {
-  if (!props.defaultCountry || hasModelValue.value || selectedCountry.value) return
+  if (!props.defaultCountry || selectedCountry.value) return
   selectCountryByCode(props.defaultCountry)
 }
 
-const handleCountrySelect = (country: Country) => {
+const handleCountrySelect = (value: Country | string | null) => {
+  const country = typeof value === 'string'
+    ? (getCountries(props.lang, props.onlyCountries).find(
+        c => c.country_code.toLowerCase() === value.toLowerCase()
+      ) ?? null)
+    : value
+
+  if (!country) return
+
   selectedCountry.value = country
   isOpen.value = false
   searchQuery.value = ''
   const nationalValue = props.enableMask ? maskedPhone.value : inputValue.value
-  const value = nationalValue
+  const phone = nationalValue
     ? (props.enableMask
         ? `+${country.phone_code} ${nationalValue}`
         : `+${country.phone_code}${nationalValue}`)
     : ''
-  lastEmittedModelValue.value = value
-  emit('update:modelValue', value)
+  lastEmittedModelValue.value = phone
+  emit('update:modelValue', phone)
 }
+
+/** Stable select model: country_code string (object identity breaks reka-ui Select). */
+const selectedCountryCode = computed(() => selectedCountry.value?.country_code)
+
+/** Full mask string length (digits + separators) — blocks typing past national max. */
+const nationalInputMaxLength = computed(() => {
+  const matrix = getMaskForCountry(selectedCountry.value)
+  return matrix.length > 0 ? matrix.length : undefined
+})
 
 watch(() => props.modelValue, () => {
   if (props.modelValue === lastEmittedModelValue.value) return
   if (!props.disableAutoParseNumber) {
     initializePhone()
   }
+  // After external model parse, still ensure default country if nothing selected.
+  if (!selectedCountry.value) applyDefaultCountry()
 }, { immediate: true })
 
 watch(() => props.lang, (lang) => {
@@ -286,6 +386,10 @@ watch(() => props.lang, (lang) => {
   if (selectedCountry.value) {
     selectCountryByCode(selectedCountry.value.country_code)
   }
+}, { immediate: true })
+
+watch(() => props.defaultCountry, () => {
+  applyDefaultCountry()
 }, { immediate: true })
 
 watch(() => selectedCountry.value, emitCountry)
@@ -299,7 +403,7 @@ onMounted(() => {
 <template>
   <div class="relative flex items-center gap-2 w-full">
     <Select
-      v-model="selectedCountry"
+      :model-value="selectedCountryCode"
       v-model:open="isOpen"
       @update:model-value="handleCountrySelect"
       :class="[props.selectClass || 'w-[180px]']"
@@ -355,7 +459,10 @@ onMounted(() => {
         'flex-1',
       )"
       :value="props.enableMask ? maskedPhone : inputValue"
+      :maxlength="nationalInputMaxLength"
+      @beforeinput="handleBeforeInput"
       @input="handleNativeInput"
+      @paste="handlePaste"
       @keydown="handleKeydown"
       type="tel"
       inputmode="numeric"

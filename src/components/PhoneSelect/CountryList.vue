@@ -32,7 +32,7 @@ const searchQuery = defineModel<string>('searchQuery', { default: '' })
   <div class="max-h-60 overflow-y-auto overflow-x-hidden">
     <template v-if="hasFavorites && favorites.length">
       <div v-for="country in favorites" :key="country.country_code">
-        <SelectItem :value="country" :class="[selectItemClass]">
+        <SelectItem :value="country.country_code" :class="[selectItemClass]">
           <CountryItem
             :country="country"
             :disable-country-name-select="disableCountryNameSelect"
@@ -43,7 +43,7 @@ const searchQuery = defineModel<string>('searchQuery', { default: '' })
       <SelectSeparator />
     </template>
     <div v-for="country in filteredCountries" :key="country.country_code">
-      <SelectItem :value="country" :class="[selectItemClass]">
+      <SelectItem :value="country.country_code" :class="[selectItemClass]">
         <CountryItem
           :country="country"
           :disable-country-name-select="disableCountryNameSelect"

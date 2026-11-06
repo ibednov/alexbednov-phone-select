@@ -8,12 +8,19 @@ export type CountryListOptions = {
   onlyCountries?: string[]
 }
 
+const countriesByLang = new Map<Language, Country[]>()
+
 const buildCountriesList = (lang: Language): Country[] => {
+  const cached = countriesByLang.get(lang)
+  if (cached) return cached
+
   const translations = loadTranslations()
-  return countriesData.map(country => ({
+  const list = countriesData.map(country => ({
     ...country,
     name: translations[lang]?.countries[country.country_code] || country.country_code
   }))
+  countriesByLang.set(lang, list)
+  return list
 }
 
 export const applyCountryWhitelist = (

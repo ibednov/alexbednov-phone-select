@@ -2096,15 +2096,20 @@ const loadTranslations = () => {
     })
   );
 };
+const countriesByLang = /* @__PURE__ */ new Map();
 const buildCountriesList = (lang2) => {
+  const cached = countriesByLang.get(lang2);
+  if (cached) return cached;
   const translations = loadTranslations();
-  return countriesData.map((country) => {
+  const list = countriesData.map((country) => {
     var _a;
     return {
       ...country,
       name: ((_a = translations[lang2]) == null ? void 0 : _a.countries[country.country_code]) || country.country_code
     };
   });
+  countriesByLang.set(lang2, list);
+  return list;
 };
 const applyCountryWhitelist = (countries2, onlyCountries) => {
   if (!(onlyCountries == null ? void 0 : onlyCountries.length)) return countries2;
